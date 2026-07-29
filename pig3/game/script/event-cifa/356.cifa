@@ -1,0 +1,75 @@
+ClearX50();
+SetX50(200, read_mem(1911134));
+SetX50(201, read_mem(1911132));
+SetX50(202, read_mem(1911130));
+SetX50(203, read_mem(345330));
+SetX50(205, GetD(GetX50(200), 0, 8));
+SetX50(206, GetD(GetX50(200), 0, 7));
+if (GetX50(203) == GetX50(205)) {
+    SetX50(207, GetX50(203) * 14 + 5014);
+    if (GetX50(206) == GetX50(207)) {
+        SetX50(206, GetX50(206) - 12);
+    }
+    SetX50(206, GetX50(206) + 2);
+    SetD(GetX50(200), 0, 7, GetX50(206));
+    write_mem(1838072, GetX50(206));
+} else {
+    SetD(GetX50(200), 0, 8, GetX50(203));
+    SetX50(207, GetX50(203) * 14 + 5004);
+    SetD(GetX50(200), 0, 7, GetX50(207));
+    write_mem(1838072, GetX50(207));
+}
+ModifyEvent(-2, 1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1);
+ModifyEvent(-2, 2, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1);
+ModifyEvent(-2, 3, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1);
+ModifyEvent(-2, 4, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1);
+SetX50(208, 1);
+do {
+    if (GetX50(208) == 1) { SetX50(209, GetX50(201)); SetX50(210, GetX50(202) - 1); }
+    if (GetX50(208) == 2) { SetX50(209, GetX50(201) + 1); SetX50(210, GetX50(202)); }
+    if (GetX50(208) == 3) { SetX50(209, GetX50(201) - 1); SetX50(210, GetX50(202)); }
+    if (GetX50(208) == 4) { SetX50(209, GetX50(201)); SetX50(210, GetX50(202) + 1); }
+    SetX50(211, GetS(GetX50(200), 1, GetX50(209), GetX50(210)));
+    if (GetX50(211) == 0) {
+        SetX50(212, GetS(GetX50(200), 3, GetX50(209), GetX50(210)));
+        if (GetX50(212) == -1) {
+            SetS(GetX50(200), 3, GetX50(209), GetX50(210), GetX50(208));
+            SetD(GetX50(200), GetX50(208), 2, -1);
+            SetD(GetX50(200), GetX50(208), 3, -1);
+            SetD(GetX50(200), GetX50(208), 4, 256);
+            SetD(GetX50(200), GetX50(208), 9, GetX50(209));
+            SetD(GetX50(200), GetX50(208), 10, GetX50(210));
+        }
+    }
+    SetX50(208, GetX50(208) + 1);
+} while (GetX50(208) <= 4);
+SetX50(212, 3000);
+SetX50(209, GetD(GetX50(200), 0, 0));
+if (GetX50(209) != 1) {
+    SetX50(210, read_mem(1837968));
+    SetX50(211, GetX50(210) + GetX50(212));
+    SetD(GetX50(200), 0, 4, GetX50(211));
+    SetD(GetX50(200), 0, 0, 1);
+}
+SetX50(210, read_mem(1837968));
+SetX50(211, GetD(GetX50(200), 0, 4));
+DrawRect(0, 30, 178, 260, 11, 0);
+DrawRect(0, 30, 178, 260, 11, 0);
+DrawRect(0, 30, 178, 260, 11, 0);
+SetX50(213, GetX50(212) / 50);
+SetX50(214, (GetX50(211) - GetX50(210)) / GetX50(213) - 1);
+SetX50(215, 0);
+do {
+    SetX50(216, GetX50(215) * 5 + 35);
+    if (GetX50(215) <= GetX50(214)) {
+        DrawPicture(0, 4612, GetX50(216), 180);
+        SetX50(215, GetX50(215) + 1);
+    }
+} while (GetX50(215) <= GetX50(214) && GetX50(215) < 50);
+if (GetX50(210) >= GetX50(211)) {
+    PlayAnimation(-1, 5994, 6012);
+    DarkScene();
+    Dead();
+} else {
+    SetX50(0, GetKey());
+}

@@ -1,0 +1,69 @@
+DarkScene();
+SetX50(100, read_mem(345330));
+SetX50(101, read_mem(1911134));
+if (GetX50(100) == 0) {
+    ka370_set_path(3882, 39, 38, 0);
+    SetS(GetX50(101), 2, 34, 40, 3882);
+    SetS(GetX50(101), 2, 37, 34, 3850);
+    SetS(GetX50(101), 2, 38, 34, 3832);
+    SetS(GetX50(101), 2, 39, 34, 3832);
+    SetScenePosition2(39, 34);
+}
+if (GetX50(100) == 1) {
+    ka370_set_path(0, 17, 7, 1);
+    SetS(GetX50(101), 2, 49, 9, 0);
+    SetS(GetX50(101), 2, 39, 11, 0);
+    SetS(GetX50(101), 2, 39, 12, 0);
+    SetS(GetX50(101), 2, 39, 13, 0);
+    SetScenePosition2(41, 13);
+}
+if (GetX50(100) == 2) {
+    ka370_set_path(3882, 17, 7, 1);
+    SetS(GetX50(101), 2, 49, 9, 3882);
+    SetS(GetX50(101), 2, 39, 11, 3846);
+    SetS(GetX50(101), 2, 39, 12, 3848);
+    SetS(GetX50(101), 2, 39, 13, 3846);
+    SetScenePosition2(39, 13);
+}
+if (GetX50(100) == 3) {
+    ka370_set_path(0, 39, 38, 0);
+    SetS(GetX50(101), 2, 34, 40, 0);
+    SetS(GetX50(101), 2, 37, 34, 0);
+    SetS(GetX50(101), 2, 38, 34, 0);
+    SetS(GetX50(101), 2, 39, 34, 0);
+    SetScenePosition2(39, 36);
+}
+LightScene();
+ka370_set_path(tile, horizontalA, horizontalB, verticalMode) {
+    if (verticalMode == 0) {
+        SetX50(102, 35);
+        do { SetS(GetX50(101), 2, GetX50(102), 39, tile); SetX50(102, GetX50(102) + 1); } while (GetX50(102) <= 41);
+        SetX50(102, 35);
+        do { SetS(GetX50(101), 2, GetX50(102), 38, tile); SetX50(102, GetX50(102) + 1); } while (GetX50(102) <= 43);
+        SetX50(102, 32);
+        do { SetS(GetX50(101), 2, GetX50(102), 35, tile); SetX50(102, GetX50(102) + 1); } while (GetX50(102) <= 44);
+        SetX50(102, 36);
+        do { SetS(GetX50(101), 2, 44, GetX50(102), tile); SetX50(102, GetX50(102) + 1); } while (GetX50(102) <= 42);
+        SetX50(102, 32);
+        do { SetS(GetX50(101), 2, GetX50(102), 42, tile); SetX50(102, GetX50(102) + 1); } while (GetX50(102) <= 43);
+        SetX50(102, 36);
+        do { SetS(GetX50(101), 2, 32, GetX50(102), tile); SetX50(102, GetX50(102) + 1); } while (GetX50(102) <= 41);
+    } else {
+        SetX50(102, 10);
+        do { SetS(GetX50(101), 2, 43, GetX50(102), tile); SetX50(102, GetX50(102) + 1); } while (GetX50(102) <= 16);
+        SetX50(102, 8);
+        do { SetS(GetX50(101), 2, 40, GetX50(102), tile); SetX50(102, GetX50(102) + 1); } while (GetX50(102) <= 16);
+        SetX50(102, 40);
+        do { SetS(GetX50(101), 2, GetX50(102), horizontalA, tile); SetX50(102, GetX50(102) + 1); } while (GetX50(102) <= 50);
+        SetX50(102, 40);
+        do { SetS(GetX50(101), 2, GetX50(102), horizontalB, tile); SetX50(102, GetX50(102) + 1); } while (GetX50(102) <= 51);
+        SetX50(102, 8);
+        do { SetS(GetX50(101), 2, 51, GetX50(102), tile); SetX50(102, GetX50(102) + 1); } while (GetX50(102) <= 17);
+        SetX50(102, 44);
+        do {
+            SetX50(103, 10);
+            do { SetS(GetX50(101), 2, GetX50(102), GetX50(103), tile); SetX50(103, GetX50(103) + 1); } while (GetX50(103) <= 14);
+            SetX50(102, GetX50(102) + 1);
+        } while (GetX50(102) <= 48);
+    }
+}
