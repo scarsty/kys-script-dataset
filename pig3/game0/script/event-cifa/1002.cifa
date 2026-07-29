@@ -1,0 +1,12 @@
+if (UseItem(145)) {
+    AddItemWithoutHint(145, -1);
+    modifyevent(-2, -2, -2, -2, -1, -1, -1, 4664, 4664, 4664, -2, -2, -2);
+    if (Judge14BooksPlaced()) {
+        playwave(23);
+        talk(0, "咦！好像有什麼聲音．", 0, 1);
+        darkscene();
+        setscenemap(-2, 1, 18, 25, 0);
+        setscenemap(-2, 1, 18, 26, 0);
+        lightscene();
+    }
+}

@@ -1,0 +1,16 @@
+if (UseItem(195)) {
+    talk(0, "動手挖墓吧！希望別有殭屍跑出來嚇人．", 0, 1);
+    playanimation(-1, 6704, 6714);
+    playanimation(-1, 6704, 6714);
+    playanimation(-1, 6716, 6742);
+    playanimation(-1, 6716, 6742);
+    playanimation(-1, 6716, 6742);
+    playanimation(-1, 6716, 6742);
+    darkscene();
+    modifyevent(-2, -2, -2, -2, 565, -1, -1, 6698, 6698, 6698, -2, -2, -2);
+    playanimation(-1, 6702, 6702);
+    lightscene();
+    talk(0, "啊！真累，盜墓的工作真不輕鬆，好在有點收穫．這是什麼東西來著，全書盡是怪異的文字，封皮寫著．．．”廣陵散”．．．", 0, 1);
+    AddItem(177, 1);
+    modifyevent(-2, -2, -2, -2, 565, -1, -1, -2, -2, -2, -2, -2, -2);
+}

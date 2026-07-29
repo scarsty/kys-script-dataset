@@ -1,0 +1,5 @@
+if (UseItem(186)) {
+    AddItemWithoutHint(186, -1);
+    talk(73, "回族人近日大舉出動，聽說與金輪寺有關．", 73, 0);
+    add3eventnum(-2,0,0,1,0);
+}

@@ -1,0 +1,6 @@
+if (UseItem(135)) {
+    modifyevent(-2, -2, -1, -1, -1, -1, -1, -2, -2, -2, -2, -2, -2);
+    setscenemap(-2, 1, 20, 20, 3694);
+    setscenemap(-2, 1, 20, 21, 4064);
+    setscenemap(-2, 1, 21, 21, 0);
+}

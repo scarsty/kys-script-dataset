@@ -1,0 +1,5 @@
+if (UseItem(186)) {
+    AddItemWithoutHint(186, -1);
+    talk(74, "沙漠中有座廢墟，藏有好東西．地點在（２１９，５２）", 74, 0);
+    add3eventnum(-2,1,0,1,0);
+}

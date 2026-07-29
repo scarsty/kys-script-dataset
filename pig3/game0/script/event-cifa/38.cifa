@@ -1,0 +1,12 @@
+if (!HaveItem(173)) {
+    talk(0, "啊！又聞到這香味了，看來我又得昏倒了．", 0, 1);
+    playanimation(-1, 5974, 5992);
+    darkscene();
+    setsceneposition2(30, 49);
+    lightscene();
+    playanimation(-1, 6014, 6024);
+    talk(0, "又昏倒了，看來我得想想辦法才是．", 0, 1);
+} else {
+    modifyevent(-2, -2, -2, -2, -1, -1, -1, -2, -2, -2, -2, -2, -2);
+    talk(0, "咦！頭比較不暈了，反而有股淡淡的微香，這朵藍花真是神奇．", 0, 1);
+}

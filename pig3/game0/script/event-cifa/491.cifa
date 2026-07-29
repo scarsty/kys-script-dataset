@@ -1,0 +1,3 @@
+if (InTeam(53)) {
+    judgescenepic(-2, 2, 6298, 1, 0);
+}

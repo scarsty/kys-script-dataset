@@ -1,0 +1,29 @@
+talk(29, "怎麼，還想殺我嗎？還是想跟我學幾招對付女人呀？", 29, 0);
+if (!AskBattle()) {
+    if (!AskJoin()) {
+        talk(0, "你們倆的事，我不想管．", 0, 1);
+    } else {
+        talk(0, "這可是你說的，我們就一起走吧，到時可得傳授小弟幾招．", 0, 1);
+        if (!TeamIsFull()) {
+            darkscene();
+            modifyevent(-2, -2, 0, 0, -1, -1, -1, -1, -1, -1, -2, -2, -2);
+            setscenemap(-2, 1, 17, 15, 2674);
+            lightscene();
+            join(29);
+            addethics(-6);
+        } else {
+            talk(29, "你的隊伍已滿，我無法加入．", 29, 0);
+        }
+    }
+} else {
+    talk(0, "你這採花淫賊，死到臨頭還不覺悟．你受死吧！", 0, 1);
+    if (TryBattle(53)) {
+        modifyevent(-2, -2, 0, 0, -1, -1, -1, -1, -1, -1, -2, -2, -2);
+        modifyevent(30, 0, -2, -2, 303, -1, -1, -2, -2, -2, -2, -2, -2);
+        setscenemap(-2, 1, 17, 15, 2674);
+        lightscene();
+        addrepute(4);
+    } else {
+        dead();
+    }
+}

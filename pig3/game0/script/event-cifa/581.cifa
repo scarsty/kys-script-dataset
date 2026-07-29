@@ -1,0 +1,15 @@
+talk(0, "賢弟，我們走了吧．", 0, 1);
+if (!TeamIsFull()) {
+    darkscene();
+    modifyevent(-2, 2, 0, 0, -1, -1, -1, -1, -1, -1, -2, -2, -2);
+    lightscene();
+    addmp(49, 300);
+    addhp(49, 200);
+    addattack(49, 30);
+    addspeed(49, 20);
+    LearnMagic2(49, 15, 0);
+    setpersonmppro(person(49),2);
+    join(49);
+} else {
+    talk(49, "你的隊伍已滿，我無法加入．", 49, 0);
+}

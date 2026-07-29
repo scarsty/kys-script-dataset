@@ -1,0 +1,5 @@
+if (UseItem(186)) {
+    AddItemWithoutHint(186, -1);
+    talk(74, "”聖堂”在那裡？”聖堂”不就是那．．．．．．．．．．．．．．．．", 74, 0);
+    add3eventnum(-2,1,0,1,0);
+}
