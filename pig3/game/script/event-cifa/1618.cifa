@@ -1,0 +1,33 @@
+__event_1618_block_0() {
+    talk(341, "施主，想挑戰少林木人巷嗎？不論勝敗，只有一次機會。", -2, 0, 0, 0);
+    CallEvent(351, 13859, 2, 0, 0);
+    if (GetX50(28931) == 1) {
+        __event_1618_block_2();
+        return;
+    }
+    __event_1618_block_1();
+}
+__event_1618_block_1() {
+    exit();
+    __event_1618_block_2();
+}
+__event_1618_block_2() {
+    if (TryBattle(279)) {
+        __event_1618_block_4();
+        return;
+    }
+    __event_1618_block_3();
+}
+__event_1618_block_3() {
+    modifyevent(59, 41, 1, 0, 1621, 0, 0, 5422, 5422, 5422, 0, -2, -2);
+    lightscene();
+    exit();
+    __event_1618_block_4();
+}
+__event_1618_block_4() {
+            lightscene();
+            AddItem(129, 1);
+            modifyevent(59, 41, 1, 0, 1621, 0, 0, 5422, 5422, 5422, 0, -2, -2);
+    exit();
+}
+__event_1618_block_0();

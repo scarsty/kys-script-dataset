@@ -1,0 +1,57 @@
+__event_80_block_0() {
+    join(45);
+    modifyevent(15, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    SetStarState(45, 3);
+    if (!InTeam(31)) {
+        __event_80_block_5();
+        return;
+    }
+    __event_80_block_1();
+}
+__event_80_block_1() {
+    if (!InTeam(2)) {
+        __event_80_block_6();
+        return;
+    }
+    __event_80_block_2();
+}
+__event_80_block_2() {
+    if (!InTeam(69)) {
+        __event_80_block_7();
+        return;
+    }
+    __event_80_block_3();
+}
+__event_80_block_3() {
+    if (!InTeam(84)) {
+        __event_80_block_8();
+        return;
+    }
+    __event_80_block_4();
+}
+__event_80_block_4() {
+    CallEvent(233, 2, 0, 0, 0);
+    CallEvent(231, 2, 177, GetX50(28931), 0);
+    CallEvent(233, 31, 0, 0, 0);
+    CallEvent(231, 31, 177, GetX50(28931), 0);
+    CallEvent(233, 45, 0, 0, 0);
+    CallEvent(231, 45, 177, GetX50(28931), 0);
+    CallEvent(233, 69, 0, 0, 0);
+    CallEvent(231, 69, 177, GetX50(28931), 0);
+    CallEvent(233, 84, 0, 0, 0);
+    CallEvent(231, 84, 177, GetX50(28931), 0);
+    __event_80_block_5();
+}
+__event_80_block_5() {
+    __event_80_block_6();
+}
+__event_80_block_6() {
+    __event_80_block_7();
+}
+__event_80_block_7() {
+    __event_80_block_8();
+}
+__event_80_block_8() {
+    exit();
+}
+__event_80_block_0();

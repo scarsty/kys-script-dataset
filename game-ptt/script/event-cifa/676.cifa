@@ -1,4 +1,7 @@
-instruct_50e(138, 139, 140, 141, 142, 148, 0);        //instruct_50e(138, 139, 140, 141, 142, 148, 0);
+if (checkHave5Item(138, 139, 140, 141, 142))
+{
+    exit();
+}
 if (!isUsingItem(138))
 {
     if (!isUsingItem(139))

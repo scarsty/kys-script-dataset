@@ -1,0 +1,18 @@
+__event_151_block_0() {
+    if (GetStarState(90) == 3) {
+        __event_151_block_2();
+        return;
+    }
+    __event_151_block_1();
+}
+__event_151_block_1() {
+    exit();
+    __event_151_block_2();
+}
+__event_151_block_2() {
+        leave(105);
+        modifyevent(16, 52, 1, 0, 802, 0, 0, 7220, 7220, 7220, 0, -2, -2);
+        SetStarState(90, 1);
+    exit();
+}
+__event_151_block_0();

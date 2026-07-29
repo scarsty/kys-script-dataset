@@ -1,0 +1,103 @@
+SetX50(22, 0);
+SetX50(29, 0);
+SetX50(3, GetX50(28928));
+SetX50(18, GetX50(28929) * 2);
+SetX50(12, GetX50(28931) * 2);
+SetX50(17, GetX50(28930));
+SetX50(100, 0);
+SetX50(7, 165);
+SetX50(32, 80);
+SetX50(33, 60);
+SetX50(8, 30);
+SetX50(15, 0);
+SetX50(16, 0);
+SetX50(50, readtalkasstring(334));
+SetX50(60, readtalkasstring(335));
+SetX50(70, readtalkasstring(336));
+SetX50(80, readtalkasstring(337));
+SetX50(1, 0);
+do {
+    SetX50(1050 + GetX50(1), 0);
+    SetX50(1100 + GetX50(1), GetX50(18));
+    SetX50(1, GetX50(1) + 1);
+} while (GetX50(1) < 25);
+SetX50(1, 0);
+do {
+    SetX50(2, (GetX50(1) + GetX50(3)) * 2);
+    do {
+        SetX50(4, Random50(25));
+    } while (GetX50(1050 + GetX50(4)) != 0);
+    SetX50(1050 + GetX50(4), GetX50(2));
+    SetX50(1000 + GetX50(1), GetX50(2));
+    SetX50(1, GetX50(1) + 1);
+} while (GetX50(1) < 25);
+SetX50(25, GetX50(7) - 117);
+SetX50(27, GetX50(25) + 160);
+DrawRect(3, 25, 26, 320, 200, 0);
+DrawRect(3, 27, 26, 160, 200, 0);
+DrawRect(3, 25, 26, 160, 200, 0);
+SetX50(6, 0);
+do {
+    SetX50(9, (GetX50(6) % 5) * 30);
+    SetX50(10, GetX50(7) + GetX50(9) - 160);
+    SetX50(11, GetX50(8) + (GetX50(6) / 5) * 30);
+    DrawPicture(0, GetX50(1000 + GetX50(6)), GetX50(10), GetX50(11));
+    SetX50(6, GetX50(6) + 1);
+} while (GetX50(6) < 25);
+Delay(2000);
+SetX50(21500, 1);
+do {
+    if (GetX50(15) < 0) { SetX50(15, GetX50(15) + 25); }
+    if (GetX50(15) >= 25) { SetX50(15, GetX50(15) - 25); }
+    SetX50(6, 0);
+    SetX50(23, GetX50(17) - GetX50(16));
+    do {
+        SetX50(9, (GetX50(6) % 5) * 30);
+        SetX50(10, GetX50(7) + GetX50(9));
+        SetX50(11, GetX50(8) + (GetX50(6) / 5) * 30);
+        DrawPicture(0, GetX50(1050 + GetX50(6)), GetX50(10), GetX50(11));
+        DrawPicture(0, GetX50(1100 + GetX50(6)), GetX50(10) - 160, GetX50(11));
+        SetX50(6, GetX50(6) + 1);
+        DrawRect(3, 27, 28, 32, 30, 0);
+        DrawRect(3, 25, 28, 32, 30, 0);
+    } while (GetX50(6) < 25);
+    SetX50(53, sprintf(GetX50String(60), GetX50(23)));
+    DrawString(3, 50, 7, 24, 1797, 0);
+    SetX50(73, sprintf(GetX50String(60), GetX50(29)));
+    DrawString(3, 70, 30, 24, 1797, 0);
+    SetX50(9, (GetX50(15) % 5) * 30);
+    SetX50(13, GetX50(7) + GetX50(9));
+    SetX50(14, GetX50(8) + (GetX50(15) / 5) * 30);
+    DrawPicture(0, GetX50(12), GetX50(13), GetX50(14));
+    if (GetX50(100) == 1) {
+        Delay(1000);
+        SetX50(21500, 0);
+    } else {
+        SetX50(0, GetKey());
+        if (GetX50(0) == 131) { SetX50(0, GetKey()); }
+        if (GetX50(0) == 156) { SetX50(15, GetX50(15) + 1); }
+        if (GetX50(0) == 154) { SetX50(15, GetX50(15) - 1); }
+        if (GetX50(0) == 152) { SetX50(15, GetX50(15) + 5); }
+        if (GetX50(0) == 158) { SetX50(15, GetX50(15) - 5); }
+        if (GetX50(0) == 27) {
+            SetX50(34, GetX50(32) - 72);
+            ShowMessage(3, 80, GetX50(34), 33, 1797, 0);
+            if (CheckJumpFlag()) {
+                SetX50(25, GetX50(7) - 165);
+                SetX50(27, GetX50(25) + 160);
+                DrawRect(3, 25, 26, 320, 200, 0);
+                DrawRect(3, 27, 26, 160, 200, 0);
+                DrawRect(3, 25, 26, 160, 200, 0);
+            }
+        }
+        if (GetX50(0) == 13 || GetX50(0) == 32) {
+            CallEvent(536, 0, 0, 0, 0);
+        }
+        SetX50(25, GetX50(7) - 117);
+        SetX50(27, GetX50(25) + 160);
+        if (GetX50(16) >= GetX50(17)) {
+            Delay(1000);
+            SetX50(21500, 0);
+        }
+    }
+} while (GetX50(21500) != 0);

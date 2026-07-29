@@ -1,0 +1,13 @@
+battle_target_to_x50(0, 0, 0, 0, 1, 0);
+battle_field_get(1, 28005, 4, 1, 0, 0);
+battle_field_get(1, 28005, 6, 2, 0, 0);
+SetX50(3, read_mem(1994454 + 0));
+battle_field_get(1, 28005, 0, 4, 0, 0);
+SetX50(6, GetX50(3) + 146);
+SetX50(5, GetRole(GetX50(4), GetX50(6) / 2));
+SetAnimationLayer(0, 0, 64, 64, 0);
+SetAnimationLayer(GetX50(1), GetX50(2), 1, 1, 1);
+PlayAction(GetX50(28005), 0, GetX50(28930));
+SetRole(GetX50(4), 6 / 2, GetX50(28928));
+SetRole(GetX50(4), 26 / 2, GetX50(28929));
+SetRole(GetX50(4), 118 / 2, GetX50(5));

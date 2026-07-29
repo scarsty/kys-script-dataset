@@ -1,0 +1,28 @@
+SetX50(9000, 124);
+SetX50(9001, GetX50(28928));
+SetX50(9002, GetX50(28929));
+SetX50(9009, 0);
+do {
+    SetX50(9000, GetX50(9000) + 2);
+    SetX50(9005, GetRole(GetX50(9001), GetX50(9000) / 2));
+    if (GetX50(9005) == GetX50(9002)) {
+        SetX50(9009, 1);
+    }
+} while (GetX50(9009) == 0 && GetX50(9000) < 144);
+if (GetX50(9009) != 0) {
+    do {
+        SetX50(9006, GetX50(9000) + 2);
+        if (GetX50(9006) != 146) {
+            SetX50(9005, GetRole(GetX50(9001), GetX50(9006) / 2));
+            SetRole(GetX50(9001), GetX50(9000) / 2, GetX50(9005));
+            SetX50(9007, GetX50(9000) + 20);
+            SetX50(9008, GetX50(9006) + 20);
+            SetX50(9005, GetRole(GetX50(9001), GetX50(9008) / 2));
+            SetRole(GetX50(9001), GetX50(9007) / 2, GetX50(9005));
+            SetX50(9000, GetX50(9000) + 2);
+        }
+    } while (GetX50(9000) < 144);
+    SetRole(GetX50(9001), GetX50(9000) / 2, 0);
+    SetX50(9007, GetX50(9000) + 20);
+    SetRole(GetX50(9001), GetX50(9007) / 2, 0);
+}

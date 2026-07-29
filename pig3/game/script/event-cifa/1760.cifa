@@ -1,0 +1,36 @@
+__event_1760_block_0() {
+    if (UseItem(240)) {
+        __event_1760_block_2();
+        return;
+    }
+    __event_1760_block_1();
+}
+__event_1760_block_1() {
+    exit();
+    __event_1760_block_2();
+}
+__event_1760_block_2() {
+    AddItem(240, -1);
+    talk(159, "身隕道存，執念不入極樂土。示法宏願，殘魂長待有緣人。", "達摩", 0, 0, 0);
+    if (TryBattle(285)) {
+        __event_1760_block_4();
+        return;
+    }
+    __event_1760_block_3();
+}
+__event_1760_block_3() {
+    dead();
+    lightscene();
+    exit();
+    __event_1760_block_4();
+}
+__event_1760_block_4() {
+            SetX50(0, GetRole(0, 146 / 2));
+            SetX50(0, GetX50(0) + 100);
+            SetRole(0, 146 / 2, GetX50(0));
+            lightscene();
+            talk(159, "佛國清淨，尚需明王護法；紅塵滾滾，還得霹靂降魔。", "達摩", 0, 0, 0);
+            modifyevent(128, 2, 1, 0, 1761, 0, 0, 6698, 6698, 6698, 0, -2, -2);
+    exit();
+}
+__event_1760_block_0();

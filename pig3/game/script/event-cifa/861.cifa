@@ -1,0 +1,13 @@
+talk(48, "還沒找到嗎？", -2, 1, 0, 0);
+SetX50(0, GetItemAmount(199));
+if (GetX50(0) >= 4) {
+    talk(0, "趙三爺，這是閣下的飛燕銀梭。", -2, 0, 0, 0);
+    talk(48, "唔，一枚不少，多謝小兄弟了。", -2, 1, 0, 0);
+    darkscene();
+    modifyevent(84, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    lightscene();
+    ShowTeammate(42, 48, 0);
+    SetStarState(42, 1);
+    modifyevent(16, 36, 1, 0, 748, 0, 0, 7198, 7198, 7198, 0, -2, -2);
+    AddItem(199, 100);
+}

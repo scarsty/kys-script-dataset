@@ -1,0 +1,5 @@
+SetX50(0, 99);
+SetX50(1, GetX50(0) + 3);
+join( GetX50(1));
+modifyevent(16, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+SetStarState(GetX50(0), 3);

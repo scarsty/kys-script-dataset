@@ -1,0 +1,7 @@
+SetX50(0, readtalkasstring(216));
+ShowMessage(0, 0, 150, 50, 1797, 0);
+SetX50(0, readtalkasstring(217));
+ShowMessage(0, 0, 150, 50, 1797, 0);
+SetX50(0, readtalkasstring(218));
+ShowMessage(0, 0, 150, 50, 1797, 0);
+SetX50(9000, GetKey());

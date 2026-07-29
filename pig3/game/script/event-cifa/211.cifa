@@ -1,0 +1,158 @@
+ClearX50();
+SetX50(500, 100);
+SetX50(501, 1100);
+SetX50(100, readtalkasstring(715));
+SetX50(1100, readtalkasstring(714));
+SetX50(10, Menu50(2, 500, 105, 90, 10));
+if (GetX50(10) == 1) {
+    ClearX50();
+    SetX50(1, 50);
+    SetX50(50, 1);
+    SetX50(33, 1);
+    SetX50(13, 0);
+    do {
+        SetX50(0, 0);
+        do {
+            SetX50(15, GetX50(13) * 4);
+            SetX50(15, GetX50(15) - 468);
+            if (GetX50(15) != 0) {
+                instruct_50(26, 0, 0, GetX50(15), 24, 5, 0);
+            } else {
+                instruct_50(26, 0, 0, GetX50(15), 25, 5, 0);
+            }
+            SetX50(6, GetItemAmount(GetX50(5)));
+            if (GetX50(6) != 0) {
+                ka211_build_line(GetX50(0), GetX50(5), GetX50(6));
+                SetX50(0, GetX50(0) + 1);
+            }
+            SetX50(13, GetX50(13) + 1);
+        } while (GetX50(13) < GetX50(1));
+        if (GetX50(0) == 0) {
+            talk("沒有可儲存的物品", 0, 2);
+        } else {
+            if (GetX50(1) != 200) {
+                ka211_add_next_page(GetX50(0));
+                SetX50(0, GetX50(0) + 1);
+            }
+            SetX50(10, ScrollMenu50(GetX50(0), 800, 54, 5, 10));
+            if (GetX50(10) > 0) {
+                if (GetX50(1) != 200 && GetX50(10) == GetX50(0)) {
+                    SetX50(1, GetX50(1) + 50);
+                    ka211_clear_page();
+                } else {
+                    SetX50(10, GetX50(10) - 1);
+                    SetX50(11, GetX50(200 + GetX50(10)));
+                    SetX50(10032, EnterNumber());
+                    if (GetX50(10032) > 0 && GetX50(10032) <= 5000) {
+                        SetX50(32, GetItemAmount(GetX50(11)));
+                        if (GetX50(32) >= GetX50(10032)) {
+                            SetX50(32, GetItem(GetX50(11), 43));
+                            SetX50(32, GetX50(32) + GetX50(10032));
+                            SetItem(GetX50(11), 43, GetX50(32));
+                            ChangeItem(GetX50(11), GetX50(10032), 1, 1);
+                            talk("儲存成功。", 0, 2);
+                        } else {
+                            talk("沒有那麼多物品。", 0, 2);
+                        }
+                    } else {
+                        talk("輸入錯誤。", 0, 2);
+                    }
+                    SetX50(13, 200);
+                }
+            } else {
+                SetX50(13, 200);
+            }
+        }
+    } while (GetX50(13) < 200);
+} else if (GetX50(10) == 2) {
+    ClearX50();
+    SetX50(0, 50);
+    SetX50(50, 1);
+    SetX50(33, 1);
+    SetX50(1, 344);
+    SetX50(5, 0);
+    SetX50(16, 0);
+    do {
+        SetX50(15, 0);
+        do {
+            SetX50(6, GetItem(GetX50(5), 43));
+            if (GetX50(6) > 0) {
+                ka211_build_line(GetX50(15), GetX50(5), GetX50(6));
+                SetX50(15, GetX50(15) + 1);
+            }
+            SetX50(5, GetX50(5) + 1);
+            SetX50(16, GetX50(16) + 1);
+        } while (GetX50(5) < 344 && GetX50(16) < GetX50(0));
+        if (GetX50(15) == 0) {
+            talk("儲存箱中沒有物品。", 0, 2);
+        } else {
+            if (GetX50(0) < 344) {
+                ka211_add_next_page(GetX50(15));
+                SetX50(15, GetX50(15) + 1);
+            }
+            SetX50(10, ScrollMenu50(GetX50(15), 800, 54, 5, 10));
+            if (GetX50(10) > 0) {
+                if (GetX50(0) < 344 && GetX50(10) == GetX50(15)) {
+                    SetX50(0, GetX50(0) + 50);
+                    ka211_clear_page();
+                } else {
+                    SetX50(10, GetX50(10) - 1);
+                    SetX50(11, GetX50(200 + GetX50(10)));
+                    SetX50(21, read_mem(1638730));
+                    if (GetX50(21) == 0) {
+                        SetX50(10032, EnterNumber());
+                        if (GetX50(10032) > 0 && GetX50(10032) <= 5000) {
+                            SetX50(32, GetItem(GetX50(11), 43));
+                            if (GetX50(10032) <= GetX50(32)) {
+                                SetX50(32, GetX50(32) - GetX50(10032));
+                                SetItem(GetX50(11), 43, GetX50(32));
+                                ChangeItem(GetX50(11), GetX50(10032), 0, 0);
+                            } else {
+                                talk("沒有那麼多物品。", 0, 2);
+                            }
+                        } else {
+                            talk("輸入錯誤。", 0, 2);
+                        }
+                    } else {
+                        talk("身上的物品太多了。", 0, 2);
+                    }
+                    SetX50(5, 344);
+                }
+            } else {
+                SetX50(5, 344);
+            }
+        }
+    } while (GetX50(5) < 344);
+}
+
+ka211_build_line(slot, item, amount) {
+    SetX50(2, slot * 30);
+    SetX50(2, GetX50(2) + 1000);
+    SetX50(800 + slot, GetX50(2));
+    record_name_to_x50(1, 1, item, GetX50(2), 0, 0);
+    string_length_x50(GetX50(2), 3, 0, 0, 0, 0);
+    SetX50(8, 21);
+    SetX50(8, GetX50(8) - GetX50(3));
+    SetX50(180, MakeSpaces(GetX50(8)));
+    SetX50(170, readtalkasstring(716));
+    SetX50(165, sprintf(GetX50String(170), amount));
+    concat_x50(140, GetX50(2), 180, 0, 0, 0);
+    concat_x50(GetX50(2), 140, 165, 0, 0, 0);
+    SetX50(200 + slot, item);
+}
+
+ka211_add_next_page(slot) {
+    SetX50(2, slot * 30);
+    SetX50(2, GetX50(2) + 1000);
+    SetX50(800 + slot, GetX50(2));
+    dialog_to_x50(0, 717, GetX50(2), 0, 0, 0);
+}
+
+ka211_clear_page() {
+    SetX50(22, 0);
+    do {
+        SetX50(800 + GetX50(22), 0);
+        SetX50(200 + GetX50(22), 0);
+        SetX50(22, GetX50(22) + 1);
+    } while (GetX50(22) < 50);
+}

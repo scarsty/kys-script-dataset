@@ -1,0 +1,81 @@
+__event_554_block_0() {
+    walkfromto(53, 30, 44, 41);
+    scenefromto(44, 41, 48, 46);
+    scenefromto(48, 46, 39, 47);
+    talk(412, "咦，這裡這麼多恆山弟子，糟了，他們一定是中了暗算。", -2, 0, 0, 0);
+    talk(331, "我在這裡守著，你們幾個過去幫忙對付老尼姑。", -2, 1, 0, 0);
+    talk(331, "是！", -2, 1, 0, 0);
+    setscenemap(62, 1, 37, 45, 0);
+    setscenemap(62, 1, 37, 47, 0);
+    setsceneposition2(44, 41);
+    talk(415, "對方高手人數不少，我得小心行事。", -2, 0, 0, 0);
+    walkfromto(44, 41, 39, 41);
+    walkfromto(39, 41, 39, 46);
+    talk(0, "喂。", -2, 0, 0, 0);
+    talk(331, "誰！！嗚。", -2, 1, 0, 0);
+    setscenemap(62, 1, 38, 46, 8354);
+    setscenemap(62, 1, 39, 47, 0);
+    talk(0, "反應真夠慢的，搜搜看他身上有沒有解藥。", -2, 0, 0, 0);
+    darkscene();
+    setsceneposition2(44, 46);
+    SetRoleFace(1);
+    lightscene();
+    talk(334, "怎麼回事，我們怎會在這裡。", -2, 1, 0, 0);
+    talk(0, "小師父，你們中了暗算，這些妖人很狡猾，用迷藥弄暈了你們。", -2, 0, 0, 0);
+    talk(334, "師叔，師叔不見了，還有其他師姐師妹。這可如何是好", -2, 1, 0, 0);
+    CallEvent(351, 2129, 2, 0, 0);
+    if (GetX50(28931) == 2) {
+        __event_554_block_2();
+        return;
+    }
+    __event_554_block_1();
+}
+__event_554_block_1() {
+    talk(425, "調虎離山，定靜師太可能有危險，我得快去看看。", -2, 0, 0, 0);
+    darkscene();
+    setscenemap(62, 1, 46, 48, 0);
+    setscenemap(62, 1, 46, 44, 0);
+    setscenemap(62, 1, 46, 46, 0);
+    setscenemap(62, 1, 48, 44, 0);
+    setscenemap(62, 1, 48, 46, 0);
+    setscenemap(62, 1, 48, 48, 0);
+    setscenemap(62, 1, 47, 45, 0);
+    setscenemap(62, 1, 47, 47, 0);
+    setscenemap(62, 1, 15, 15, 8546);
+    setscenemap(62, 1, 18, 16, 5894);
+    setscenemap(62, 1, 16, 18, 5892);
+    setscenemap(62, 1, 14, 18, 5892);
+    setscenemap(62, 1, 12, 15, 5888);
+    setscenemap(62, 1, 13, 12, 5890);
+    setscenemap(62, 1, 16, 12, 5890);
+    SetD(62, 2, 4, 555);
+    SetD(62, 0, 4, 0);
+    lightscene();
+    exit();
+    __event_554_block_2();
+}
+__event_554_block_2() {
+        talk(0, "定靜師太武功高強，想來應該不至於有事，先救那些被魔教拐走的恆山弟子吧。", -2, 0, 0, 0);
+        darkscene();
+        setscenemap(62, 1, 46, 48, 0);
+        setscenemap(62, 1, 46, 44, 0);
+        setscenemap(62, 1, 46, 46, 0);
+        setscenemap(62, 1, 48, 44, 0);
+        setscenemap(62, 1, 48, 46, 0);
+        setscenemap(62, 1, 48, 48, 0);
+        setscenemap(62, 1, 47, 45, 0);
+        setscenemap(62, 1, 47, 47, 0);
+        setscenemap(62, 1, 25, 48, 5194);
+        setscenemap(62, 1, 23, 48, 5194);
+        setscenemap(62, 1, 23, 49, 5194);
+        setscenemap(62, 1, 23, 47, 5194);
+        setscenemap(62, 1, 24, 49, 5194);
+        setscenemap(62, 1, 24, 48, 5194);
+        setscenemap(62, 1, 24, 47, 5194);
+        setscenemap(62, 1, 29, 49, 0);
+        SetD(62, 0, 4, 0);
+        SetD(62, 1, 4, 552);
+        lightscene();
+    exit();
+}
+__event_554_block_0();

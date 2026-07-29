@@ -1,0 +1,11 @@
+SetSubmapInfo(34, 16 / 2, 37);
+SetSubmapInfo(34, 28 / 2, 12);
+SetSubmapInfo(34, 30 / 2, 42);
+SetSubmapInfo(34, 44 / 2, 7);
+SetSubmapInfo(34, 46 / 2, 42);
+SetSubmapInfo(34, 48 / 2, 12);
+SetSubmapInfo(34, 50 / 2, 42);
+SetSubmapInfo(37, 28 / 2, 54);
+SetSubmapInfo(37, 30 / 2, 43);
+SetSubmapInfo(37, 48 / 2, 54);
+SetSubmapInfo(37, 50 / 2, 43);

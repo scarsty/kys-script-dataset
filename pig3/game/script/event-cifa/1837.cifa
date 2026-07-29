@@ -1,0 +1,27 @@
+__event_1837_block_0() {
+    if (!InTeam(72)) {
+        __event_1837_block_2();
+        return;
+    }
+    __event_1837_block_1();
+}
+__event_1837_block_1() {
+    exit();
+    __event_1837_block_2();
+}
+__event_1837_block_2() {
+    if (!InTeam(73)) {
+        __event_1837_block_4();
+        return;
+    }
+    __event_1837_block_3();
+}
+__event_1837_block_3() {
+    exit();
+    __event_1837_block_4();
+}
+__event_1837_block_4() {
+            CallEvent(1835, 0, 0, 0, 0);
+    exit();
+}
+__event_1837_block_0();

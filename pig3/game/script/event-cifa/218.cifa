@@ -1,0 +1,46 @@
+SetX50(21800, 1);
+do {
+    if (GetX50(22) < 0) { SetX50(22, GetX50(22) + 25); }
+    if (GetX50(22) >= 25) { SetX50(22, GetX50(22) - 25); }
+    SetX50(1, 0);
+    do {
+        SetX50(9, (GetX50(1) % 5) * 30);
+        SetX50(20, GetX50(7) + GetX50(9));
+        SetX50(21, GetX50(8) + (GetX50(1) / 5) * 30);
+        DrawPicture(0, GetX50(1050 + GetX50(1)), GetX50(20), GetX50(21));
+        SetX50(1, GetX50(1) + 1);
+    } while (GetX50(1) < 25);
+    SetX50(9, (GetX50(22) % 5) * 30);
+    SetX50(20, GetX50(7) + GetX50(9) - 160);
+    SetX50(21, GetX50(8) + (GetX50(22) / 5) * 30);
+    DrawPicture(0, GetX50(12), GetX50(20), GetX50(21));
+    SetX50(9, (GetX50(15) % 5) * 30);
+    SetX50(20, GetX50(7) + GetX50(9) - 160);
+    SetX50(21, GetX50(8) + (GetX50(15) / 5) * 30);
+    DrawPicture(0, GetX50(12), GetX50(20), GetX50(21));
+    SetX50(0, GetKey());
+    if (GetX50(0) == 131) { SetX50(0, GetKey()); }
+    if (GetX50(0) == 156) { SetX50(22, GetX50(22) + 1); }
+    if (GetX50(0) == 154) { SetX50(22, GetX50(22) - 1); }
+    if (GetX50(0) == 152) { SetX50(22, GetX50(22) + 5); }
+    if (GetX50(0) == 158) { SetX50(22, GetX50(22) - 5); }
+    if (GetX50(0) == 27) {
+        SetX50(21800, 0);
+    } else if (GetX50(0) == 13 || GetX50(0) == 32) {
+        SetX50(16, GetX50(16) + 1);
+        SetX50(19, GetX50(1050 + GetX50(15)));
+        SetX50(20, GetX50(1050 + GetX50(22)));
+        SetX50(1050 + GetX50(22), GetX50(19));
+        SetX50(1050 + GetX50(15), GetX50(20));
+        SetX50(29, 0);
+        SetX50(1, 0);
+        do {
+            if (GetX50(1050 + GetX50(1)) == GetX50(1000 + GetX50(1))) {
+                SetX50(29, GetX50(29) + 1);
+            }
+            SetX50(1, GetX50(1) + 1);
+        } while (GetX50(1) < 25);
+        if (GetX50(29) >= 24) { SetX50(100, 1); }
+        SetX50(21800, 0);
+    }
+} while (GetX50(21800) != 0);

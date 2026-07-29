@@ -1,0 +1,5 @@
+SetMainMapPosition(418, 332);
+SetSubmapInfo(3, 28 / 2, 37);
+SetSubmapInfo(3, 30 / 2, 57);
+SetSubmapInfo(3, 34 / 2, 37);
+SetSubmapInfo(3, 40 / 2, 60);

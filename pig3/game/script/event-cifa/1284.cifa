@@ -1,0 +1,20 @@
+__event_1284_block_0() {
+    SetX50(0, GetRole(166, 60 / 2));
+    SetX50(0, GetX50(0) + 1);
+    SetRole(166, 60 / 2, GetX50(0));
+    if (GetX50(0) == 4) {
+        __event_1284_block_2();
+        return;
+    }
+    __event_1284_block_1();
+}
+__event_1284_block_1() {
+    exit();
+    __event_1284_block_2();
+}
+__event_1284_block_2() {
+        openscene(119);
+        SetMissionState(25, 1);
+    exit();
+}
+__event_1284_block_0();

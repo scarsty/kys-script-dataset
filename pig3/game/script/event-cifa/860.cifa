@@ -1,0 +1,7 @@
+SetX50(126, Digging(8752, 4, 7396, 10));
+lightscene();
+ChangeItem(199, GetX50(126), 0, 0);
+SetX50(0, GetItemAmount(199));
+if (GetX50(0) >= 4) {
+    modifyevent(84, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+}

@@ -1,0 +1,33 @@
+CallEvent(221, 0, 0, 0, 0);
+SetX50(100, read_mem(1911654));
+SetX50(0, 0);
+SetX50(1, 0);
+do {
+    SetX50(101, GetX50(200 + GetX50(0)));
+    if (GetX50(101) != GetX50(100)) {
+        SetX50(102, GetD(GetX50(101), 199, 2));
+        if (GetX50(102) != 1) {
+            SetX50(500 + GetX50(1), GetX50(101));
+            SetX50(103, GetX50(300 + GetX50(0)));
+            SetX50(600 + GetX50(1), GetX50(103));
+            SetX50(104, GetX50(400 + GetX50(0)));
+            SetX50(700 + GetX50(1), GetX50(104));
+            SetX50(105, GetX50(1) * 20);
+            SetX50(105, GetX50(105) + 1000);
+            record_name_to_x50(1, 2, 101, GetX50(105), 0, 0);
+            SetX50(800 + GetX50(1), GetX50(105));
+            SetX50(1, GetX50(1) + 1);
+        }
+    }
+    SetX50(0, GetX50(0) + 1);
+} while (GetX50(0) < 9);
+if (GetX50(1) >= 1) {
+    SetX50(10, ScrollMenu50(GetX50(1), 800, 10, 50, 5));
+    if (GetX50(10) > 0) {
+        SetX50(10, GetX50(10) - 1);
+        SetX50(101, GetX50(500 + GetX50(10)));
+        SetX50(103, GetX50(600 + GetX50(10)));
+        SetX50(104, GetX50(700 + GetX50(10)));
+        CallEvent(220, GetX50(101), GetX50(103), GetX50(104), 0);
+    }
+}

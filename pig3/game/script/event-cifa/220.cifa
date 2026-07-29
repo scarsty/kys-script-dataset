@@ -1,0 +1,11 @@
+darkscene();
+SetX50(28932, GetSubmapInfo(GetX50(28928), 28 / 2));
+SetX50(28933, GetSubmapInfo(GetX50(28928), 30 / 2));
+SetSubmapInfo(GetX50(28928), 28 / 2, GetX50(28929));
+SetSubmapInfo(GetX50(28928), 30 / 2, GetX50(28930));
+write_mem(1911134 + 0, GetX50(28928));
+write_mem(168639 + 0, 195);
+PE(-28218, 2, 0, 1, 0, 0);
+write_mem(168639 + 0, 233);
+SetSubmapInfo(GetX50(28928), 28 / 2, GetX50(28932));
+SetSubmapInfo(GetX50(28928), 30 / 2, GetX50(28933));

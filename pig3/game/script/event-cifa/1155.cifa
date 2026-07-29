@@ -1,0 +1,20 @@
+__event_1155_block_0() {
+    SetX50(0, GetRole(166, 52 / 2));
+    SetX50(0, GetX50(0) + 1);
+    SetRole(166, 52 / 2, GetX50(0));
+    if (GetX50(0) == 2) {
+        __event_1155_block_2();
+        return;
+    }
+    __event_1155_block_1();
+}
+__event_1155_block_1() {
+    exit();
+    __event_1155_block_2();
+}
+__event_1155_block_2() {
+        modifyevent(17, 0, 0, 0, 0, 0, 1148, 0, 0, 0, 0, -2, -2);
+        modifyevent(17, 1, 0, 0, 0, 0, 1148, 0, 0, 0, 0, -2, -2);
+    exit();
+}
+__event_1155_block_0();

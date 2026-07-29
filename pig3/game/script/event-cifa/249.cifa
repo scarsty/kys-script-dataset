@@ -1,0 +1,48 @@
+SetX50(500, 100);
+SetX50(501, 120);
+SetX50(502, 140);
+SetX50(503, 160);
+SetX50(504, 180);
+SetX50(505, 200);
+SetX50(3, 100);
+SetX50(5, 10);
+SetX50(1, 0);
+SetX50(10, readtalkasstring(224));
+SetX50(6, 0);
+do {
+    SetX50(0, GetTeam(GetX50(1)));
+    if (GetX50(0) == -1) {
+        SetX50(6, 1);
+    } else {
+        SetX50(2, GetRole(GetX50(0), 19));
+        record_name_to_x50(1, 0, 0, GetX50(3), 0, 0);
+        string_length_x50(GetX50(3), 4, 0, 0, 0, 0);
+        SetX50(4, GetX50(5) - GetX50(4));
+        spaces_x50(1, 50, 4, 0, 0, 0, 0);
+        concat_x50(60, GetX50(3), 50, 0, 0, 0, 0);
+        format_x50(1, 50, 10, 2, 0, 0, 0);
+        concat_x50(60, 60, 50, 0, 0, 0, 0);
+        format_x50(0, GetX50(3), 60, 0, 0, 0, 0);
+        SetX50(1, GetX50(1) + 1);
+        SetX50(3, GetX50(3) + 20);
+    }
+} while (GetX50(6) == 0 && GetX50(1) < 6);
+SetX50(300, Menu50(GetX50(1), 500, 30, 30, 10));
+if (GetX50(300) != 0) {
+    SetX50(300, GetX50(300) - 1);
+    SetX50(3, GetTeam(GetX50(300)));
+    SetX50(2, GetRole(GetX50(3), 19));
+    if (GetX50(2) == 0) {
+        talk(75, "沒傷還找老子來治，消遣老子不成？", -2, 0, 0, 0);
+    } else {
+        SetX50(1, GetItemAmount(0));
+        if (GetX50(2) > GetX50(1)) {
+            talk(75, "雖然我們很熟，但醫療費還是不能少的。", -2, 0, 0, 0);
+        } else {
+            SetRole(GetX50(3), 19, 0);
+            SetX50(0, 0);
+            SetX50(2, GetX50(0) - GetX50(2));
+            AddItem(0, GetX50(2));
+        }
+    }
+}

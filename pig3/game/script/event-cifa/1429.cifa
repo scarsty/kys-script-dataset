@@ -1,0 +1,93 @@
+__event_1429_block_0() {
+    if (InTeam(43)) {
+        __event_1429_block_2();
+        return;
+    }
+    __event_1429_block_1();
+}
+__event_1429_block_1() {
+    talk(95, "不對不對，你聽好了，我的謎面是“孔子觀書竟三絕，幽王布榜賞千金”。", -2, 0, 0, 0);
+    talk(0, "……你急什麼，等我再找找。", -2, 1, 0, 0);
+    exit();
+    __event_1429_block_2();
+}
+__event_1429_block_2() {
+    talk(95, "哈哈，真聰明，又猜對啦。", -2, 0, 0, 0);
+    SetX50(0, GetRole(0, 120 / 2));
+    SetX50(0, GetX50(0) + 2);
+    SetRole(0, 120 / 2, GetX50(0));
+    SetX50(1, GetTeam(1));
+    if (GetX50(1) <= 0) {
+        __event_1429_block_8();
+        return;
+    }
+    __event_1429_block_3();
+}
+__event_1429_block_3() {
+    SetX50(0, GetRole(GetX50(1), 120 / 2));
+    SetX50(0, GetX50(0) + 2);
+    SetRole(GetX50(1), 120 / 2, GetX50(0));
+    SetX50(2, GetTeam(2));
+    if (GetX50(1) <= 0) {
+        __event_1429_block_9();
+        return;
+    }
+    __event_1429_block_4();
+}
+__event_1429_block_4() {
+    SetX50(0, GetRole(GetX50(2), 120 / 2));
+    SetX50(0, GetX50(0) + 2);
+    SetRole(GetX50(2), 120 / 2, GetX50(0));
+    SetX50(3, GetTeam(3));
+    if (GetX50(1) <= 0) {
+        __event_1429_block_10();
+        return;
+    }
+    __event_1429_block_5();
+}
+__event_1429_block_5() {
+    SetX50(0, GetRole(GetX50(3), 120 / 2));
+    SetX50(0, GetX50(0) + 2);
+    SetRole(GetX50(3), 120 / 2, GetX50(0));
+    SetX50(4, GetTeam(4));
+    if (GetX50(1) <= 0) {
+        __event_1429_block_11();
+        return;
+    }
+    __event_1429_block_6();
+}
+__event_1429_block_6() {
+    SetX50(0, GetRole(GetX50(4), 120 / 2));
+    SetX50(0, GetX50(0) + 2);
+    SetRole(GetX50(4), 120 / 2, GetX50(0));
+    SetX50(5, GetTeam(5));
+    if (GetX50(1) <= 0) {
+        __event_1429_block_12();
+        return;
+    }
+    __event_1429_block_7();
+}
+__event_1429_block_7() {
+    SetX50(0, GetRole(GetX50(5), 120 / 2));
+    SetX50(0, GetX50(0) + 2);
+    SetRole(GetX50(5), 120 / 2, GetX50(0));
+    __event_1429_block_8();
+}
+__event_1429_block_8() {
+    __event_1429_block_9();
+}
+__event_1429_block_9() {
+    __event_1429_block_10();
+}
+__event_1429_block_10() {
+    __event_1429_block_11();
+}
+__event_1429_block_11() {
+    __event_1429_block_12();
+}
+__event_1429_block_12() {
+                            modifyevent(15, 41, 1, 0, 1430, 0, 0, 7060, 7060, 7060, 0, -2, -2);
+                            showtitle("隊伍中所有人資質提高二點", 28421);
+    exit();
+}
+__event_1429_block_0();

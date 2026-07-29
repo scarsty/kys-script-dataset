@@ -1,0 +1,62 @@
+__event_918_block_0() {
+    SetX50(0, GetRole(166, 38 / 2));
+    SetX50(0, GetX50(0) + 1);
+    SetRole(166, 38 / 2, GetX50(0));
+    if (GetX50(0) == 3) {
+        __event_918_block_2();
+        return;
+    }
+    __event_918_block_1();
+}
+__event_918_block_1() {
+    exit();
+    __event_918_block_2();
+}
+__event_918_block_2() {
+        modifyevent(61, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+        modifyevent(108, 3, 0, 0, 0, 0, 917, 0, 0, 0, 0, -2, -2);
+        setscenemap(108, 1, 25, 25, 8840);
+        setscenemap(108, 1, 27, 39, 8840);
+        setscenemap(108, 1, 27, 37, 8840);
+        setscenemap(108, 1, 27, 35, 8840);
+        setscenemap(108, 1, 27, 33, 8840);
+        setscenemap(108, 1, 27, 31, 8840);
+        setscenemap(108, 1, 27, 29, 8840);
+        setscenemap(108, 1, 27, 27, 8840);
+        setscenemap(108, 1, 27, 25, 8840);
+        setscenemap(108, 1, 26, 38, 8840);
+        setscenemap(108, 1, 26, 36, 8840);
+        setscenemap(108, 1, 26, 34, 8840);
+        setscenemap(108, 1, 26, 32, 8840);
+        setscenemap(108, 1, 26, 30, 8840);
+        setscenemap(108, 1, 26, 28, 8840);
+        setscenemap(108, 1, 26, 26, 8840);
+        setscenemap(108, 1, 25, 39, 8840);
+        setscenemap(108, 1, 25, 37, 8840);
+        setscenemap(108, 1, 25, 35, 8840);
+        setscenemap(108, 1, 25, 33, 8840);
+        setscenemap(108, 1, 25, 31, 8840);
+        setscenemap(108, 1, 25, 29, 8840);
+        setscenemap(108, 1, 25, 27, 8840);
+        setscenemap(108, 1, 15, 37, 8826);
+        setscenemap(108, 1, 15, 35, 8826);
+        setscenemap(108, 1, 15, 33, 8826);
+        setscenemap(108, 1, 15, 31, 8826);
+        setscenemap(108, 1, 15, 29, 8826);
+        setscenemap(108, 1, 15, 27, 8826);
+        setscenemap(108, 1, 15, 25, 8826);
+        setscenemap(108, 1, 16, 35, 8826);
+        setscenemap(108, 1, 16, 33, 8826);
+        setscenemap(108, 1, 16, 31, 8826);
+        setscenemap(108, 1, 16, 29, 8826);
+        setscenemap(108, 1, 16, 27, 8826);
+        setscenemap(108, 1, 17, 34, 8826);
+        setscenemap(108, 1, 17, 28, 8826);
+        setscenemap(108, 1, 18, 32, 8616);
+        setscenemap(108, 1, 18, 30, 8618);
+        setscenemap(108, 1, 17, 30, 7220);
+        setscenemap(108, 1, 17, 31, 7228);
+        setscenemap(108, 1, 17, 32, 7216);
+    exit();
+}
+__event_918_block_0();

@@ -1,0 +1,53 @@
+listA_id = {};
+listA_name = {};
+listA_amount = {};
+listA_display = {};
+listB_id = {};
+listB_name = {};
+listB_amount = {};
+listB_display = {};
+for (i = 0; i < size(list1); i = i + 1) {
+    id = list1[i];
+    listA_id[i] = id;
+    listA_name[i] = GetNameAsString(1, id);
+    listA_amount[i] = haveitemamount(id);
+    listA_display[i] = sprintf("%-10s%6d", listA_name[i], listA_amount[i]);
+}
+for (i = 0; i < size(list2); i = i + 1) {
+    id = list2[i];
+    listB_id[i] = id;
+    listB_name[i] = GetNameAsString(1, id);
+    listB_amount[i] = haveitemamount(id);
+    listB_display[i] = sprintf("%-10s%6d", listB_name[i], listB_amount[i]);
+}
+Talk(personID, personSay, -2, 1, 0, 0);
+showstringwithbox(160, 180, "請選擇" + itemA);
+selectA = menu(size(list1), 160, 210, 100, listA_display);
+if (selectA == -1) { exit(); }
+if (listA_amount[selectA] <= 0) {
+    Talk(personID, "不要開玩笑！", -2, 1, 0, 0);
+    exit();
+}
+showstringwithbox(390, 180, "請選擇" + itemB);
+selectB = menu(size(list2), 390, 210, 100, listB_display);
+if (selectB == -1) { exit(); }
+if (listB_amount[selectB] <= 0) {
+    Talk(personID, "不要開另一個玩笑！", -2, 1, 0, 0);
+    exit();
+}
+idA = listA_id[selectA];
+idB = listB_id[selectB];
+idC_key = to_string(idA) + "+" + to_string(idB);
+if (!list3.contains(idC_key)) {
+    Talk(personID, "合成失敗！", -2, 1, 0, 0);
+    exit();
+}
+idC = list3[idC_key];
+additem(idA, -1);
+additem(idB, -1);
+if (getitempro(idC, 41) == 4) {
+    additem(idC, 100);
+}
+else {
+    additem(idC, 1);
+}

@@ -1,0 +1,34 @@
+__event_533_block_0() {
+    talk(422, "鍾姑娘，你看這是什麼？", -2, 0, 0, 0);
+    talk(56, "我的閃電貂！好貂兒乖貂兒你終於回來了……&&大哥，多謝你啦，以後有什麼能幫你的儘管說，就算我幫不了，我也可以去找爹娘幫忙。", -2, 1, 0, 0);
+    talk(0, "現在倒是有一件大事姑娘可以做，就是遊歷江湖，訪遍名山大川～不知道鍾姑娘可有興趣同行？", -2, 0, 0, 0);
+    talk(56, "好呀好呀，我正想出去玩玩呢！", -2, 1, 0, 0);
+    if (TeamIsFull()) {
+        __event_533_block_2();
+        return;
+    }
+    __event_533_block_1();
+}
+__event_533_block_1() {
+    CallEvent(100, 0, 0, 0, 0);
+    darkscene();
+    modifyevent(11, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    lightscene();
+    ShowTeammate(84, 56, 0);
+    SetStarState(84, 3);
+    AddItem(116, 1);
+    exit();
+    __event_533_block_2();
+}
+__event_533_block_2() {
+        talk(56, "你的隊伍已滿，我就直接去歸雲莊了。", -2, 1, 0, 0);
+        darkscene();
+        modifyevent(11, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+        modifyevent(16, 2, 1, 0, 756, 0, 0, 7032, 0, 0, 0, -2, -2);
+        lightscene();
+        ShowTeammate(84, 56, 0);
+        SetStarState(84, 1);
+        AddItem(116, 1);
+    exit();
+}
+__event_533_block_0();

@@ -1,0 +1,14 @@
+__event_1769_block_0() {
+    SetAttribute(225, 3, 0, 30, 40);
+    SetAttribute(224, 3, 0, 30, 40);
+    if (TryBattle(143)) {
+        __event_1769_block_1();
+        return;
+    }
+    __event_1769_block_1();
+}
+__event_1769_block_1() {
+        lightscene();
+    exit();
+}
+__event_1769_block_0();

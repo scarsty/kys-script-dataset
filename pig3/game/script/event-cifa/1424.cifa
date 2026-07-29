@@ -1,0 +1,189 @@
+__event_1424_block_0() {
+    modifyevent(95, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    modifyevent(15, 19, 1, 0, 739, 0, 0, 5342, 5342, 5342, 0, -2, -2);
+    SetStarState(39, 1);
+    if (GetStarState(37) == 0) {
+        __event_1424_block_2();
+        return;
+    }
+    __event_1424_block_1();
+}
+__event_1424_block_1() {
+    SetStarState(37, 1);
+    modifyevent(15, 18, 1, 0, 738, 0, 0, 5334, 5334, 5334, 0, -2, -2);
+    __event_1424_block_2();
+}
+__event_1424_block_2() {
+    modifyevent(95, 6, 1, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    if (GetStarState(43) == 0) {
+        __event_1424_block_4();
+        return;
+    }
+    __event_1424_block_3();
+}
+__event_1424_block_3() {
+    SetStarState(43, 1);
+    modifyevent(15, 22, 1, 0, 743, 0, 0, 5324, 5324, 5324, 0, -2, -2);
+    modifyevent(95, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    if (JudgeSexual(0)) {
+        __event_1424_block_5();
+        return;
+    }
+    __event_1424_block_4();
+}
+__event_1424_block_4() {
+    SetX50(0, GetRole(166, 76 / 2));
+    modifyevent(95, 141, 1, 0, 1392, GetX50(0), 0, 5326, 5326, 5326, 0, -2, -2);
+    modifyevent(95, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    __event_1424_block_5();
+}
+__event_1424_block_5() {
+    if (GetStarState(41) == 0) {
+        __event_1424_block_7();
+        return;
+    }
+    __event_1424_block_6();
+}
+__event_1424_block_6() {
+    SetStarState(41, 1);
+    modifyevent(15, 21, 1, 0, 741, 0, 0, 5316, 5316, 5316, 0, -2, -2);
+    if (JudgeSexual(0)) {
+        __event_1424_block_8();
+        return;
+    }
+    __event_1424_block_7();
+}
+__event_1424_block_7() {
+    modifyevent(95, 143, 1, 0, 1395, 0, 0, 5302, 5302, 5302, 0, -2, -2);
+    modifyevent(95, 136, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    __event_1424_block_8();
+}
+__event_1424_block_8() {
+    if (GetStarState(46) == 0) {
+        __event_1424_block_10();
+        return;
+    }
+    __event_1424_block_9();
+}
+__event_1424_block_9() {
+    SetStarState(46, 1);
+    modifyevent(15, 37, 1, 0, 786, 0, 0, 7294, 7294, 7294, 0, -2, -2);
+    if (JudgeSexual(0)) {
+        __event_1424_block_11();
+        return;
+    }
+    __event_1424_block_10();
+}
+__event_1424_block_10() {
+    modifyevent(47, 1, 1, 0, 1403, 0, 0, 7292, 7292, 7292, 0, -2, -2);
+    modifyevent(95, 137, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    __event_1424_block_11();
+}
+__event_1424_block_11() {
+    if (GetStarState(61) == 0) {
+        __event_1424_block_13();
+        return;
+    }
+    __event_1424_block_12();
+}
+__event_1424_block_12() {
+    SetStarState(61, 1);
+    modifyevent(15, 25, 1, 0, 761, 0, 0, 7308, 7308, 7308, 0, -2, -2);
+    if (JudgeSexual(0)) {
+        __event_1424_block_14();
+        return;
+    }
+    __event_1424_block_13();
+}
+__event_1424_block_13() {
+    modifyevent(3, 39, 1, 0, 1404, 1406, 0, 7310, 7310, 7310, 0, -2, -2);
+    modifyevent(95, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    __event_1424_block_14();
+}
+__event_1424_block_14() {
+    if (GetStarState(69) == 0) {
+        __event_1424_block_16();
+        return;
+    }
+    __event_1424_block_15();
+}
+__event_1424_block_15() {
+    SetStarState(69, 1);
+    modifyevent(15, 36, 1, 0, 785, 0, 0, 7306, 7306, 7306, 0, -2, -2);
+    if (JudgeSexual(0)) {
+        __event_1424_block_17();
+        return;
+    }
+    __event_1424_block_16();
+}
+__event_1424_block_16() {
+    modifyevent(62, 4, 1, 0, 1417, 0, 0, 7304, 7304, 7304, 0, -2, -2);
+    modifyevent(95, 138, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    __event_1424_block_17();
+}
+__event_1424_block_17() {
+    if (GetStarState(51) == 0) {
+        __event_1424_block_19();
+        return;
+    }
+    __event_1424_block_18();
+}
+__event_1424_block_18() {
+    SetStarState(51, 1);
+    modifyevent(15, 30, 1, 0, 771, 0, 0, 7298, 7298, 7298, 0, -2, -2);
+    if (JudgeSexual(0)) {
+        __event_1424_block_22();
+        return;
+    }
+    __event_1424_block_19();
+}
+__event_1424_block_19() {
+    modifyevent(95, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    SetX50(0, GetRole(166, 86 / 2));
+    if (GetX50(0) == 0) {
+        __event_1424_block_21();
+        return;
+    }
+    __event_1424_block_20();
+}
+__event_1424_block_20() {
+    modifyevent(19, 30, 1, 0, 1411, 0, 0, 7298, 7298, 7298, 0, -2, -2);
+    if (JudgeSexual(0)) {
+        __event_1424_block_23();
+        return;
+    }
+    __event_1424_block_21();
+}
+__event_1424_block_21() {
+    modifyevent(95, 147, 1, 0, 1416, 0, 0, 7298, 7298, 7298, 0, -2, -2);
+    __event_1424_block_22();
+}
+__event_1424_block_22() {
+    __event_1424_block_23();
+}
+__event_1424_block_23() {
+    if (GetStarState(60) == 0) {
+        __event_1424_block_25();
+        return;
+    }
+    __event_1424_block_24();
+}
+__event_1424_block_24() {
+    SetStarState(60, 1);
+    modifyevent(15, 27, 1, 0, 766, 0, 0, 7302, 7302, 7302, 0, -2, -2);
+    if (JudgeSexual(0)) {
+        __event_1424_block_26();
+        return;
+    }
+    __event_1424_block_25();
+}
+__event_1424_block_25() {
+    modifyevent(95, 139, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    SetX50(0, GetRole(166, 88 / 2));
+    modifyevent(39, 3, 1, 0, 1397, GetX50(0), 0, 7300, 7300, 7300, 0, -2, -2);
+    __event_1424_block_26();
+}
+__event_1424_block_26() {
+    exit();
+}
+__event_1424_block_0();

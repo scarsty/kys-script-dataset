@@ -1,0 +1,3 @@
+join(7);
+modifyevent(16, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+SetStarState(5, 3);

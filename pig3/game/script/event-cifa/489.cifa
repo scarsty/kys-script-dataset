@@ -1,0 +1,70 @@
+__event_489_block_0() {
+    SetX50(1001, read_mem(349914 + 0));
+    SetX50(1002, read_mem(349916 + 0));
+    SetAnimationLayer(GetX50(1001), GetX50(1002), 1, 1, 1);
+    SetX50(1001, GetX50(1001) * 2);
+    SetX50(1002, GetX50(1002) * 128);
+    SetX50(1003, GetX50(1001) + GetX50(1002));
+    SetX50(1004, read_mem(1985028 + GetX50(1003)));
+    battle_field_get(1, 1004, 0, 1005, 0, 0);
+    if (GetX50(1005) < 0) {
+        __event_489_block_5();
+        return;
+    }
+    __event_489_block_1();
+}
+__event_489_block_1() {
+    battle_field_get(1, 1004, 2, 1040, 0, 0);
+    battle_field_get(1, 28005, 2, 1010, 0, 0);
+    if (GetX50(1040) == GetX50(1010)) {
+        __event_489_block_6();
+        return;
+    }
+    __event_489_block_2();
+}
+__event_489_block_2() {
+    battle_field_get(1, 28005, 0, 1010, 0, 0);
+    SetX50(1011, read_mem(1994454 + 0));
+    SetX50(1012, GetX50(1011) * 2);
+    SetX50(1012, GetX50(1012) + 146);
+    SetX50(1013, GetRole(GetX50(1010), GetX50(1012) / 2));
+    SetX50(1014, GetX50(1013) / 100);
+    SetX50(1100 + 0, 10);
+    SetX50(1100 + 1, 15);
+    SetX50(1100 + 2, 20);
+    SetX50(1100 + 3, 25);
+    SetX50(1100 + 4, 30);
+    SetX50(1100 + 5, 35);
+    SetX50(1100 + 6, 40);
+    SetX50(1100 + 7, 45);
+    SetX50(1100 + 8, 50);
+    SetX50(1100 + 9, 55);
+    SetX50(1017, GetX50(1100 + GetX50(1014)));
+    SetX50(1006, GetRole(GetX50(1005), 42 / 2));
+    SetX50(1007, GetX50(1006) - GetX50(1017));
+    if (GetX50(1007) >= 0) {
+        __event_489_block_4();
+        return;
+    }
+    __event_489_block_3();
+}
+__event_489_block_3() {
+    SetX50(1017, GetX50(1006) + 0);
+    SetX50(1007, 0);
+    __event_489_block_4();
+}
+__event_489_block_4() {
+    SetRole(GetX50(1005), 42 / 2, GetX50(1007));
+    battle_field_set(5, 1004, 18, 1017, 0, 0);
+    __event_489_block_5();
+}
+__event_489_block_5() {
+    PlayAction(GetX50(28005), 1, 19);
+    ShowHurtValue(2);
+    Redraw();
+    __event_489_block_6();
+}
+__event_489_block_6() {
+    exit();
+}
+__event_489_block_0();

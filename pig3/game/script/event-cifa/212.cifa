@@ -1,0 +1,103 @@
+ClearX50();
+SetX50(1, 50);
+SetX50(50, 1);
+SetX50(33, 1);
+SetX50(13, 0);
+do {
+    SetX50(0, 0);
+    do {
+        SetX50(15, GetX50(13) * 4);
+        SetX50(15, GetX50(15) - 468);
+        if (GetX50(15) != 0) {
+            instruct_50(26, 0, 0, GetX50(15), 24, 5, 0);
+        } else {
+            instruct_50(26, 0, 0, GetX50(15), 25, 5, 0);
+        }
+        SetX50(30, GetItem(GetX50(5), 10));
+        if (GetX50(30) != 0) {
+            SetX50(6, GetItemAmount(GetX50(5)));
+            if (GetX50(6) != 0) {
+                ka212_build_line(GetX50(0), GetX50(5), GetX50(30), GetX50(6));
+                SetX50(0, GetX50(0) + 1);
+            }
+        }
+        SetX50(13, GetX50(13) + 1);
+    } while (GetX50(13) < GetX50(1));
+    if (GetX50(0) == 0) {
+        talk(90, "沒有可出售的物品。", -2, 0, 0, 0);
+    } else {
+        if (GetX50(1) != 200) {
+            ka212_add_next_page(GetX50(0));
+            SetX50(0, GetX50(0) + 1);
+        }
+        SetX50(10, ScrollMenu50(GetX50(0), 800, 36, 5, 10));
+        if (GetX50(10) > 0) {
+            if (GetX50(1) != 200 && GetX50(10) == GetX50(0)) {
+                SetX50(1, GetX50(1) + 50);
+                ka212_clear_page();
+            } else {
+                SetX50(10, GetX50(10) - 1);
+                SetX50(28927, GetX50(200 + GetX50(10)));
+                SetX50(10032, EnterNumber());
+                SetX50(6, GetItemAmount(GetX50(28927)));
+                if (GetX50(10032) > GetX50(6)) {
+                    talk(90, "沒有那麼多物品。", -2, 0, 0, 0);
+                } else if (GetX50(10032) <= 0 || GetX50(10032) > 1000) {
+                    talk(90, "輸入錯誤。", -2, 0, 0, 0);
+                } else {
+                    SetX50(30, GetItem(GetX50(28927), 10));
+                    SetX50(30, GetX50(30) * GetX50(10032));
+                    SetX50(31, GetItemAmount(0));
+                    SetX50(31, GetX50(31) + GetX50(30));
+                    if (GetX50(30) == 0 || GetX50(31) == 0) {
+                        talk(90, "身上金錢太多或出售貨品太多。", -2, 0, 0, 0);
+                    } else {
+                        ChangeItem(GetX50(28927), GetX50(10032), 1, 1);
+                        ChangeItem(0, GetX50(30), 0, 0);
+                    }
+                }
+                SetX50(13, 200);
+            }
+        } else {
+            SetX50(13, 200);
+        }
+    }
+} while (GetX50(13) < 200);
+ka212_build_line(slot, item, price, amount) {
+    SetX50(2, slot * 30);
+    SetX50(2, GetX50(2) + 1000);
+    SetX50(800 + slot, GetX50(2));
+    record_name_to_x50(1, 1, item, GetX50(2), 0, 0);
+    string_length_x50(GetX50(2), 3, 0, 0, 0, 0);
+    SetX50(8, 19);
+    SetX50(8, GetX50(8) - GetX50(3));
+    SetX50(180, MakeSpaces(GetX50(8)));
+    SetX50(170, readtalkasstring(716));
+    SetX50(15020, sprintf(GetX50String(170), price));
+    SetX50(15019, "價 ");
+    string_length_x50(15020, 3, 0, 0, 0, 0);
+    SetX50(8, 5);
+    SetX50(8, GetX50(8) - GetX50(3));
+    SetX50(15030, MakeSpaces(GetX50(8)));
+    SetX50(15010, sprintf(GetX50String(170), amount));
+    SetX50(15009, "量 ");
+    concat_x50(15000, 15019, 15030, 0, 0, 0);
+    concat_x50(14000, 15000, 15009, 0, 0, 0);
+    concat_x50(140, GetX50(2), 180, 0, 0, 0);
+    concat_x50(GetX50(2), 140, 14000, 0, 0, 0);
+    SetX50(200 + slot, item);
+}
+ka212_add_next_page(slot) {
+    SetX50(2, slot * 30);
+    SetX50(2, GetX50(2) + 1000);
+    SetX50(800 + slot, GetX50(2));
+    dialog_to_x50(0, 717, GetX50(2), 0, 0, 0);
+}
+ka212_clear_page() {
+    SetX50(22, 0);
+    do {
+        SetX50(800 + GetX50(22), 0);
+        SetX50(200 + GetX50(22), 0);
+        SetX50(22, GetX50(22) + 1);
+    } while (GetX50(22) < 50);
+}

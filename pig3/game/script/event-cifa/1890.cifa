@@ -1,0 +1,69 @@
+f1() {
+	setbattlepro(-1,b,33);
+	setbattlepro(-1,b,34);
+	setbattlepro(-1,b,35);
+	setbattlepro(-1,b,36);
+	setbattlepro(-1,b,37);
+	setbattlepro(-1,b,38);
+}
+clear();
+showstringwithbox(10, 10, "選擇被哪個人暴打");
+a=menu(3, 10, 40, -1, {"虛僞帝之戰","無恥帝之戰","光頭強之戰"});
+	randomseed(time());
+	b=304;
+if (a==0) {
+	talk(0, "虛僞帝？他是誰？", -2, 0, 0, 0);
+	talk(47, "只聽說是去過一趟希臘，那邊有十二個絶頂高手，據說是波斯十二寶樹王的師父。虛僞帝一個人打敗了希腊所有高手，說他們武功太差，但是招式還有些可取之處。最近遊歷到我們中原武林，想找人切磋一下。", -2, 1, 0, 0);
+	talk(0, "為啥聽起來這麽扯淡的樣子……", -2, 0, 0, 0);
+	xwd=930;
+    f1();
+    setbattlename(b, "虛僞帝");
+    setbattlepro(xwd,b,33);
+	talk(456, "……", "虛僞帝", 1);
+	rest();
+	if (trybattle(b)) {
+		talk(0, "……", -2, 0);
+		setrolepro(407,0, 92);
+	}
+	else {
+		talk(0, "這人開掛的吧……", -2, 0);
+	}
+	rest();
+}
+if (a==1) {
+	wcd=931;
+	talk(0, "無恥帝又是什麽人？", -2, 0, 0, 0);
+	talk(47, "也是去過希臘，但他將希臘所有高手的武功融為一體，實力不在虛僞帝之下。但我觀察，好像他的力道並不太強。", -2, 1, 0, 0);
+	talk(0, "一聽就不是什麽正經人。", -2, 0, 0, 0);
+	f1();
+    setbattlename(b, "無恥帝");
+    setbattlepro(wcd,b,33);
+	talk(454, "……", "無恥帝", 1);
+	rest();
+	if (trybattle(b)) {
+		talk(0, "……", -2, 0);
+	}
+	else {
+		talk(0, "這人不僅無恥，而且無聊……", -2, 0);
+	}
+	rest();
+}
+if (a== 2) {
+	gtd=932;
+	talk(0, "這都是些啥人？", -2, 0, 0, 0);
+	talk(47, "我也搞不清楚，這些人一窩一窩的。", -2, 1, 0, 0);
+	f1();
+	setbattlename(b, "光頭強");
+	setbattlepro(gtd,b,33);
+	talk(455, "是兄弟就來砍我！", "光頭強", 1);
+	talk(0, "？？？", -2, 0, 0, 0);
+	rest();
+	if (trybattle(b)) {
+		talk(455, "是兄弟就來砍我！", -2, 1);
+		instruct_33(0, 409, 1);
+	}
+	else {
+	}
+	talk(0, "這人是搞笑動畫來的吧……", -2, 0);
+	rest();
+}

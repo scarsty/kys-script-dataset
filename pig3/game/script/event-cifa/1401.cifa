@@ -1,0 +1,24 @@
+__event_1401_block_0() {
+    if (UseItem(259)) {
+        __event_1401_block_2();
+        return;
+    }
+    __event_1401_block_1();
+}
+__event_1401_block_1() {
+    exit();
+    __event_1401_block_2();
+}
+__event_1401_block_2() {
+        talk(0, "符姑娘，此物可行？", -2, 0, 0, 0);
+        talk(102, "星宿柔絲索，通體由雪蠶絲所制。有了它，或許可以修復乾坤一氣袋。請公子稍等。", -2, 1, 0, 0);
+        darkscene();
+        AddItemWithoutHint(259, -1);
+        lightscene();
+        talk(102, "不出我所料，雪蠶絲果然可與這袋子契合。此物便交與公子了。", -2, 0, 0, 0);
+        talk(0, "謝過符姑娘。", -2, 1, 0, 0);
+        talk(102, "小事不足掛齒。", -2, 0, 0, 0);
+        AddItem(51, 1);
+    exit();
+}
+__event_1401_block_0();

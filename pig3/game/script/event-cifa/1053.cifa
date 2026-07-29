@@ -1,0 +1,3 @@
+SetX50(0, GetRole(166, 100 / 2));
+SetX50(0, GetX50(0) + 1);
+SetRole(166, 100 / 2, GetX50(0));

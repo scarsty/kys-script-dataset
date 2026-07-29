@@ -1,0 +1,23 @@
+SetX50(8000, GetX50(28928));
+SetX50(8100, GetX50(28929));
+SetX50(7100, 0);
+SetX50(6000, 0);
+do {
+    SetX50(7200, GetX50(7100) * 100);
+    SetX50(7200, GetX50(7200) + 2000);
+    SetX50(30 + GetX50(7100), GetX50(7200));
+    SetX50(7100, GetX50(7100) + 1);
+} while (GetX50(7100) != GetX50(8100));
+do {
+    SetX50(6100, GetX50(6000) * 100);
+    SetX50(6100, GetX50(6100) + 2000);
+    dialog_to_x50(1, 8000, GetX50(6100), 0, 0, 0);
+    SetX50(6000, GetX50(6000) + 1);
+    SetX50(8000, GetX50(8000) + 1);
+} while (GetX50(6000) != GetX50(8100));
+SetX50(10, ScrollMenu50(GetX50(8100), 30, 100, 50, 10));
+if (GetX50(10) == 0) {
+    exit();
+}
+SetX50(1234, GetX50(10) - 1);
+PlayMusic(GetX50(1234));

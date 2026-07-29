@@ -1,0 +1,53 @@
+__event_593_block_0() {
+    talk(348, "叫花子，沒錢花，叫聲大爺行行好，多了咱們也不要，紋銀五百請拿來。", -2, 1, 0, 0);
+    CallEvent(351, 2705, 2, 0, 0);
+    if (GetX50(28931) == 2) {
+        __event_593_block_4();
+        return;
+    }
+    __event_593_block_1();
+}
+__event_593_block_1() {
+    if (JudgeMoney(500)) {
+        __event_593_block_3();
+        return;
+    }
+    __event_593_block_2();
+}
+__event_593_block_2() {
+    talk(348, "連五百兩都沒有，比我們叫花子還窮啊……", -2, 1, 0, 0);
+    exit();
+    __event_593_block_3();
+}
+__event_593_block_3() {
+    AddItemWithoutHint(0, -500);
+    talk(348, "大爺真是出手豪闊呀，裡邊請。", -2, 1, 0, 0);
+    darkscene();
+    modifyevent(55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    lightscene();
+    exit();
+    __event_593_block_4();
+}
+__event_593_block_4() {
+    talk(348, "嘿嘿，來到丐幫卻不賞錢，大爺，總得留下個腕吧。", -2, 1, 0, 0);
+    if (TryBattle(50)) {
+        __event_593_block_6();
+        return;
+    }
+    __event_593_block_5();
+}
+__event_593_block_5() {
+    lightscene();
+    talk(348, "就這點功夫，還想進丐幫？", -2, 1, 0, 0);
+    exit();
+    __event_593_block_6();
+}
+__event_593_block_6() {
+                lightscene();
+                talk(348, "閣下武功了得，裡邊請！", -2, 1, 0, 0);
+                darkscene();
+                modifyevent(55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+                lightscene();
+    exit();
+}
+__event_593_block_0();

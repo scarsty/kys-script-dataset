@@ -1,0 +1,99 @@
+__event_799_block_0() {
+    talk(102, "做一件衣服很麻煩，有時需要很多奇怪的材料，而我卻樂在其中！", -2, 0, 0, 0);
+    if (!HaveItem(245)) {
+        __event_799_block_9();
+        return;
+    }
+    __event_799_block_1();
+}
+__event_799_block_1() {
+    if (!HaveItem(246)) {
+        __event_799_block_10();
+        return;
+    }
+    __event_799_block_2();
+}
+__event_799_block_2() {
+    if (!HaveItem(247)) {
+        __event_799_block_11();
+        return;
+    }
+    __event_799_block_3();
+}
+__event_799_block_3() {
+    if (!HaveItem(248)) {
+        __event_799_block_12();
+        return;
+    }
+    __event_799_block_4();
+}
+__event_799_block_4() {
+    if (!HaveItem(249)) {
+        __event_799_block_13();
+        return;
+    }
+    __event_799_block_5();
+}
+__event_799_block_5() {
+    if (!HaveItem(250)) {
+        __event_799_block_14();
+        return;
+    }
+    __event_799_block_6();
+}
+__event_799_block_6() {
+    if (!HaveItem(251)) {
+        __event_799_block_15();
+        return;
+    }
+    __event_799_block_7();
+}
+__event_799_block_7() {
+    if (!HaveItem(252)) {
+        __event_799_block_16();
+        return;
+    }
+    __event_799_block_8();
+}
+__event_799_block_8() {
+    talk(102, "哇，哇～～，冰蠶絲、水晶棋子、金線帛、明玉絹、昂日金針、白玉帶鉤、百花清露、玳瑁簪，這麼多奇異材料都起啦！這下就看我的了！", -2, 0, 0, 0);
+    darkscene();
+    AddItemWithoutHint(245, -1);
+    AddItemWithoutHint(246, -1);
+    AddItemWithoutHint(247, -1);
+    AddItemWithoutHint(248, -1);
+    AddItemWithoutHint(249, -1);
+    AddItemWithoutHint(250, -1);
+    AddItemWithoutHint(251, -1);
+    AddItemWithoutHint(252, -1);
+    lightscene();
+    talk(102, "這是我為您量身定做的，穿穿看吧！", -2, 0, 0, 0);
+    AddItem(244, 1);
+    modifyevent(15, 84, 1, 0, 1644, -2, 0, 7284, 7284, 7284, 0, -2, -2);
+    __event_799_block_9();
+}
+__event_799_block_9() {
+    __event_799_block_10();
+}
+__event_799_block_10() {
+    __event_799_block_11();
+}
+__event_799_block_11() {
+    __event_799_block_12();
+}
+__event_799_block_12() {
+    __event_799_block_13();
+}
+__event_799_block_13() {
+    __event_799_block_14();
+}
+__event_799_block_14() {
+    __event_799_block_15();
+}
+__event_799_block_15() {
+    __event_799_block_16();
+}
+__event_799_block_16() {
+    exit();
+}
+__event_799_block_0();

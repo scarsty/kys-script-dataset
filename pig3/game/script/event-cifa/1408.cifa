@@ -1,0 +1,39 @@
+__event_1408_block_0() {
+    SetX50(0, GetRole(0, 88 / 2));
+    if (GetX50(0) < 120) {
+        __event_1408_block_2();
+        return;
+    }
+    __event_1408_block_1();
+}
+__event_1408_block_1() {
+    talk(0, "＜好高的牆，看我的輕功！＞", -2, 0, 0, 0);
+    darkscene();
+    setsceneposition2(25, 21);
+    SetRoleFace(2);
+    lightscene();
+    talk(422, "＜我自己都崇拜我自己了，這麼高的牆，一躍而過～＞", -2, 1, 0, 0);
+    talk(0, "＜黑狗啊黑狗，我為刀俎，你為狗肉，節哀順變吧～＞", -2, 0, 0, 0);
+    darkscene();
+    modifyevent(65, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    modifyevent(65, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    modifyevent(65, 46, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    modifyevent(65, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    modifyevent(65, 44, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    modifyevent(65, 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    modifyevent(65, 42, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    modifyevent(65, 41, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    modifyevent(65, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    modifyevent(65, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    setsceneposition2(25, 29);
+    SetRoleFace(1);
+    lightscene();
+    AddItem(261, 1);
+    exit();
+    __event_1408_block_2();
+}
+__event_1408_block_2() {
+        talk(420, "好高的牆，我的輕功還不夠啊。", -2, 1, 0, 0);
+    exit();
+}
+__event_1408_block_0();

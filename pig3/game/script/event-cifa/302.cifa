@@ -1,0 +1,45 @@
+showstringwithbox(10, 10, "你想學哪種武功？");
+pause();
+a = -1;
+while (a < 0) {
+    a = menu(4, 10, 40, -1, {"南山刀法", "越女劍法", "碧波掌法", "柯氏降魔杖"});
+}
+if (a == 3) {
+    talk(369, "嘿嘿，小子，有眼光！我就把我家傳的柯氏降魔杖傳授給你！", -2, 0, 0, 0);
+    SetX50(10, GetRole(0, 106 / 2));
+    SetX50(10, GetX50(10) + 10);
+    SetRole(0, 106 / 2, GetX50(10));
+    CallEvent(231, 0, 91, 2, 0);
+    SetX50(0, 0);
+    SetJumpFlag(GetX50(0) > 1);
+}
+else if (a == 2) {
+    talk(242, "哈哈，你很會挑師父嘛！這套碧波掌，是我桃花島的入門武功，就傳給你吧！", -2, 0, 0, 0);
+    SetX50(10, GetRole(0, 100 / 2));
+    SetX50(10, GetX50(10) + 10);
+    SetRole(0, 100 / 2, GetX50(10));
+    CallEvent(231, 0, 1, 2, 0);
+    SetX50(0, 0);
+    SetJumpFlag(GetX50(0) > 1);
+}
+else if (a == 1) {
+    talk(2, "好孩子，這套越女劍法，是靖哥哥的七師父韓小瑩留下來的，我就傳授與你吧！", -2, 0, 0, 0);
+    SetX50(10, GetRole(0, 102 / 2));
+    SetX50(10, GetX50(10) + 10);
+    SetRole(0, 102 / 2, GetX50(10));
+    CallEvent(231, 0, 36, 2, 0);
+    SetX50(0, 0);
+    SetJumpFlag(GetX50(0) > 1);
+}
+else {
+    talk(1, "我四師父的這套南山刀法，法度嚴謹，是刀法入門之基礎，我就傳授給你吧！", -2, 0, 0, 0);
+    SetX50(10, GetRole(0, 104 / 2));
+    SetX50(10, GetX50(10) + 10);
+    SetRole(0, 104 / 2, GetX50(10));
+    CallEvent(231, 0, 66, 2, 0);
+}
+AddItem(62, 1);
+AddItem(88, 1);
+AddItem(113, 1);
+AddItem(135, 1);
+AddItem(161, 1);

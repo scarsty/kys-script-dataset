@@ -1,0 +1,18 @@
+SetX50(10, 0);
+do {
+    battle_field_get(1, 10, 0, 1, 0, 0);
+    SetX50(3, GetRole(GetX50(1), 6 / 2));
+    if (GetX50(3) == 13) {
+        CallEvent(438, GetX50(1), 0, 0, 0);
+    }
+    SetX50(2, GetRole(GetX50(1), 26 / 2));
+    if (GetX50(2) <= 0) {
+        SetRole(GetX50(1), 6 / 2, 0);
+        SetRole(GetX50(1), 114 / 2, 0);
+        SetRole(GetX50(1), 116 / 2, 0);
+        SetRole(GetX50(1), 110 / 2, 0);
+        SetX50(2, 0);
+    }
+    SetRole(GetX50(1), 26 / 2, GetX50(2));
+    SetX50(10, GetX50(10) + 1);
+} while (GetX50(10) < 26);

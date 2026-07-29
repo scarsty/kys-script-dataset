@@ -1,0 +1,95 @@
+__event_64_block_0() {
+    join(37);
+    modifyevent(15, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    SetStarState(48, 3);
+    if (!InTeam(17)) {
+        __event_64_block_4();
+        return;
+    }
+    __event_64_block_1();
+}
+__event_64_block_1() {
+    if (!InTeam(74)) {
+        __event_64_block_5();
+        return;
+    }
+    __event_64_block_2();
+}
+__event_64_block_2() {
+    if (!InTeam(69)) {
+        __event_64_block_6();
+        return;
+    }
+    __event_64_block_3();
+}
+__event_64_block_3() {
+    CallEvent(233, 37, 0, 0, 0);
+    CallEvent(231, 37, 172, GetX50(28931), 0);
+    CallEvent(233, 74, 0, 0, 0);
+    CallEvent(231, 74, 172, GetX50(28931), 0);
+    CallEvent(233, 17, 0, 0, 0);
+    CallEvent(231, 17, 172, GetX50(28931), 0);
+    CallEvent(233, 69, 0, 0, 0);
+    CallEvent(231, 69, 172, GetX50(28931), 0);
+    __event_64_block_4();
+}
+__event_64_block_4() {
+    __event_64_block_5();
+}
+__event_64_block_5() {
+    __event_64_block_6();
+}
+__event_64_block_6() {
+    if (!InTeam(6)) {
+        __event_64_block_11();
+        return;
+    }
+    __event_64_block_7();
+}
+__event_64_block_7() {
+    if (!InTeam(28)) {
+        __event_64_block_12();
+        return;
+    }
+    __event_64_block_8();
+}
+__event_64_block_8() {
+    if (!InTeam(81)) {
+        __event_64_block_13();
+        return;
+    }
+    __event_64_block_9();
+}
+__event_64_block_9() {
+    if (!InTeam(82)) {
+        __event_64_block_14();
+        return;
+    }
+    __event_64_block_10();
+}
+__event_64_block_10() {
+    CallEvent(233, 6, 0, 0, 0);
+    CallEvent(231, 6, 176, GetX50(28931), 0);
+    CallEvent(233, 37, 0, 0, 0);
+    CallEvent(231, 37, 176, GetX50(28931), 0);
+    CallEvent(233, 28, 0, 0, 0);
+    CallEvent(231, 28, 176, GetX50(28931), 0);
+    CallEvent(233, 81, 0, 0, 0);
+    CallEvent(231, 81, 176, GetX50(28931), 0);
+    CallEvent(233, 82, 0, 0, 0);
+    CallEvent(231, 82, 176, GetX50(28931), 0);
+    __event_64_block_11();
+}
+__event_64_block_11() {
+    __event_64_block_12();
+}
+__event_64_block_12() {
+    __event_64_block_13();
+}
+__event_64_block_13() {
+    __event_64_block_14();
+}
+__event_64_block_14() {
+    exit();
+}
+__event_64_block_0();

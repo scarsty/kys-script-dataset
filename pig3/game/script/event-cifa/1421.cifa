@@ -1,0 +1,51 @@
+__event_1421_block_0() {
+    if (!HaveItem(263)) {
+        __event_1421_block_4();
+        return;
+    }
+    __event_1421_block_1();
+}
+__event_1421_block_1() {
+    if (!HaveItem(264)) {
+        __event_1421_block_5();
+        return;
+    }
+    __event_1421_block_2();
+}
+__event_1421_block_2() {
+    if (!HaveItem(265)) {
+        __event_1421_block_6();
+        return;
+    }
+    __event_1421_block_3();
+}
+__event_1421_block_3() {
+    talk(0, "道長，可是這幾卷道書？", -2, 0, 0, 0);
+    talk(88, "正是正是，“兆者，始也。基者，本也。陰極陽生，乾坤相交，恍惚中有物，杳冥中有精，生機於此兆始返本。”原來如此，原來如此！", -2, 1, 0, 0);
+    talk(0, "恭喜道長得償所願。晚輩卻有一不情之請。", -2, 0, 0, 0);
+    talk(88, "小兄弟請說。", -2, 1, 0, 0);
+    talk(0, "現下戰火漸起，天下英雄于歸雲莊相聚，共商抗擊外族之策，不知道長可願同往？", -2, 0, 0, 0);
+    talk(88, "家國大事，自是含糊不得。", -2, 1, 0, 0);
+    darkscene();
+    modifyevent(62, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    lightscene();
+    SetStarState(69, 1);
+    ShowTeammate(69, 88, 0);
+    modifyevent(15, 36, 1, 0, 785, 0, 0, 7306, 7306, 7306, 0, -2, -2);
+    AddItemWithoutHint(263, -1);
+    AddItemWithoutHint(264, -1);
+    AddItemWithoutHint(265, -1);
+    exit();
+    __event_1421_block_4();
+}
+__event_1421_block_4() {
+    __event_1421_block_5();
+}
+__event_1421_block_5() {
+    __event_1421_block_6();
+}
+__event_1421_block_6() {
+                talk(88, "經多方探聽，這書所缺的部分，武當、全真、青城分別有所收藏。只是我這身份……呵呵，不大方便，不大方便。", -2, 0, 0, 0);
+    exit();
+}
+__event_1421_block_0();

@@ -1,0 +1,20 @@
+__event_101_block_0() {
+    if (GetStarState(57) == 3) {
+        __event_101_block_2();
+        return;
+    }
+    __event_101_block_1();
+}
+__event_101_block_1() {
+    exit();
+    __event_101_block_2();
+}
+__event_101_block_2() {
+        leave(57);
+        modifyevent(16, 43, 1, 0, 757, 0, 0, 7246, 7246, 7246, 0, -2, -2);
+        SetStarState(57, 1);
+        CallEvent(232, 57, 162, 0, 0);
+        CallEvent(232, 58, 162, 0, 0);
+    exit();
+}
+__event_101_block_0();

@@ -1,0 +1,28 @@
+__event_433_block_0() {
+    SetX50(10, GetX50(28928) / 100);
+    SetX50(10, GetX50(10) + 1);
+    SetX50(11, GetX50(28004) * GetX50(10));
+    SetX50(11, GetX50(11) / 10);
+    SetX50(28004, GetX50(28004) - GetX50(11));
+    battle_field_get(1, 28001, 0, 12, 0, 0);
+    SetX50(12, GetRole(GetX50(12), 34 / 2));
+    SetX50(12, GetX50(12) - GetX50(11));
+    if (GetX50(12) >= 0) {
+        __event_433_block_2();
+        return;
+    }
+    __event_433_block_1();
+}
+__event_433_block_1() {
+    SetX50(12, 0);
+    __event_433_block_2();
+}
+__event_433_block_2() {
+        SetRole(GetX50(1), 34 / 2, GetX50(12));
+        battle_field_get(1, 28001, 4, 13, 0, 0);
+        battle_field_get(1, 28001, 6, 14, 0, 0);
+        SetAnimationLayer(GetX50(13), GetX50(14), 1, 1, 1);
+        battle_field_set(5, 28001, 18, 11, 0, 0);
+    exit();
+}
+__event_433_block_0();

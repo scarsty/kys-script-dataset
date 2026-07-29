@@ -1,0 +1,107 @@
+__event_82_block_0() {
+    join(46);
+    modifyevent(16, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    SetStarState(38, 3);
+    if (!InTeam(13)) {
+        __event_82_block_5();
+        return;
+    }
+    __event_82_block_1();
+}
+__event_82_block_1() {
+    if (!InTeam(42)) {
+        __event_82_block_6();
+        return;
+    }
+    __event_82_block_2();
+}
+__event_82_block_2() {
+    if (!InTeam(51)) {
+        __event_82_block_7();
+        return;
+    }
+    __event_82_block_3();
+}
+__event_82_block_3() {
+    if (!InTeam(8)) {
+        __event_82_block_8();
+        return;
+    }
+    __event_82_block_4();
+}
+__event_82_block_4() {
+    CallEvent(233, 8, 0, 0, 0);
+    CallEvent(231, 8, 175, GetX50(28931), 0);
+    CallEvent(233, 13, 0, 0, 0);
+    CallEvent(231, 13, 175, GetX50(28931), 0);
+    CallEvent(233, 42, 0, 0, 0);
+    CallEvent(231, 42, 175, GetX50(28931), 0);
+    CallEvent(233, 51, 0, 0, 0);
+    CallEvent(231, 51, 175, GetX50(28931), 0);
+    CallEvent(233, 46, 0, 0, 0);
+    CallEvent(231, 46, 175, GetX50(28931), 0);
+    __event_82_block_5();
+}
+__event_82_block_5() {
+    __event_82_block_6();
+}
+__event_82_block_6() {
+    __event_82_block_7();
+}
+__event_82_block_7() {
+    __event_82_block_8();
+}
+__event_82_block_8() {
+    if (!InTeam(48)) {
+        __event_82_block_13();
+        return;
+    }
+    __event_82_block_9();
+}
+__event_82_block_9() {
+    if (!InTeam(49)) {
+        __event_82_block_14();
+        return;
+    }
+    __event_82_block_10();
+}
+__event_82_block_10() {
+    if (!InTeam(52)) {
+        __event_82_block_15();
+        return;
+    }
+    __event_82_block_11();
+}
+__event_82_block_11() {
+    if (!InTeam(54)) {
+        __event_82_block_16();
+        return;
+    }
+    __event_82_block_12();
+}
+__event_82_block_12() {
+    CallEvent(233, 46, 0, 0, 0);
+    CallEvent(231, 46, 178, GetX50(28931), 0);
+    CallEvent(233, 48, 0, 0, 0);
+    CallEvent(231, 48, 178, GetX50(28931), 0);
+    CallEvent(233, 49, 0, 0, 0);
+    CallEvent(231, 49, 178, GetX50(28931), 0);
+    CallEvent(233, 52, 0, 0, 0);
+    CallEvent(231, 52, 178, GetX50(28931), 0);
+    CallEvent(233, 54, 0, 0, 0);
+    CallEvent(231, 54, 178, GetX50(28931), 0);
+    __event_82_block_13();
+}
+__event_82_block_13() {
+    __event_82_block_14();
+}
+__event_82_block_14() {
+    __event_82_block_15();
+}
+__event_82_block_15() {
+    __event_82_block_16();
+}
+__event_82_block_16() {
+    exit();
+}
+__event_82_block_0();

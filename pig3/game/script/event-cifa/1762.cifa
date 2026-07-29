@@ -1,0 +1,72 @@
+__event_1762_block_0() {
+    if (UseItem(240)) {
+        __event_1762_block_2();
+        return;
+    }
+    __event_1762_block_1();
+}
+__event_1762_block_1() {
+    exit();
+    __event_1762_block_2();
+}
+__event_1762_block_2() {
+    AddItem(240, -1);
+    talk(263, "王兄，這區區小事便由我代勞吧。", -2, 0, 0, 0);
+    talk(262, "身隕道存，執念不入極樂土。示法宏願，殘魂長待有緣人。", -2, 0, 0, 0);
+    if (TryBattle(287)) {
+        __event_1762_block_4();
+        return;
+    }
+    __event_1762_block_3();
+}
+__event_1762_block_3() {
+    dead();
+    lightscene();
+    exit();
+    __event_1762_block_4();
+}
+__event_1762_block_4() {
+    lightscene();
+    talk(263, "哼。", -2, 0, 0, 0);
+    talk(262, "呵，此番便輪到我了。", -2, 0, 0, 0);
+    if (TryBattle(288)) {
+        __event_1762_block_6();
+        return;
+    }
+    __event_1762_block_5();
+}
+__event_1762_block_5() {
+    dead();
+    lightscene();
+    exit();
+    __event_1762_block_6();
+}
+__event_1762_block_6() {
+    lightscene();
+    talk(262, "唔……", -2, 0, 0, 0);
+    talk(263, "我等尚未出全力。", -2, 0, 0, 0);
+    talk(262, "當真如此？", -2, 0, 0, 0);
+    talk(263, "便要如此。", -2, 0, 0, 0);
+    if (TryBattle(284)) {
+        __event_1762_block_8();
+        return;
+    }
+    __event_1762_block_7();
+}
+__event_1762_block_7() {
+    dead();
+    lightscene();
+    exit();
+    __event_1762_block_8();
+}
+__event_1762_block_8() {
+                    SetX50(0, GetRole(0, 146 / 2));
+                    SetX50(0, GetX50(0) + 100);
+                    SetRole(0, 146 / 2, GetX50(0));
+                    lightscene();
+                    talk(262, "原來……你我都錯了。", -2, 0, 0, 0);
+                    talk(263, "你我本都明白。", -2, 0, 0, 0);
+                    modifyevent(128, 3, 1, 0, 1763, 0, 0, 6698, 6698, 6698, 0, -2, -2);
+    exit();
+}
+__event_1762_block_0();

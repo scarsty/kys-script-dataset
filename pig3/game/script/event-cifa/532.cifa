@@ -1,0 +1,32 @@
+__event_532_block_0() {
+    talk(0, "木姑娘，這可是你的黑玫瑰麼？", -2, 0, 0, 0);
+    talk(80, "啊，真是黑玫瑰！本姑娘從不欠人人情，你以後有什麼事需要幫忙，儘管來找我便是。不過這段時間我可能要去中原一趟，暫時不在此處。", -2, 1, 0, 0);
+    talk(0, "在下我欲往中原，不如姑娘與我們同行可好？", -2, 0, 0, 0);
+    talk(80, "如此也好。", -2, 1, 0, 0);
+    if (TeamIsFull()) {
+        __event_532_block_2();
+        return;
+    }
+    __event_532_block_1();
+}
+__event_532_block_1() {
+    CallEvent(126, 0, 0, 0, 0);
+    darkscene();
+    modifyevent(9, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    lightscene();
+    ShowTeammate(83, 80, 0);
+    SetStarState(83, 3);
+    exit();
+    __event_532_block_2();
+}
+__event_532_block_2() {
+        talk(80, "你的隊伍已滿，我就直接去歸雲莊了。", -2, 1, 0, 0);
+        darkscene();
+        modifyevent(9, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+        modifyevent(16, 3, 1, 0, 777, 0, 0, 7028, 0, 0, 0, -2, -2);
+        lightscene();
+        ShowTeammate(83, 80, 0);
+        SetStarState(83, 1);
+    exit();
+}
+__event_532_block_0();

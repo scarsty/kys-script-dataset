@@ -1,0 +1,47 @@
+battle_field_get(1, 28005, 0, 1000, 0, 0);
+SetX50(1001, read_mem(1994454));
+SetX50(1002, GetX50(1001) * 2);
+SetX50(1002, GetX50(1002) + 146);
+SetX50(1003, GetRole(GetX50(1000), GetX50(1002) / 2));
+SetX50(1004, GetX50(1003) / 100);
+SetX50(1100, 10);
+SetX50(1101, 15);
+SetX50(1102, 20);
+SetX50(1103, 25);
+SetX50(1104, 30);
+SetX50(1105, 35);
+SetX50(1106, 40);
+SetX50(1107, 45);
+SetX50(1108, 45);
+SetX50(1109, 50);
+SetX50(1007, GetX50(1100 + GetX50(1004)));
+SetX50(1020, -1);
+do {
+    SetX50(1020, GetX50(1020) + 1);
+    if (GetX50(1020) != GetX50(28005)) {
+        battle_field_get(1, 1020, 0, 1030, 0, 0);
+        if (GetX50(1030) >= 0) {
+            battle_field_get(1, 1020, 10, 1031, 0, 0);
+            if (GetX50(1031) <= 0) {
+                battle_field_get(1, 1020, 2, 1010, 0, 0);
+                if (GetX50(1010) != 1) {
+                    SetX50(1005, GetRole(GetX50(1030), 41));
+                    SetX50(1011, GetRole(GetX50(1030), 42));
+                    SetX50(1009, GetX50(1005) + GetX50(1007));
+                    if (GetX50(1009) > GetX50(1011)) {
+                        SetX50(1009, GetX50(1011));
+                    }
+                    battle_field_get(1, 1020, 4, 1040, 0, 0);
+                    battle_field_get(1, 1020, 6, 1041, 0, 0);
+                    SetAnimationLayer(GetX50(1040), GetX50(1041), 1, 1, 1);
+                    SetRole(GetX50(1030), 41, GetX50(1009));
+                    SetX50(1008, GetX50(1009) - GetX50(1005));
+                    battle_field_set(5, 1020, 18, 1008, 0, 0);
+                }
+            }
+        }
+    }
+} while (GetX50(1020) < 25);
+PlayAction(GetX50(28005), 1, 0);
+ShowHurtValue(4);
+Redraw();

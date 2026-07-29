@@ -1,0 +1,28 @@
+__event_25_block_0() {
+    if (GetStarState(13) == 3) {
+        __event_25_block_2();
+        return;
+    }
+    __event_25_block_1();
+}
+__event_25_block_1() {
+    exit();
+    __event_25_block_2();
+}
+__event_25_block_2() {
+        leave(13);
+        modifyevent(16, 18, 1, 0, 713, 0, 0, 6188, 6188, 6188, 0, -2, -2);
+        SetStarState(13, 1);
+        CallEvent(232, 12, 164, 0, 0);
+        SetRole(13, 128 / 2, 25);
+        CallEvent(232, 8, 168, 0, 0);
+        CallEvent(232, 13, 168, 0, 0);
+        CallEvent(232, 44, 168, 0, 0);
+        CallEvent(232, 8, 175, 0, 0);
+        CallEvent(232, 13, 175, 0, 0);
+        CallEvent(232, 42, 175, 0, 0);
+        CallEvent(232, 51, 175, 0, 0);
+        CallEvent(232, 46, 175, 0, 0);
+    exit();
+}
+__event_25_block_0();

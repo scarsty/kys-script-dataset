@@ -1,0 +1,57 @@
+__event_1403_block_0() {
+    talk(89, "…………", -2, 0, 0, 0);
+    talk(0, "…………", -2, 1, 0, 0);
+    if (!InTeam(64)) {
+        __event_1403_block_5();
+        return;
+    }
+    __event_1403_block_1();
+}
+__event_1403_block_1() {
+    if (!InTeam(74)) {
+        __event_1403_block_6();
+        return;
+    }
+    __event_1403_block_2();
+}
+__event_1403_block_2() {
+    if (!InTeam(88)) {
+        __event_1403_block_7();
+        return;
+    }
+    __event_1403_block_3();
+}
+__event_1403_block_3() {
+    if (!InTeam(69)) {
+        __event_1403_block_8();
+        return;
+    }
+    __event_1403_block_4();
+}
+__event_1403_block_4() {
+    talk(89, "他們？", -2, 0, 0, 0);
+    talk(0, "不錯。", -2, 1, 0, 0);
+    talk(89, "同進退。", -2, 0, 0, 0);
+    talk(0, "好！", -2, 1, 0, 0);
+    darkscene();
+    modifyevent(47, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    lightscene();
+    SetStarState(46, 1);
+    ShowTeammate(46, 89, 0);
+    modifyevent(15, 37, 1, 0, 786, 0, 0, 7294, 7294, 7294, 0, -2, -2);
+    exit();
+    __event_1403_block_5();
+}
+__event_1403_block_5() {
+    __event_1403_block_6();
+}
+__event_1403_block_6() {
+    __event_1403_block_7();
+}
+__event_1403_block_7() {
+    __event_1403_block_8();
+}
+__event_1403_block_8() {
+    exit();
+}
+__event_1403_block_0();

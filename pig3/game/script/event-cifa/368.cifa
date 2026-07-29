@@ -1,0 +1,300 @@
+__event_368_block_0() {
+    if (GetX50(112) != 1224) {
+        __event_368_block_2();
+        return;
+    }
+    __event_368_block_1();
+}
+__event_368_block_1() {
+        SetX50(113, 29);
+    exit();
+    __event_368_block_2();
+}
+__event_368_block_2() {
+    if (GetX50(112) != 6666) {
+        __event_368_block_4();
+        return;
+    }
+    __event_368_block_3();
+}
+__event_368_block_3() {
+            SetX50(113, 28);
+    exit();
+    __event_368_block_4();
+}
+__event_368_block_4() {
+    if (GetX50(112) != 1111) {
+        __event_368_block_6();
+        return;
+    }
+    __event_368_block_5();
+}
+__event_368_block_5() {
+                SetX50(113, 27);
+    exit();
+    __event_368_block_6();
+}
+__event_368_block_6() {
+    if (GetX50(112) != 4444) {
+        __event_368_block_8();
+        return;
+    }
+    __event_368_block_7();
+}
+__event_368_block_7() {
+                    SetX50(113, 26);
+    exit();
+    __event_368_block_8();
+}
+__event_368_block_8() {
+    if (GetX50(112) != 1313) {
+        __event_368_block_10();
+        return;
+    }
+    __event_368_block_9();
+}
+__event_368_block_9() {
+                        SetX50(113, 25);
+    exit();
+    __event_368_block_10();
+}
+__event_368_block_10() {
+    if (GetX50(112) != 5555) {
+        __event_368_block_12();
+        return;
+    }
+    __event_368_block_11();
+}
+__event_368_block_11() {
+                            SetX50(113, 24);
+    exit();
+    __event_368_block_12();
+}
+__event_368_block_12() {
+    if (GetX50(112) != 3333) {
+        __event_368_block_14();
+        return;
+    }
+    __event_368_block_13();
+}
+__event_368_block_13() {
+                                SetX50(113, 23);
+    exit();
+    __event_368_block_14();
+}
+__event_368_block_14() {
+    if (GetX50(112) != 2222) {
+        __event_368_block_16();
+        return;
+    }
+    __event_368_block_15();
+}
+__event_368_block_15() {
+                                    SetX50(113, 22);
+    exit();
+    __event_368_block_16();
+}
+__event_368_block_16() {
+    if (GetX50(112) != 5656) {
+        __event_368_block_18();
+        return;
+    }
+    __event_368_block_17();
+}
+__event_368_block_17() {
+                                        SetX50(113, 21);
+    exit();
+    __event_368_block_18();
+}
+__event_368_block_18() {
+    if (GetX50(112) != 4646) {
+        __event_368_block_20();
+        return;
+    }
+    __event_368_block_19();
+}
+__event_368_block_19() {
+                                            SetX50(113, 20);
+    exit();
+    __event_368_block_20();
+}
+__event_368_block_20() {
+    if (GetX50(112) != 1616) {
+        __event_368_block_22();
+        return;
+    }
+    __event_368_block_21();
+}
+__event_368_block_21() {
+                                                SetX50(113, 19);
+    exit();
+    __event_368_block_22();
+}
+__event_368_block_22() {
+    if (GetX50(112) != 1515) {
+        __event_368_block_24();
+        return;
+    }
+    __event_368_block_23();
+}
+__event_368_block_23() {
+                                                    SetX50(113, 18);
+    exit();
+    __event_368_block_24();
+}
+__event_368_block_24() {
+    if (GetX50(112) != 3645) {
+        __event_368_block_26();
+        return;
+    }
+    __event_368_block_25();
+}
+__event_368_block_25() {
+                                                        SetX50(113, 17);
+    exit();
+    __event_368_block_26();
+}
+__event_368_block_26() {
+    if (GetX50(112) != 2635) {
+        __event_368_block_28();
+        return;
+    }
+    __event_368_block_27();
+}
+__event_368_block_27() {
+                                                            SetX50(113, 16);
+    exit();
+    __event_368_block_28();
+}
+__event_368_block_28() {
+    if (GetX50(112) != 2534) {
+        __event_368_block_30();
+        return;
+    }
+    __event_368_block_29();
+}
+__event_368_block_29() {
+                                                                SetX50(113, 15);
+    exit();
+    __event_368_block_30();
+}
+__event_368_block_30() {
+    if (GetX50(112) != 1423) {
+        __event_368_block_32();
+        return;
+    }
+    __event_368_block_31();
+}
+__event_368_block_31() {
+                                                                    SetX50(113, 14);
+    exit();
+    __event_368_block_32();
+}
+__event_368_block_32() {
+    if (GetX50(112) != 3666) {
+        __event_368_block_34();
+        return;
+    }
+    __event_368_block_33();
+}
+__event_368_block_33() {
+                                                                        SetX50(113, 13);
+    exit();
+    __event_368_block_34();
+}
+__event_368_block_34() {
+    if (GetX50(112) != 4566) {
+        __event_368_block_36();
+        return;
+    }
+    __event_368_block_35();
+}
+__event_368_block_35() {
+                                                                            SetX50(113, 13);
+    exit();
+    __event_368_block_36();
+}
+__event_368_block_36() {
+    if (GetX50(112) != 1136) {
+        __event_368_block_38();
+        return;
+    }
+    __event_368_block_37();
+}
+__event_368_block_37() {
+                                                                                SetX50(113, 12);
+    exit();
+    __event_368_block_38();
+}
+__event_368_block_38() {
+    if (GetX50(112) != 1145) {
+        __event_368_block_40();
+        return;
+    }
+    __event_368_block_39();
+}
+__event_368_block_39() {
+                                                                                    SetX50(113, 12);
+    exit();
+    __event_368_block_40();
+}
+__event_368_block_40() {
+    if (GetX50(112) != 2666) {
+        __event_368_block_42();
+        return;
+    }
+    __event_368_block_41();
+}
+__event_368_block_41() {
+                                                                                        SetX50(113, 11);
+    exit();
+    __event_368_block_42();
+}
+__event_368_block_42() {
+    if (GetX50(112) != 3566) {
+        __event_368_block_44();
+        return;
+    }
+    __event_368_block_43();
+}
+__event_368_block_43() {
+                                                                                            SetX50(113, 11);
+    exit();
+    __event_368_block_44();
+}
+__event_368_block_44() {
+    if (GetX50(112) != 1126) {
+        __event_368_block_46();
+        return;
+    }
+    __event_368_block_45();
+}
+__event_368_block_45() {
+                                                                                                SetX50(113, 10);
+    exit();
+    __event_368_block_46();
+}
+__event_368_block_46() {
+    if (GetX50(112) != 1135) {
+        __event_368_block_48();
+        return;
+    }
+    __event_368_block_47();
+}
+__event_368_block_47() {
+                                                                                                    SetX50(113, 10);
+    exit();
+    __event_368_block_48();
+}
+__event_368_block_48() {
+                                                                                                    SetX50(114, GetX50(108) / 10);
+                                                                                                    SetX50(115, GetX50(108) % 10);
+                                                                                                    SetX50(116, GetX50(110) / 10);
+                                                                                                    SetX50(117, GetX50(110) % 10);
+                                                                                                    SetX50(118, GetX50(114) + GetX50(115));
+                                                                                                    SetX50(118, GetX50(118) + GetX50(116));
+                                                                                                    SetX50(118, GetX50(118) + GetX50(117));
+                                                                                                    SetX50(113, GetX50(118) % 10);
+    exit();
+}
+__event_368_block_0();

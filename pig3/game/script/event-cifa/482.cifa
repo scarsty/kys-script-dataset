@@ -1,0 +1,80 @@
+__event_482_block_0() {
+    SetX50(1001, read_mem(349914 + 0));
+    SetX50(1002, read_mem(349916 + 0));
+    SetX50(1001, GetX50(1001) * 2);
+    SetX50(1002, GetX50(1002) * 128);
+    SetX50(1003, GetX50(1001) + GetX50(1002));
+    SetX50(1004, read_mem(1985028 + GetX50(1003)));
+    battle_field_get(1, 1004, 0, 1005, 0, 0);
+    if (GetX50(1005) < 0) {
+        __event_482_block_8();
+        return;
+    }
+    __event_482_block_1();
+}
+__event_482_block_1() {
+    battle_field_get(1, 1004, 2, 1040, 0, 0);
+    if (GetX50(1040) == 0) {
+        __event_482_block_9();
+        return;
+    }
+    __event_482_block_2();
+}
+__event_482_block_2() {
+    battle_field_get(1, 28005, 0, 1000, 0, 0);
+    SetX50(1040, GetRole(GetX50(1005), 30 / 2));
+    if (GetX50(1040) > 20) {
+        __event_482_block_5();
+        return;
+    }
+    __event_482_block_3();
+}
+__event_482_block_3() {
+    SetX50(1021, read_mem(1994454 + 0));
+    SetX50(1022, GetX50(1021) * 2);
+    SetX50(1022, GetX50(1022) + 146);
+    SetX50(1023, GetRole(GetX50(1000), GetX50(1022) / 2));
+    SetX50(1024, GetX50(1023) / 100);
+    SetX50(1025, Random50(11));
+    if (GetX50(1024) < GetX50(1025)) {
+        __event_482_block_6();
+        return;
+    }
+    __event_482_block_4();
+}
+__event_482_block_4() {
+    SetX50(1007, GetRole(GetX50(1005), 34 / 2));
+    SetRole(GetX50(1005), 34 / 2, 0);
+    SetX50(1008, GetX50(28005) * 28);
+    SetX50(1009, read_mem(1951558 + GetX50(1008)));
+    SetX50(1009, GetX50(1009) + GetX50(1007));
+    write_mem(1951558 + GetX50(1008), GetX50(1009));
+    if (1) {
+        __event_482_block_7();
+        return;
+    }
+    __event_482_block_5();
+}
+__event_482_block_5() {
+    __event_482_block_6();
+}
+__event_482_block_6() {
+    SetX50(1007, 0);
+    __event_482_block_7();
+}
+__event_482_block_7() {
+    SetX50(1006, GetX50(1004) * 28);
+    write_mem(1951550 + GetX50(1006), GetX50(1007));
+    write_mem(1960452 + GetX50(1003), 1);
+    __event_482_block_8();
+}
+__event_482_block_8() {
+    PlayAction(GetX50(28005), 1, 1);
+    ShowHurtValue(1);
+    Redraw();
+    __event_482_block_9();
+}
+__event_482_block_9() {
+    exit();
+}
+__event_482_block_0();

@@ -1,0 +1,21 @@
+__event_116_block_0() {
+    join(73);
+    modifyevent(15, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    SetStarState(68, 3);
+    if (!InTeam(72)) {
+        __event_116_block_2();
+        return;
+    }
+    __event_116_block_1();
+}
+__event_116_block_1() {
+    CallEvent(233, 73, 0, 0, 0);
+    CallEvent(231, 73, 165, GetX50(28931), 0);
+    CallEvent(233, 72, 0, 0, 0);
+    CallEvent(231, 72, 165, GetX50(28931), 0);
+    __event_116_block_2();
+}
+__event_116_block_2() {
+    exit();
+}
+__event_116_block_0();
