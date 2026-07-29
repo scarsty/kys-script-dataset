@@ -1,2 +1,0 @@
-AskSoftStar();
-exit();
