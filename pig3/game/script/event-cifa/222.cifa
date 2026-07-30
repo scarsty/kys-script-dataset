@@ -14,7 +14,7 @@ do {
             SetX50(700 + GetX50(1), GetX50(104));
             SetX50(105, GetX50(1) * 20);
             SetX50(105, GetX50(105) + 1000);
-            record_name_to_x50(1, 2, 101, GetX50(105), 0, 0);
+            getname(1, 2, 101, GetX50(105), 0, 0);
             SetX50(800 + GetX50(1), GetX50(105));
             SetX50(1, GetX50(1) + 1);
         }

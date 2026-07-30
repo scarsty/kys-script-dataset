@@ -1,7 +1,7 @@
 __event_299_block_0() {
     SetAnimationLayer(0, 0, 63, 63, 0);
-    battle_field_get(5, 28005, 4, 1, 0, 0);
-    battle_field_get(5, 28005, 6, 2, 0, 0);
+    battlefieldget(5, 28005, 4, 1, 0, 0);
+    battlefieldget(5, 28005, 6, 2, 0, 0);
     SetAnimationLayer(GetX50(1), GetX50(2), 1, 1, 1);
     SetX50(11, GetX50(2) * 128);
     SetX50(12, GetX50(1) * 2);
@@ -21,8 +21,8 @@ __event_299_block_0() {
 }
 __event_299_block_1() {
     PlayAction(GetX50(28005), 1, 26);
-    battle_field_set(5, 28005, 4, 1, 0, 0);
-    battle_field_set(5, 28005, 6, 2, 0, 0);
+    battlefieldset(5, 28005, 4, 1, 0, 0);
+    battlefieldset(5, 28005, 6, 2, 0, 0);
     write_mem(1985028 + GetX50(3), -1);
     write_mem(1985028 + GetX50(4), GetX50(28005));
     Redraw();

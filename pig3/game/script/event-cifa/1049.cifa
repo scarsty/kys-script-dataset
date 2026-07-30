@@ -3,11 +3,11 @@ SetX50(1075, -1);
 SetX50(1080, 15);
 do {
     SetX50(1075, GetX50(1075) + 1);
-    battle_field_get(1, 1075, 10, 1076, 0, 0);
+    battlefieldget(1, 1075, 10, 1076, 0, 0);
     if (GetX50(1076) != 1) {
-        battle_field_get(1, 1075, 0, 1077, 0, 0);
+        battlefieldget(1, 1075, 0, 1077, 0, 0);
         if (GetX50(1077) != -1) {
-            battle_field_get(1, 1075, 2, 1079, 0, 0);
+            battlefieldget(1, 1075, 2, 1079, 0, 0);
             if (GetX50(1079) == GetX50(1074)) {
                 SetX50(1078, GetRole(GetX50(1077), 110 / 2));
                 if (GetX50(1078) >= GetX50(1080)) {

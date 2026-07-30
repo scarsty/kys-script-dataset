@@ -1,4 +1,4 @@
-battle_field_get(1, 28001, 0, 1, 0, 0);
+battlefieldget(1, 28001, 0, 1, 0, 0);
 SetX50(2, GetX50(28003) + 0);
 SetX50(3, GetRole(GetX50(1), 6 / 2));
 SetX50(4, GetRole(GetX50(2), 6 / 2));

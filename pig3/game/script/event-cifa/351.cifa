@@ -8,13 +8,13 @@ if (GetX50(9000) <= GetX50(9001)) {
     SetX50(9002, GetX50(9002) + 1);
     SetX50(9003, GetX50(9003) + 100);
     SetX50(15000 + GetX50(9000), GetX50(9003));
-    dialog_to_x50(1, 9002, GetX50(9003), 0, 0, 0);
+    gettalk(1, 9002, GetX50(9003), 0, 0, 0);
 }
 SetX50(9999, drawlength(GetX50String(10000)));
 SetX50(9999, GetX50(9999) * 10);
 SetX50(9999, GetX50(9999) + 10);
 DrawRect(4, 12, 15, 9999, 30, 0);
-DrawString(0, 10000, 19, 22, 1797, 0);
+DrawString1(0, 10000, 19, 22, 1797, 0);
 SetX50(9006, GetKey());
 Delay(100);
 SetX50(28931, ScrollMenu50(GetX50(28929), 15000, 12, 50, 8));

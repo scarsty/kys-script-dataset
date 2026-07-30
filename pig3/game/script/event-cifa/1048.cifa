@@ -1,7 +1,7 @@
 SetX50(1045, 0);
 SetX50(1047, 0);
-battle_field_get(1, 28001, 0, 1000, 0, 0);
-battle_field_get(1, 28001, 2, 1074, 0, 0);
+battlefieldget(1, 28001, 0, 1000, 0, 0);
+battlefieldget(1, 28001, 2, 1074, 0, 0);
 SetX50(999, GetX50(28002) + 0);
 SetX50(1005, GetX50(28003) + 0);
 SetX50(998, 124);

@@ -1,0 +1,234 @@
+ClearX50();
+SetX50(15205, EnterNumber(0, 15, 200, 200));
+if (JudgeMoney( GetX50(15205)) == 1) { goto label0; }
+exit();
+label0:
+    CallEvent(367, 0, 0, 0, 0);
+    Redraw();
+    SetX50(100, 0);
+    SetX50(101, 9080);
+    SetX50(104, 0);
+    SetX50(105, 0);
+    SetX50(160, 429);
+    SetX50(161, 288);
+    SetX50(162, 133);
+    SetX50(163, 288);
+    SetX50(164, 139);
+    SetX50(165, 148);
+    SetX50(166, 289);
+    SetX50(167, 148);
+    drawrect50(0, 110, 90, 300, 180, 0);
+    drawrect50(0, 110, 90, 60, 30, 60);
+    drawstring(0, 950, 120, 97, -27245, 0);
+    drawrect50(0, 350, 90, 60, 30, 60);
+    drawstring(0, 955, 360, 97, -27245, 0);
+    drawrect50(0, 110, 130, 150, 100, 0);
+    drawrect50(0, 260, 130, 150, 100, 0);
+    drawrect50(0, 410, 90, 90, 90, 0);
+    drawstring(0, 1010, 417, 97, 1797, 0);
+    drawrect50(0, 500, 90, 30, 30, 60);
+    SetX50(127, GetX50(104) + 48);
+    drawstring(0, 127, 507, 97, 26980, 0);
+    drawstring(0, 1020, 417, 127, 1797, 0);
+    drawrect50(0, 500, 120, 30, 30, 60);
+    SetX50(127, GetX50(105) + 48);
+    drawstring(0, 127, 507, 127, 26980, 0);
+    drawstring(0, 975, 417, 157, 1797, 0);
+    drawrect50(0, 500, 150, 30, 30, 60);
+    SetX50(106, readtalkasstring(224));
+    SetX50(127, sprintf(GetX50String(106), GetX50(15205)));
+    drawstring(0, 127, 507, 157, 26980, 0);
+    drawrect50(0, 110, 280, 300, 80, 0);
+    drawrect50(0, 410, 280, 120, 80, 0);
+label29:
+    drawrect50(0, 170, 90, 180, 30, 60);
+    SetX50(106, GetX50(100) * 5);
+    SetX50(106, GetX50(106) + 960);
+    drawstring(0, GetX50(106), 233, 97, 26980, 0);
+    DrawPicture(0, 9144, 139, 148);
+    DrawPicture(0, 9144, 200, 148);
+    DrawPicture(0, 9144, 289, 148);
+    DrawPicture(0, 9144, 350, 148);
+    drawrect50(0, 110, 240, 150, 30, 60);
+    drawrect50(0, 260, 240, 150, 30, 60);
+    drawrect50(0, 110, 360, 420, 30, 60);
+    drawstring(0, 1000, 120, 367, 21072, 0);
+    SetX50(312, -1);
+    SetX50(313, -1);
+    SetX50(314, -1);
+    SetX50(315, -1);
+    SetX50(102, 0);
+    SetX50(103, 0);
+label17:
+label20:
+    SetX50(106, 0);
+label3:
+    SetX50(107, GetX50(106) * 51);
+    SetX50(107, GetX50(107) + GetX50(160));
+    SetX50(108, GetX50(312 + GetX50(106)));
+    if (GetX50(108) < 0) { goto label1; }
+        SetX50(109, GetX50(300 + GetX50(108)));
+        SetX50(110, GetX50(109) * 2);
+        SetX50(110, GetX50(110) + GetX50(101));
+        DrawPicture(0, GetX50(110), GetX50(107), GetX50(161));
+label1:
+        if (GetX50(108) != -1) { goto label2; }
+            DrawPicture(0, 9144, GetX50(107), GetX50(161));
+label2:
+            SetX50(106, GetX50(106) + 1);
+            if (GetX50(106) < 2) { goto label3; }
+label10:
+label13:
+                SetX50(106, 0);
+label6:
+                SetX50(107, GetX50(106) * 54);
+                SetX50(107, GetX50(107) + GetX50(162));
+                SetX50(108, GetX50(308 + GetX50(106)));
+                if (GetX50(108) != 0) { goto label4; }
+                    SetX50(109, GetX50(300 + GetX50(106)));
+                    SetX50(110, GetX50(109) * 2);
+                    SetX50(110, GetX50(110) + GetX50(101));
+                    DrawPicture(0, GetX50(110), GetX50(107), GetX50(163));
+label4:
+                    if (GetX50(108) != 1) { goto label5; }
+                        DrawPicture(0, 9144, GetX50(107), GetX50(163));
+label5:
+                        SetX50(106, GetX50(106) + 1);
+                        if (GetX50(106) < 4) { goto label6; }
+                            SetX50(111, GetX50(103) * 54);
+                            SetX50(111, GetX50(111) + GetX50(162));
+                            DrawPicture(0, 9146, GetX50(111), GetX50(163));
+                            drawrect50(0, 350, 280, 60, 30, 100);
+                            drawstring(0, 970, 360, 287, -25960, 0);
+                            SetX50(112, GetX50(308 + GetX50(103)));
+                            if (GetX50(112) != 0) { goto label7; }
+                                SetX50(113, GetX50(300 + GetX50(103)));
+                                SetX50(114, GetX50(113) * 5);
+                                SetX50(114, GetX50(114) + 600);
+                                drawstring(0, GetX50(114), 360, 287, -25960, 0);
+label7:
+label9:
+label12:
+label15:
+label16:
+label19:
+label21:
+label22:
+                                SetX50(106, GetKey());
+                                if (GetX50(106) != 156) { goto label8; }
+                                    if (GetX50(103) >= 3) { goto label9; }
+                                        SetX50(103, GetX50(103) + 1);
+                                        if (CheckJumpFlag()) { goto label10; }
+label8:
+                                            if (GetX50(106) != 154) { goto label11; }
+                                                if (GetX50(103) <= 0) { goto label12; }
+                                                    SetX50(103, GetX50(103) - 1);
+                                                    if (CheckJumpFlag()) { goto label13; }
+label11:
+                                                        if (GetX50(106) != 32) { goto label14; }
+                                                            if (GetX50(102) >= 2) { goto label15; }
+                                                                SetX50(107, GetX50(308 + GetX50(103)));
+                                                                if (GetX50(107) != 0) { goto label16; }
+                                                                    SetX50(308 + GetX50(103), 1);
+                                                                    SetX50(312 + GetX50(102), GetX50(103));
+                                                                    SetX50(102, GetX50(102) + 1);
+                                                                    if (CheckJumpFlag()) { goto label17; }
+label14:
+                                                                        if (GetX50(106) != 27) { goto label18; }
+                                                                            if (GetX50(102) <= 0) { goto label19; }
+                                                                                SetX50(102, GetX50(102) - 1);
+                                                                                SetX50(107, GetX50(312 + GetX50(102)));
+                                                                                SetX50(308 + GetX50(107), 0);
+                                                                                SetX50(312 + GetX50(102), -1);
+                                                                                if (CheckJumpFlag()) { goto label20; }
+label18:
+                                                                                    if (GetX50(106) != 13) { goto label21; }
+                                                                                        if (GetX50(102) != 2) { goto label22; }
+                                                                                            SetX50(107, GetX50(300 + GetX50(312)));
+                                                                                            SetX50(108, GetX50(200 + GetX50(107)));
+                                                                                            SetX50(109, GetX50(300 + GetX50(313)));
+                                                                                            SetX50(110, GetX50(200 + GetX50(109)));
+                                                                                            if (GetX50(108) <= GetX50(110)) { goto label23; }
+                                                                                                SetX50(111, GetX50(108) + 0);
+                                                                                                SetX50(108, GetX50(110) + 0);
+                                                                                                SetX50(110, GetX50(111) + 0);
+label23:
+                                                                                                SetX50(112, GetX50(108) * 100);
+                                                                                                SetX50(112, GetX50(112) + GetX50(110));
+                                                                                                CallEvent(368, 0, 0, 0, 0);
+                                                                                                SetX50(114, 0);
+label24:
+                                                                                                SetX50(115, GetX50(114) * 61);
+                                                                                                SetX50(116, GetX50(115) + GetX50(164));
+                                                                                                SetX50(115, GetX50(114) * 51);
+                                                                                                SetX50(117, GetX50(115) + GetX50(160));
+                                                                                                SetX50(118, GetX50(312 + GetX50(114)));
+                                                                                                SetX50(119, GetX50(300 + GetX50(118)));
+                                                                                                SetX50(120, GetX50(119) * 2);
+                                                                                                SetX50(120, GetX50(120) + GetX50(101));
+                                                                                                DrawPicture(0, GetX50(120), GetX50(116), GetX50(165));
+                                                                                                DrawPicture(0, 9144, GetX50(117), GetX50(161));
+                                                                                                Delay(250);
+                                                                                                SetX50(114, GetX50(114) + 1);
+                                                                                                if (GetX50(114) < 2) { goto label24; }
+                                                                                                    SetX50(121, GetX50(113) * 5);
+                                                                                                    SetX50(121, GetX50(121) + 800);
+                                                                                                    drawstring(0, GetX50(121), 160, 247, 1797, 0);
+                                                                                                    SetX50(0, GetKey());
+                                                                                                    SetX50(114, 0);
+label25:
+                                                                                                    SetX50(115, GetX50(114) * 61);
+                                                                                                    SetX50(115, GetX50(115) + GetX50(166));
+                                                                                                    SetX50(116, GetX50(100) * 2);
+                                                                                                    SetX50(116, GetX50(116) + GetX50(114));
+                                                                                                    SetX50(117, GetX50(422 + GetX50(116)));
+                                                                                                    SetX50(118, GetX50(304 + GetX50(117)));
+                                                                                                    SetX50(119, GetX50(118) * 2);
+                                                                                                    SetX50(119, GetX50(119) + GetX50(101));
+                                                                                                    DrawPicture(0, GetX50(119), GetX50(115), GetX50(167));
+                                                                                                    Delay(250);
+                                                                                                    SetX50(114, GetX50(114) + 1);
+                                                                                                    if (GetX50(114) < 2) { goto label25; }
+                                                                                                        SetX50(120, GetX50(100) * 2);
+                                                                                                        SetX50(121, GetX50(120) + 1);
+                                                                                                        SetX50(122, GetX50(422 + GetX50(120)));
+                                                                                                        SetX50(123, GetX50(422 + GetX50(121)));
+                                                                                                        SetX50(124, GetX50(122) * 4);
+                                                                                                        SetX50(124, GetX50(124) + GetX50(123));
+                                                                                                        SetX50(125, GetX50(460 + GetX50(124)));
+                                                                                                        SetX50(126, GetX50(125) * 5);
+                                                                                                        SetX50(126, GetX50(126) + 800);
+                                                                                                        drawstring(0, GetX50(126), 310, 247, 1797, 0);
+                                                                                                        SetX50(0, GetKey());
+                                                                                                        drawrect50(0, 110, 390, 420, 30, 60);
+                                                                                                        if (GetX50(113) <= GetX50(125)) { goto label26; }
+                                                                                                            SetX50(104, GetX50(104) + 1);
+                                                                                                            drawstring(0, 1010, 120, 397, 21072, 0);
+label26:
+                                                                                                            if (GetX50(113) >= GetX50(125)) { goto label27; }
+                                                                                                                SetX50(105, GetX50(105) + 1);
+                                                                                                                drawstring(0, 1020, 120, 397, 21072, 0);
+label27:
+                                                                                                                if (GetX50(113) != GetX50(125)) { goto label28; }
+                                                                                                                    drawstring(0, 1030, 120, 397, 21072, 0);
+label28:
+                                                                                                                    SetX50(0, GetKey());
+                                                                                                                    SetX50(100, GetX50(100) + 1);
+                                                                                                                    CallEvent(373, 0, 0, 0, 0);
+                                                                                                                    if (GetX50(100) != 2) { goto label29; }
+                                                                                                                        drawrect50(0, 110, 360, 420, 30, 60);
+                                                                                                                        if (GetX50(104) <= GetX50(105)) { goto label30; }
+                                                                                                                            drawstring(0, 1040, 120, 367, 21072, 0);
+                                                                                                                            AddItemWithoutHint(0, GetX50(15205));
+                                                                                                                            SetX50(0, GetKey());
+exit();
+label30:
+                                                                                                                            if (GetX50(104) >= GetX50(105)) { goto label31; }
+                                                                                                                                drawstring(0, 1050, 120, 367, 21072, 0);
+                                                                                                                                SetX50(15205, GetX50(15205) * -1);
+                                                                                                                                AddItemWithoutHint(0, GetX50(15205));
+                                                                                                                                SetX50(0, GetKey());
+exit();
+label31:
+                                                                                                                                drawstring(0, 1060, 120, 367, 21072, 0);
+                                                                                                                                SetX50(0, GetKey());

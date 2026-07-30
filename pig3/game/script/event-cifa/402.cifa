@@ -1,6 +1,6 @@
 SetX50(10, 0);
 do {
-    battle_field_get(1, 10, 0, 1, 0, 0);
+    battlefieldget(1, 10, 0, 1, 0, 0);
     SetX50(3, GetRole(GetX50(1), 6 / 2));
     if (GetX50(3) == 13) {
         CallEvent(438, GetX50(1), 0, 0, 0);

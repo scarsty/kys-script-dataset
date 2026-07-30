@@ -14,8 +14,8 @@ if (GetX50(3500) == 0 || GetX50(3900) == 0) {
     SetX50(3910, 0);
     if (GetX50(3500) == 1 && GetX50(3900) == 1) {
         Talk(107, "當前只有一種糧食和一種水，是否製作？", -2, 1, 0, 0);
-        dialog_to_x50(0, 266, 2500, 0, 0, 0);
-        dialog_to_x50(0, 267, 2550, 0, 0, 0);
+        gettalk(0, 266, 2500, 0, 0, 0);
+        gettalk(0, 267, 2550, 0, 0, 0);
         SetX50(2600, 2500); SetX50(2601, 2550);
         SetX50(3910, Menu50(2, 2600, 181, 215, 10));
         if (GetX50(3910) == 1) { SetX50(3510, 1); }
@@ -45,9 +45,9 @@ ka239_build_candidates(sourceBase, sourceCount, textBase, idBase, amountBase, co
         if (GetX50(3112) > 0) {
             SetX50(3113, GetX50(countBase)); SetX50(3114, 4000 + GetX50(3113) * 100);
             SetX50(3115, GetX50(3114) + 20); SetX50(3116, GetX50(3114) + 40);
-            record_name_to_x50(1, 1, GetX50(3111), GetX50(3114), 0, 0);
+            getname(1, 1, GetX50(3111), GetX50(3114), 0, 0);
             SetX50(GetX50(3115), sprintf(GetX50String(3100), GetX50(3112)));
-            concat_x50(GetX50(3116), GetX50(3114), GetX50(3115), 0, 0, 0);
+            concat(GetX50(3116), GetX50(3114), GetX50(3115), 0, 0, 0);
             SetX50(textBase + GetX50(3113), GetX50(3116)); SetX50(idBase + GetX50(3113), GetX50(3111));
             SetX50(amountBase + GetX50(3113), GetX50(3112)); SetX50(countBase, GetX50(countBase) + 1);
         }

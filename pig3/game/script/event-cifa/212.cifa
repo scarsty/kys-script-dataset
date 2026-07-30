@@ -67,31 +67,31 @@ ka212_build_line(slot, item, price, amount) {
     SetX50(2, slot * 30);
     SetX50(2, GetX50(2) + 1000);
     SetX50(800 + slot, GetX50(2));
-    record_name_to_x50(1, 1, item, GetX50(2), 0, 0);
-    string_length_x50(GetX50(2), 3, 0, 0, 0, 0);
+    getname(1, 1, item, GetX50(2), 0, 0);
+    stringlength(GetX50(2), 3, 0, 0, 0, 0);
     SetX50(8, 19);
     SetX50(8, GetX50(8) - GetX50(3));
     SetX50(180, MakeSpaces(GetX50(8)));
     SetX50(170, readtalkasstring(716));
     SetX50(15020, sprintf(GetX50String(170), price));
     SetX50(15019, "價 ");
-    string_length_x50(15020, 3, 0, 0, 0, 0);
+    stringlength(15020, 3, 0, 0, 0, 0);
     SetX50(8, 5);
     SetX50(8, GetX50(8) - GetX50(3));
     SetX50(15030, MakeSpaces(GetX50(8)));
     SetX50(15010, sprintf(GetX50String(170), amount));
     SetX50(15009, "量 ");
-    concat_x50(15000, 15019, 15030, 0, 0, 0);
-    concat_x50(14000, 15000, 15009, 0, 0, 0);
-    concat_x50(140, GetX50(2), 180, 0, 0, 0);
-    concat_x50(GetX50(2), 140, 14000, 0, 0, 0);
+    concat(15000, 15019, 15030, 0, 0, 0);
+    concat(14000, 15000, 15009, 0, 0, 0);
+    concat(140, GetX50(2), 180, 0, 0, 0);
+    concat(GetX50(2), 140, 14000, 0, 0, 0);
     SetX50(200 + slot, item);
 }
 ka212_add_next_page(slot) {
     SetX50(2, slot * 30);
     SetX50(2, GetX50(2) + 1000);
     SetX50(800 + slot, GetX50(2));
-    dialog_to_x50(0, 717, GetX50(2), 0, 0, 0);
+    gettalk(0, 717, GetX50(2), 0, 0, 0);
 }
 ka212_clear_page() {
     SetX50(22, 0);

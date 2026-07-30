@@ -71,7 +71,7 @@ __event_372_block_10() {
     SetX50(106, GetD(GetX50(101), GetX50(104), 1));
     SetX50(106, GetX50(106) - 100);
     SetX50(106, GetX50(106) + 13326);
-    dialog_to_x50(0, GetX50(106), 1000, 0, 0, 0);
+    gettalk(0, GetX50(106), 1000, 0, 0, 0);
     SetX50(2000, sprintf(GetX50String(1000), GetX50(107)));
     SetX50(0, 0);
     talk(102, -2000, "乞丐", 0, 1, 0);
