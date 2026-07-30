@@ -23,7 +23,7 @@ else {
 				showstringwithbox(10, 10, "現在只有" + to_string(d)+"這種材料，是否製作？");
 				b=menu(2, 10, 40, 100, {"是","否"});
 				if (b==0) {
-					getitem(a,-1);
+					AddItemWithoutHint(a,-1);
 					g=getitempro(a,42);
 					i=g;
 					j=187;
@@ -31,17 +31,17 @@ else {
 						j=j+1;
 						k=getitempro(j,42);
 						if (k==i) {
-							getitem(j,50);
+							AddItem(j,50);
 							exit();
 						}
 					}
-					getitem(205,1);
+					AddItem(205,1);
 				}
 				else { }
 			}
 			else {
-				getitem(a,-1);
-				getitem(z,-1);
+				AddItemWithoutHint(a,-1);
+				AddItemWithoutHint(z,-1);
 				g=getitempro(a,42);
 				h=getitempro(z,42);
 				i=g+h;
@@ -50,11 +50,11 @@ else {
 					j=j+1;
 					k=getitempro(j,42);
 					if (k==i) {
-						getitem(j,50);
+						AddItem(j,50);
 						exit();
 					}
 				}
-				getitem(205,1);
+				AddItem(205,1);
 			}
 		}
 	}

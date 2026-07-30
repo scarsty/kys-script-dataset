@@ -43,11 +43,11 @@ if (!list3.contains(idC_key)) {
     exit();
 }
 idC = list3[idC_key];
-additem(idA, -1);
-additem(idB, -1);
+AddItemWithoutHint(idA, -1);
+AddItemWithoutHint(idB, -1);
 if (getitempro(idC, 41) == 4) {
-    additem(idC, 100);
+    AddItem(idC, 100);
 }
 else {
-    additem(idC, 1);
+    AddItem(idC, 1);
 }

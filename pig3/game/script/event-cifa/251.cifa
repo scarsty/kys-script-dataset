@@ -68,32 +68,27 @@ SetX50(113, -1);
 SetX50(114, -1);
 SetX50(106, 0);
 label0:
-label2:
-label5:
-label6:
-label8:
 SetX50(107, Random50(GetX50(100)));
 SetX50(108, GetX50(300 + GetX50(107)));
 if (GetX50(108) == 1) { goto label0; }
     if (GetX50(107) > 5) { goto label1; }
-        if (GetX50(103) == 1) { goto label2; }
+        if (GetX50(103) == 1) { goto label0; }
             SetX50(103, 1);
             if (!CheckJumpFlag()) { goto label3; }
 label1:
-                if (GetX50(107) > 9) { goto label4; }
-                    if (GetX50(104) == 1) { goto label5; }
+                if (GetX50(107) > 9) { goto label3; }
+                    if (GetX50(104) == 1) { goto label0; }
                         SetX50(104, 1);
 label3:
-label4:
                         SetX50(109, 0);
 label7:
                         SetX50(110, GetX50(111 + GetX50(109)));
-                        if (GetX50(107) == GetX50(110)) { goto label6; }
+                        if (GetX50(107) == GetX50(110)) { goto label0; }
                             SetX50(109, GetX50(109) + 1);
                             if (GetX50(109) < GetX50(106)) { goto label7; }
                                 SetX50(111 + GetX50(106), GetX50(107));
                                 SetX50(106, GetX50(106) + 1);
-                                if (GetX50(106) < 4) { goto label8; }
+                                if (GetX50(106) < 4) { goto label0; }
                                     SetX50(120, Random50(4));
                                     SetX50(121, GetX50(111 + GetX50(120)));
                                     SetX50(300 + GetX50(121), 1);

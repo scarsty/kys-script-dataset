@@ -60,7 +60,6 @@ label29:
     SetX50(102, 0);
     SetX50(103, 0);
 label17:
-label20:
     SetX50(106, 0);
 label3:
     SetX50(107, GetX50(106) * 51);
@@ -78,7 +77,6 @@ label2:
             SetX50(106, GetX50(106) + 1);
             if (GetX50(106) < 2) { goto label3; }
 label10:
-label13:
                 SetX50(106, 0);
 label6:
                 SetX50(107, GetX50(106) * 54);
@@ -107,43 +105,36 @@ label5:
                                 SetX50(114, GetX50(114) + 600);
                                 drawstring(0, GetX50(114), 360, 287, -25960, 0);
 label7:
-label9:
-label12:
-label15:
-label16:
-label19:
-label21:
-label22:
                                 SetX50(106, GetKey());
                                 if (GetX50(106) != 156) { goto label8; }
-                                    if (GetX50(103) >= 3) { goto label9; }
+                                    if (GetX50(103) >= 3) { goto label7; }
                                         SetX50(103, GetX50(103) + 1);
                                         if (CheckJumpFlag()) { goto label10; }
 label8:
                                             if (GetX50(106) != 154) { goto label11; }
-                                                if (GetX50(103) <= 0) { goto label12; }
+                                                if (GetX50(103) <= 0) { goto label7; }
                                                     SetX50(103, GetX50(103) - 1);
-                                                    if (CheckJumpFlag()) { goto label13; }
+                                                    if (CheckJumpFlag()) { goto label10; }
 label11:
                                                         if (GetX50(106) != 32) { goto label14; }
-                                                            if (GetX50(102) >= 2) { goto label15; }
+                                                            if (GetX50(102) >= 2) { goto label7; }
                                                                 SetX50(107, GetX50(308 + GetX50(103)));
-                                                                if (GetX50(107) != 0) { goto label16; }
+                                                                if (GetX50(107) != 0) { goto label7; }
                                                                     SetX50(308 + GetX50(103), 1);
                                                                     SetX50(312 + GetX50(102), GetX50(103));
                                                                     SetX50(102, GetX50(102) + 1);
                                                                     if (CheckJumpFlag()) { goto label17; }
 label14:
                                                                         if (GetX50(106) != 27) { goto label18; }
-                                                                            if (GetX50(102) <= 0) { goto label19; }
+                                                                            if (GetX50(102) <= 0) { goto label7; }
                                                                                 SetX50(102, GetX50(102) - 1);
                                                                                 SetX50(107, GetX50(312 + GetX50(102)));
                                                                                 SetX50(308 + GetX50(107), 0);
                                                                                 SetX50(312 + GetX50(102), -1);
-                                                                                if (CheckJumpFlag()) { goto label20; }
+                                                                                if (CheckJumpFlag()) { goto label17; }
 label18:
-                                                                                    if (GetX50(106) != 13) { goto label21; }
-                                                                                        if (GetX50(102) != 2) { goto label22; }
+                                                                                    if (GetX50(106) != 13) { goto label7; }
+                                                                                    if (GetX50(102) != 2) { goto label7; }
                                                                                             SetX50(107, GetX50(300 + GetX50(312)));
                                                                                             SetX50(108, GetX50(200 + GetX50(107)));
                                                                                             SetX50(109, GetX50(300 + GetX50(313)));

@@ -53,9 +53,9 @@ if (GetX50(209) != 1) {
 }
 SetX50(210, read_mem(1837968));
 SetX50(211, GetD(GetX50(200), 0, 4));
-DrawRect(0, 30, 178, 260, 11, 0);
-DrawRect(0, 30, 178, 260, 11, 0);
-DrawRect(0, 30, 178, 260, 11, 0);
+DrawRect(0, 30, 178, 260, 0, ColColor(255), 102);
+DrawRect(0, 30, 178, 260, 0, ColColor(255), 102);
+DrawRect(0, 30, 178, 260, 0, ColColor(255), 102);
 SetX50(213, GetX50(212) / 50);
 SetX50(214, (GetX50(211) - GetX50(210)) / GetX50(213) - 1);
 SetX50(215, 0);

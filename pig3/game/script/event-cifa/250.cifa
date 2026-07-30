@@ -3,17 +3,14 @@ SetX50(1021, 2000);
 SetX50(1090, 26);
 SetX50(1550, readtalkasstring(224));
 label1:
-label2:
-label3:
-label5:
 SetX50(1090, GetX50(1090) + 1);
 if (GetX50(1090) >= 54) { goto label0; }
     SetX50(1091, GetItem(GetX50(1090), 78 / 2));
     if (GetX50(1091) != 0) { goto label1; }
         SetX50(1001, GetItemAmount(GetX50(1090)));
-        if (GetX50(1001) <= 0) { goto label2; }
+        if (GetX50(1001) <= 0) { goto label1; }
             SetX50(1092, GetItem(GetX50(1090), 18 / 2));
-            if (GetX50(1092) <= 0) { goto label3; }
+            if (GetX50(1092) <= 0) { goto label1; }
                 SetX50(1500, GetItemName(GetX50(1090)));
                 SetX50(1600, sprintf(GetX50String(1550), GetX50(1092)));
                 SetX50(1008, drawlength(GetX50String(1500)));
@@ -33,7 +30,7 @@ label4:
                     SetX50(1200 + GetX50(1020), GetX50(1092));
                     SetX50(1250 + GetX50(1020), GetX50(1090));
                     SetX50(1021, GetX50(1021) + 50);
-                    if (1) { goto label5; }
+                    if (1) { goto label1; }
 label0:
                         if (GetX50(1020) == 0) { goto label6; }
                             SetX50(1120, 0);
@@ -141,16 +138,15 @@ label18:
                                                                             showmessage(2, 1900, 200, 1077, 26211, 0);
                                                                             SetX50(1030, Menu50(GetX50(1020), 1300, 181, GetX50(1075), 10));
                                                                             if (GetX50(1030) <= 0) { goto label19; }
-                                                                                if (GetX50(1120) == 1) { goto label20; }
+                                                                                if (GetX50(1120) == 1) { goto label16; }
                                                                                     SetX50(1950, readtalkasstring(274));
 label15:
                                                                                     SetX50(1125, GetX50(1120) * 18);
                                                                                     SetX50(1125, GetX50(1125) + 10);
                                                                                     showmessage(2, 1950, 500, 1177, 26211, 0);
                                                                                     SetX50(1130, Menu50(GetX50(1120), 1450, 481, GetX50(1175), 10));
-                                                                                    if (GetX50(1130) <= 0) { goto label21; }
+                                                                                    if (GetX50(1130) <= 0) { goto label19; }
 label16:
-label20:
                                                                                         SetX50(1051, GetX50(1250 + GetX50(1030)));
                                                                                         SetX50(1151, GetX50(1430 + GetX50(1130)));
                                                                                         AddItemWithoutHint( GetX50(1151), -1);
@@ -173,7 +169,6 @@ label20:
                                                                                                 SetItem(GetX50(1051), 106 / 2, GetX50(1072));
                                                                                                 SetX50(2200, readtalkasstring(286));
 label24:
-label25:
                                                                                                 SetX50(2100, readtalkasstring(283));
                                                                                                 SetX50(2150, readtalkasstring(287));
                                                                                                 SetX50(1500, GetItemName(GetX50(1051)));
@@ -206,11 +201,10 @@ label22:
                                                                                                     SetX50(1072, GetX50(1072) + GetX50(1095));
                                                                                                     SetItem(GetX50(1051), 108 / 2, GetX50(1072));
                                                                                                     SetX50(2200, readtalkasstring(285));
-                                                                                                    if (1) { goto label25; }
+                                                                                                    if (1) { goto label24; }
 label13:
                                                                                                         talk(97, "對不起，原材料不足，請集齊材料再來。", -2, 1, 0, 0);
 label19:
-label21:
                                                                                                         exit();
 label6:
                                                                                                         talk(97, "當前沒有可打造之武器", -2, 1, 0, 0);

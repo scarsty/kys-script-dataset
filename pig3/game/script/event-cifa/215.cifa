@@ -33,9 +33,9 @@ do {
 } while (GetX50(1) < 25);
 SetX50(25, GetX50(7) - 117);
 SetX50(27, GetX50(25) + 160);
-DrawRect(3, 25, 26, 320, 200, 0);
-DrawRect(3, 27, 26, 160, 200, 0);
-DrawRect(3, 25, 26, 160, 200, 0);
+DrawRect(GetX50(25), GetX50(26), 320, 200, 0, ColColor(255), 255);
+DrawRect(GetX50(27), GetX50(26), 160, 200, 0, ColColor(255), 255);
+DrawRect(GetX50(25), GetX50(26), 160, 200, 0, ColColor(255), 255);
 SetX50(6, 0);
 do {
     SetX50(9, (GetX50(6) % 5) * 30);
@@ -58,8 +58,8 @@ do {
         DrawPicture(0, GetX50(1050 + GetX50(6)), GetX50(10), GetX50(11));
         DrawPicture(0, GetX50(1100 + GetX50(6)), GetX50(10) - 160, GetX50(11));
         SetX50(6, GetX50(6) + 1);
-        DrawRect(3, 27, 28, 32, 30, 0);
-        DrawRect(3, 25, 28, 32, 30, 0);
+        DrawRect(GetX50(27), GetX50(28), 32, 30, 0, ColColor(255), 102);
+        DrawRect(GetX50(25), GetX50(28), 32, 30, 0, ColColor(255), 102);
     } while (GetX50(6) < 25);
     SetX50(53, sprintf(GetX50String(60), GetX50(23)));
     DrawString(3, 50, 7, 24, 1797, 0);
@@ -85,9 +85,9 @@ do {
             if (CheckJumpFlag()) {
                 SetX50(25, GetX50(7) - 165);
                 SetX50(27, GetX50(25) + 160);
-                DrawRect(3, 25, 26, 320, 200, 0);
-                DrawRect(3, 27, 26, 160, 200, 0);
-                DrawRect(3, 25, 26, 160, 200, 0);
+                DrawRect(GetX50(25), GetX50(26), 320, 200, 0, ColColor(255), 255);
+                DrawRect(GetX50(27), GetX50(26), 160, 200, 0, ColColor(255), 255);
+                DrawRect(GetX50(25), GetX50(26), 160, 200, 0, ColColor(255), 255);
             }
         }
         if (GetX50(0) == 13 || GetX50(0) == 32) {

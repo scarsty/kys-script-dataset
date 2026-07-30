@@ -110,14 +110,13 @@ setx50(1050,"莊家獲勝");
 setx50(1060,"不賺不賠");
 SetX50(100, 0);
 label0:
-label1:
 SetX50(101, Random50(32));
 SetX50(102, GetX50(250 + GetX50(101)));
 if (GetX50(102) != 0) { goto label0; }
     SetX50(250 + GetX50(101), 1);
     SetX50(300 + GetX50(100), GetX50(101));
     SetX50(100, GetX50(100) + 1);
-    if (GetX50(100) < 8) { goto label1; }
+    if (GetX50(100) < 8) { goto label0; }
         SetX50(403, 0);
 label5:
         SetX50(404, GetX50(403) + 1);
