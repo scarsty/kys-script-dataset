@@ -1,5 +1,5 @@
 battlefieldget(1, 28005, 0, 1000, 0, 0);
-SetX50(1001, read_mem(1994454));
+SetX50(1001, getbattleactor());
 SetX50(1002, GetX50(1001) * 2);
 SetX50(1002, GetX50(1002) + 146);
 SetX50(1003, GetRole(GetX50(1000), GetX50(1002) / 2));
@@ -29,7 +29,7 @@ do {
             SetX50(1024, GetX50(1022) * 2);
             SetX50(1025, GetX50(1023) * 128);
             SetX50(1026, GetX50(1024) + GetX50(1025));
-            write_mem(1960452 + GetX50(1026), 0);
+            UpdateAllScreen();
         }
         battlefieldget(1, 1020, 10, 1031, 0, 0);
         if (GetX50(1031) >= 0) {

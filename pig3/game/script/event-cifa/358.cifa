@@ -1,6 +1,6 @@
-SetX50(200, read_mem(1911134 + 0));
-SetX50(201, read_mem(1911132 + 0));
-SetX50(202, read_mem(1911130 + 0));
+SetX50(200, getcurrentscene());
+SetX50(201, getsceney());
+SetX50(202, getscenex());
 SetX50(203, GetS(GetX50(200), 3, GetX50(201), GetX50(202)));
 SetX50(204, GetD(GetX50(200), GetX50(203), 7));
 SetX50(204, GetX50(204) * -1);

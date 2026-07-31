@@ -102,10 +102,10 @@ else {
     talk(2, "靖哥哥，芙兒，我們先一起把兩位聖人的屍體埋葬好，然後儘快帶這孩子回桃花島吧。", -2, 0, 0, 0);
     talk(1, "也好！", -2, 0, 0, 0);
     darkscene();
-    write_mem(1911134 + 0, 1);
-    write_mem(168639 + 0, 195);
+    setspecialcurrentscene(1); UpdateAllScreen();
+    UpdateAllScreen();
     pe(-28218, 2, 0, 1, 0, 0);
-    write_mem(168639 + 0, 233);
+    UpdateAllScreen();
     lightscene();
     setsceneposition2(29, 25);
     talk(2, "孩子，以後你就住在桃花島吧。這是你郭伯伯，我是你郭伯母。以後你便叫我們師父師娘吧。這是我爹爹，你叫他黃公公吧。", -2, 0, 0, 0);

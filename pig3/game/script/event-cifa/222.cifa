@@ -1,5 +1,4 @@
 CallEvent(221, 0, 0, 0, 0);
-SetX50(100, read_mem(1911654));
 SetX50(0, 0);
 SetX50(1, 0);
 do {

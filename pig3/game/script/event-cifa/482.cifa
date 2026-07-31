@@ -1,11 +1,11 @@
 __cifa_pc_482 = 0;
 if (__cifa_pc_482 == 0) {
-    SetX50(1001, read_mem(349914 + 0));
-    SetX50(1002, read_mem(349916 + 0));
+    SetX50(1001, getbattlecursorx());
+    SetX50(1002, getbattlecursory());
     SetX50(1001, GetX50(1001) * 2);
     SetX50(1002, GetX50(1002) * 128);
     SetX50(1003, GetX50(1001) + GetX50(1002));
-    SetX50(1004, read_mem(1985028 + GetX50(1003)));
+    SetX50(1004, getbattlefieldcell(GetX50(1003)));
     battlefieldget(1, 1004, 0, 1005, 0, 0);
     if (GetX50(1005) < 0) {
         __cifa_pc_482 = 8;
@@ -31,7 +31,7 @@ if (__cifa_pc_482 == 2) {
     }
 }
 if (__cifa_pc_482 == 3) {
-    SetX50(1021, read_mem(1994454 + 0));
+    SetX50(1021, getbattleactor());
     SetX50(1022, GetX50(1021) * 2);
     SetX50(1022, GetX50(1022) + 146);
     SetX50(1023, GetRole(GetX50(1000), GetX50(1022) / 2));
@@ -47,9 +47,8 @@ if (__cifa_pc_482 == 4) {
     SetX50(1007, GetRole(GetX50(1005), 34 / 2));
     SetRole(GetX50(1005), 34 / 2, 0);
     SetX50(1008, GetX50(28005) * 28);
-    SetX50(1009, read_mem(1951558 + GetX50(1008)));
     SetX50(1009, GetX50(1009) + GetX50(1007));
-    write_mem(1951558 + GetX50(1008), GetX50(1009));
+    UpdateAllScreen();
     if (1) {
         __cifa_pc_482 = 7;
     } else {
@@ -62,8 +61,8 @@ if (__cifa_pc_482 == 6) {
 }
 if (__cifa_pc_482 == 7) {
     SetX50(1006, GetX50(1004) * 28);
-    write_mem(1951550 + GetX50(1006), GetX50(1007));
-    write_mem(1960452 + GetX50(1003), 1);
+    UpdateAllScreen();
+    UpdateAllScreen();
     __cifa_pc_482 = 8;
 }
 if (__cifa_pc_482 == 8) {

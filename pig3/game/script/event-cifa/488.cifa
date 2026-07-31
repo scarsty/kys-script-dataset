@@ -1,5 +1,5 @@
 battlefieldget(1, 28005, 0, 1000, 0, 0);
-SetX50(1001, read_mem(1994454));
+SetX50(1001, getbattleactor());
 SetX50(1002, GetX50(1001) * 2);
 SetX50(1002, GetX50(1002) + 146);
 SetX50(1003, GetRole(GetX50(1000), GetX50(1002) / 2));

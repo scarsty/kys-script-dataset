@@ -1,6 +1,6 @@
 DarkScene();
-SetX50(100, read_mem(345330));
-SetX50(101, read_mem(1911134));
+SetX50(100, getsceneface());
+SetX50(101, getcurrentscene());
 if (GetX50(100) == 0) {
     ka370_set_path(3882, 39, 38, 0);
     SetS(GetX50(101), 2, 34, 40, 3882);

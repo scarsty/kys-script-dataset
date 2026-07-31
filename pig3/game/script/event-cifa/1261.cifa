@@ -57,7 +57,7 @@ lightscene();
 talk(412, "什麼聲音？", -2, 0, 0, 0);
 talk(7, "不好，我們快退。", -2, 1, 0, 0);
 darkscene();
-SetX50(101, read_mem(1911134 + 0));
+SetX50(101, getcurrentscene());
 SetS(GetX50(101), 2, 30, 37, 4994);
 SetS(GetX50(101), 0, 30, 41, 4398);
 SetS(GetX50(101), 0, 31, 41, 4398);

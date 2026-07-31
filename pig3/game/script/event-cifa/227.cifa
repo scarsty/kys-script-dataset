@@ -1,5 +1,5 @@
-write_mem(1837988 + 0, GetX50(28928));
-write_mem(1837984 + 0, GetX50(28929));
+UpdateAllScreen();
+UpdateAllScreen();
 if (GetX50(28930) == 0) {
     SetX50(28929, GetX50(28929) - 1);
 }
@@ -12,11 +12,11 @@ if (GetX50(28930) == 2) {
 if (GetX50(28930) == 3) {
     SetX50(28928, GetX50(28928) - 1);
 }
-write_mem(1837990 + 0, GetX50(28928));
-write_mem(1837986 + 0, GetX50(28929));
+UpdateAllScreen();
+UpdateAllScreen();
 if (GetX50(28930) != -2) {
-    write_mem(345358 + 0, GetX50(28930));
+    UpdateAllScreen();
     SetX50(28931, GetX50(28930) * 8);
     SetX50(28931, GetX50(28931) + 7430);
-    write_mem(1838058 + 0, GetX50(28931));
+    UpdateAllScreen();
 }

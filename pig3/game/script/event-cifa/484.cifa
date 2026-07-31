@@ -1,11 +1,11 @@
 __cifa_pc_484 = 0;
 if (__cifa_pc_484 == 0) {
-    SetX50(1001, read_mem(349914 + 0));
-    SetX50(1002, read_mem(349916 + 0));
+    SetX50(1001, getbattlecursorx());
+    SetX50(1002, getbattlecursory());
     SetX50(1001, GetX50(1001) * 2);
     SetX50(1002, GetX50(1002) * 128);
     SetX50(1003, GetX50(1001) + GetX50(1002));
-    SetX50(1004, read_mem(1985028 + GetX50(1003)));
+    SetX50(1004, getbattlefieldcell(GetX50(1003)));
     battlefieldget(1, 1004, 0, 1005, 0, 0);
     if (GetX50(1005) < 0) {
         __cifa_pc_484 = 18;
@@ -25,7 +25,7 @@ if (__cifa_pc_484 == 2) {
     PlayAction(GetX50(28005), 1, 36);
     battlefieldget(1, 28005, 0, 1000, 0, 0);
     SetX50(1040, GetRole(GetX50(1005), 30 / 2));
-    SetX50(1021, read_mem(1994454 + 0));
+    SetX50(1021, getbattleactor());
     SetX50(1022, GetX50(1021) * 2);
     SetX50(1022, GetX50(1022) + 146);
     SetX50(1023, GetRole(GetX50(1000), GetX50(1022) / 2));

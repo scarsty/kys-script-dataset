@@ -98,7 +98,6 @@ if (GetX50(10) == 1) {
                 } else {
                     SetX50(10, GetX50(10) - 1);
                     SetX50(11, GetX50(200 + GetX50(10)));
-                    SetX50(21, read_mem(1638730));
                     if (GetX50(21) == 0) {
                         SetX50(10032, EnterNumber());
                         if (GetX50(10032) > 0 && GetX50(10032) <= 5000) {

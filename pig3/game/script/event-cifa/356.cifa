@@ -1,8 +1,8 @@
 ClearX50();
-SetX50(200, read_mem(1911134));
-SetX50(201, read_mem(1911132));
-SetX50(202, read_mem(1911130));
-SetX50(203, read_mem(345330));
+SetX50(200, getcurrentscene());
+SetX50(201, getsceney());
+SetX50(202, getscenex());
+SetX50(203, getsceneface());
 SetX50(205, GetD(GetX50(200), 0, 8));
 SetX50(206, GetD(GetX50(200), 0, 7));
 if (GetX50(203) == GetX50(205)) {
@@ -12,12 +12,12 @@ if (GetX50(203) == GetX50(205)) {
     }
     SetX50(206, GetX50(206) + 2);
     SetD(GetX50(200), 0, 7, GetX50(206));
-    write_mem(1838072, GetX50(206));
+    UpdateAllScreen();
 } else {
     SetD(GetX50(200), 0, 8, GetX50(203));
     SetX50(207, GetX50(203) * 14 + 5004);
     SetD(GetX50(200), 0, 7, GetX50(207));
-    write_mem(1838072, GetX50(207));
+    UpdateAllScreen();
 }
 ModifyEvent(-2, 1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1);
 ModifyEvent(-2, 2, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1);
@@ -46,12 +46,12 @@ do {
 SetX50(212, 3000);
 SetX50(209, GetD(GetX50(200), 0, 0));
 if (GetX50(209) != 1) {
-    SetX50(210, read_mem(1837968));
+    SetX50(210, getbattletick());
     SetX50(211, GetX50(210) + GetX50(212));
     SetD(GetX50(200), 0, 4, GetX50(211));
     SetD(GetX50(200), 0, 0, 1);
 }
-SetX50(210, read_mem(1837968));
+SetX50(210, getbattletick());
 SetX50(211, GetD(GetX50(200), 0, 4));
 DrawRect(0, 30, 178, 260, 0, ColColor(255), 102);
 DrawRect(0, 30, 178, 260, 0, ColColor(255), 102);

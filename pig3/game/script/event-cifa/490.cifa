@@ -1,130 +1,272 @@
-label15:
-SetX50(1081, read_mem(1994454 + 0));
-SetX50(1082, GetX50(1081) * 2);
-SetX50(1082, GetX50(1082) + 146);
-battlefieldget(1, 28005, 0, 1000, 0, 0);
-SetX50(1083, GetRole(GetX50(1000), GetX50(1082) / 2));
-SetX50(1084, GetX50(1083) / 100);
-SetX50(1011, GetX50(1084) * 2);
-SetX50(1085, GetX50(1082) - 20);
-SetX50(999, GetRole(GetX50(1000), GetX50(1085) / 2));
-SetX50(1070, GetMagic(GetX50(999), 16 / 2));
-SetX50(1071, GetMagic(GetX50(999), 18 / 2));
-SetX50(1072, GetMagic(GetX50(999), 26 / 2));
-SetX50(1073, GetMagic(GetX50(999), 34 / 2));
-SetX50(1045, 0);
-SetX50(1054, GetX50(28005) * 28);
-battlefieldget(1, 28005, 2, 1074, 0, 0);
-SetX50(1040, GetRole(GetX50(1000), 108 / 2));
-SetX50(1012, GetX50(1011) + 76);
-SetX50(1020, GetMagic(GetX50(999), GetX50(1012) / 2));
-SetX50(1091, GetItemAmount(GetX50(1070)));
-if (GetX50(1091) < GetX50(1071)) { goto label0; }
-SetX50(1012, GetX50(1011) + 36);
-SetX50(1021, GetMagic(GetX50(999), GetX50(1012) / 2));
-SetX50(1060, GetX50(1020) * 2);
-SetX50(1060, GetX50(1060) + 1);
-SetX50(1001, read_mem(349914 + 0));
-SetX50(1002, read_mem(349916 + 0));
-SetX50(1061, GetX50(1001) - GetX50(1020));
-SetX50(1062, GetX50(1002) - GetX50(1020));
-SetAnimationLayer(GetX50(1061), GetX50(1062), GetX50(1060), GetX50(1060), 1);
-PlayAction(GetX50(28005), 1, GetX50(1072));
-SetX50(1063, GetX50(1001) + GetX50(1020));
-SetX50(1064, GetX50(1002) + GetX50(1020));
-label11:
-if (GetX50(1061) < 0) { goto label1; }
-if (GetX50(1061) > 63) { goto label2; }
-SetX50(1062, GetX50(1002) - GetX50(1020));
-label10:
-if (GetX50(1062) < 0) { goto label3; }
-if (GetX50(1062) > 63) { goto label4; }
-SetX50(1065, GetX50(1061) * 2);
-SetX50(1066, GetX50(1062) * 128);
-SetX50(1067, GetX50(1065) + GetX50(1066));
-SetX50(1004, read_mem(1985028 + GetX50(1067)));
-if (GetX50(1004) < 0) { goto label5; }
-battlefieldget(1, 1004, 2, 1009, 0, 0);
-if (GetX50(1009) == GetX50(1074)) { goto label6; }
-battlefieldget(1, 1004, 0, 1005, 0, 0);
-SetX50(1006, GetX50(1004) * 28);
-SetX50(1030, GetRole(GetX50(1005), 34 / 2));
-SetX50(1051, Random50(5));
-SetX50(1051, GetX50(1051) + GetX50(1021));
-SetX50(1053, GetX50(1040) * 2);
-SetX50(1050, GetX50(1053) + GetX50(1051));
-SetX50(1050, GetX50(1050) / 3);
-SetX50(1055, read_mem(1951558 + GetX50(1054)));
-SetX50(1055, GetX50(1055) + GetX50(1050));
-write_mem(1951558 + GetX50(1054), GetX50(1055));
-write_mem(1951550 + GetX50(1006), GetX50(1050));
-write_mem(1960452 + GetX50(1067), 1);
-if (GetX50(1030) > GetX50(1050)) { goto label7; }
-SetX50(1030, 0);
-if (1) { goto label8; }
-label7:
-SetX50(1030, GetX50(1030) - GetX50(1050));
-label8:
-SetRole(GetX50(1005), 34 / 2, GetX50(1030));
-if (1) { goto label9; }
-label6:
-write_mem(1960452 + GetX50(1067), 0);
-label3:
-label4:
-label5:
-label9:
-SetX50(1062, GetX50(1062) + 1);
-if (GetX50(1062) <= GetX50(1064)) { goto label10; }
-label1:
-label2:
-SetX50(1061, GetX50(1061) + 1);
-if (GetX50(1061) <= GetX50(1063)) { goto label11; }
-ShowHurtValue(1);
-ChangeItem(GetX50(1070), GetX50(1071), 0, 1);
-if (GetX50(1073) <= 0) { goto label12; }
-SetX50(1061, GetX50(1001) - GetX50(1020));
-SetX50(1062, GetX50(1002) - GetX50(1020));
-label23:
-if (GetX50(1061) < 0) { goto label13; }
-if (GetX50(1061) > 63) { goto label14; }
-SetX50(1062, GetX50(1002) - GetX50(1020));
-label22:
-if (GetX50(1062) < 0) { goto label15; }
-if (GetX50(1062) > 63) { goto label16; }
-SetX50(1065, GetX50(1061) * 2);
-SetX50(1066, GetX50(1062) * 128);
-SetX50(1067, GetX50(1065) + GetX50(1066));
-SetX50(1004, read_mem(1985028 + GetX50(1067)));
-if (GetX50(1004) < 0) { goto label17; }
-battlefieldget(1, 1004, 2, 1009, 0, 0);
-if (GetX50(1009) == GetX50(1074)) { goto label18; }
-battlefieldget(1, 1004, 0, 1005, 0, 0);
-SetX50(1006, GetX50(1004) * 28);
-SetX50(1075, GetRole(GetX50(1005), 40 / 2));
-SetX50(1076, GetRole(GetX50(1005), 98 / 2));
-SetX50(1050, GetX50(1073) - GetX50(1076));
-if (GetX50(1050) >= 0) { goto label19; }
-SetX50(1050, 0);
-label19:
-SetX50(1075, GetX50(1075) + GetX50(1050));
-if (GetX50(1075) <= 999) { goto label20; }
-SetX50(1075, 999);
-label20:
-write_mem(1951550 + GetX50(1006), GetX50(1050));
-SetRole(GetX50(1005), 40 / 2, GetX50(1075));
-if (1) { goto label21; }
-label18:
-write_mem(1960452 + GetX50(1067), 0);
-label16:
-label17:
-label21:
-SetX50(1062, GetX50(1062) + 1);
-if (GetX50(1062) <= GetX50(1064)) { goto label22; }
-label13:
-label14:
-SetX50(1061, GetX50(1061) + 1);
-if (GetX50(1061) <= GetX50(1063)) { goto label23; }
-ShowHurtValue(2);
-label12:
-Redraw();
-label0:
+__cifa_pc_490 = 0;
+do {
+    if (__cifa_pc_490 == 0) {
+        SetX50(1081, getbattleactor());
+        SetX50(1082, GetX50(1081) * 2);
+        SetX50(1082, GetX50(1082) + 146);
+        battlefieldget(1, 28005, 0, 1000, 0, 0);
+        SetX50(1083, GetRole(GetX50(1000), GetX50(1082) / 2));
+        SetX50(1084, GetX50(1083) / 100);
+        SetX50(1011, GetX50(1084) * 2);
+        SetX50(1085, GetX50(1082) - 20);
+        SetX50(999, GetRole(GetX50(1000), GetX50(1085) / 2));
+        SetX50(1070, GetMagic(GetX50(999), 16 / 2));
+        SetX50(1071, GetMagic(GetX50(999), 18 / 2));
+        SetX50(1072, GetMagic(GetX50(999), 26 / 2));
+        SetX50(1073, GetMagic(GetX50(999), 34 / 2));
+        SetX50(1045, 0);
+        SetX50(1054, GetX50(28005) * 28);
+        battlefieldget(1, 28005, 2, 1074, 0, 0);
+        SetX50(1040, GetRole(GetX50(1000), 108 / 2));
+        SetX50(1012, GetX50(1011) + 76);
+        SetX50(1020, GetMagic(GetX50(999), GetX50(1012) / 2));
+        SetX50(1091, GetItemAmount(GetX50(1070)));
+        if (GetX50(1091) < GetX50(1071)) {
+            __cifa_pc_490 = 38;
+        } else {
+            __cifa_pc_490 = 1;
+        }
+    }
+    if (__cifa_pc_490 == 1) {
+        SetX50(1012, GetX50(1011) + 36);
+        SetX50(1021, GetMagic(GetX50(999), GetX50(1012) / 2));
+        SetX50(1060, GetX50(1020) * 2);
+        SetX50(1060, GetX50(1060) + 1);
+        SetX50(1001, getbattlecursorx());
+        SetX50(1002, getbattlecursory());
+        SetX50(1061, GetX50(1001) - GetX50(1020));
+        SetX50(1062, GetX50(1002) - GetX50(1020));
+        SetAnimationLayer(GetX50(1061), GetX50(1062), GetX50(1060), GetX50(1060), 1);
+        PlayAction(GetX50(28005), 1, GetX50(1072));
+        SetX50(1063, GetX50(1001) + GetX50(1020));
+        SetX50(1064, GetX50(1002) + GetX50(1020));
+        __cifa_pc_490 = 2;
+    }
+    if (__cifa_pc_490 == 2) {
+        if (GetX50(1061) < 0) {
+            __cifa_pc_490 = 19;
+        } else {
+            __cifa_pc_490 = 3;
+        }
+    }
+    if (__cifa_pc_490 == 3) {
+        if (GetX50(1061) > 63) {
+            __cifa_pc_490 = 19;
+        } else {
+            __cifa_pc_490 = 4;
+        }
+    }
+    if (__cifa_pc_490 == 4) {
+        SetX50(1062, GetX50(1002) - GetX50(1020));
+        __cifa_pc_490 = 5;
+    }
+    if (__cifa_pc_490 == 5) {
+        if (GetX50(1062) < 0) {
+            __cifa_pc_490 = 17;
+        } else {
+            __cifa_pc_490 = 6;
+        }
+    }
+    if (__cifa_pc_490 == 6) {
+        if (GetX50(1062) > 63) {
+            __cifa_pc_490 = 17;
+        } else {
+            __cifa_pc_490 = 7;
+        }
+    }
+    if (__cifa_pc_490 == 7) {
+        SetX50(1065, GetX50(1061) * 2);
+        SetX50(1066, GetX50(1062) * 128);
+        SetX50(1067, GetX50(1065) + GetX50(1066));
+        SetX50(1004, getbattlefieldcell(GetX50(1067)));
+        if (GetX50(1004) < 0) {
+            __cifa_pc_490 = 17;
+        } else {
+            __cifa_pc_490 = 8;
+        }
+    }
+    if (__cifa_pc_490 == 8) {
+        battlefieldget(1, 1004, 2, 1009, 0, 0);
+        if (GetX50(1009) == GetX50(1074)) {
+            __cifa_pc_490 = 13;
+        } else {
+            __cifa_pc_490 = 9;
+        }
+    }
+    if (__cifa_pc_490 == 9) {
+        battlefieldget(1, 1004, 0, 1005, 0, 0);
+        SetX50(1006, GetX50(1004) * 28);
+        SetX50(1030, GetRole(GetX50(1005), 34 / 2));
+        SetX50(1051, Random50(5));
+        SetX50(1051, GetX50(1051) + GetX50(1021));
+        SetX50(1053, GetX50(1040) * 2);
+        SetX50(1050, GetX50(1053) + GetX50(1051));
+        SetX50(1050, GetX50(1050) / 3);
+        SetX50(1055, GetX50(1055) + GetX50(1050));
+        UpdateAllScreen();
+        UpdateAllScreen();
+        UpdateAllScreen();
+        if (GetX50(1030) > GetX50(1050)) {
+            __cifa_pc_490 = 11;
+        } else {
+            __cifa_pc_490 = 10;
+        }
+    }
+    if (__cifa_pc_490 == 10) {
+        SetX50(1030, 0);
+        if (1) {
+            __cifa_pc_490 = 12;
+        } else {
+            __cifa_pc_490 = 11;
+        }
+    }
+    if (__cifa_pc_490 == 11) {
+        SetX50(1030, GetX50(1030) - GetX50(1050));
+        __cifa_pc_490 = 12;
+    }
+    if (__cifa_pc_490 == 12) {
+        SetRole(GetX50(1005), 34 / 2, GetX50(1030));
+        if (1) {
+            __cifa_pc_490 = 17;
+        } else {
+            __cifa_pc_490 = 13;
+        }
+    }
+    if (__cifa_pc_490 == 13) {
+        UpdateAllScreen();
+        __cifa_pc_490 = 17;
+    }
+    if (__cifa_pc_490 == 17) {
+        SetX50(1062, GetX50(1062) + 1);
+        if (GetX50(1062) <= GetX50(1064)) {
+            __cifa_pc_490 = 5;
+        } else {
+            __cifa_pc_490 = 19;
+        }
+    }
+    if (__cifa_pc_490 == 19) {
+        SetX50(1061, GetX50(1061) + 1);
+        if (GetX50(1061) <= GetX50(1063)) {
+            __cifa_pc_490 = 2;
+        } else {
+            __cifa_pc_490 = 20;
+        }
+    }
+    if (__cifa_pc_490 == 20) {
+        ShowHurtValue(1);
+        ChangeItem(GetX50(1070), GetX50(1071), 0, 1);
+        if (GetX50(1073) <= 0) {
+            __cifa_pc_490 = 37;
+        } else {
+            __cifa_pc_490 = 21;
+        }
+    }
+    if (__cifa_pc_490 == 21) {
+        SetX50(1061, GetX50(1001) - GetX50(1020));
+        SetX50(1062, GetX50(1002) - GetX50(1020));
+        __cifa_pc_490 = 22;
+    }
+    if (__cifa_pc_490 == 22) {
+        if (GetX50(1061) < 0) {
+            __cifa_pc_490 = 35;
+        } else {
+            __cifa_pc_490 = 23;
+        }
+    }
+    if (__cifa_pc_490 == 23) {
+        if (GetX50(1061) > 63) {
+            __cifa_pc_490 = 35;
+        } else {
+            __cifa_pc_490 = 24;
+        }
+    }
+    if (__cifa_pc_490 == 24) {
+        SetX50(1062, GetX50(1002) - GetX50(1020));
+        __cifa_pc_490 = 25;
+    }
+    if (__cifa_pc_490 == 25) {
+        if (GetX50(1062) < 0) {
+            __cifa_pc_490 = 0;
+        } else {
+            __cifa_pc_490 = 26;
+        }
+    }
+    if (__cifa_pc_490 == 26) {
+        if (GetX50(1062) > 63) {
+            __cifa_pc_490 = 33;
+        } else {
+            __cifa_pc_490 = 27;
+        }
+    }
+    if (__cifa_pc_490 == 27) {
+        SetX50(1065, GetX50(1061) * 2);
+        SetX50(1066, GetX50(1062) * 128);
+        SetX50(1067, GetX50(1065) + GetX50(1066));
+        SetX50(1004, getbattlefieldcell(GetX50(1067)));
+        if (GetX50(1004) < 0) {
+            __cifa_pc_490 = 33;
+        } else {
+            __cifa_pc_490 = 28;
+        }
+    }
+    if (__cifa_pc_490 == 28) {
+        battlefieldget(1, 1004, 2, 1009, 0, 0);
+        if (GetX50(1009) == GetX50(1074)) {
+            __cifa_pc_490 = 30;
+        } else {
+            __cifa_pc_490 = 29;
+        }
+    }
+    if (__cifa_pc_490 == 29) {
+        battlefieldget(1, 1004, 0, 1005, 0, 0);
+        SetX50(1006, GetX50(1004) * 28);
+        SetX50(1075, GetRole(GetX50(1005), 40 / 2));
+        SetX50(1076, GetRole(GetX50(1005), 98 / 2));
+        SetX50(1050, GetX50(1073) - GetX50(1076));
+        if (GetX50(1050) < 0) {
+            SetX50(1050, 0);
+        }
+        SetX50(1075, GetX50(1075) + GetX50(1050));
+        if (GetX50(1075) > 999) {
+            SetX50(1075, 999);
+        }
+        UpdateAllScreen();
+        SetRole(GetX50(1005), 40 / 2, GetX50(1075));
+        if (1) {
+            __cifa_pc_490 = 33;
+        } else {
+            __cifa_pc_490 = 30;
+        }
+    }
+    if (__cifa_pc_490 == 30) {
+        UpdateAllScreen();
+        __cifa_pc_490 = 33;
+    }
+    if (__cifa_pc_490 == 33) {
+        SetX50(1062, GetX50(1062) + 1);
+        if (GetX50(1062) <= GetX50(1064)) {
+            __cifa_pc_490 = 25;
+        } else {
+            __cifa_pc_490 = 35;
+        }
+    }
+    if (__cifa_pc_490 == 35) {
+        SetX50(1061, GetX50(1061) + 1);
+        if (GetX50(1061) <= GetX50(1063)) {
+            __cifa_pc_490 = 22;
+        } else {
+            __cifa_pc_490 = 36;
+        }
+    }
+    if (__cifa_pc_490 == 36) {
+        ShowHurtValue(2);
+        __cifa_pc_490 = 37;
+    }
+    if (__cifa_pc_490 == 37) {
+        Redraw();
+        __cifa_pc_490 = 38;
+    }
+    if (__cifa_pc_490 == 38) {
+        exit();
+    }
+} while (__cifa_pc_490 >= 0);

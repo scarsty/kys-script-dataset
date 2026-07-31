@@ -1,10 +1,10 @@
 SetX50(107, Random50(5));
 if (GetX50(107) == 4) {
     ClearX50();
-    SetX50(100, read_mem(345330 + 0));
-    SetX50(101, read_mem(1911134 + 0));
-    SetX50(102, read_mem(1911132 + 0));
-    SetX50(103, read_mem(1911130 + 0));
+    SetX50(100, getsceneface());
+    SetX50(101, getcurrentscene());
+    SetX50(102, getsceney());
+    SetX50(103, getscenex());
     if (GetX50(100) == 0) {
         SetX50(103, GetX50(103) - 1);
     }

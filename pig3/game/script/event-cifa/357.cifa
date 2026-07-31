@@ -22,10 +22,10 @@ if (__cifa_pc_357 == 0) {
     SetX50(326, 8230);
     SetX50(327, 0);
     setx50(320, "遠方傳來響聲………");
-    SetX50(200, read_mem(1911134 + 0));
-    SetX50(201, read_mem(1911132 + 0));
-    SetX50(202, read_mem(1911130 + 0));
-    SetX50(203, read_mem(345330 + 0));
+    SetX50(200, getcurrentscene());
+    SetX50(201, getsceney());
+    SetX50(202, getscenex());
+    SetX50(203, getsceneface());
     if (GetX50(203) == 0) {
         SetX50(204, GetX50(201) + 0);
         SetX50(205, GetX50(202) - 1);
