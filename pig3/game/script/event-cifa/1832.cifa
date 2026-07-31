@@ -16,7 +16,7 @@ __event_1832_block_2() {
         SetX50(1001, GetRole(0, 102 / 2));
         SetX50(1002, GetX50(1001) + GetX50(2000));
         SetRole(0, 102 / 2, GetX50(1002));
-        SetX50(3000, readtalkasstring(15715));
+        SetX50(3000, "增加御劍%d");
         SetX50(3100, sprintf(GetX50String(3000), GetX50(2000)));
         SetX50(3200, GetRoleName(0));
         SetX50(3100, GetX50String(3300) + GetX50String(3200));

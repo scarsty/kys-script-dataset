@@ -4,7 +4,7 @@ SetX50(3001, 221);
 SetX50(3002, 222);
 SetX50(3010, 209);
 SetX50(3011, 210);
-SetX50(3100, readtalkasstring(224));
+SetX50(3100, "%d");
 ka238_build_candidates(3000, 3, 3200, 3300, 3400, 3500);
 ka238_build_candidates(3010, 2, 3600, 3700, 3800, 3900);
 if (GetX50(3500) == 0 || GetX50(3900) == 0) {
@@ -19,10 +19,14 @@ if (GetX50(3500) == 0 || GetX50(3900) == 0) {
         SetX50(2600, 2500);
         SetX50(2601, 2550);
         SetX50(3910, Menu50(2, 2600, 181, 215, 10));
-        if (GetX50(3910) == 1) { SetX50(3510, 1); }
+        if (GetX50(3910) == 1) {
+            SetX50(3510, 1);
+        }
     } else {
         SetX50(3510, Menu50(GetX50(3500), 3200, 181, 215, 10));
-        if (GetX50(3510) > 0) { SetX50(3910, Menu50(GetX50(3900), 3600, 400, 215, 10)); }
+        if (GetX50(3510) > 0) {
+            SetX50(3910, Menu50(GetX50(3900), 3600, 400, 215, 10));
+        }
     }
     if (GetX50(3510) > 0 && GetX50(3910) > 0) {
         SetX50(1050, GetX50(3300 + GetX50(3510) - 1));
@@ -37,22 +41,31 @@ if (GetX50(3500) == 0 || GetX50(3900) == 0) {
             SetX50(1070, GetX50(1070) + 1);
             SetX50(1071, GetItem(GetX50(1070), 42));
         } while (GetX50(1071) != GetX50(1060) && GetX50(1070) < 22);
-        if (GetX50(1071) == GetX50(1060)) { AddItem(GetX50(1070), 1); } else { AddItem(205, 1); }
+        if (GetX50(1071) == GetX50(1060)) {
+            AddItem(GetX50(1070), 1);
+        } else {
+            AddItem(205, 1);
+        }
     }
 }
-
 ka238_build_candidates(sourceBase, sourceCount, textBase, idBase, amountBase, countBase) {
-    SetX50(countBase, 0); SetX50(3110, 0);
+    SetX50(countBase, 0);
+    SetX50(3110, 0);
     do {
-        SetX50(3111, GetX50(sourceBase + GetX50(3110))); SetX50(3112, GetItemAmount(GetX50(3111)));
+        SetX50(3111, GetX50(sourceBase + GetX50(3110)));
+        SetX50(3112, GetItemAmount(GetX50(3111)));
         if (GetX50(3112) > 0) {
-            SetX50(3113, GetX50(countBase)); SetX50(3114, 4000 + GetX50(3113) * 100);
-            SetX50(3115, GetX50(3114) + 20); SetX50(3116, GetX50(3114) + 40);
+            SetX50(3113, GetX50(countBase));
+            SetX50(3114, 4000 + GetX50(3113) * 100);
+            SetX50(3115, GetX50(3114) + 20);
+            SetX50(3116, GetX50(3114) + 40);
             getname(1, 1, GetX50(3111), GetX50(3114), 0, 0);
             SetX50(GetX50(3115), sprintf(GetX50String(3100), GetX50(3112)));
             concat(GetX50(3116), GetX50(3114), GetX50(3115), 0, 0, 0);
-            SetX50(textBase + GetX50(3113), GetX50(3116)); SetX50(idBase + GetX50(3113), GetX50(3111));
-            SetX50(amountBase + GetX50(3113), GetX50(3112)); SetX50(countBase, GetX50(countBase) + 1);
+            SetX50(textBase + GetX50(3113), GetX50(3116));
+            SetX50(idBase + GetX50(3113), GetX50(3111));
+            SetX50(amountBase + GetX50(3113), GetX50(3112));
+            SetX50(countBase, GetX50(countBase) + 1);
         }
         SetX50(3110, GetX50(3110) + 1);
     } while (GetX50(3110) < sourceCount);

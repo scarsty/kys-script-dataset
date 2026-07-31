@@ -62,7 +62,7 @@ SetSubmapInfo(16, 28 / 2, 0);
 SetSubmapInfo(16, 30 / 2, 0);
 write_mem(1911134 + 0, 16);
 write_mem(168639 + 0, 195);
-PE(-28218, 2, 0, 1, 0, 0);
+pe(-28218, 2, 0, 1, 0, 0);
 write_mem(168639 + 0, 233);
 setsceneposition2(27, 27);
 SetSubmapInfo(16, 28 / 2, 12);
@@ -170,7 +170,7 @@ do {
     SetSubmapInfo(15, 30 / 2, 0);
     write_mem(1911134 + 0, 15);
     write_mem(168639 + 0, 195);
-    PE(-28218, 2, 0, 1, 0, 0);
+    pe(-28218, 2, 0, 1, 0, 0);
     write_mem(168639 + 0, 233);
     setscenemap(15, 1, 17, 7, 7066);
     setscenemap(15, 1, 18, 7, 7068);

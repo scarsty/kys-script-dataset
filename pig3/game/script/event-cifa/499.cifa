@@ -1,7 +1,7 @@
-SetX50(0, readtalkasstring(216));
-ShowMessage(0, 0, 150, 50, 1797, 0);
-SetX50(0, readtalkasstring(217));
-ShowMessage(0, 0, 150, 50, 1797, 0);
-SetX50(0, readtalkasstring(218));
-ShowMessage(0, 0, 150, 50, 1797, 0);
+SetX50(0, "《金庸水滸傳》");
+showmessage(0, 0, 150, 50, 1797, 0);
+SetX50(0, "前兩章內部測試版0.13");
+showmessage(0, 0, 150, 50, 1797, 0);
+SetX50(0, "鐵血丹心論壇出品");
+showmessage(0, 0, 150, 50, 1797, 0);
 SetX50(9000, GetKey());

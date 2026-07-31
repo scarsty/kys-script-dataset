@@ -7,7 +7,7 @@ SetX50(3004, 218);
 SetX50(3005, 219);
 SetX50(3010, 209);
 SetX50(3011, 210);
-SetX50(3100, readtalkasstring(224));
+SetX50(3100, "%d");
 ka237_build_candidates(3000, 6, 3200, 3300, 3400, 3500);
 ka237_build_candidates(3010, 2, 3600, 3700, 3800, 3900);
 if (GetX50(3500) == 0 || GetX50(3900) == 0) {
@@ -26,7 +26,7 @@ if (GetX50(3500) == 0 || GetX50(3900) == 0) {
             SetX50(3510, 1);
         }
     } else {
-          DrawRect(176, GetX50(1076), 170, GetX50(1025), 0, ColColor(255), 102);
+        DrawRect(176, GetX50(1076), 170, GetX50(1025), 0, ColColor(255), 102);
         SetX50(3510, Menu50(GetX50(3500), 3200, 181, 215, 10));
         if (GetX50(3510) > 0) {
             SetX50(3910, Menu50(GetX50(3900), 3600, 400, 215, 10));
@@ -52,7 +52,6 @@ if (GetX50(3500) == 0 || GetX50(3900) == 0) {
         }
     }
 }
-
 ka237_build_candidates(sourceBase, sourceCount, textBase, idBase, amountBase, countBase) {
     SetX50(countBase, 0);
     SetX50(3110, 0);

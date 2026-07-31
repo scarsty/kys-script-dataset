@@ -107,7 +107,7 @@ label9:
                                     SetX50(122, GetX50(122) + 1);
                                     if (GetX50(122) < 4) { goto label9; }
                                         SetX50(122, 0);
-                                        drawrect50(1, 5, 150, 67, 25, 0);
+                                        DrawRect(GetX50(5), 150, 67, 25, 0, ColColor(255), 102);
                                         i=getx50(102)+1;
                                         setx50(1500,"第" + to_string(i)+"題");
                                         setx50(1502,0);

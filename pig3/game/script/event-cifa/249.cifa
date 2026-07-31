@@ -7,7 +7,7 @@ SetX50(505, 200);
 SetX50(3, 100);
 SetX50(5, 10);
 SetX50(1, 0);
-SetX50(10, readtalkasstring(224));
+SetX50(10, "%d");
 SetX50(6, 0);
 do {
     SetX50(0, GetTeam(GetX50(1)));
@@ -16,13 +16,13 @@ do {
     } else {
         SetX50(2, GetRole(GetX50(0), 19));
         getname(1, 0, 0, GetX50(3), 0, 0);
-        stringlength(GetX50(3), 4, 0, 0, 0, 0);
+        string_length_x50(GetX50(3), 4, 0, 0, 0, 0);
         SetX50(4, GetX50(5) - GetX50(4));
-        spaces(1, 50, 4, 0, 0, 0, 0);
+        spaces_x50(1, 50, 4, 0, 0, 0, 0);
         concat(60, GetX50(3), 50, 0, 0, 0, 0);
-        format(1, 50, 10, 2, 0, 0, 0);
+        format50(1, 50, 10, 2, 0, 0, 0);
         concat(60, 60, 50, 0, 0, 0, 0);
-        format(0, GetX50(3), 60, 0, 0, 0, 0);
+        format50(0, GetX50(3), 60, 0, 0, 0, 0);
         SetX50(1, GetX50(1) + 1);
         SetX50(3, GetX50(3) + 20);
     }

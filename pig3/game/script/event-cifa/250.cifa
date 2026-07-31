@@ -1,7 +1,7 @@
 SetX50(1020, 0);
 SetX50(1021, 2000);
 SetX50(1090, 26);
-SetX50(1550, readtalkasstring(224));
+SetX50(1550, "%d");
 label1:
 SetX50(1090, GetX50(1090) + 1);
 if (GetX50(1090) >= 54) { goto label0; }
@@ -22,7 +22,7 @@ label4:
                 SetX50(1008, GetX50(1008) + 1);
                 if (GetX50(1008) < 5) { goto label4; }
                     SetX50(1670, GetX50String(1500) + GetX50String(1500));
-                    SetX50(1670, readtalkasstring(290));
+                    SetX50(1670, "可打造次數：");
                     SetX50(1670, GetX50String(1500) + GetX50String(1500));
                     concat(GetX50(1021), 1500, 1600, 0, 0, 0);
                     SetX50(1300 + GetX50(1020), GetX50(1021));
@@ -104,8 +104,8 @@ label11:
                                                         SetX50(1176, GetX50(1175) - 5);
                                                         SetX50(1177, GetX50(1175) - 25);
                                                         if (GetX50(1020) > 1) { goto label14; }
-                                                            SetX50(1980, readtalkasstring(274));
-                                                            SetX50(1930, readtalkasstring(264));
+                                                            SetX50(1980, "請選擇材料");
+                                                            SetX50(1930, "已有");
                                                             SetX50(1055, GetX50(1250 + 1));
                                                             SetX50(1950, GetItemName(GetX50(1055)));
                                                             SetX50(1950, GetX50String(1900) + GetX50String(1930));
@@ -113,8 +113,8 @@ label11:
                                                             SetX50(1030, 1);
                                                             if (GetX50(1120) > 1) { goto label15; }
                                                                 talk(97, "當前只有一種可打造兵器和一種材料，是否打造？", -2, 1, 0, 0);
-                                                                SetX50(2500, readtalkasstring(266));
-                                                                SetX50(2550, readtalkasstring(267));
+                                                                SetX50(2500, "是");
+                                                                SetX50(2550, "否");
                                                                 SetX50(2600 + 0, 2500);
                                                                 SetX50(2600 + 1, 2550);
                                                                 SetX50(1130, Menu50(2, 2600, 181, 215, 10));
@@ -122,8 +122,8 @@ label11:
                                                                     exit();
 label14:
                                                                     if (GetX50(1120) > 1) { goto label17; }
-                                                                        SetX50(1980, readtalkasstring(276));
-                                                                        SetX50(1930, readtalkasstring(264));
+                                                                        SetX50(1980, "請選擇欲打造之兵器");
+                                                                        SetX50(1930, "已有");
                                                                         SetX50(1055, GetX50(1430 + 1));
                                                                         SetX50(1950, GetItemName(GetX50(1055)));
                                                                         SetX50(1950, GetX50String(1900) + GetX50String(1930));
@@ -131,7 +131,7 @@ label14:
                                                                         SetX50(1130, 1);
                                                                         if (1) { goto label18; }
 label17:
-                                                                            SetX50(1900, readtalkasstring(276));
+                                                                            SetX50(1900, "請選擇欲打造之兵器");
 label18:
                                                                             SetX50(1025, GetX50(1020) * 18);
                                                                             SetX50(1025, GetX50(1025) + 10);
@@ -139,7 +139,7 @@ label18:
                                                                             SetX50(1030, Menu50(GetX50(1020), 1300, 181, GetX50(1075), 10));
                                                                             if (GetX50(1030) <= 0) { goto label19; }
                                                                                 if (GetX50(1120) == 1) { goto label16; }
-                                                                                    SetX50(1950, readtalkasstring(274));
+                                                                                    SetX50(1950, "請選擇材料");
 label15:
                                                                                     SetX50(1125, GetX50(1120) * 18);
                                                                                     SetX50(1125, GetX50(1125) + 10);
@@ -167,10 +167,10 @@ label16:
                                                                                                 SetX50(1072, GetItem(GetX50(1051), 106 / 2));
                                                                                                 SetX50(1072, GetX50(1072) + GetX50(1095));
                                                                                                 SetItem(GetX50(1051), 106 / 2, GetX50(1072));
-                                                                                                SetX50(2200, readtalkasstring(286));
+                                                                                                SetX50(2200, "輕功加成");
 label24:
-                                                                                                SetX50(2100, readtalkasstring(283));
-                                                                                                SetX50(2150, readtalkasstring(287));
+                                                                                                SetX50(2100, "打造成功");
+                                                                                                SetX50(2150, "增加");
                                                                                                 SetX50(1500, GetItemName(GetX50(1051)));
                                                                                                 SetX50(1600, sprintf(GetX50String(1550), GetX50(1095)));
                                                                                                 SetX50(1500, GetX50String(2300) + GetX50String(2100));
@@ -189,7 +189,7 @@ label23:
                                                                                                 SetX50(1072, GetItem(GetX50(1051), 104 / 2));
                                                                                                 SetX50(1072, GetX50(1072) + GetX50(1095));
                                                                                                 SetItem(GetX50(1051), 104 / 2, GetX50(1072));
-                                                                                                SetX50(2200, readtalkasstring(284));
+                                                                                                SetX50(2200, "攻擊力");
                                                                                                 if (1) { goto label24; }
 label22:
                                                                                                     SetX50(2000 + 0, 6);
@@ -200,7 +200,7 @@ label22:
                                                                                                     SetX50(1072, GetItem(GetX50(1051), 108 / 2));
                                                                                                     SetX50(1072, GetX50(1072) + GetX50(1095));
                                                                                                     SetItem(GetX50(1051), 108 / 2, GetX50(1072));
-                                                                                                    SetX50(2200, readtalkasstring(285));
+                                                                                                    SetX50(2200, "防禦力");
                                                                                                     if (1) { goto label24; }
 label13:
                                                                                                         talk(97, "對不起，原材料不足，請集齊材料再來。", -2, 1, 0, 0);

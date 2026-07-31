@@ -1,8 +1,8 @@
 ClearX50();
 SetX50(500, 100);
 SetX50(501, 1100);
-SetX50(100, readtalkasstring(715));
-SetX50(1100, readtalkasstring(714));
+SetX50(100, "儲存物品");
+SetX50(1100, "取回物品");
 SetX50(10, Menu50(2, 500, 105, 90, 10));
 if (GetX50(10) == 1) {
     ClearX50();
@@ -16,9 +16,9 @@ if (GetX50(10) == 1) {
             SetX50(15, GetX50(13) * 4);
             SetX50(15, GetX50(15) - 468);
             if (GetX50(15) != 0) {
-                instruct_50(26, 0, 0, GetX50(15), 24, 5, 0);
+                memoryget(0, 0, GetX50(15), 24, 5, 0);
             } else {
-                instruct_50(26, 0, 0, GetX50(15), 25, 5, 0);
+                memoryget(0, 0, GetX50(15), 25, 5, 0);
             }
             SetX50(6, GetItemAmount(GetX50(5)));
             if (GetX50(6) != 0) {
@@ -124,30 +124,28 @@ if (GetX50(10) == 1) {
         }
     } while (GetX50(5) < 344);
 }
-
 ka211_build_line(slot, item, amount) {
     SetX50(2, slot * 30);
     SetX50(2, GetX50(2) + 1000);
     SetX50(800 + slot, GetX50(2));
-    getname(1, 1, item, GetX50(2), 0, 0);
-    stringlength(GetX50(2), 3, 0, 0, 0, 0);
+    getname(0, 1, item, GetX50(2), 0, 0);
+    string_length_x50(GetX50(2), 3, 0, 0, 0, 0);
     SetX50(8, 21);
     SetX50(8, GetX50(8) - GetX50(3));
     SetX50(180, MakeSpaces(GetX50(8)));
-    SetX50(170, readtalkasstring(716));
-    SetX50(165, sprintf(GetX50String(170), amount));
+    SetX50(170, "%d");
+    SetX50(6, amount);
+    SetX50(165, sprintf(GetX50String(170), GetX50(6)));
     concat(140, GetX50(2), 180, 0, 0, 0);
     concat(GetX50(2), 140, 165, 0, 0, 0);
     SetX50(200 + slot, item);
 }
-
 ka211_add_next_page(slot) {
     SetX50(2, slot * 30);
     SetX50(2, GetX50(2) + 1000);
     SetX50(800 + slot, GetX50(2));
     gettalk(0, 717, GetX50(2), 0, 0, 0);
 }
-
 ka211_clear_page() {
     SetX50(22, 0);
     do {

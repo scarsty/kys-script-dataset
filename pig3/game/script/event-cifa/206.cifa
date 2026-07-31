@@ -66,8 +66,8 @@ __event_206_block_9() {
 }
 __event_206_block_10() {
                         SetX50(400 + GetX50(118), GetX50(123));
-                        DrawRect(0, 0, 0, 200, 0, ColColor(255), 255);
-                        DrawRect(200, 0, 120, 200, 0, ColColor(255), 255);
+                        DrawRect(0, 0, 200, 200, 0, ColColor(255), 102);
+                        DrawRect(200, 0, 120, 200, 0, ColColor(255), 102);
     exit();
 }
 __event_206_block_0();

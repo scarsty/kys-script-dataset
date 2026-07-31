@@ -11,10 +11,10 @@ SetX50(33, 60);
 SetX50(8, 30);
 SetX50(15, 0);
 SetX50(16, 0);
-SetX50(50, readtalkasstring(334));
-SetX50(60, readtalkasstring(335));
-SetX50(70, readtalkasstring(336));
-SetX50(80, readtalkasstring(337));
+SetX50(50, "快，先進去看看。");
+SetX50(60, "爺爺……爺爺……你怎麼不起來了……");
+SetX50(70, "你爺爺已經死啦，當然不會起來了！");
+SetX50(80, "芙兒，住口！");
 SetX50(1, 0);
 do {
     SetX50(1050 + GetX50(1), 0);

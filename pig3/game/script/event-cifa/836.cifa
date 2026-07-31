@@ -91,7 +91,7 @@ __event_836_block_2() {
     setscenemap(80, 1, 29, 7, 0);
     write_mem(1911134 + 0, 81);
     write_mem(168639 + 0, 195);
-    PE(-28218, 2, 0, 1, 0, 0);
+    pe(-28218, 2, 0, 1, 0, 0);
     write_mem(168639 + 0, 233);
     setsceneposition2(13, 33);
     SetRoleFace(0);
@@ -216,7 +216,7 @@ __event_836_block_8() {
                     setscenemap(81, 1, 10, 32, 0);
                     write_mem(1911134 + 0, 80);
                     write_mem(168639 + 0, 195);
-                    PE(-28218, 2, 0, 1, 0, 0);
+                    pe(-28218, 2, 0, 1, 0, 0);
                     write_mem(168639 + 0, 233);
                     setscenemap(80, 1, 29, 25, 6066);
                     setscenemap(80, 1, 29, 23, 7202);

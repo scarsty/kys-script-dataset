@@ -4,7 +4,7 @@ SetX50(3001, 207);
 SetX50(3002, 208);
 SetX50(3010, 209);
 SetX50(3011, 210);
-SetX50(3100, readtalkasstring(224));
+SetX50(3100, "%d");
 ka235_build_candidates(3000, 3, 3200, 3300, 3400, 3500);
 ka235_build_candidates(3010, 2, 3600, 3700, 3800, 3900);
 if (GetX50(3500) == 0 || GetX50(3900) == 0) {
@@ -48,7 +48,6 @@ if (GetX50(3500) == 0 || GetX50(3900) == 0) {
         }
     }
 }
-
 ka235_build_candidates(sourceBase, sourceCount, textBase, idBase, amountBase, countBase) {
     SetX50(countBase, 0);
     SetX50(3110, 0);

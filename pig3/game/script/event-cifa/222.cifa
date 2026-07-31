@@ -21,13 +21,15 @@ do {
     }
     SetX50(0, GetX50(0) + 1);
 } while (GetX50(0) < 9);
-if (GetX50(1) >= 1) {
-    SetX50(10, ScrollMenu50(GetX50(1), 800, 10, 50, 5));
-    if (GetX50(10) > 0) {
-        SetX50(10, GetX50(10) - 1);
-        SetX50(101, GetX50(500 + GetX50(10)));
-        SetX50(103, GetX50(600 + GetX50(10)));
-        SetX50(104, GetX50(700 + GetX50(10)));
-        CallEvent(220, GetX50(101), GetX50(103), GetX50(104), 0);
-    }
+if (GetX50(1) < 1) {
+    exit();
 }
+SetX50(10, ScrollMenu50(GetX50(1), 800, 10, 50, 5));
+if (GetX50(10) <= 0) {
+    exit();
+}
+SetX50(10, GetX50(10) - 1);
+SetX50(101, GetX50(500 + GetX50(10)));
+SetX50(103, GetX50(600 + GetX50(10)));
+SetX50(104, GetX50(700 + GetX50(10)));
+CallEvent(220, GetX50(101), GetX50(103), GetX50(104), 0);

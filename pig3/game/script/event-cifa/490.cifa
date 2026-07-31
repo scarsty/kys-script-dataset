@@ -34,16 +34,16 @@ if (GetX50(1091) < GetX50(1071)) { goto label0; }
     SetX50(1064, GetX50(1002) + GetX50(1020));
 label11:
     if (GetX50(1061) < 0) { goto label1; }
-                if (GetX50(1061) > 63) { goto label1; }
+        if (GetX50(1061) > 63) { goto label1; }
             SetX50(1062, GetX50(1002) - GetX50(1020));
 label10:
             if (GetX50(1062) < 0) { goto label3; }
-                        if (GetX50(1062) > 63) { goto label3; }
+                if (GetX50(1062) > 63) { goto label3; }
                     SetX50(1065, GetX50(1061) * 2);
                     SetX50(1066, GetX50(1062) * 128);
                     SetX50(1067, GetX50(1065) + GetX50(1066));
                     SetX50(1004, read_mem(1985028 + GetX50(1067)));
-                            if (GetX50(1004) < 0) { goto label3; }
+                    if (GetX50(1004) < 0) { goto label3; }
                         battlefieldget(1, 1004, 2, 1009, 0, 0);
                         if (GetX50(1009) == GetX50(1074)) { goto label6; }
                             battlefieldget(1, 1004, 0, 1005, 0, 0);
@@ -66,7 +66,7 @@ label7:
                                     SetX50(1030, GetX50(1030) - GetX50(1050));
 label8:
                                     SetRole(GetX50(1005), 34 / 2, GetX50(1030));
-                                                        if (1) { goto label3; }
+                                    if (1) { goto label3; }
 label6:
                                         write_mem(1960452 + GetX50(1067), 0);
 label3:
