@@ -1,4 +1,5 @@
-__event_1554_block_0() {
+__cifa_pc_1554 = 0;
+if (__cifa_pc_1554 == 0) {
     darkscene();
     setsceneposition2(23, 23);
     lightscene();
@@ -77,12 +78,12 @@ __event_1554_block_0() {
     lightscene();
     CallEvent(351, 13322, 2, 0, 0);
     if (GetX50(28931) == 2) {
-        __event_1554_block_2();
-        return;
+        __cifa_pc_1554 = 2;
+    } else {
+        __cifa_pc_1554 = 1;
     }
-    __event_1554_block_1();
 }
-__event_1554_block_1() {
+if (__cifa_pc_1554 == 1) {
     talk(0, "師父，弟子有一不情之請。", -2, 0, 0, 0);
     talk(1, "是什麼事？", -2, 1, 0, 0);
     talk(0, "弟子想請師父相助，一起去破少林三大神僧的金剛伏魔圈。", -2, 0, 0, 0);
@@ -98,21 +99,21 @@ __event_1554_block_1() {
     talk(422, "多謝師父！", -2, 0, 0, 0);
     SetRole(166, 96 / 2, 250);
     if (JudgeSexual(0)) {
-        __event_1554_block_3();
-        return;
+        __cifa_pc_1554 = 3;
+    } else {
+        __cifa_pc_1554 = 2;
     }
-    __event_1554_block_2();
 }
-__event_1554_block_2() {
+if (__cifa_pc_1554 == 2) {
     talk(0, "蕭大哥，小弟有一不情之請。", -2, 1, 0, 0);
     talk(21, "不用說了，我和你一起去破陣。", -2, 0, 0, 0);
     talk(412, "大哥，此陣凶險無比……你？不考慮下？", -2, 1, 0, 0);
     talk(21, "笑話，你的事，就是我的事，凶險無比也好，九死一生也罷，蕭某幾時怕過。", -2, 0, 0, 0);
     SetAttribute(892, 0, 0, 0, 0);
     SetRole(166, 96 / 2, 249);
-    __event_1554_block_3();
+    __cifa_pc_1554 = 3;
 }
-__event_1554_block_3() {
+if (__cifa_pc_1554 == 3) {
     modifyevent(60, 38, 0, 0, 0, 0, 0, 9208, 9208, 9208, 0, -2, -2);
     scenefromto(34, 31, 22, 23);
     talk(7, "看來&&是不會來了，渡厄大師，晚輩再來領教三位的高招。", -2, 1, 0, 0);
@@ -493,4 +494,3 @@ __event_1554_block_3() {
     SetMissionState(45, 2);
     exit();
 }
-__event_1554_block_0();

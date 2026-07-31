@@ -1,4 +1,5 @@
-__event_1498_block_0() {
+__cifa_pc_1498 = 0;
+if (__cifa_pc_1498 == 0) {
     darkscene();
     modifyevent(46, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
     setsceneposition2(32, 22);
@@ -200,24 +201,24 @@ __event_1498_block_0() {
     lightscene();
     talk(0, "蕭大哥，你怎麼來了。", -2, 1, 0, 0);
     if (GetStarState(7) == 0) {
-        __event_1498_block_2();
-        return;
+        __cifa_pc_1498 = 2;
+    } else {
+        __cifa_pc_1498 = 1;
     }
-    __event_1498_block_1();
 }
-__event_1498_block_1() {
+if (__cifa_pc_1498 == 1) {
     talk(21, "上次收到你的來信說阿朱的傷勢大有起色，所以我就去歸雲莊探望她，聽說你上少林來了，於是我也就跟著一起過來瞧瞧。", -2, 0, 0, 0);
     if (JudgeSexual(0)) {
-        __event_1498_block_3();
-        return;
+        __cifa_pc_1498 = 3;
+    } else {
+        __cifa_pc_1498 = 2;
     }
-    __event_1498_block_2();
 }
-__event_1498_block_2() {
+if (__cifa_pc_1498 == 2) {
     talk(21, "我本是準備去歸雲莊找你喝酒，他們說你上了少林，於是我也就跟過來瞧瞧。", -2, 1, 0, 0);
-    __event_1498_block_3();
+    __cifa_pc_1498 = 3;
 }
-__event_1498_block_3() {
+if (__cifa_pc_1498 == 3) {
     talk(0, "幸好有你，否則那個大輪子的明王還真是棘手貨。只是你這樣孤身一人前來，太冒險了吧。這裡有不少人都恨你入骨呢。", -2, 0, 0, 0);
     talk(21, "哦？", -2, 1, 0, 0);
     talk(357, "真的是蕭峰，大家別讓他跑了。", -2, 0, 0, 0);
@@ -806,4 +807,3 @@ __event_1498_block_3() {
     lightscene();
     exit();
 }
-__event_1498_block_0();

@@ -1,4 +1,5 @@
-__event_1126_block_0() {
+__cifa_pc_1126 = 0;
+if (__cifa_pc_1126 == 0) {
     walkfromto(38, 39, 38, 42);
     walkfromto(38, 42, 40, 42);
     talk(92, "好香，好香，當真令人食指大動矣。小兄弟，你這個……", -2, 0, 0, 0);
@@ -34,43 +35,43 @@ __event_1126_block_0() {
     talk(412, "我……", -2, 0, 0, 0);
     CallEvent(351, 5804, 3, 0, 0);
     if (GetX50(28931) == 3) {
-        __event_1126_block_11();
-        return;
+        __cifa_pc_1126 = 11;
+    } else {
+        __cifa_pc_1126 = 1;
     }
-    __event_1126_block_1();
 }
-__event_1126_block_1() {
+if (__cifa_pc_1126 == 1) {
     if (GetX50(28931) == 2) {
-        __event_1126_block_5();
-        return;
+        __cifa_pc_1126 = 5;
+    } else {
+        __cifa_pc_1126 = 2;
     }
-    __event_1126_block_2();
 }
-__event_1126_block_2() {
+if (__cifa_pc_1126 == 2) {
     talk(0, "好，這位兄臺，在下嚐嚐你的酒如何？", -2, 0, 0, 0);
     talk(92, "呵呵，不妨事，不妨事，少俠想喝，便喝罷。", -2, 0, 0, 0);
     darkscene();
     lightscene();
     SetX50(0, GetRole(0, 80 / 2));
     if (GetX50(0) == 0) {
-        __event_1126_block_4();
-        return;
+        __cifa_pc_1126 = 4;
+    } else {
+        __cifa_pc_1126 = 3;
     }
-    __event_1126_block_3();
 }
-__event_1126_block_3() {
+if (__cifa_pc_1126 == 3) {
     talk(422, "果然是好酒！", -2, 1, 0, 0);
     talk(92, "少俠內力不凡，佩服，佩服。", -2, 0, 0, 0);
     SetX50(0, GetRole(0, 84 / 2));
     SetX50(0, GetX50(0) + 30);
     SetRole(0, 84 / 2, GetX50(0));
     if (1) {
-        __event_1126_block_11();
-        return;
+        __cifa_pc_1126 = 11;
+    } else {
+        __cifa_pc_1126 = 4;
     }
-    __event_1126_block_4();
 }
-__event_1126_block_4() {
+if (__cifa_pc_1126 == 4) {
     talk(420, "這酒……這酒裡放了什麼！啊……", -2, 1, 0, 0);
     talk(92, "呵呵，看來少俠的功夫還須錘鍊才是。", -2, 0, 0, 0);
     darkscene();
@@ -82,33 +83,33 @@ __event_1126_block_4() {
     SetRole(0, 40 / 2, GetX50(0));
     lightscene();
     if (1) {
-        __event_1126_block_11();
-        return;
+        __cifa_pc_1126 = 11;
+    } else {
+        __cifa_pc_1126 = 5;
     }
-    __event_1126_block_5();
 }
-__event_1126_block_5() {
+if (__cifa_pc_1126 == 5) {
     talk(93, "拿去罷。", -2, 1, 0, 0);
     SetX50(0, GetRole(0, 80 / 2));
     if (GetX50(0) == 1) {
-        __event_1126_block_7();
-        return;
+        __cifa_pc_1126 = 7;
+    } else {
+        __cifa_pc_1126 = 6;
     }
-    __event_1126_block_6();
 }
-__event_1126_block_6() {
+if (__cifa_pc_1126 == 6) {
     talk(422, "果然是好酒！", -2, 0, 0, 0);
     talk(93, "哼", -2, 1, 0, 0);
     SetX50(0, GetRole(0, 84 / 2));
     SetX50(0, GetX50(0) + 30);
     SetRole(0, 84 / 2, GetX50(0));
     if (1) {
-        __event_1126_block_11();
-        return;
+        __cifa_pc_1126 = 11;
+    } else {
+        __cifa_pc_1126 = 7;
     }
-    __event_1126_block_7();
 }
-__event_1126_block_7() {
+if (__cifa_pc_1126 == 7) {
     talk(421, "這酒……這酒裡放了什麼！啊……", -2, 0, 0, 0);
     talk(93, "小子，這酒看來你是無福消受了。", -2, 1, 0, 0);
     SetX50(0, GetRole(0, 36 / 2));
@@ -117,9 +118,9 @@ __event_1126_block_7() {
     SetX50(0, GetRole(0, 40 / 2));
     SetX50(0, GetX50(0) + 5);
     SetRole(0, 40 / 2, GetX50(0));
-    __event_1126_block_11();
+    __cifa_pc_1126 = 11;
 }
-__event_1126_block_11() {
+if (__cifa_pc_1126 == 11) {
     talk(4, "哈哈，這酒真是好喝。&&公子，兩位大爺，我曾聽叮叮噹噹說過，男人和女人若是情投意合，就結為夫婦，男人和男人交情好，就結拜為兄弟。難得有緣在此一同喝酒吃肉，咱們喝乾了這兩葫蘆酒之後，索性便結義為兄弟，以後時時一同喝酒，三位說可好？", -2, 0, 0, 0);
     talk(415, "＜一同喝酒，便要結義？他這腦筋也真簡單得可以。這兩人來歷不明，我還是謹慎些好＞三位意氣相投，若結為兄弟，也是一樁美事。在下福薄，卻是不敢高攀。", -2, 1, 0, 0);
     talk(4, "&&公子，唉，那真是可惜。這兩位大哥，卻不知哪一位年紀大些？又不知兩位尊姓大名？", -2, 0, 0, 0);
@@ -153,4 +154,3 @@ __event_1126_block_11() {
     SetRole(166, 92 / 2, 1);
     exit();
 }
-__event_1126_block_0();

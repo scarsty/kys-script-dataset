@@ -1,4 +1,5 @@
-__event_1482_block_0() {
+__cifa_pc_1482 = 0;
+if (__cifa_pc_1482 == 0) {
     darkscene();
     modifyevent(125, 20, 0, 0, 0, 0, 0, 8896, 8896, 8896, 0, -2, -2);
     lightscene();
@@ -112,25 +113,26 @@ __event_1482_block_0() {
     SetRoleFace(1);
     SetX50(0, GetRole(166, 116 / 2));
     if (GetX50(0) == 0) {
-        __event_1482_block_4();
-        return;
+        __cifa_pc_1482 = 4;
+    } else {
+        __cifa_pc_1482 = 1;
     }
 }
-__event_1482_block_1() {
+if (__cifa_pc_1482 == 1) {
     if (GetX50(0) == 1) {
         modifyevent(2, 19, 0, 0, 0, 0, 0, 7312, 0, 0, 0, -2, -2);
     }
     if (GetX50(0) != 2) {
-        __event_1482_block_4();
-        return;
+        __cifa_pc_1482 = 4;
+    } else {
+        __cifa_pc_1482 = 2;
     }
-    __event_1482_block_2();
 }
-__event_1482_block_2() {
+if (__cifa_pc_1482 == 2) {
     modifyevent(2, 19, 0, 0, 0, 0, 0, 7126, 0, 0, 0, -2, -2);
-    __event_1482_block_4();
+    __cifa_pc_1482 = 4;
 }
-__event_1482_block_4() {
+if (__cifa_pc_1482 == 4) {
     lightscene();
     talk(242, "這兩人自己解不出這俠客行的祕密，居然毀去石刻，令我也無法再解，實在可惡，可惡！", -2, 1, 0, 0);
     talk(0, "師公，這俠客行的圖解之祕，已經有人解出來了。", -2, 0, 0, 0);
@@ -190,12 +192,12 @@ __event_1482_block_4() {
     SetMissionState(42, 2);
     SetX50(0, GetRole(166, 116 / 2));
     if (GetX50(0) == 0) {
-        __event_1482_block_8();
-        return;
+        __cifa_pc_1482 = 8;
+    } else {
+        __cifa_pc_1482 = 5;
     }
-    __event_1482_block_5();
 }
-__event_1482_block_5() {
+if (__cifa_pc_1482 == 5) {
     if (GetX50(0) == 1) {
         talk(412, "你……你難道……一直在這等我？", -2, 0, 0, 0);
         talk(85, "怎麼樣，我這個徒弟夠意思吧？", -2, 1, 0, 0);
@@ -207,12 +209,12 @@ __event_1482_block_5() {
         SetRole(116, 110 / 2, GetX50(1));
     }
     if (GetX50(0) != 2) {
-        __event_1482_block_8();
-        return;
+        __cifa_pc_1482 = 8;
+    } else {
+        __cifa_pc_1482 = 6;
     }
-    __event_1482_block_6();
 }
-__event_1482_block_6() {
+if (__cifa_pc_1482 == 6) {
     talk(412, "非非，你怎麼在這。難道……你一直在這裡等我？", -2, 0, 0, 0);
     talk(84, "&&哥哥，我……你終於平安回來啦……", -2, 1, 0, 0);
     talk(422, "別哭，我這不是好好的嘛。你的&&哥哥不會有事的，因為捨不得非非呀。", -2, 0, 0, 0);
@@ -221,9 +223,8 @@ __event_1482_block_6() {
     SetX50(1, GetRole(166, 112 / 2));
     SetX50(1, GetX50(1) + 6);
     SetRole(116, 112 / 2, GetX50(1));
-    __event_1482_block_8();
+    __cifa_pc_1482 = 8;
 }
-__event_1482_block_8() {
+if (__cifa_pc_1482 == 8) {
     exit();
 }
-__event_1482_block_0();

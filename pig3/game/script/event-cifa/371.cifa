@@ -1,4 +1,5 @@
-__event_371_block_0() {
+__cifa_pc_371 = 0;
+if (__cifa_pc_371 == 0) {
     ClearX50();
     SetX50(15205, EnterNumber(0, 300, 200, 200));
     SetX50(100, GetX50(15205) + 0);
@@ -35,44 +36,44 @@ __event_371_block_0() {
         SetX50(102, GetD(105, 80, 8));
     }
     if (GetX50(102) == 0) {
-        __event_371_block_8();
-        return;
+        __cifa_pc_371 = 8;
+    } else {
+        __cifa_pc_371 = 1;
     }
-    __event_371_block_1();
 }
-__event_371_block_1() {
+if (__cifa_pc_371 == 1) {
     if (GetX50(100) != GetX50(102)) {
-        __event_371_block_8();
-        return;
+        __cifa_pc_371 = 8;
+    } else {
+        __cifa_pc_371 = 2;
     }
-    __event_371_block_2();
 }
-__event_371_block_2() {
+if (__cifa_pc_371 == 2) {
     SetX50(103, GetX50(101) + 266);
     SetX50(104, GetItem(GetX50(103), 188 / 2));
     if (GetX50(104) == 1) {
-        __event_371_block_6();
-        return;
+        __cifa_pc_371 = 6;
+    } else {
+        __cifa_pc_371 = 3;
     }
-    __event_371_block_3();
 }
-__event_371_block_3() {
+if (__cifa_pc_371 == 3) {
     SetItem(GetX50(103), 188 / 2, 1);
     SetX50(104, GetD(107, 0, 8));
     SetX50(104, GetX50(104) + 1);
     SetD(107, 0, 8, GetX50(104));
     if (GetX50(104) != 8) {
-        __event_371_block_6();
-        return;
+        __cifa_pc_371 = 6;
+    } else {
+        __cifa_pc_371 = 4;
     }
-    __event_371_block_4();
 }
-__event_371_block_4() {
+if (__cifa_pc_371 == 4) {
     SetS(107, 1, 40, 13, 0);
     SetS(107, 1, 39, 35, 0);
-    __event_371_block_6();
+    __cifa_pc_371 = 6;
 }
-__event_371_block_6() {
+if (__cifa_pc_371 == 6) {
     SetX50(105, GetX50(101) + 13335);
     print(getx50(101));
     i = getx50(101);
@@ -102,8 +103,7 @@ __event_371_block_6() {
     }
     exit();
 }
-__event_371_block_8() {
+if (__cifa_pc_371 == 8) {
     showtitle("本頁為佛家思想的內容，沒有什麼特別的。", 1797);
     exit();
 }
-__event_371_block_0();

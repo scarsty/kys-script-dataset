@@ -1,4 +1,5 @@
-__event_845_block_0() {
+__cifa_pc_845 = 0;
+if (__cifa_pc_845 == 0) {
     walkfromto(29, 38, 29, 21);
     talk(34, "陳公子，趙三哥，紅花會此次仗義來援，青桐代族人謝過了。", -2, 1, 0, 0);
     talk(15, "青……霍姑娘何必如此客氣。大夥兒都是好朋友，回部有何危難，紅花會決計沒有袖手旁觀的道理。", -2, 1, 0, 0);
@@ -21,20 +22,20 @@ __event_845_block_0() {
     talk(0, "陳公子有此美意，自是恭敬不如從命。既然如此——", -2, 0, 0, 0);
     CallEvent(351, 4248, 3, 0, 0);
     if (GetX50(28931) != 3) {
-        __event_845_block_2();
-        return;
+        __cifa_pc_845 = 2;
+    } else {
+        __cifa_pc_845 = 1;
     }
-    __event_845_block_1();
 }
-__event_845_block_1() {
+if (__cifa_pc_845 == 1) {
     trybattle(92);
     lightscene();
     talk(0, "趙三爺果然不愧千手如來之名，諸般暗器神出鬼沒，直驚出在下一身冷汗。", -2, 0, 0, 0);
     talk(48, "呵呵，鵰蟲小技而已。小兄弟武功進步如此神速，足見天資過人，若肯在暗器上多下工夫，將來成就定在趙某之上。這是我多年來研究暗器的一點心得，就贈與少俠吧。", -2, 1, 0, 0);
     AddItem(183, 1);
-    __event_845_block_2();
+    __cifa_pc_845 = 2;
 }
-__event_845_block_2() {
+if (__cifa_pc_845 == 2) {
     if (GetX50(28931) == 2) {
         SetRole(166, 42 / 2, 3);
         if (!TryBattle(91)) {
@@ -46,30 +47,30 @@ __event_845_block_2() {
         AddItem(103, 1);
     }
     if (GetX50(28931) != 1) {
-        __event_845_block_8();
-        return;
+        __cifa_pc_845 = 8;
+    } else {
+        __cifa_pc_845 = 3;
     }
-    __event_845_block_3();
 }
-__event_845_block_3() {
+if (__cifa_pc_845 == 3) {
     if (TryBattle(90)) {
-        __event_845_block_6();
-        return;
+        __cifa_pc_845 = 6;
+    } else {
+        __cifa_pc_845 = 4;
     }
-    __event_845_block_4();
 }
-__event_845_block_4() {
+if (__cifa_pc_845 == 4) {
     lightscene();
     talk(0, "陳公子武藝高明，在下甘拜下風。", -2, 0, 0, 0);
     talk(15, "呵呵，少俠武功已是大有進步，這裡有本拳譜，就贈與少俠，若能參透，必可百尺竿頭更進一步。", -2, 1, 0, 0);
     AddItem(77, 1);
     if (JudgeSexual(0)) {
-        __event_845_block_8();
-        return;
+        __cifa_pc_845 = 8;
+    } else {
+        __cifa_pc_845 = 5;
     }
-    __event_845_block_5();
 }
-__event_845_block_5() {
+if (__cifa_pc_845 == 5) {
     talk(34, "忙了這大半天，大夥兒定然都累了，青桐也不再說什麼囉嗦言語。這次與清軍交戰，我們的部署是這樣……", -2, 1, 0, 0);
     darkscene();
     lightscene();
@@ -86,13 +87,13 @@ __event_845_block_5() {
     lightscene();
     exit();
 }
-__event_845_block_6() {
+if (__cifa_pc_845 == 6) {
     lightscene();
     talk(0, "陳公子，承讓了。", -2, 0, 0, 0);
     talk(15, "少俠的武功果然進步神速，陳某自愧不如。", -2, 1, 0, 0);
-    __event_845_block_8();
+    __cifa_pc_845 = 8;
 }
-__event_845_block_8() {
+if (__cifa_pc_845 == 8) {
     talk(34, "忙了這大半天，大夥兒定然都累了，青桐也不再說什麼囉嗦言語。這次與清軍交戰，我們的部署是這樣……", -2, 1, 0, 0);
     darkscene();
     lightscene();
@@ -116,4 +117,3 @@ __event_845_block_8() {
     lightscene();
     exit();
 }
-__event_845_block_0();

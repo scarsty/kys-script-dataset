@@ -1,4 +1,5 @@
-__event_1566_block_0() {
+__cifa_pc_1566 = 0;
+if (__cifa_pc_1566 == 0) {
     showtitle("任我行死後，向問天繼任成為日月神教的教主，向左使為人雖然桀驁不馴，卻沒有太大的野心，與正派也算是相安無事。", 28421);
     showtitle("五毒教退回雲南地界，並在兩位中間人的引導下，與中原武林和睦相處。", 28421);
     showtitle("蛇島一戰，神龍教自教主洪安通以下，幾乎全軍覆沒，對武林不再構成威脅。", 28421);
@@ -54,24 +55,24 @@ __event_1566_block_0() {
     RoleEnding(34, 9, GetX50(7034));
     SetX50(2, GetRole(166, 118 / 2));
     if (GetX50(2) == 1) {
-        __event_1566_block_2();
-        return;
+        __cifa_pc_1566 = 2;
+    } else {
+        __cifa_pc_1566 = 1;
     }
-    __event_1566_block_1();
 }
-__event_1566_block_1() {
+if (__cifa_pc_1566 == 1) {
     RoleEnding(35, 35, GetX50(7035));
     if (JudgeSexual(0)) {
-        __event_1566_block_3();
-        return;
+        __cifa_pc_1566 = 3;
+    } else {
+        __cifa_pc_1566 = 2;
     }
-    __event_1566_block_2();
 }
-__event_1566_block_2() {
+if (__cifa_pc_1566 == 2) {
     RoleEnding(35, 35, 15378);
-    __event_1566_block_3();
+    __cifa_pc_1566 = 3;
 }
-__event_1566_block_3() {
+if (__cifa_pc_1566 == 3) {
     SetX50(100, GetKey());
     SetX50(0, 36);
     SetX50(1, 13415);
@@ -170,24 +171,24 @@ __event_1566_block_3() {
     SetX50(1, GetX50(1) + 1);
     SetX50(2, GetRole(166, 118 / 2));
     if (GetX50(2) == 2) {
-        __event_1566_block_5();
-        return;
+        __cifa_pc_1566 = 5;
+    } else {
+        __cifa_pc_1566 = 4;
     }
-    __event_1566_block_4();
 }
-__event_1566_block_4() {
+if (__cifa_pc_1566 == 4) {
     RoleEnding(GetX50(0), 85, GetX50(1));
     if (JudgeSexual(0)) {
-        __event_1566_block_6();
-        return;
+        __cifa_pc_1566 = 6;
+    } else {
+        __cifa_pc_1566 = 5;
     }
-    __event_1566_block_5();
 }
-__event_1566_block_5() {
+if (__cifa_pc_1566 == 5) {
     RoleEnding(GetX50(0), 85, 15379);
-    __event_1566_block_6();
+    __cifa_pc_1566 = 6;
 }
-__event_1566_block_6() {
+if (__cifa_pc_1566 == 6) {
     SetX50(0, GetX50(0) + 1);
     SetX50(1, GetX50(1) + 1);
     RoleEnding(GetX50(0), 55, GetX50(1));
@@ -246,24 +247,24 @@ __event_1566_block_6() {
     SetX50(1, GetX50(1) + 1);
     SetX50(2, GetRole(166, 118 / 2));
     if (GetX50(2) == 3) {
-        __event_1566_block_8();
-        return;
+        __cifa_pc_1566 = 8;
+    } else {
+        __cifa_pc_1566 = 7;
     }
-    __event_1566_block_7();
 }
-__event_1566_block_7() {
+if (__cifa_pc_1566 == 7) {
     RoleEnding(GetX50(0), 84, GetX50(1));
     if (JudgeSexual(0)) {
-        __event_1566_block_9();
-        return;
+        __cifa_pc_1566 = 9;
+    } else {
+        __cifa_pc_1566 = 8;
     }
-    __event_1566_block_8();
 }
-__event_1566_block_8() {
+if (__cifa_pc_1566 == 8) {
     RoleEnding(GetX50(0), 84, 15380);
-    __event_1566_block_9();
+    __cifa_pc_1566 = 9;
 }
-__event_1566_block_9() {
+if (__cifa_pc_1566 == 9) {
     SetX50(0, GetX50(0) + 1);
     SetX50(1, GetX50(1) + 1);
     RoleEnding(GetX50(0), 53, GetX50(1));
@@ -311,24 +312,24 @@ __event_1566_block_9() {
     SetX50(1, GetX50(1) + 1);
     SetX50(2, GetRole(166, 62 / 2));
     if (GetX50(2) == 1) {
-        __event_1566_block_11();
-        return;
+        __cifa_pc_1566 = 11;
+    } else {
+        __cifa_pc_1566 = 10;
     }
-    __event_1566_block_10();
 }
-__event_1566_block_10() {
+if (__cifa_pc_1566 == 10) {
     RoleEnding(GetX50(0), 430, GetX50(1));
     if (JudgeSexual(0)) {
-        __event_1566_block_12();
-        return;
+        __cifa_pc_1566 = 12;
+    } else {
+        __cifa_pc_1566 = 11;
     }
-    __event_1566_block_11();
 }
-__event_1566_block_11() {
+if (__cifa_pc_1566 == 11) {
     RoleEnding(GetX50(0), 430, 14311);
-    __event_1566_block_12();
+    __cifa_pc_1566 = 12;
 }
-__event_1566_block_12() {
+if (__cifa_pc_1566 == 12) {
     SetX50(100, GetKey());
     SetX50(0, GetX50(0) + 1);
     SetX50(1, GetX50(1) + 1);
@@ -399,4 +400,3 @@ __event_1566_block_12() {
     EndAnimation(0, 0, 0, 0, 0, 0, -1);
     exit();
 }
-__event_1566_block_0();

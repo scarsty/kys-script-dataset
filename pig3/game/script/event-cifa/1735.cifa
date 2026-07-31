@@ -1,34 +1,27 @@
-__event_1735_block_0() {
-    darkscene();
-    setsceneposition2(11, 36);
-    modifyevent(15, 90, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(15, 89, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(15, 70, 0, 0, 0, 0, 0, 8618, 8618, 8618, 0, -2, -2);
-    modifyevent(15, 91, 0, 0, 0, 0, 0, 8616, 8616, 8616, 0, -2, -2);
-    lightscene();
-    talk(2, "&&，今日爹傳來消息，說在水月庵附近發現金輪法王的下落，而丐幫弟子報信說在恆山附近也見過了金輪等人。", -2, 0, 0, 0);
-    talk(415, "啊？那我們先去哪裡找襄兒？", -2, 1, 0, 0);
-    talk(1, "我和你師娘商量了一下，決定由你去水月庵助你師公一臂之力，我二人就去恆山看看。我們即刻動身，你自己要一路小心。", -2, 0, 0, 0);
-    talk(425, "是，師父師娘請放心，我一定會把襄兒救回來的！", -2, 1, 0, 0);
-    CallEvent(1753, 0, 0, 0, 0);
-    darkscene();
-    modifyevent(15, 70, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(15, 91, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    CallEvent(1, 0, 0, 0, 0);
-    CallEvent(3, 0, 0, 0, 0);
-    modifyevent(16, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(16, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    SetStarState(1, 2);
-    SetStarState(2, 2);
-    SetX50(0, GetRole(166, 110 / 2));
-    SetX50(1, GetRole(166, 112 / 2));
-    if (GetX50(0) < GetX50(1)) {
-        __event_1735_block_6();
-        return;
-    }
-    __event_1735_block_1();
-}
-__event_1735_block_1() {
+darkscene();
+setsceneposition2(11, 36);
+modifyevent(15, 90, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(15, 89, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(15, 70, 0, 0, 0, 0, 0, 8618, 8618, 8618, 0, -2, -2);
+modifyevent(15, 91, 0, 0, 0, 0, 0, 8616, 8616, 8616, 0, -2, -2);
+lightscene();
+talk(2, "&&，今日爹傳來消息，說在水月庵附近發現金輪法王的下落，而丐幫弟子報信說在恆山附近也見過了金輪等人。", -2, 0, 0, 0);
+talk(415, "啊？那我們先去哪裡找襄兒？", -2, 1, 0, 0);
+talk(1, "我和你師娘商量了一下，決定由你去水月庵助你師公一臂之力，我二人就去恆山看看。我們即刻動身，你自己要一路小心。", -2, 0, 0, 0);
+talk(425, "是，師父師娘請放心，我一定會把襄兒救回來的！", -2, 1, 0, 0);
+CallEvent(1753, 0, 0, 0, 0);
+darkscene();
+modifyevent(15, 70, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(15, 91, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+CallEvent(1, 0, 0, 0, 0);
+CallEvent(3, 0, 0, 0, 0);
+modifyevent(16, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(16, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+SetStarState(1, 2);
+SetStarState(2, 2);
+SetX50(0, GetRole(166, 110 / 2));
+SetX50(1, GetRole(166, 112 / 2));
+if (GetX50(0) >= GetX50(1)) {
     modifyevent(15, 69, 0, 0, 0, 0, 0, 7314, 7314, 7314, 0, -2, -2);
     lightscene();
     talk(85, "師父弟弟，這都什麼時辰了，你現在就要動身啊？", -2, 0, 0, 0);
@@ -43,29 +36,15 @@ __event_1735_block_1() {
     darkscene();
     modifyevent(15, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
     CallEvent(229, 5, 0, 0, 0);
-    if (InTeam(85)) {
-        __event_1735_block_5();
-        return;
+    if (!InTeam(85)) {
+        if (!TeamIsFull()) {
+            CallEvent(134, 0, 0, 0, 0);
+        }
     }
-    __event_1735_block_2();
-}
-__event_1735_block_2() {
-    if (TeamIsFull()) {
-        __event_1735_block_5();
-        return;
-    }
-    __event_1735_block_3();
-}
-__event_1735_block_3() {
-    CallEvent(134, 0, 0, 0, 0);
-    __event_1735_block_5();
-}
-__event_1735_block_5() {
     modifyevent(64, 0, 0, 0, 0, 0, 1736, 0, 0, 0, 0, -2, -2);
     lightscene();
     exit();
-}
-__event_1735_block_6() {
+} else {
     modifyevent(15, 69, 0, 0, 0, 0, 0, 7124, 7124, 7124, 0, -2, -2);
     lightscene();
     talk(84, "&&哥哥，你現在就去嗎？", -2, 1, 0, 0);
@@ -77,26 +56,12 @@ __event_1735_block_6() {
     darkscene();
     modifyevent(15, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
     CallEvent(229, 5, 0, 0, 0);
-    if (InTeam(84)) {
-        __event_1735_block_10();
-        return;
+    if (!InTeam(84)) {
+        if (!TeamIsFull()) {
+            CallEvent(132, 0, 0, 0, 0);
+        }
     }
-    __event_1735_block_7();
-}
-__event_1735_block_7() {
-    if (TeamIsFull()) {
-        __event_1735_block_10();
-        return;
-    }
-    __event_1735_block_8();
-}
-__event_1735_block_8() {
-    CallEvent(132, 0, 0, 0, 0);
-    __event_1735_block_10();
-}
-__event_1735_block_10() {
     modifyevent(64, 0, 0, 0, 0, 0, 1737, 0, 0, 0, 0, -2, -2);
     lightscene();
     exit();
 }
-__event_1735_block_0();

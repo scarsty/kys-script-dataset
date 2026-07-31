@@ -1,4 +1,5 @@
-__event_484_block_0() {
+__cifa_pc_484 = 0;
+if (__cifa_pc_484 == 0) {
     SetX50(1001, read_mem(349914 + 0));
     SetX50(1002, read_mem(349916 + 0));
     SetX50(1001, GetX50(1001) * 2);
@@ -7,20 +8,20 @@ __event_484_block_0() {
     SetX50(1004, read_mem(1985028 + GetX50(1003)));
     battlefieldget(1, 1004, 0, 1005, 0, 0);
     if (GetX50(1005) < 0) {
-        __event_484_block_18();
-        return;
+        __cifa_pc_484 = 18;
+    } else {
+        __cifa_pc_484 = 1;
     }
-    __event_484_block_1();
 }
-__event_484_block_1() {
+if (__cifa_pc_484 == 1) {
     battlefieldget(1, 1004, 2, 1040, 0, 0);
     if (GetX50(1040) == 0) {
-        __event_484_block_18();
-        return;
+        __cifa_pc_484 = 18;
+    } else {
+        __cifa_pc_484 = 2;
     }
-    __event_484_block_2();
 }
-__event_484_block_2() {
+if (__cifa_pc_484 == 2) {
     PlayAction(GetX50(28005), 1, 36);
     battlefieldget(1, 28005, 0, 1000, 0, 0);
     SetX50(1040, GetRole(GetX50(1005), 30 / 2));
@@ -31,82 +32,81 @@ __event_484_block_2() {
     SetX50(1024, GetX50(1023) / 100);
     SetX50(1025, Random50(11));
     if (GetX50(1024) < GetX50(1025)) {
-        __event_484_block_16();
-        return;
+        __cifa_pc_484 = 16;
+    } else {
+        __cifa_pc_484 = 3;
     }
-    __event_484_block_3();
 }
-__event_484_block_3() {
+if (__cifa_pc_484 == 3) {
     SetX50(1007, GetRole(GetX50(1005), 166 / 2));
     SetX50(1008, GetRole(GetX50(1005), 168 / 2));
     SetX50(1009, GetX50(1007) + GetX50(1008));
     if (GetX50(1009) < -1) {
-        __event_484_block_16();
-        return;
+        __cifa_pc_484 = 16;
+    } else {
+        __cifa_pc_484 = 4;
     }
-    __event_484_block_4();
 }
-__event_484_block_4() {
+if (__cifa_pc_484 == 4) {
     if (GetX50(1007) < 0) {
-        __event_484_block_10();
-        return;
+        __cifa_pc_484 = 10;
+    } else {
+        __cifa_pc_484 = 5;
     }
-    __event_484_block_5();
 }
-__event_484_block_5() {
+if (__cifa_pc_484 == 5) {
     if (GetX50(1008) < 0) {
-        __event_484_block_7();
-        return;
+        __cifa_pc_484 = 7;
+    } else {
+        __cifa_pc_484 = 6;
     }
-    __event_484_block_6();
 }
-__event_484_block_6() {
+if (__cifa_pc_484 == 6) {
     SetX50(1030, Random50(2));
     if (GetX50(1030) == 1) {
-        __event_484_block_10();
-        return;
+        __cifa_pc_484 = 10;
+    } else {
+        __cifa_pc_484 = 7;
     }
-    __event_484_block_7();
 }
-__event_484_block_7() {
+if (__cifa_pc_484 == 7) {
     SetX50(1017, GetRole(GetX50(1005), 174 / 2));
     SetX50(1017, GetX50(1017) - 1);
     SetRole(GetX50(1005), 174 / 2, GetX50(1017));
     AddItem( GetX50(1007), 1);
     if (GetX50(1017) > 0) {
-        __event_484_block_16();
-        return;
+        __cifa_pc_484 = 16;
+    } else {
+        __cifa_pc_484 = 8;
     }
-    __event_484_block_8();
 }
-__event_484_block_8() {
+if (__cifa_pc_484 == 8) {
     SetRole(GetX50(1005), 166 / 2, -1);
     if (1) {
-        __event_484_block_16();
-        return;
+        __cifa_pc_484 = 16;
+    } else {
+        __cifa_pc_484 = 10;
     }
-    __event_484_block_10();
 }
-__event_484_block_10() {
+if (__cifa_pc_484 == 10) {
     SetX50(1018, GetRole(GetX50(1005), 176 / 2));
     SetX50(1018, GetX50(1018) - 1);
     SetRole(GetX50(1005), 176 / 2, GetX50(1018));
     AddItem( GetX50(1008), 1);
     if (GetX50(1018) > 0) {
-        __event_484_block_16();
-        return;
+        __cifa_pc_484 = 16;
+    } else {
+        __cifa_pc_484 = 11;
     }
-    __event_484_block_11();
 }
-__event_484_block_11() {
+if (__cifa_pc_484 == 11) {
     SetRole(GetX50(1005), 168 / 2, -1);
-    __event_484_block_16();
+    __cifa_pc_484 = 16;
 }
-__event_484_block_16() {
+if (__cifa_pc_484 == 16) {
     Redraw();
-    __event_484_block_18();
+    __cifa_pc_484 = 18;
 }
-__event_484_block_18() {
+if (__cifa_pc_484 == 18) {
     exit();
 }
-__event_484_block_0();

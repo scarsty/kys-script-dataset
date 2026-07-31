@@ -1,4 +1,5 @@
-__event_357_block_0() {
+__cifa_pc_357 = 0;
+if (__cifa_pc_357 == 0) {
     SetX50(300, 28961);
     SetX50(301, 27861);
     SetX50(302, 25203);
@@ -92,39 +93,40 @@ __event_357_block_0() {
         exit();
     }
     if (GetX50(206) == 4838) {
-        __event_357_block_8();
-        return;
+        __cifa_pc_357 = 8;
+    } else {
+        __cifa_pc_357 = 1;
     }
 }
-__event_357_block_1() {
+if (__cifa_pc_357 == 1) {
     if (GetX50(206) == 4713) {
-        __event_357_block_8();
-        return;
+        __cifa_pc_357 = 8;
+    } else {
+        __cifa_pc_357 = 2;
     }
-    __event_357_block_2();
 }
-__event_357_block_2() {
+if (__cifa_pc_357 == 2) {
     if (GetX50(206) == 2722) {
-        __event_357_block_8();
-        return;
+        __cifa_pc_357 = 8;
+    } else {
+        __cifa_pc_357 = 3;
     }
-    __event_357_block_3();
 }
-__event_357_block_3() {
+if (__cifa_pc_357 == 3) {
     if (GetX50(206) == 1531) {
-        __event_357_block_8();
-        return;
+        __cifa_pc_357 = 8;
+    } else {
+        __cifa_pc_357 = 4;
     }
-    __event_357_block_4();
 }
-__event_357_block_4() {
+if (__cifa_pc_357 == 4) {
     if (GetX50(206) != 513) {
-        __event_357_block_9();
-        return;
+        __cifa_pc_357 = 9;
+    } else {
+        __cifa_pc_357 = 8;
     }
-    __event_357_block_8();
 }
-__event_357_block_8() {
+if (__cifa_pc_357 == 8) {
     SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
     SetD(GetX50(200), GetX50(207), 7, -2);
     SetX50(209, GetS(GetX50(200), 3, 5, 13));
@@ -144,28 +146,28 @@ __event_357_block_8() {
     SetX50(0, GetKey());
     exit();
 }
-__event_357_block_9() {
+if (__cifa_pc_357 == 9) {
     if (GetX50(206) == 1423) {
-        __event_357_block_13();
-        return;
+        __cifa_pc_357 = 13;
+    } else {
+        __cifa_pc_357 = 10;
     }
-    __event_357_block_10();
 }
-__event_357_block_10() {
+if (__cifa_pc_357 == 10) {
     if (GetX50(206) == 1623) {
-        __event_357_block_13();
-        return;
+        __cifa_pc_357 = 13;
+    } else {
+        __cifa_pc_357 = 11;
     }
-    __event_357_block_11();
 }
-__event_357_block_11() {
+if (__cifa_pc_357 == 11) {
     if (GetX50(206) != 1823) {
-        __event_357_block_20();
-        return;
+        __cifa_pc_357 = 20;
+    } else {
+        __cifa_pc_357 = 13;
     }
-    __event_357_block_13();
 }
-__event_357_block_13() {
+if (__cifa_pc_357 == 13) {
     if (GetX50(211) >= 4996) {
         SetX50(211, GetX50(211) - 4);
     }
@@ -174,26 +176,26 @@ __event_357_block_13() {
     SetX50(210, GetS(GetX50(200), 2, 16, 23));
     SetX50(212, GetS(GetX50(200), 2, 18, 23));
     if (GetX50(209) != 4992) {
-        __event_357_block_19();
-        return;
+        __cifa_pc_357 = 19;
+    } else {
+        __cifa_pc_357 = 14;
     }
-    __event_357_block_14();
 }
-__event_357_block_14() {
+if (__cifa_pc_357 == 14) {
     if (GetX50(210) != 4994) {
-        __event_357_block_19();
-        return;
+        __cifa_pc_357 = 19;
+    } else {
+        __cifa_pc_357 = 15;
     }
-    __event_357_block_15();
 }
-__event_357_block_15() {
+if (__cifa_pc_357 == 15) {
     if (GetX50(212) != 4994) {
-        __event_357_block_19();
-        return;
+        __cifa_pc_357 = 19;
+    } else {
+        __cifa_pc_357 = 16;
     }
-    __event_357_block_16();
 }
-__event_357_block_16() {
+if (__cifa_pc_357 == 16) {
     SetX50(207, GetS(GetX50(200), 3, 14, 23));
     SetD(GetX50(200), GetX50(207), 7, -2);
     SetX50(207, GetS(GetX50(200), 3, 16, 23));
@@ -205,12 +207,12 @@ __event_357_block_16() {
     drawstring(0, 320, 105, 104, 1797, 0);
     playwave(22);
     SetX50(0, GetKey());
-    __event_357_block_19();
+    __cifa_pc_357 = 19;
 }
-__event_357_block_19() {
+if (__cifa_pc_357 == 19) {
     exit();
 }
-__event_357_block_20() {
+if (__cifa_pc_357 == 20) {
     if (GetX50(206) == 835) {
         SetX50(209, GetS(GetX50(200), 3, 8, 35));
         SetX50(210, GetD(GetX50(200), GetX50(209), 8));
@@ -254,4 +256,3 @@ __event_357_block_20() {
     }
     exit();
 }
-__event_357_block_0();

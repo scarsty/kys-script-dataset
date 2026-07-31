@@ -1,60 +1,42 @@
-__event_481_block_0() {
-    battlefieldget(1, 28005, 0, 1000, 0, 0);
-    SetX50(1001, read_mem(1994454 + 0));
-    SetX50(1002, GetX50(1001) * 2);
-    SetX50(1002, GetX50(1002) + 146);
-    SetX50(1003, GetRole(GetX50(1000), GetX50(1002) / 2));
-    SetX50(1005, GetRole(GetX50(1000), 82 / 2));
-    SetX50(1006, GetRole(GetX50(1000), 84 / 2));
-    SetX50(1020, GetRole(GetX50(1000), 42 / 2));
-    SetX50(1004, GetX50(1003) / 100);
-    SetX50(1100 + 0, 10);
-    SetX50(1100 + 1, 15);
-    SetX50(1100 + 2, 20);
-    SetX50(1100 + 3, 25);
-    SetX50(1100 + 4, 30);
-    SetX50(1100 + 5, 35);
-    SetX50(1100 + 6, 40);
-    SetX50(1100 + 7, 45);
-    SetX50(1100 + 8, 45);
-    SetX50(1100 + 9, 50);
-    SetX50(1007, GetX50(1100 + GetX50(1004)));
-    if (GetX50(1006) >= 300) {
-        __event_481_block_2();
-        return;
-    }
-    __event_481_block_1();
-}
-__event_481_block_1() {
+battlefieldget(1, 28005, 0, 1000, 0, 0);
+SetX50(1001, read_mem(1994454 + 0));
+SetX50(1002, GetX50(1001) * 2);
+SetX50(1002, GetX50(1002) + 146);
+SetX50(1003, GetRole(GetX50(1000), GetX50(1002) / 2));
+SetX50(1005, GetRole(GetX50(1000), 82 / 2));
+SetX50(1006, GetRole(GetX50(1000), 84 / 2));
+SetX50(1020, GetRole(GetX50(1000), 42 / 2));
+SetX50(1004, GetX50(1003) / 100);
+SetX50(1100 + 0, 10);
+SetX50(1100 + 1, 15);
+SetX50(1100 + 2, 20);
+SetX50(1100 + 3, 25);
+SetX50(1100 + 4, 30);
+SetX50(1100 + 5, 35);
+SetX50(1100 + 6, 40);
+SetX50(1100 + 7, 45);
+SetX50(1100 + 8, 45);
+SetX50(1100 + 9, 50);
+SetX50(1007, GetX50(1100 + GetX50(1004)));
+if (GetX50(1006) < 300) {
     SetX50(1008, GetX50(1006) * GetX50(1007));
     SetX50(1008, GetX50(1008) / 100);
-    if (1) {
-        __event_481_block_3();
-        return;
-    }
-    __event_481_block_2();
-}
-__event_481_block_2() {
+} else {
     SetX50(1008, GetX50(1006) / 100);
     SetX50(1008, GetX50(1008) * GetX50(1007));
-    __event_481_block_3();
 }
-__event_481_block_3() {
-    SetX50(1009, GetX50(1008) + GetX50(1005));
-    if (GetX50(1009) > GetX50(1006)) {
-        SetX50(1009, GetX50(1006) + 0);
-        SetX50(1008, GetX50(1006) - GetX50(1005));
-    }
-    SetRole(GetX50(1000), 82 / 2, GetX50(1009));
-    SetX50(1020, GetX50(1020) - 6);
-    SetRole(GetX50(1000), 42 / 2, GetX50(1020));
-    battlefieldget(1, 28005, 4, 1010, 0, 0);
-    battlefieldget(1, 28005, 6, 1011, 0, 0);
-    SetAnimationLayer(GetX50(1010), GetX50(1011), 1, 1, 1);
-    battlefieldset(5, 28005, 18, 1008, 0, 0);
-    PlayAction(GetX50(28005), -1, 0);
-    ShowHurtValue(4);
-    Redraw();
-    exit();
+SetX50(1009, GetX50(1008) + GetX50(1005));
+if (GetX50(1009) > GetX50(1006)) {
+    SetX50(1009, GetX50(1006) + 0);
+    SetX50(1008, GetX50(1006) - GetX50(1005));
 }
-__event_481_block_0();
+SetRole(GetX50(1000), 82 / 2, GetX50(1009));
+SetX50(1020, GetX50(1020) - 6);
+SetRole(GetX50(1000), 42 / 2, GetX50(1020));
+battlefieldget(1, 28005, 4, 1010, 0, 0);
+battlefieldget(1, 28005, 6, 1011, 0, 0);
+SetAnimationLayer(GetX50(1010), GetX50(1011), 1, 1, 1);
+battlefieldset(5, 28005, 18, 1008, 0, 0);
+PlayAction(GetX50(28005), -1, 0);
+ShowHurtValue(4);
+Redraw();
