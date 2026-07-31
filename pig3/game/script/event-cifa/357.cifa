@@ -82,9 +82,9 @@ __event_357_block_8() {
     __event_357_block_9();
 }
 __event_357_block_9() {
-                        DrawRect(100, 100, 110, 25, 0, ColColor(255), 102);
-                        drawstring(0, 300, 105, 104, 1797, 0);
-                        SetX50(0, GetKey());
+    DrawRect(100, 100, 110, 25, 0, ColColor(255), 102);
+    drawstring(0, 300, 105, 104, 1797, 0);
+    SetX50(0, GetKey());
     exit();
     __event_357_block_10();
 }
@@ -98,13 +98,13 @@ __event_357_block_10() {
     __event_357_block_11();
 }
 __event_357_block_11() {
-                            SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
-                            SetD(GetX50(200), GetX50(207), 7, -2);
-                            SetS(GetX50(200), 1, 14, 43, 0);
-                            DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
-                            drawstring(0, 320, 105, 104, 1797, 0);
-                            playwave(22);
-                            SetX50(0, GetKey());
+    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
+    SetD(GetX50(200), GetX50(207), 7, -2);
+    SetS(GetX50(200), 1, 14, 43, 0);
+    DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
+    drawstring(0, 320, 105, 104, 1797, 0);
+    playwave(22);
+    SetX50(0, GetKey());
     exit();
     __event_357_block_12();
 }
@@ -116,13 +116,13 @@ __event_357_block_12() {
     __event_357_block_13();
 }
 __event_357_block_13() {
-                                SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
-                                SetD(GetX50(200), GetX50(207), 7, -2);
-                                SetS(GetX50(200), 1, 52, 41, 0);
-                                DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
-                                drawstring(0, 320, 105, 104, 1797, 0);
-                                playwave(22);
-                                SetX50(0, GetKey());
+    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
+    SetD(GetX50(200), GetX50(207), 7, -2);
+    SetS(GetX50(200), 1, 52, 41, 0);
+    DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
+    drawstring(0, 320, 105, 104, 1797, 0);
+    playwave(22);
+    SetX50(0, GetKey());
     exit();
     __event_357_block_14();
 }
@@ -134,13 +134,13 @@ __event_357_block_14() {
     __event_357_block_15();
 }
 __event_357_block_15() {
-                                    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
-                                    SetD(GetX50(200), GetX50(207), 7, -2);
-                                    SetS(GetX50(200), 1, 51, 17, 0);
-                                    DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
-                                    drawstring(0, 320, 105, 104, 1797, 0);
-                                    playwave(22);
-                                    SetX50(0, GetKey());
+    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
+    SetD(GetX50(200), GetX50(207), 7, -2);
+    SetS(GetX50(200), 1, 51, 17, 0);
+    DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
+    drawstring(0, 320, 105, 104, 1797, 0);
+    playwave(22);
+    SetX50(0, GetKey());
     exit();
     __event_357_block_16();
 }
@@ -152,13 +152,13 @@ __event_357_block_16() {
     __event_357_block_17();
 }
 __event_357_block_17() {
-                                        SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
-                                        SetD(GetX50(200), GetX50(207), 7, -2);
-                                        SetS(GetX50(200), 1, 32, 23, 0);
-                                        DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
-                                        drawstring(0, 320, 105, 104, 1797, 0);
-                                        playwave(22);
-                                        SetX50(0, GetKey());
+    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
+    SetD(GetX50(200), GetX50(207), 7, -2);
+    SetS(GetX50(200), 1, 32, 23, 0);
+    DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
+    drawstring(0, 320, 105, 104, 1797, 0);
+    playwave(22);
+    SetX50(0, GetKey());
     exit();
     __event_357_block_18();
 }
@@ -220,18 +220,18 @@ __event_357_block_26() {
     __event_357_block_27();
 }
 __event_357_block_27() {
-                                                                DrawRect(100, 100, 90, 25, 0, ColColor(255), 102);
-                                                                drawstring(0, 310, 105, 104, 1797, 0);
-                                                                SetX50(0, GetKey());
+    DrawRect(100, 100, 90, 25, 0, ColColor(255), 102);
+    drawstring(0, 310, 105, 104, 1797, 0);
+    SetX50(0, GetKey());
     exit();
     __event_357_block_28();
 }
 __event_357_block_28() {
-                                                                SetS(GetX50(200), 1, 9, 26, 0);
-                                                                DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
-                                                                drawstring(0, 320, 105, 104, 1797, 0);
-                                                                playwave(22);
-                                                                SetX50(0, GetKey());
+    SetS(GetX50(200), 1, 9, 26, 0);
+    DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
+    drawstring(0, 320, 105, 104, 1797, 0);
+    playwave(22);
+    SetX50(0, GetKey());
     exit();
     __event_357_block_29();
 }
@@ -336,17 +336,17 @@ __event_357_block_43() {
     __event_357_block_44();
 }
 __event_357_block_44() {
-                                                                                                    SetX50(210, GetX50(210) + 1);
-                                                                                                    SetD(GetX50(200), GetX50(209), 8, GetX50(210));
-                                                                                                    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
-                                                                                                    SetD(GetX50(200), GetX50(207), 7, -2);
+    SetX50(210, GetX50(210) + 1);
+    SetD(GetX50(200), GetX50(209), 8, GetX50(210));
+    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
+    SetD(GetX50(200), GetX50(207), 7, -2);
     exit();
     __event_357_block_45();
 }
 __event_357_block_45() {
-                                                                                                    DrawRect(100, 100, 110, 25, 0, ColColor(255), 102);
-                                                                                                    drawstring(0, 300, 105, 104, 1797, 0);
-                                                                                                    SetX50(0, GetKey());
+    DrawRect(100, 100, 110, 25, 0, ColColor(255), 102);
+    drawstring(0, 300, 105, 104, 1797, 0);
+    SetX50(0, GetKey());
     exit();
     __event_357_block_46();
 }
@@ -358,12 +358,12 @@ __event_357_block_46() {
     __event_357_block_47();
 }
 __event_357_block_47() {
-                                                                                                        SetX50(209, GetS(GetX50(200), 3, 8, 35));
-                                                                                                        SetX50(210, GetD(GetX50(200), GetX50(209), 8));
-                                                                                                        SetX50(210, GetX50(210) + 1);
-                                                                                                        SetD(GetX50(200), GetX50(209), 8, GetX50(210));
-                                                                                                        SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
-                                                                                                        SetD(GetX50(200), GetX50(207), 7, -2);
+    SetX50(209, GetS(GetX50(200), 3, 8, 35));
+    SetX50(210, GetD(GetX50(200), GetX50(209), 8));
+    SetX50(210, GetX50(210) + 1);
+    SetD(GetX50(200), GetX50(209), 8, GetX50(210));
+    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
+    SetD(GetX50(200), GetX50(207), 7, -2);
     exit();
     __event_357_block_48();
 }
@@ -384,13 +384,13 @@ __event_357_block_49() {
     __event_357_block_50();
 }
 __event_357_block_50() {
-                                                                                                                SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
-                                                                                                                SetD(GetX50(200), GetX50(207), 7, -2);
-                                                                                                                SetS(GetX50(200), 1, 21, 32, 0);
-                                                                                                                DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
-                                                                                                                drawstring(0, 320, 105, 104, 1797, 0);
-                                                                                                                playwave(22);
-                                                                                                                SetX50(0, GetKey());
+    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
+    SetD(GetX50(200), GetX50(207), 7, -2);
+    SetS(GetX50(200), 1, 21, 32, 0);
+    DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
+    drawstring(0, 320, 105, 104, 1797, 0);
+    playwave(22);
+    SetX50(0, GetKey());
     exit();
     __event_357_block_51();
 }

@@ -43,11 +43,11 @@ __event_593_block_5() {
     __event_593_block_6();
 }
 __event_593_block_6() {
-                lightscene();
-                talk(348, "閣下武功了得，裡邊請！", -2, 1, 0, 0);
-                darkscene();
-                modifyevent(55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-                lightscene();
+    lightscene();
+    talk(348, "閣下武功了得，裡邊請！", -2, 1, 0, 0);
+    darkscene();
+    modifyevent(55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    lightscene();
     exit();
 }
 __event_593_block_0();

@@ -112,7 +112,7 @@ SetRole(244, 88 / 2, 0);
 SetRole(244, 86 / 2, 100);
 SetRole(244, 90 / 2, 200);
 if (!TryBattle(159)) {
-                dead();
+    dead();
     exit();
 }
 modifyevent(38, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);

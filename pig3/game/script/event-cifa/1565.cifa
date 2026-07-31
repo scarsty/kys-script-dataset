@@ -27,7 +27,7 @@ CallEvent(27, 0, 0, 0, 0);
 SetAttribute(225, 1, 0, 0, 0);
 SetAttribute(224, 1, 2, 0, 0);
 if (!TryBattle(270)) {
-        dead();
+    dead();
     exit();
 }
 modifyevent(117, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);

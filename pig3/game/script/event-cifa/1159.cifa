@@ -42,7 +42,7 @@ talk(414, "嘖嘖，護法下令拿下教主，教中竟有人轟然奉令，我
 talk(319, "臭小子，你找死！", -2, 1, 0, 0);
 SetAttribute(319, 0, 0, 0, 0);
 if (!TryBattle(129)) {
-            dead();
+    dead();
     exit();
 }
 lightscene();

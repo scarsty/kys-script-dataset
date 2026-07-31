@@ -86,7 +86,7 @@ __event_1755_block_13() {
     __event_1755_block_14();
 }
 __event_1755_block_14() {
-                                SetRole(166, 118 / 2, 1);
+    SetRole(166, 118 / 2, 1);
     exit();
 }
 __event_1755_block_0();

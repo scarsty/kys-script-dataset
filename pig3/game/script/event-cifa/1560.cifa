@@ -9,7 +9,7 @@ SetAttribute(145, 1, 1, 0, 0);
 SetAttribute(139, 1, 1, 0, 0);
 SetAttribute(303, 1, 1, 0, 0);
 if (!TryBattle(265)) {
-        dead();
+    dead();
     exit();
 }
 lightscene();

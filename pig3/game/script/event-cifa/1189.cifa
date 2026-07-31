@@ -37,7 +37,7 @@ talk(172, "他奶奶的，老子要是打不過你，就拜你為師！", -2, 1,
 talk(0, "好，一言為定！", -2, 0, 0, 0);
 SetAttribute(172, 0, 0, 0, 0);
 if (!TryBattle(147)) {
-            dead();
+    dead();
     exit();
 }
 lightscene();

@@ -356,7 +356,7 @@ __event_1336_block_7() {
     __event_1336_block_8();
 }
 __event_1336_block_8() {
-                    dead();
+    dead();
     exit();
 }
 __event_1336_block_0();

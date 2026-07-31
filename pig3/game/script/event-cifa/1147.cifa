@@ -12,7 +12,7 @@ if (!AskBattle()) {
 talk(0, "既然如此，我就跟您過幾招試試。", -2, 0, 0, 0);
 SetAttribute(356, 0, -2, 10, 25);
 if (!TryBattle(128)) {
-            dead();
+    dead();
     exit();
 }
 lightscene();

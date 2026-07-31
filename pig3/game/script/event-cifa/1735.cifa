@@ -102,8 +102,8 @@ __event_1735_block_9() {
     __event_1735_block_10();
 }
 __event_1735_block_10() {
-                        modifyevent(64, 0, 0, 0, 0, 0, 1737, 0, 0, 0, 0, -2, -2);
-                        lightscene();
+    modifyevent(64, 0, 0, 0, 0, 0, 1737, 0, 0, 0, 0, -2, -2);
+    lightscene();
     exit();
 }
 __event_1735_block_0();

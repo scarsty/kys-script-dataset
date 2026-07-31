@@ -3,7 +3,7 @@ talk(245, "哈哈，莫大，你毀我鐵掌幫之時，可曾想到有今日？
 talk(416, "住手！", -2, 0, 0, 0);
 SetAttribute(245, 1, 1, 0, 50);
 if (!TryBattle(186)) {
-        dead();
+    dead();
     exit();
 }
 setsceneposition2(30, 17);

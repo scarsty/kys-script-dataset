@@ -7,7 +7,7 @@ talk(162, "無崖子那老鬼讓你來清理門戶？這老頭子八成是幾十
 talk(416, "廢話少說，拿命來！", -2, 0, 0, 0);
 SetAttribute(162, 1, 1, 0, 50);
 if (!TryBattle(185)) {
-        dead();
+    dead();
     exit();
 }
 lightscene();

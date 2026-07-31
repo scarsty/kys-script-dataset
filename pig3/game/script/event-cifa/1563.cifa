@@ -5,7 +5,7 @@ talk(301, "那就練練吧！", -2, 1, 0, 0);
 SetAttribute(302, 1, 1, 0, 0);
 SetAttribute(301, 1, 1, 0, 0);
 if (!TryBattle(268)) {
-        dead();
+    dead();
     exit();
 }
 lightscene();

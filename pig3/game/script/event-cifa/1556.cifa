@@ -98,7 +98,7 @@ talk(1, "蒙哥居然親自攻城，救女事小，守城事大！諸位英雄�
 talk(416, "不，我要去救襄兒。", -2, 1, 0, 0);
 talk(1, "&&，回來。", -2, 0, 0, 0);
 if (!TryBattle(256)) {
-        dead();
+    dead();
     exit();
 }
 setsceneposition2(21, 31);
@@ -106,7 +106,7 @@ lightscene();
 talk(35, "這麼好玩的世界……我卻快要死了……", -2, 1, 0, 0);
 talk(425, "襄兒，我定會救你出來！", -2, 0, 0, 0);
 if (!TryBattle(256)) {
-            dead();
+    dead();
     exit();
 }
 modifyevent(108, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
@@ -122,12 +122,12 @@ talk(416, "好機會，襄兒莫慌，我來救你了。", -2, 0, 0, 0);
 talk(251, "異想天開。", -2, 1, 0, 0);
 SetAttribute(251, 0, 0, 0, 0);
 if (!TryBattle(253)) {
-                dead();
+    dead();
     exit();
 }
 lightscene();
 if (!TryBattle(254)) {
-                    dead();
+    dead();
     exit();
 }
 lightscene();
@@ -167,7 +167,7 @@ SetAttribute(254, 1, -2, 0, 0);
 SetAttribute(253, 1, -2, 0, 0);
 SetAttribute(252, 1, -2, 0, 0);
 if (!TryBattle(255)) {
-                        dead();
+    dead();
     exit();
 }
 modifyevent(108, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);

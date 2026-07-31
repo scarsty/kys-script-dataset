@@ -47,7 +47,7 @@ talk(132, "他媽的，老子送你去見你爹去。", -2, 0, 0, 0);
 SetAttribute(127, 1, 1, 0, 50);
 SetAttribute(132, 1, 1, 0, 30);
 if (!TryBattle(121)) {
-            dead();
+    dead();
     exit();
 }
 modifyevent(107, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);

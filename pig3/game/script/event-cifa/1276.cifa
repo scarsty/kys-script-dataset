@@ -80,14 +80,14 @@ talk(400, "不用怕，不用怕，爺爺不會傷你。你瞧著，我這麼伸
 talk(417, "石兄弟小心！", -2, 1, 0, 0);
 SetAttribute(400, 0, 0, 0, 50);
 if (!TryBattle(176)) {
-        dead();
+    dead();
     exit();
 }
 lightscene();
 talk(400, "哇呀呀，兩個乳臭未乾的毛頭小子，我白自在怎可能會鬥不過你們？我不信，我不信，再來！", -2, 0, 0, 0);
 SetAttribute(400, 1, 2, 0, 50);
 if (!TryBattle(177)) {
-            dead();
+    dead();
     exit();
 }
 lightscene();

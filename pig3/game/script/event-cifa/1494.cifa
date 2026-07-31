@@ -46,7 +46,7 @@ SetAttribute(203, 0, 0, 0, 0);
 SetRole(203, 128 / 2, 60);
 SetRole(203, 148 / 2, 900);
 if (!TryBattle(229)) {
-        dead();
+    dead();
     exit();
 }
 modifyevent(35, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
@@ -59,7 +59,7 @@ SetAttribute(220, 0, -2, 0, 0);
 SetAttribute(219, 0, -2, 0, 0);
 SetAttribute(217, 0, 0, 0, 0);
 if (!TryBattle(230)) {
-            dead();
+    dead();
     exit();
 }
 modifyevent(35, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);

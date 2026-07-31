@@ -1,7 +1,7 @@
 talk(343, "何人闖島？", -2, 0, 0, 0);
 talk(0, "桃花島&&！", -2, 1, 0, 0);
 if (!TryBattle(153)) {
-        dead();
+    dead();
     exit();
 }
 modifyevent(124, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
@@ -18,7 +18,7 @@ SetAttribute(197, 0, 0, 0, 40);
 SetAttribute(196, 0, 0, 0, 40);
 SetAttribute(195, 0, 0, 0, 40);
 if (!TryBattle(154)) {
-            dead();
+    dead();
     exit();
 }
 modifyevent(124, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
@@ -42,7 +42,7 @@ SetAttribute(201, 0, 0, 0, 40);
 SetAttribute(200, 0, 0, 0, 40);
 SetAttribute(199, 0, 0, 0, 40);
 if (!TryBattle(155)) {
-                dead();
+    dead();
     exit();
 }
 modifyevent(124, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
@@ -62,7 +62,7 @@ talk(193, "小子既然敢來我教總壇，那就休想活著回去！來人，
 talk(0, "神龍教勾結外族，犯我中華，人人得而誅之。就算我今日不成，以後還有千萬義士！再說，今日鹿死誰手，尚未可知。", -2, 0, 0, 0);
 SetAttribute(193, 1, 1, 0, 40);
 if (!TryBattle(156)) {
-                    dead();
+    dead();
     exit();
 }
 modifyevent(124, 15, 0, 0, 0, 0, 0, 8352, 8352, 8352, 0, -2, -2);

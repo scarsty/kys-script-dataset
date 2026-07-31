@@ -19,7 +19,7 @@ talk(267, "……哼，石中玉，莫要以為裝瘋賣傻，便能哄過了白
 talk(416, "＜不好！＞白師傅，手下留情！", -2, 1, 0, 0);
 SetAttribute(267, 1, 1, 20, 0);
 if (!TryBattle(125)) {
-        dead();
+    dead();
     exit();
 }
 setsceneposition2(32, 33);

@@ -2,7 +2,7 @@ scenefromto(50, 32, 27, 32);
 talk(412, "＜咦，是令狐兄弟，那個老者是誰啊？他們怎麼會被圍攻的？不管了，先去幫他一把＞**令狐兄弟莫慌，我來也。", -2, 0, 0, 0);
 SetAttribute(235, 1, 1, 0, 0);
 if (!TryBattle(132)) {
-        dead();
+    dead();
     exit();
 }
 setsceneposition2(27, 32);
@@ -44,7 +44,7 @@ lightscene();
 talk(414, "喂，你們這群傢伙，眼睛都往哪兒看啊？小爺在這兒呢。", -2, 0, 0, 0);
 talk(235, "那小子在那兒，追。", -2, 1, 0, 0);
 if (!TryBattle(133)) {
-            dead();
+    dead();
     exit();
 }
 setsceneposition2(43, 17);

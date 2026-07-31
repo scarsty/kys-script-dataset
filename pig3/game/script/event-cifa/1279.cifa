@@ -49,17 +49,17 @@ talk(331, "你屬下小使，見了教主為何不跪？", -2, 0, 0, 0);
 talk(224, "因為他受不起，動手罷。", -2, 1, 0, 0);
 talk(331, "大膽叛徒，行刺教主！眾武士，快上殿擒拿叛徒。", -2, 0, 0, 0);
 if (!TryBattle(161)) {
-        dead();
+    dead();
     exit();
 }
 lightscene();
 if (!TryBattle(162)) {
-            dead();
+    dead();
     exit();
 }
 lightscene();
 if (!TryBattle(163)) {
-                dead();
+    dead();
     exit();
 }
 modifyevent(117, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);

@@ -52,7 +52,7 @@ talk(20, "&&公子，你怎麼了？", -2, 1, 0, 0);
 talk(416, "我沒事……紫衫龍王，你想做什麼？", -2, 0, 0, 0);
 SetAttribute(296, 0, 0, 0, 0);
 if (!TryBattle(206)) {
-        dead();
+    dead();
     exit();
 }
 lightscene();
@@ -135,7 +135,7 @@ talk(7, "啊！", -2, 1, 0, 0);
 talk(20, "公子！", -2, 0, 0, 0);
 talk(416, "卑鄙！", -2, 1, 0, 0);
 if (!TryBattle(209)) {
-                dead();
+    dead();
     exit();
 }
 setsceneposition2(25, 31);

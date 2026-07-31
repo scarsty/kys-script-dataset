@@ -106,5 +106,5 @@ SetStarState(105, 2);
 SetStarState(106, 1);
 SetStarState(107, 2);
 trybattle(289);
-    CallEvent(729, 0, 0, 0, 0);
-    CallEvent(1566, 0, 0, 0, 0);
+CallEvent(729, 0, 0, 0, 0);
+CallEvent(1566, 0, 0, 0, 0);

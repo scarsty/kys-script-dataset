@@ -10,7 +10,7 @@ lightscene();
 talk(416, "什麼人，站住！", -2, 1, 0, 0);
 SetAttribute(398, 1, 2, 0, 0);
 if (!TryBattle(143)) {
-        dead();
+    dead();
     exit();
 }
 lightscene();

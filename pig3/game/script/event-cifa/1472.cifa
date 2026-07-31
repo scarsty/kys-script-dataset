@@ -4,7 +4,7 @@ SetRoleFace(2);
 lightscene();
 talk(416, "楊左使，我來助你！", -2, 0, 0, 0);
 if (!TryBattle(204)) {
-        dead();
+    dead();
     exit();
 }
 modifyevent(113, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);

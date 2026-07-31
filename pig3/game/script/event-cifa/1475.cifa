@@ -82,7 +82,7 @@ SetAttribute(299, 0, 0, 0, 0);
 SetAttribute(298, 0, 0, 0, 0);
 SetAttribute(297, 0, 0, 0, 0);
 if (!TryBattle(210)) {
-        dead();
+    dead();
     exit();
 }
 lightscene();
@@ -90,7 +90,7 @@ talk(419, "嘖嘖，我說怎樣？便還給你們，也保不住這令牌。", 
 talk(368, "爾休得猖狂，待吾人前來會你！", -2, 0, 0, 0);
 SetAttribute(368, 0, 0, 0, 0);
 if (!TryBattle(211)) {
-            dead();
+    dead();
     exit();
 }
 modifyevent(126, 32, 0, 0, 0, 0, 0, 9248, 9248, 9248, 0, -2, -2);
@@ -124,7 +124,7 @@ SetAttribute(368, 0, 0, 0, 0);
 SetAttribute(762, 0, 0, 0, 0);
 SetAttribute(763, 0, 0, 0, 0);
 if (!TryBattle(212)) {
-                dead();
+    dead();
     exit();
 }
 lightscene();

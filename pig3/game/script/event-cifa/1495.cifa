@@ -11,7 +11,7 @@ SetAttribute(205, 0, 0, 0, 0);
 SetRole(205, 128 / 2, 60);
 SetRole(205, 148 / 2, 900);
 if (!TryBattle(231)) {
-        dead();
+    dead();
     exit();
 }
 lightscene();

@@ -13,7 +13,7 @@ talk(416, "謝先生且慢！", -2, 0, 0, 0);
 talk(264, "又是你，謝某還有要事去辦，小子，給我閃開罷！", -2, 1, 0, 0);
 SetAttribute(264, 1, 1, 0, 35);
 if (!TryBattle(175)) {
-        dead();
+    dead();
     exit();
 }
 lightscene();

@@ -26,7 +26,7 @@ talk(187, "對，對，對！皇上這主意挺高明，漢人的書本兒，讀
 talk(188, "好，咱們玩咱們的，赫圖，你先向鰲少保請教請教。", -2, 0, 0, 0);
 SetAttribute(187, 1, 3, 0, 0);
 if (!TryBattle(148)) {
-        dead();
+    dead();
     exit();
 }
 lightscene();

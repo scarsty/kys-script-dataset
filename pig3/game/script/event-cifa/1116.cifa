@@ -24,7 +24,7 @@ talk(416, "我是苗大俠的朋友，你這個鼠輩還不配苗大俠親自出
 talk(127, "好狂的小子，田大爺我成全你。", -2, 0, 0, 0);
 SetAttribute(127, 1, 1, 0, 30);
 if (!TryBattle(120)) {
-        dead();
+    dead();
     exit();
 }
 lightscene();

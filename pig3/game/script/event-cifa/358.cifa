@@ -13,8 +13,8 @@ SetX50(207, GetX50(205) % 100);
 SetX50(208, GetSubmapInfo(GetX50(200), 20 / 2));
 SetX50(209, GetSubmapInfo(GetX50(200), 22 / 2));
 if (GetX50(208) <= 0 && GetX50(209) <= 0) {
-            SetSubmapInfo(GetX50(204), 48 / 2, GetX50(206));
-            SetSubmapInfo(GetX50(204), 50 / 2, GetX50(207));
+    SetSubmapInfo(GetX50(204), 48 / 2, GetX50(206));
+    SetSubmapInfo(GetX50(204), 50 / 2, GetX50(207));
     exit();
 }
 SetSubmapInfo(GetX50(204), 28 / 2, GetX50(206));

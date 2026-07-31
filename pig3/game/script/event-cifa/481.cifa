@@ -53,16 +53,16 @@ __event_481_block_4() {
     __event_481_block_5();
 }
 __event_481_block_5() {
-                SetRole(GetX50(1000), 82 / 2, GetX50(1009));
-                SetX50(1020, GetX50(1020) - 6);
-                SetRole(GetX50(1000), 42 / 2, GetX50(1020));
-                battlefieldget(1, 28005, 4, 1010, 0, 0);
-                battlefieldget(1, 28005, 6, 1011, 0, 0);
-                SetAnimationLayer(GetX50(1010), GetX50(1011), 1, 1, 1);
-                battlefieldset(5, 28005, 18, 1008, 0, 0);
-                PlayAction(GetX50(28005), -1, 0);
-                ShowHurtValue(4);
-                Redraw();
+    SetRole(GetX50(1000), 82 / 2, GetX50(1009));
+    SetX50(1020, GetX50(1020) - 6);
+    SetRole(GetX50(1000), 42 / 2, GetX50(1020));
+    battlefieldget(1, 28005, 4, 1010, 0, 0);
+    battlefieldget(1, 28005, 6, 1011, 0, 0);
+    SetAnimationLayer(GetX50(1010), GetX50(1011), 1, 1, 1);
+    battlefieldset(5, 28005, 18, 1008, 0, 0);
+    PlayAction(GetX50(28005), -1, 0);
+    ShowHurtValue(4);
+    Redraw();
     exit();
 }
 __event_481_block_0();

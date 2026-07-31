@@ -30,7 +30,7 @@ talk(6, "你要較量，便較量。", -2, 1, 0, 0);
 talk(415, "這架打得真是莫名其妙。", -2, 0, 0, 0);
 SetAttribute(121, 1, 1, 0, 30);
 if (!TryBattle(115)) {
-            dead();
+    dead();
     exit();
 }
 setscenemap(68, 1, 48, 31, 0);

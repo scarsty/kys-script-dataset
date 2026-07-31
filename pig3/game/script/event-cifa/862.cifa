@@ -32,15 +32,15 @@ __event_862_block_3() {
     __event_862_block_4();
 }
 __event_862_block_4() {
-            talk(0, "陳公子，此去前路只怕凶險甚多，在下想請公子助我們一臂之力。", -2, 0, 0, 0);
-            talk(15, "你救回了喀絲麗，我便跟你走一趟罷。", -2, 1, 0, 0);
-            darkscene();
-            modifyevent(84, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-            lightscene();
-            ShowTeammate(30, 15, 0);
-            SetStarState(30, 1);
-            modifyevent(16, 20, 1, 0, 715, 0, 0, 7168, 7168, 7168, 0, -2, -2);
-            AddItem(77, 1);
+    talk(0, "陳公子，此去前路只怕凶險甚多，在下想請公子助我們一臂之力。", -2, 0, 0, 0);
+    talk(15, "你救回了喀絲麗，我便跟你走一趟罷。", -2, 1, 0, 0);
+    darkscene();
+    modifyevent(84, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    lightscene();
+    ShowTeammate(30, 15, 0);
+    SetStarState(30, 1);
+    modifyevent(16, 20, 1, 0, 715, 0, 0, 7168, 7168, 7168, 0, -2, -2);
+    AddItem(77, 1);
     exit();
 }
 __event_862_block_0();

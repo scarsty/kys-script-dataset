@@ -42,7 +42,7 @@ talk(224, "動手！！", -2, 0, 0, 0);
 SetAttribute(225, 3, 0, 35, 40);
 SetAttribute(224, 3, 0, 37, 40);
 if (!TryBattle(164)) {
-        dead();
+    dead();
     exit();
 }
 modifyevent(118, 1, 0, 0, 0, 0, 0, 7966, 7966, 7966, 0, -2, -2);

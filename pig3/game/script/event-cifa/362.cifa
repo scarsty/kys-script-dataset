@@ -50,20 +50,20 @@ __event_362_block_3() {
     __event_362_block_4();
 }
 __event_362_block_4() {
-            SetX50(1, Random50(8));
-            SetX50(1, GetX50(1) + 20);
-            SetRole(0, 4 / 2, GetX50(1));
-            SetX50(1, Random50(8));
-            SetX50(1, GetX50(1) + 20);
-            SetRole(0, 24 / 2, GetX50(1));
-            SetX50(1, Random50(3));
-            SetX50(1, GetX50(1) + 5);
-            SetRole(0, 18 / 2, GetX50(1));
-            SetX50(1, Random50(3));
-            SetRole(0, 20 / 2, GetX50(1));
-            SetX50(1, Random50(3));
-            SetX50(1, GetX50(1) + 5);
-            SetRole(0, 22 / 2, GetX50(1));
+    SetX50(1, Random50(8));
+    SetX50(1, GetX50(1) + 20);
+    SetRole(0, 4 / 2, GetX50(1));
+    SetX50(1, Random50(8));
+    SetX50(1, GetX50(1) + 20);
+    SetRole(0, 24 / 2, GetX50(1));
+    SetX50(1, Random50(3));
+    SetX50(1, GetX50(1) + 5);
+    SetRole(0, 18 / 2, GetX50(1));
+    SetX50(1, Random50(3));
+    SetRole(0, 20 / 2, GetX50(1));
+    SetX50(1, Random50(3));
+    SetX50(1, GetX50(1) + 5);
+    SetRole(0, 22 / 2, GetX50(1));
     exit();
 }
 __event_362_block_0();

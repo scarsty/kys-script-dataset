@@ -1,4 +1,4 @@
 SetAttribute(225, 3, 0, 30, 40);
 SetAttribute(224, 3, 0, 30, 40);
 trybattle(143);
-    lightscene();
+lightscene();

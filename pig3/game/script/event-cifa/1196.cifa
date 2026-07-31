@@ -17,7 +17,7 @@ talk(0, "我替你們說吧，看打……", -2, 1, 0, 0);
 SetAttribute(625, 2, 0, 0, 0);
 SetAttribute(626, 2, 0, 0, 0);
 if (!TryBattle(142)) {
-        dead();
+    dead();
     exit();
 }
 modifyevent(20, 3, 0, 0, 0, 0, 0, 8350, 8350, 8350, 0, -2, -2);

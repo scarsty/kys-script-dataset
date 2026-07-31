@@ -98,7 +98,7 @@ talk(7, "成崑惡賊！！！", -2, 0, 0, 0);
 talk(303, "！！！", -2, 1, 0, 0);
 SetAttribute(303, 0, 0, 0, 50);
 if (!TryBattle(171)) {
-        dead();
+    dead();
     exit();
 }
 lightscene();

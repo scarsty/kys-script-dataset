@@ -8,7 +8,7 @@ talk(0, "袁大哥莫慌，小弟在此！", -2, 0, 0, 0);
 SetAttribute(133, 1, 1, 0, 0);
 SetAttribute(324, 1, 1, 0, 0);
 if (!TryBattle(131)) {
-        dead();
+    dead();
     exit();
 }
 modifyevent(105, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);

@@ -33,13 +33,13 @@ __event_858_block_3() {
     __event_858_block_4();
 }
 __event_858_block_4() {
-            talk(46, "哈哈，小兄弟既誠心邀請，老道也就不說什麼客套話了。", -2, 1, 0, 0);
-            darkscene();
-            modifyevent(84, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-            lightscene();
-            ShowTeammate(38, 46, 0);
-            SetStarState(38, 1);
-            modifyevent(16, 35, 1, 0, 746, 0, 0, 7184, 7184, 7184, 0, -2, -2);
+    talk(46, "哈哈，小兄弟既誠心邀請，老道也就不說什麼客套話了。", -2, 1, 0, 0);
+    darkscene();
+    modifyevent(84, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    lightscene();
+    ShowTeammate(38, 46, 0);
+    SetStarState(38, 1);
+    modifyevent(16, 35, 1, 0, 746, 0, 0, 7184, 7184, 7184, 0, -2, -2);
     exit();
 }
 __event_858_block_0();

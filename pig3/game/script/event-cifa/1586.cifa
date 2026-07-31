@@ -83,12 +83,12 @@ __event_1586_block_13() {
     __event_1586_block_14();
 }
 __event_1586_block_14() {
-                                        talk(22, "要易容成這個樣子啊，好吧。", -2, 1, 0, 0);
-                                        darkscene();
-                                        SetRole(0, 2 / 2, GetX50(3000));
-                                        lightscene();
-                                        talk(22, "怎麼樣，不錯吧？", -2, 1, 0, 0);
-                                        talk(0, "………………", -2, 0, 0, 0);
+    talk(22, "要易容成這個樣子啊，好吧。", -2, 1, 0, 0);
+    darkscene();
+    SetRole(0, 2 / 2, GetX50(3000));
+    lightscene();
+    talk(22, "怎麼樣，不錯吧？", -2, 1, 0, 0);
+    talk(0, "………………", -2, 0, 0, 0);
     exit();
 }
 __event_1586_block_0();

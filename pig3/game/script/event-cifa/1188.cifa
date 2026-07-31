@@ -18,7 +18,7 @@ talk(225, "如果梅莊之內有人的武功勝得過這位王兄，這幅圖便
 talk(230, "好，一言為定。就讓我先來領教王兄高招！", -2, 1, 0, 0);
 SetAttribute(230, 0, 0, 0, 0);
 if (!TryBattle(136)) {
-        dead();
+    dead();
     exit();
 }
 lightscene();
@@ -36,7 +36,7 @@ talk(225, "我已經和四莊主說過了，倘若梅莊之中有人勝的了這
 talk(229, "好，姓王的，咱們來比劃比劃！", -2, 0, 0, 0);
 SetAttribute(229, 0, 0, 0, 0);
 if (!TryBattle(137)) {
-            dead();
+    dead();
     exit();
 }
 lightscene();
@@ -57,7 +57,7 @@ talk(228, "好吧，就讓我來見識見識丐幫的絕學！王兄，請。", 
 talk(0, "請！", -2, 0, 0, 0);
 SetAttribute(228, 0, 0, 0, 0);
 if (!TryBattle(138)) {
-                dead();
+    dead();
     exit();
 }
 lightscene();
@@ -87,7 +87,7 @@ talk(230, "大哥，他們說只要……", -2, 0, 0, 0);
 talk(227, "好，幾位既然駕臨梅莊，老朽只好用這把老骨頭捨命陪君子了。", -2, 1, 0, 0);
 SetAttribute(227, 0, 0, 0, 0);
 if (!TryBattle(139)) {
-                    dead();
+    dead();
     exit();
 }
 lightscene();

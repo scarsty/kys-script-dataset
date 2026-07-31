@@ -79,7 +79,7 @@ __event_1562_block_1() {
     __event_1562_block_2();
 }
 __event_1562_block_2() {
-            dead();
+    dead();
     exit();
     __event_1562_block_3();
 }
@@ -114,28 +114,28 @@ __event_1562_block_4() {
     __event_1562_block_5();
 }
 __event_1562_block_5() {
-                dead();
+    dead();
     exit();
     __event_1562_block_6();
 }
 __event_1562_block_6() {
-                modifyevent(121, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-                modifyevent(121, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-                modifyevent(121, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-                modifyevent(121, 40, 0, 0, 0, 0, 0, 5166, 5166, 5166, 0, -2, -2);
-                setsceneposition2(38, 42);
-                lightscene();
-                talk(426, "程姑娘，程姑娘……", -2, 1, 0, 0);
-                talk(6, "怎麼會這樣？怎麼會這樣！石萬嗔！石萬嗔！！你這天殺的石萬嗔！！！", -2, 0, 0, 0);
-                talk(0, "程姑娘，我們不會讓你的血白流的！", -2, 1, 0, 0);
-                darkscene();
-                modifyevent(121, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-                modifyevent(121, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-                lightscene();
-                CallEvent(43, 0, 0, 0, 0);
-                modifyevent(16, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-                leave(25);
-                SetStarState(25, 5);
+    modifyevent(121, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    modifyevent(121, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    modifyevent(121, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    modifyevent(121, 40, 0, 0, 0, 0, 0, 5166, 5166, 5166, 0, -2, -2);
+    setsceneposition2(38, 42);
+    lightscene();
+    talk(426, "程姑娘，程姑娘……", -2, 1, 0, 0);
+    talk(6, "怎麼會這樣？怎麼會這樣！石萬嗔！石萬嗔！！你這天殺的石萬嗔！！！", -2, 0, 0, 0);
+    talk(0, "程姑娘，我們不會讓你的血白流的！", -2, 1, 0, 0);
+    darkscene();
+    modifyevent(121, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    modifyevent(121, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    lightscene();
+    CallEvent(43, 0, 0, 0, 0);
+    modifyevent(16, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+    leave(25);
+    SetStarState(25, 5);
     exit();
 }
 __event_1562_block_0();
