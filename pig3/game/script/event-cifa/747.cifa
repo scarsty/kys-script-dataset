@@ -4,32 +4,32 @@ showstringwithbox(10, 10, "選擇列傳內容");
 a=menu(3, 10, 40, -1, {"四大高手列傳","陸冠英列傳","虛僞無恥的製作人"});
 clear();
 if (a<0) {
-	exit();
+    exit();
 }
 if (a==0) {
-	execevent(1871);
-	exit();
+    execevent(1871);
+    exit();
 }
 if (a==1) {
-	showstringwithbox(10, 10, "請選擇內容");
-	b=menu(4, 10, 40, -1, {"太湖戲鬼","戰楊康","戰三鬼","突擊南部隘口"});
-	if (b<0) {
-		exit();
-	}
-	if (b==0) {
-		execevent(1867);
-	}
-	if (b==1) {
-		execevent(1868);
-	}
-	if (b==2) {
-		execevent(1869);
-	}
-	if (b==3) {
-		execevent(1872);
-	}
+    showstringwithbox(10, 10, "請選擇內容");
+    b=menu(4, 10, 40, -1, {"太湖戲鬼","戰楊康","戰三鬼","突擊南部隘口"});
+    if (b<0) {
+        exit();
+    }
+    if (b==0) {
+        execevent(1867);
+    }
+    if (b==1) {
+        execevent(1868);
+    }
+    if (b==2) {
+        execevent(1869);
+    }
+    if (b==3) {
+        execevent(1872);
+    }
 }
 if (a==2) {
-	execevent(1890);
-	exit();
+    execevent(1890);
+    exit();
 }

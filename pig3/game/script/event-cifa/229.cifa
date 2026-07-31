@@ -1,48 +1,18 @@
-__event_229_block_0() {
-    SetX50(0, GetTeam(GetX50(28928)));
-    Debug(0, 0, 0, 0, 0, 0);
-    if (GetX50(0) > 200) {
-        __event_229_block_5();
-        return;
+SetX50(0, GetTeam(GetX50(28928)));
+Debug(0, 0, 0, 0, 0, 0);
+if (GetX50(0) <= 200 && GetX50(0) >= 0) {
+    if (GetX50(0) <= 82) {
+        SetX50(0, GetX50(0) - 1);
+        SetX50(0, GetX50(0) * 2);
+        SetX50(0, GetX50(0) + 18);
+        SetX50(0, GetRole(168, GetX50(0) / 2));
+        CallEvent(GetX50(0), 0, 0, 0, 0);
+        exit();
     }
-    __event_229_block_1();
-}
-__event_229_block_1() {
-    if (GetX50(0) < 0) {
-        __event_229_block_6();
-        return;
-    }
-    __event_229_block_2();
-}
-__event_229_block_2() {
-    if (GetX50(0) > 82) {
-        __event_229_block_4();
-        return;
-    }
-    __event_229_block_3();
-}
-__event_229_block_3() {
-    SetX50(0, GetX50(0) - 1);
-    SetX50(0, GetX50(0) * 2);
-    SetX50(0, GetX50(0) + 18);
-    SetX50(0, GetRole(168, GetX50(0) / 2));
-    CallEvent(GetX50(0), 0, 0, 0, 0);
-    exit();
-    __event_229_block_4();
-}
-__event_229_block_4() {
     SetX50(0, GetX50(0) - 83);
     SetX50(0, GetX50(0) * 2);
     SetX50(0, GetX50(0) + 18);
     SetX50(0, GetRole(169, GetX50(0) / 2));
     CallEvent(GetX50(0), 0, 0, 0, 0);
     exit();
-    __event_229_block_5();
 }
-__event_229_block_5() {
-    __event_229_block_6();
-}
-__event_229_block_6() {
-    exit();
-}
-__event_229_block_0();

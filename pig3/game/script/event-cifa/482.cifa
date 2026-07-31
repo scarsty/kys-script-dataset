@@ -24,7 +24,7 @@ __event_482_block_2() {
     battlefieldget(1, 28005, 0, 1000, 0, 0);
     SetX50(1040, GetRole(GetX50(1005), 30 / 2));
     if (GetX50(1040) > 20) {
-        __event_482_block_5();
+        __event_482_block_6();
         return;
     }
     __event_482_block_3();
@@ -53,9 +53,6 @@ __event_482_block_4() {
         __event_482_block_7();
         return;
     }
-    __event_482_block_5();
-}
-__event_482_block_5() {
     __event_482_block_6();
 }
 __event_482_block_6() {

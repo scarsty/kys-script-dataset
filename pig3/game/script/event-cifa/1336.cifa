@@ -157,7 +157,7 @@ if (GetX50(28931) != 2) {
         SetRole(0, 82 / 2, 8000);
         SetRole(0, 80 / 2, 2);
         if (getrolepro(0,13)>=0) {
-        SetRole(0, 184 / 2, 126);
+            SetRole(0, 184 / 2, 126);
         }
         SetRole(0, 192 / 2, 999);
         setsceneposition2(23, 25);

@@ -1,88 +1,36 @@
-__event_372_block_0() {
-    SetX50(107, Random50(5));
-    if (GetX50(107) != 4) {
-        __event_372_block_11();
-        return;
-    }
-    __event_372_block_1();
-}
-__event_372_block_1() {
+SetX50(107, Random50(5));
+if (GetX50(107) == 4) {
     ClearX50();
     SetX50(100, read_mem(345330 + 0));
     SetX50(101, read_mem(1911134 + 0));
     SetX50(102, read_mem(1911132 + 0));
     SetX50(103, read_mem(1911130 + 0));
-    if (GetX50(100) != 0) {
-        __event_372_block_3();
-        return;
+    if (GetX50(100) == 0) {
+        SetX50(103, GetX50(103) - 1);
     }
-    __event_372_block_2();
-}
-__event_372_block_2() {
-    SetX50(103, GetX50(103) - 1);
-    __event_372_block_3();
-}
-__event_372_block_3() {
-    if (GetX50(100) != 1) {
-        __event_372_block_5();
-        return;
+    if (GetX50(100) == 1) {
+        SetX50(102, GetX50(102) + 1);
     }
-    __event_372_block_4();
-}
-__event_372_block_4() {
-    SetX50(102, GetX50(102) + 1);
-    __event_372_block_5();
-}
-__event_372_block_5() {
-    if (GetX50(100) != 2) {
-        __event_372_block_7();
-        return;
+    if (GetX50(100) == 2) {
+        SetX50(102, GetX50(102) - 1);
     }
-    __event_372_block_6();
-}
-__event_372_block_6() {
-    SetX50(102, GetX50(102) - 1);
-    __event_372_block_7();
-}
-__event_372_block_7() {
-    if (GetX50(100) != 3) {
-        __event_372_block_9();
-        return;
+    if (GetX50(100) == 3) {
+        SetX50(103, GetX50(103) + 1);
     }
-    __event_372_block_8();
-}
-__event_372_block_8() {
-    SetX50(103, GetX50(103) + 1);
-    __event_372_block_9();
-}
-__event_372_block_9() {
     SetX50(104, GetS(GetX50(101), 3, GetX50(102), GetX50(103)));
     SetX50(105, GetD(GetX50(101), GetX50(104), 8));
-    if (GetX50(105) != 0) {
-        __event_372_block_12();
-        return;
+    if (GetX50(105) == 0) {
+        SetX50(107, Random50(300));
+        SetX50(107, GetX50(107) + 1);
+        SetD(GetX50(101), GetX50(104), 8, GetX50(107));
+        SetX50(106, GetD(GetX50(101), GetX50(104), 1));
+        SetX50(106, GetX50(106) - 100);
+        SetX50(106, GetX50(106) + 13326);
+        gettalk(0, GetX50(106), 1000, 0, 0, 0);
+        SetX50(2000, sprintf(GetX50String(1000), GetX50(107)));
+        SetX50(0, 0);
+        talk(102, -2000, "乞丐", 0, 1, 0);
+        SetX50(0, 2000);
+        SetX50(0, GetKey());
     }
-    __event_372_block_10();
 }
-__event_372_block_10() {
-    SetX50(107, Random50(300));
-    SetX50(107, GetX50(107) + 1);
-    SetD(GetX50(101), GetX50(104), 8, GetX50(107));
-    SetX50(106, GetD(GetX50(101), GetX50(104), 1));
-    SetX50(106, GetX50(106) - 100);
-    SetX50(106, GetX50(106) + 13326);
-    gettalk(0, GetX50(106), 1000, 0, 0, 0);
-    SetX50(2000, sprintf(GetX50String(1000), GetX50(107)));
-    SetX50(0, 0);
-    talk(102, -2000, "乞丐", 0, 1, 0);
-    SetX50(0, 2000);
-    SetX50(0, GetKey());
-    __event_372_block_11();
-}
-__event_372_block_11() {
-    __event_372_block_12();
-}
-__event_372_block_12() {
-    exit();
-}
-__event_372_block_0();

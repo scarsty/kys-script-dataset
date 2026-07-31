@@ -3,208 +3,214 @@ SetX50(1021, 2000);
 SetX50(1090, 26);
 SetX50(1550, "%d");
 label1:
+label2:
+label3:
+label5:
 SetX50(1090, GetX50(1090) + 1);
 if (GetX50(1090) >= 54) { goto label0; }
-    SetX50(1091, GetItem(GetX50(1090), 78 / 2));
-    if (GetX50(1091) != 0) { goto label1; }
-        SetX50(1001, GetItemAmount(GetX50(1090)));
-        if (GetX50(1001) <= 0) { goto label1; }
-            SetX50(1092, GetItem(GetX50(1090), 18 / 2));
-            if (GetX50(1092) <= 0) { goto label1; }
-                SetX50(1500, GetItemName(GetX50(1090)));
-                SetX50(1600, sprintf(GetX50String(1550), GetX50(1092)));
-                SetX50(1008, drawlength(GetX50String(1500)));
-                SetX50(1008, GetX50(1008) / 2);
-                SetX50(1670, MakeSpaces(1));
-                SetX50(1650, MakeSpaces(1));
+SetX50(1091, GetItem(GetX50(1090), 78 / 2));
+if (GetX50(1091) != 0) { goto label1; }
+SetX50(1001, GetItemAmount(GetX50(1090)));
+if (GetX50(1001) <= 0) { goto label2; }
+SetX50(1092, GetItem(GetX50(1090), 18 / 2));
+if (GetX50(1092) <= 0) { goto label3; }
+SetX50(1500, GetItemName(GetX50(1090)));
+SetX50(1600, sprintf(GetX50String(1550), GetX50(1092)));
+SetX50(1008, drawlength(GetX50String(1500)));
+SetX50(1008, GetX50(1008) / 2);
+SetX50(1670, MakeSpaces(1));
+SetX50(1650, MakeSpaces(1));
 label4:
-                SetX50(1650, GetX50String(1670) + GetX50String(1670));
-                SetX50(1008, GetX50(1008) + 1);
-                if (GetX50(1008) < 5) { goto label4; }
-                    SetX50(1670, GetX50String(1500) + GetX50String(1500));
-                    SetX50(1670, "可打造次數：");
-                    SetX50(1670, GetX50String(1500) + GetX50String(1500));
-                    concat(GetX50(1021), 1500, 1600, 0, 0, 0);
-                    SetX50(1300 + GetX50(1020), GetX50(1021));
-                    SetX50(1020, GetX50(1020) + 1);
-                    SetX50(1200 + GetX50(1020), GetX50(1092));
-                    SetX50(1250 + GetX50(1020), GetX50(1090));
-                    SetX50(1021, GetX50(1021) + 50);
-                    if (1) { goto label1; }
+SetX50(1650, GetX50String(1670) + GetX50String(1670));
+SetX50(1008, GetX50(1008) + 1);
+if (GetX50(1008) < 5) { goto label4; }
+SetX50(1670, GetX50String(1500) + GetX50String(1500));
+SetX50(1670, "可打造次數：");
+SetX50(1670, GetX50String(1500) + GetX50String(1500));
+concat(GetX50(1021), 1500, 1600, 0, 0, 0);
+SetX50(1300 + GetX50(1020), GetX50(1021));
+SetX50(1020, GetX50(1020) + 1);
+SetX50(1200 + GetX50(1020), GetX50(1092));
+SetX50(1250 + GetX50(1020), GetX50(1090));
+SetX50(1021, GetX50(1021) + 50);
+if (1) { goto label5; }
 label0:
-                        if (GetX50(1020) == 0) { goto label6; }
-                            SetX50(1120, 0);
-                            SetX50(1121, 5500);
-                            SetX50(1101, GetItemAmount(211));
-                            if (GetX50(1101) <= 0) { goto label7; }
-                                SetX50(1500, GetItemName(211));
-                                SetX50(1600, sprintf(GetX50String(1550), GetX50(1101)));
-                                SetX50(1008, drawlength(GetX50String(1500)));
-                                SetX50(1008, GetX50(1008) / 2);
-                                SetX50(1670, MakeSpaces(1));
-                                SetX50(1650, MakeSpaces(1));
+if (GetX50(1020) == 0) { goto label6; }
+SetX50(1120, 0);
+SetX50(1121, 5500);
+SetX50(1101, GetItemAmount(211));
+if (GetX50(1101) <= 0) { goto label7; }
+SetX50(1500, GetItemName(211));
+SetX50(1600, sprintf(GetX50String(1550), GetX50(1101)));
+SetX50(1008, drawlength(GetX50String(1500)));
+SetX50(1008, GetX50(1008) / 2);
+SetX50(1670, MakeSpaces(1));
+SetX50(1650, MakeSpaces(1));
 label8:
-                                SetX50(1650, GetX50String(1670) + GetX50String(1670));
-                                SetX50(1008, GetX50(1008) + 1);
-                                if (GetX50(1008) < 11) { goto label8; }
-                                    SetX50(1670, GetX50String(1500) + GetX50String(1500));
-                                    concat(GetX50(1121), 1500, 1600, 0, 0, 0);
-                                    SetX50(1450 + GetX50(1120), GetX50(1121));
-                                    SetX50(1120, GetX50(1120) + 1);
-                                    SetX50(1430 + GetX50(1120), 211);
-                                    SetX50(1121, GetX50(1121) + 50);
+SetX50(1650, GetX50String(1670) + GetX50String(1670));
+SetX50(1008, GetX50(1008) + 1);
+if (GetX50(1008) < 11) { goto label8; }
+SetX50(1670, GetX50String(1500) + GetX50String(1500));
+concat(GetX50(1121), 1500, 1600, 0, 0, 0);
+SetX50(1450 + GetX50(1120), GetX50(1121));
+SetX50(1120, GetX50(1120) + 1);
+SetX50(1430 + GetX50(1120), 211);
+SetX50(1121, GetX50(1121) + 50);
 label7:
-                                    SetX50(1102, GetItemAmount(212));
-                                    if (GetX50(1102) <= 0) { goto label9; }
-                                        SetX50(1500, GetItemName(212));
-                                        SetX50(1600, sprintf(GetX50String(1550), GetX50(1102)));
-                                        SetX50(1008, drawlength(GetX50String(1500)));
-                                        SetX50(1008, GetX50(1008) / 2);
-                                        SetX50(1670, MakeSpaces(1));
-                                        SetX50(1650, MakeSpaces(1));
+SetX50(1102, GetItemAmount(212));
+if (GetX50(1102) <= 0) { goto label9; }
+SetX50(1500, GetItemName(212));
+SetX50(1600, sprintf(GetX50String(1550), GetX50(1102)));
+SetX50(1008, drawlength(GetX50String(1500)));
+SetX50(1008, GetX50(1008) / 2);
+SetX50(1670, MakeSpaces(1));
+SetX50(1650, MakeSpaces(1));
 label10:
-                                        SetX50(1650, GetX50String(1670) + GetX50String(1670));
-                                        SetX50(1008, GetX50(1008) + 1);
-                                        if (GetX50(1008) < 11) { goto label10; }
-                                            SetX50(1670, GetX50String(1500) + GetX50String(1500));
-                                            concat(GetX50(1121), 1500, 1600, 0, 0, 0);
-                                            SetX50(1450 + GetX50(1120), GetX50(1121));
-                                            SetX50(1120, GetX50(1120) + 1);
-                                            SetX50(1430 + GetX50(1120), 212);
-                                            SetX50(1121, GetX50(1121) + 50);
+SetX50(1650, GetX50String(1670) + GetX50String(1670));
+SetX50(1008, GetX50(1008) + 1);
+if (GetX50(1008) < 11) { goto label10; }
+SetX50(1670, GetX50String(1500) + GetX50String(1500));
+concat(GetX50(1121), 1500, 1600, 0, 0, 0);
+SetX50(1450 + GetX50(1120), GetX50(1121));
+SetX50(1120, GetX50(1120) + 1);
+SetX50(1430 + GetX50(1120), 212);
+SetX50(1121, GetX50(1121) + 50);
 label9:
-                                            SetX50(1103, GetItemAmount(213));
-                                            if (GetX50(1103) <= 0) { goto label11; }
-                                                SetX50(1500, GetItemName(213));
-                                                SetX50(1600, sprintf(GetX50String(1550), GetX50(1103)));
-                                                SetX50(1008, drawlength(GetX50String(1500)));
-                                                SetX50(1008, GetX50(1008) / 2);
-                                                SetX50(1670, MakeSpaces(1));
-                                                SetX50(1650, MakeSpaces(1));
+SetX50(1103, GetItemAmount(213));
+if (GetX50(1103) <= 0) { goto label11; }
+SetX50(1500, GetItemName(213));
+SetX50(1600, sprintf(GetX50String(1550), GetX50(1103)));
+SetX50(1008, drawlength(GetX50String(1500)));
+SetX50(1008, GetX50(1008) / 2);
+SetX50(1670, MakeSpaces(1));
+SetX50(1650, MakeSpaces(1));
 label12:
-                                                SetX50(1650, GetX50String(1670) + GetX50String(1670));
-                                                SetX50(1008, GetX50(1008) + 1);
-                                                if (GetX50(1008) < 11) { goto label12; }
-                                                    SetX50(1670, GetX50String(1500) + GetX50String(1500));
-                                                    concat(GetX50(1121), 1500, 1600, 0, 0, 0);
-                                                    SetX50(1450 + GetX50(1120), GetX50(1121));
-                                                    SetX50(1120, GetX50(1120) + 1);
-                                                    SetX50(1430 + GetX50(1120), 213);
-                                                    SetX50(1121, GetX50(1121) + 50);
+SetX50(1650, GetX50String(1670) + GetX50String(1670));
+SetX50(1008, GetX50(1008) + 1);
+if (GetX50(1008) < 11) { goto label12; }
+SetX50(1670, GetX50String(1500) + GetX50String(1500));
+concat(GetX50(1121), 1500, 1600, 0, 0, 0);
+SetX50(1450 + GetX50(1120), GetX50(1121));
+SetX50(1120, GetX50(1120) + 1);
+SetX50(1430 + GetX50(1120), 213);
+SetX50(1121, GetX50(1121) + 50);
 label11:
-                                                    if (GetX50(1120) == 0) { goto label13; }
-                                                        SetX50(1075, GetX50(1020) * 18);
-                                                        SetX50(1075, GetX50(1075) - 470);
-                                                        SetX50(1075, GetX50(1075) / -2);
-                                                        SetX50(1076, GetX50(1075) - 5);
-                                                        SetX50(1077, GetX50(1075) - 25);
-                                                        SetX50(1175, GetX50(1120) * 18);
-                                                        SetX50(1175, GetX50(1175) - 470);
-                                                        SetX50(1175, GetX50(1175) / -2);
-                                                        SetX50(1176, GetX50(1175) - 5);
-                                                        SetX50(1177, GetX50(1175) - 25);
-                                                        if (GetX50(1020) > 1) { goto label14; }
-                                                            SetX50(1980, "請選擇材料");
-                                                            SetX50(1930, "已有");
-                                                            SetX50(1055, GetX50(1250 + 1));
-                                                            SetX50(1950, GetItemName(GetX50(1055)));
-                                                            SetX50(1950, GetX50String(1900) + GetX50String(1930));
-                                                            SetX50(1980, GetX50String(1950) + GetX50String(1900));
-                                                            SetX50(1030, 1);
-                                                            if (GetX50(1120) > 1) { goto label15; }
-                                                                talk(97, "當前只有一種可打造兵器和一種材料，是否打造？", -2, 1, 0, 0);
-                                                                SetX50(2500, "是");
-                                                                SetX50(2550, "否");
-                                                                SetX50(2600 + 0, 2500);
-                                                                SetX50(2600 + 1, 2550);
-                                                                SetX50(1130, Menu50(2, 2600, 181, 215, 10));
-                                                                if (GetX50(1130) == 1) { goto label16; }
-                                                                    exit();
+if (GetX50(1120) == 0) { goto label13; }
+SetX50(1075, GetX50(1020) * 18);
+SetX50(1075, GetX50(1075) - 470);
+SetX50(1075, GetX50(1075) / -2);
+SetX50(1076, GetX50(1075) - 5);
+SetX50(1077, GetX50(1075) - 25);
+SetX50(1175, GetX50(1120) * 18);
+SetX50(1175, GetX50(1175) - 470);
+SetX50(1175, GetX50(1175) / -2);
+SetX50(1176, GetX50(1175) - 5);
+SetX50(1177, GetX50(1175) - 25);
+if (GetX50(1020) > 1) { goto label14; }
+SetX50(1980, "請選擇材料");
+SetX50(1930, "已有");
+SetX50(1055, GetX50(1250 + 1));
+SetX50(1950, GetItemName(GetX50(1055)));
+SetX50(1950, GetX50String(1900) + GetX50String(1930));
+SetX50(1980, GetX50String(1950) + GetX50String(1900));
+SetX50(1030, 1);
+if (GetX50(1120) > 1) { goto label15; }
+talk(97, "當前只有一種可打造兵器和一種材料，是否打造？", -2, 1, 0, 0);
+SetX50(2500, "是");
+SetX50(2550, "否");
+SetX50(2600 + 0, 2500);
+SetX50(2600 + 1, 2550);
+SetX50(1130, Menu50(2, 2600, 181, 215, 10));
+if (GetX50(1130) == 1) { goto label16; }
+exit();
 label14:
-                                                                    if (GetX50(1120) > 1) { goto label17; }
-                                                                        SetX50(1980, "請選擇欲打造之兵器");
-                                                                        SetX50(1930, "已有");
-                                                                        SetX50(1055, GetX50(1430 + 1));
-                                                                        SetX50(1950, GetItemName(GetX50(1055)));
-                                                                        SetX50(1950, GetX50String(1900) + GetX50String(1930));
-                                                                        SetX50(1980, GetX50String(1900) + GetX50String(1900));
-                                                                        SetX50(1130, 1);
-                                                                        if (1) { goto label18; }
+if (GetX50(1120) > 1) { goto label17; }
+SetX50(1980, "請選擇欲打造之兵器");
+SetX50(1930, "已有");
+SetX50(1055, GetX50(1430 + 1));
+SetX50(1950, GetItemName(GetX50(1055)));
+SetX50(1950, GetX50String(1900) + GetX50String(1930));
+SetX50(1980, GetX50String(1900) + GetX50String(1900));
+SetX50(1130, 1);
+if (1) { goto label18; }
 label17:
-                                                                            SetX50(1900, "請選擇欲打造之兵器");
+SetX50(1900, "請選擇欲打造之兵器");
 label18:
-                                                                            SetX50(1025, GetX50(1020) * 18);
-                                                                            SetX50(1025, GetX50(1025) + 10);
-                                                                            showmessage(2, 1900, 200, 1077, 26211, 0);
-                                                                            SetX50(1030, Menu50(GetX50(1020), 1300, 181, GetX50(1075), 10));
-                                                                            if (GetX50(1030) <= 0) { goto label19; }
-                                                                                if (GetX50(1120) == 1) { goto label16; }
-                                                                                    SetX50(1950, "請選擇材料");
+SetX50(1025, GetX50(1020) * 18);
+SetX50(1025, GetX50(1025) + 10);
+showmessage(2, 1900, 200, 1077, 26211, 0);
+SetX50(1030, Menu50(GetX50(1020), 1300, 181, GetX50(1075), 10));
+if (GetX50(1030) <= 0) { goto label19; }
+if (GetX50(1120) == 1) { goto label20; }
+SetX50(1950, "請選擇材料");
 label15:
-                                                                                    SetX50(1125, GetX50(1120) * 18);
-                                                                                    SetX50(1125, GetX50(1125) + 10);
-                                                                                    showmessage(2, 1950, 500, 1177, 26211, 0);
-                                                                                    SetX50(1130, Menu50(GetX50(1120), 1450, 481, GetX50(1175), 10));
-                                                                                    if (GetX50(1130) <= 0) { goto label19; }
+SetX50(1125, GetX50(1120) * 18);
+SetX50(1125, GetX50(1125) + 10);
+showmessage(2, 1950, 500, 1177, 26211, 0);
+SetX50(1130, Menu50(GetX50(1120), 1450, 481, GetX50(1175), 10));
+if (GetX50(1130) <= 0) { goto label21; }
 label16:
-                                                                                        SetX50(1051, GetX50(1250 + GetX50(1030)));
-                                                                                        SetX50(1151, GetX50(1430 + GetX50(1130)));
-                                                                                        AddItemWithoutHint( GetX50(1151), -1);
-                                                                                        SetX50(1092, GetItem(GetX50(1051), 18 / 2));
-                                                                                        SetX50(1092, GetX50(1092) - 1);
-                                                                                        SetItem(GetX50(1051), 18 / 2, GetX50(1092));
-                                                                                        SetX50(1070, GetRole(97, 112 / 2));
-                                                                                        SetX50(1071, GetX50(1070) / 12);
-                                                                                        SetX50(1070, GetX50(1070) + 1);
-                                                                                        SetRole(97, 112 / 2, GetX50(1070));
-                                                                                        if (GetX50(1151) == 211) { goto label22; }
-                                                                                            if (GetX50(1151) == 212) { goto label23; }
-                                                                                                SetX50(2000 + 0, 3);
-                                                                                                SetX50(2000 + 1, 6);
-                                                                                                SetX50(2000 + 2, 8);
-                                                                                                SetX50(2000 + 3, 9);
-                                                                                                SetX50(1095, GetX50(2000 + GetX50(1071)));
-                                                                                                SetX50(1072, GetItem(GetX50(1051), 106 / 2));
-                                                                                                SetX50(1072, GetX50(1072) + GetX50(1095));
-                                                                                                SetItem(GetX50(1051), 106 / 2, GetX50(1072));
-                                                                                                SetX50(2200, "輕功加成");
+label20:
+SetX50(1051, GetX50(1250 + GetX50(1030)));
+SetX50(1151, GetX50(1430 + GetX50(1130)));
+AddItemWithoutHint( GetX50(1151), -1);
+SetX50(1092, GetItem(GetX50(1051), 18 / 2));
+SetX50(1092, GetX50(1092) - 1);
+SetItem(GetX50(1051), 18 / 2, GetX50(1092));
+SetX50(1070, GetRole(97, 112 / 2));
+SetX50(1071, GetX50(1070) / 12);
+SetX50(1070, GetX50(1070) + 1);
+SetRole(97, 112 / 2, GetX50(1070));
+if (GetX50(1151) == 211) { goto label22; }
+if (GetX50(1151) == 212) { goto label23; }
+SetX50(2000 + 0, 3);
+SetX50(2000 + 1, 6);
+SetX50(2000 + 2, 8);
+SetX50(2000 + 3, 9);
+SetX50(1095, GetX50(2000 + GetX50(1071)));
+SetX50(1072, GetItem(GetX50(1051), 106 / 2));
+SetX50(1072, GetX50(1072) + GetX50(1095));
+SetItem(GetX50(1051), 106 / 2, GetX50(1072));
+SetX50(2200, "輕功加成");
 label24:
-                                                                                                SetX50(2100, "打造成功");
-                                                                                                SetX50(2150, "增加");
-                                                                                                SetX50(1500, GetItemName(GetX50(1051)));
-                                                                                                SetX50(1600, sprintf(GetX50String(1550), GetX50(1095)));
-                                                                                                SetX50(1500, GetX50String(2300) + GetX50String(2100));
-                                                                                                SetX50(2150, GetX50String(2300) + GetX50String(2300));
-                                                                                                SetX50(2200, GetX50String(2300) + GetX50String(2300));
-                                                                                                SetX50(1600, GetX50String(2300) + GetX50String(2300));
-                                                                                                clear();
-                                                                                                showmessage(0, 2300, 170, 230, 0, 0);
-                                                                                                exit();
+label25:
+SetX50(2100, "打造成功");
+SetX50(2150, "增加");
+SetX50(1500, GetItemName(GetX50(1051)));
+SetX50(1600, sprintf(GetX50String(1550), GetX50(1095)));
+SetX50(1500, GetX50String(2300) + GetX50String(2100));
+SetX50(2150, GetX50String(2300) + GetX50String(2300));
+SetX50(2200, GetX50String(2300) + GetX50String(2300));
+SetX50(1600, GetX50String(2300) + GetX50String(2300));
+clear();
+showmessage(0, 2300, 170, 230, 0, 0);
+exit();
 label23:
-                                                                                                SetX50(2000 + 0, 6);
-                                                                                                SetX50(2000 + 1, 11);
-                                                                                                SetX50(2000 + 2, 15);
-                                                                                                SetX50(2000 + 3, 18);
-                                                                                                SetX50(1095, GetX50(2000 + GetX50(1071)));
-                                                                                                SetX50(1072, GetItem(GetX50(1051), 104 / 2));
-                                                                                                SetX50(1072, GetX50(1072) + GetX50(1095));
-                                                                                                SetItem(GetX50(1051), 104 / 2, GetX50(1072));
-                                                                                                SetX50(2200, "攻擊力");
-                                                                                                if (1) { goto label24; }
+SetX50(2000 + 0, 6);
+SetX50(2000 + 1, 11);
+SetX50(2000 + 2, 15);
+SetX50(2000 + 3, 18);
+SetX50(1095, GetX50(2000 + GetX50(1071)));
+SetX50(1072, GetItem(GetX50(1051), 104 / 2));
+SetX50(1072, GetX50(1072) + GetX50(1095));
+SetItem(GetX50(1051), 104 / 2, GetX50(1072));
+SetX50(2200, "攻擊力");
+if (1) { goto label24; }
 label22:
-                                                                                                    SetX50(2000 + 0, 6);
-                                                                                                    SetX50(2000 + 1, 11);
-                                                                                                    SetX50(2000 + 2, 15);
-                                                                                                    SetX50(2000 + 3, 18);
-                                                                                                    SetX50(1095, GetX50(2000 + GetX50(1071)));
-                                                                                                    SetX50(1072, GetItem(GetX50(1051), 108 / 2));
-                                                                                                    SetX50(1072, GetX50(1072) + GetX50(1095));
-                                                                                                    SetItem(GetX50(1051), 108 / 2, GetX50(1072));
-                                                                                                    SetX50(2200, "防禦力");
-                                                                                                    if (1) { goto label24; }
+SetX50(2000 + 0, 6);
+SetX50(2000 + 1, 11);
+SetX50(2000 + 2, 15);
+SetX50(2000 + 3, 18);
+SetX50(1095, GetX50(2000 + GetX50(1071)));
+SetX50(1072, GetItem(GetX50(1051), 108 / 2));
+SetX50(1072, GetX50(1072) + GetX50(1095));
+SetItem(GetX50(1051), 108 / 2, GetX50(1072));
+SetX50(2200, "防禦力");
+if (1) { goto label25; }
 label13:
-                                                                                                        talk(97, "對不起，原材料不足，請集齊材料再來。", -2, 1, 0, 0);
+talk(97, "對不起，原材料不足，請集齊材料再來。", -2, 1, 0, 0);
 label19:
-                                                                                                        exit();
+label21:
+exit();
 label6:
-                                                                                                        talk(97, "當前沒有可打造之武器", -2, 1, 0, 0);
+talk(97, "當前沒有可打造之武器", -2, 1, 0, 0);

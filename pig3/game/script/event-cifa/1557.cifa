@@ -22,18 +22,10 @@ __event_1557_block_0() {
     talk(415, "遼軍竟已行進至此地？", -2, 1, 0, 0);
     talk(2, "&&，這隊遼兵看來不過百餘人，大概只是一小隊先鋒營，不足為懼。", -2, 0, 0, 0);
     talk(0, "還是師娘仔細。大遼鐵騎？嘿嘿，那就讓我來領教一下！", -2, 1, 0, 0);
-    if (TryBattle(257)) {
-        __event_1557_block_2();
-        return;
+    if (!TryBattle(257)) {
+        dead();
+        exit();
     }
-    __event_1557_block_1();
-}
-__event_1557_block_1() {
-    dead();
-    exit();
-    __event_1557_block_2();
-}
-__event_1557_block_2() {
     lightscene();
     talk(365, "咳咳……大膽狂徒，你們等著……等我們大軍一到，把你們碾為肉泥……", -2, 0, 0, 0);
     talk(1, "這只是遼軍一小隊，這仗既然接上了，只怕大批遼清聯軍跟著便來，大家千萬小心。", -2, 1, 0, 0);
@@ -99,18 +91,10 @@ __event_1557_block_2() {
     lightscene();
     talk(365, "不自量力，憑你們區區幾人之力，也敢擋我數十萬聯軍，受死吧！", -2, 1, 0, 0);
     talk(1, "但教我有一口氣在，就決不允許外族侵入我中原一步！", -2, 0, 0, 0);
-    if (TryBattle(258)) {
-        __event_1557_block_4();
-        return;
+    if (!TryBattle(258)) {
+        dead();
+        exit();
     }
-    __event_1557_block_3();
-}
-__event_1557_block_3() {
-    dead();
-    exit();
-    __event_1557_block_4();
-}
-__event_1557_block_4() {
     lightscene();
     talk(421, "敵軍越殺越多，雙拳難敵四手，這樣下去不是辦法……", -2, 1, 0, 0);
     talk(40, "如今敵眾我寡，平陽交鋒，對我方不利。", -2, 0, 0, 0);
@@ -123,18 +107,10 @@ __event_1557_block_4() {
     lightscene();
     talk(416, "耶律洪基，蕭峰蕭大哥有話對你說，只好勞你與我走一趟！", -2, 1, 0, 0);
     talk(158, "護駕，護駕！", -2, 0, 0, 0);
-    if (TryBattle(259)) {
-        __event_1557_block_6();
-        return;
+    if (!TryBattle(259)) {
+        dead();
+        exit();
     }
-    __event_1557_block_5();
-}
-__event_1557_block_5() {
-    dead();
-    exit();
-    __event_1557_block_6();
-}
-__event_1557_block_6() {
     lightscene();
     talk(365, "不好，陛下，陛下！", -2, 1, 0, 0);
     darkscene();
@@ -164,12 +140,11 @@ __event_1557_block_6() {
     talk(1, "大遼皇帝，你瞧，遼國的將士也一樣不願意打仗，你若執意南征，也未必能勝。", -2, 0, 0, 0);
     talk(158, "………………哼！", -2, 1, 0, 0);
     if (GetStarState(21) != 0) {
-        __event_1557_block_18();
+        __event_1557_block_12();
         return;
     }
-    __event_1557_block_7();
 }
-__event_1557_block_7() {
+__event_1557_block_1() {
     darkscene();
     modifyevent(57, 77, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
     modifyevent(57, 40, 0, 0, 0, 0, 0, 9304, 9304, 9304, 0, -2, -2);
@@ -187,64 +162,52 @@ __event_1557_block_7() {
     talk(424, "蕭大哥，蕭大哥！！你……你這又是何苦……", -2, 1, 0, 0);
     SetX50(0, GetTeam(1));
     if (GetX50(0) == -1) {
-        __event_1557_block_13();
+        __event_1557_block_11();
         return;
     }
-    __event_1557_block_8();
+    __event_1557_block_2();
 }
-__event_1557_block_8() {
+__event_1557_block_2() {
     talk( GetX50(0), "蕭大俠！", -2, 0, 0, 0);
     SetX50(0, GetTeam(2));
     if (GetX50(0) == -1) {
-        __event_1557_block_14();
+        __event_1557_block_11();
         return;
     }
-    __event_1557_block_9();
+    __event_1557_block_3();
 }
-__event_1557_block_9() {
+__event_1557_block_3() {
     talk( GetX50(0), "蕭大俠！", -2, 1, 0, 0);
     SetX50(0, GetTeam(3));
     if (GetX50(0) == -1) {
-        __event_1557_block_15();
+        __event_1557_block_11();
         return;
     }
-    __event_1557_block_10();
+    __event_1557_block_4();
 }
-__event_1557_block_10() {
+__event_1557_block_4() {
     talk( GetX50(0), "蕭大俠！", -2, 0, 0, 0);
     SetX50(0, GetTeam(4));
     if (GetX50(0) == -1) {
-        __event_1557_block_16();
+        __event_1557_block_11();
         return;
     }
-    __event_1557_block_11();
+    __event_1557_block_5();
 }
-__event_1557_block_11() {
+__event_1557_block_5() {
     talk( GetX50(0), "蕭大俠！", -2, 1, 0, 0);
     SetX50(0, GetTeam(5));
     if (GetX50(0) == -1) {
-        __event_1557_block_17();
+        __event_1557_block_11();
         return;
     }
-    __event_1557_block_12();
+    __event_1557_block_6();
 }
-__event_1557_block_12() {
+__event_1557_block_6() {
     talk( GetX50(0), "蕭大俠！", -2, 0, 0, 0);
-    __event_1557_block_13();
+    __event_1557_block_11();
 }
-__event_1557_block_13() {
-    __event_1557_block_14();
-}
-__event_1557_block_14() {
-    __event_1557_block_15();
-}
-__event_1557_block_15() {
-    __event_1557_block_16();
-}
-__event_1557_block_16() {
-    __event_1557_block_17();
-}
-__event_1557_block_17() {
+__event_1557_block_11() {
     talk(2, "蕭大俠……唉，他本是契丹人，遼帝又是他結拜義兄，他為了兩國百姓定紛止爭，心底卻終是覺得此舉不忠不義……", -2, 1, 0, 0);
     talk(158, "………………………………", -2, 0, 0, 0);
     talk(158, "傳令下去，後隊變前隊，班師回京。", -2, 1, 0, 0);
@@ -253,12 +216,12 @@ __event_1557_block_17() {
     modifyevent(16, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
     SetStarState(7, 3);
     if (JudgeSexual(0)) {
-        __event_1557_block_19();
+        __event_1557_block_13();
         return;
     }
-    __event_1557_block_18();
+    __event_1557_block_12();
 }
-__event_1557_block_18() {
+__event_1557_block_12() {
     darkscene();
     modifyevent(57, 77, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
     modifyevent(57, 40, 0, 0, 0, 0, 0, 9304, 9304, 9304, 0, -2, -2);
@@ -273,9 +236,9 @@ __event_1557_block_18() {
     talk(158, "傳令下去，後隊變前隊，班師回京。", -2, 0, 0, 0);
     talk(1, "太好了，多虧了蕭大俠，如今清遼聯軍之勢一半已去。", -2, 1, 0, 0);
     talk(21, "郭大俠客氣了，若不是&&兄弟出手如電，也不會這麼順利。", -2, 0, 0, 0);
-    __event_1557_block_19();
+    __event_1557_block_13();
 }
-__event_1557_block_19() {
+__event_1557_block_13() {
     talk(425, "看，又有軍隊過來了！", -2, 1, 0, 0);
     darkscene();
     modifyevent(57, 76, 0, 0, 0, 0, 0, 8614, 8614, 8614, 0, -2, -2);
@@ -353,66 +316,34 @@ __event_1557_block_19() {
     talk(0, "那便有勞天地會與紅花會的各位英雄了。", -2, 1, 0, 0);
     talk(49, "諸位英雄，且隨文某殺將過去！", -2, 0, 0, 0);
     talk(361, "保護皇上！", -2, 1, 0, 0);
-    if (TryBattle(260)) {
-        __event_1557_block_21();
-        return;
+    if (!TryBattle(260)) {
+        dead();
+        exit();
     }
-    __event_1557_block_20();
-}
-__event_1557_block_20() {
-    dead();
-    exit();
-    __event_1557_block_21();
-}
-__event_1557_block_21() {
     lightscene();
     talk(40, "各位好漢，我們衝！", -2, 0, 0, 0);
-    if (TryBattle(261)) {
-        __event_1557_block_23();
-        return;
+    if (!TryBattle(261)) {
+        dead();
+        exit();
     }
-    __event_1557_block_22();
-}
-__event_1557_block_22() {
-    dead();
-    exit();
-    __event_1557_block_23();
-}
-__event_1557_block_23() {
     lightscene();
     talk(416, "瞧我的！殺啊！", -2, 1, 0, 0);
     talk(134, "掌門大會時沒調兵宰了你小子，想不到養虎遺患。今天我領大軍在此，看你如何脫身？", -2, 0, 0, 0);
     talk(0, "我既然敢來，胸中自有脫身良策。你若能保下命來，或許還能見識見識。", -2, 1, 0, 0);
-    if (TryBattle(262)) {
-        __event_1557_block_25();
-        return;
+    if (!TryBattle(262)) {
+        dead();
+        exit();
     }
-    __event_1557_block_24();
-}
-__event_1557_block_24() {
-    dead();
-    exit();
-    __event_1557_block_25();
-}
-__event_1557_block_25() {
     setsceneposition2(22, 26);
     lightscene();
     talk(245, "哼，小子直闖中軍，不知道個“怕”字怎麼寫嗎？", -2, 0, 0, 0);
     talk(414, "哎呦～我好怕～我好怕裘老前輩再次施展那天下無雙的“水上漂”神功，一聲不響地離開吶！", -2, 1, 0, 0);
     talk(360, "哈哈哈哈哈！", -2, 0, 0, 0);
     talk(245, "住口！我倒要看看，你手上的功夫，有嘴上的幾成！", -2, 1, 0, 0);
-    if (TryBattle(263)) {
-        __event_1557_block_27();
-        return;
+    if (!TryBattle(263)) {
+        dead();
+        exit();
     }
-    __event_1557_block_26();
-}
-__event_1557_block_26() {
-    dead();
-    exit();
-    __event_1557_block_27();
-}
-__event_1557_block_27() {
     setsceneposition2(18, 26);
     lightscene();
     talk(239, "保護皇上！", -2, 0, 0, 0);
@@ -420,18 +351,10 @@ __event_1557_block_27() {
     talk(0, "呵，我此來本欲與你議事。可既然如此，我不顯些手段出來，你是不會死心了。", -2, 0, 0, 0);
     talk(188, "朕親率天兵在此，豈容你造次？來人哪！把這不知天高地厚的小子給朕拿下！", -2, 1, 0, 0);
     talk(361, "?！！！", -2, 0, 0, 0);
-    if (TryBattle(263)) {
-        __event_1557_block_29();
-        return;
+    if (!TryBattle(263)) {
+        dead();
+        exit();
     }
-    __event_1557_block_28();
-}
-__event_1557_block_28() {
-    dead();
-    exit();
-    __event_1557_block_29();
-}
-__event_1557_block_29() {
     modifyevent(57, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
     modifyevent(57, 79, 0, 0, 0, 0, 0, 9306, 9306, 9306, 0, -2, -2);
     setsceneposition2(30, 26);
@@ -447,28 +370,27 @@ __event_1557_block_29() {
     talk(188, "！！！！！", -2, 1, 0, 0);
     SetX50(28929, GetStarState(9));
     if (GetX50(28931) != 0) {
-        __event_1557_block_31();
+        __event_1557_block_15();
         return;
     }
-    __event_1557_block_30();
 }
-__event_1557_block_30() {
+__event_1557_block_14() {
     talk(15, "你既然逼死了她，我讓你這清室亂上一亂，又有何妨！", -2, 0, 0, 0);
     talk(188, "枉你自詡心繫蒼生，那關外的千萬黎民，你便也不顧了麼？", -2, 1, 0, 0);
     talk(15, "我已經顧不了那麼多了！這是一個交易，你若退兵回去，與那遼主一樣不再進犯，我便將這個祕密帶進棺材，保清廷根基不壞；你若是一意孤行，少不得我要壞你清廷基業，保全這關內的漢人了。其中得失，你自己想罷。", -2, 0, 0, 0);
     if (JudgeSexual(0)) {
-        __event_1557_block_32();
+        __event_1557_block_16();
         return;
     }
-    __event_1557_block_31();
+    __event_1557_block_15();
 }
-__event_1557_block_31() {
+__event_1557_block_15() {
     talk(15, "你愛民如子，這個祕密我本不想說的。", -2, 1, 0, 0);
     talk(188, "道貌岸然，虛偽至極！你若說將出去，皇族必將大亂！枉你自詡心繫蒼生，那關外的千萬黎民，你便也不顧了麼？", -2, 0, 0, 0);
     talk(15, "我總盼你能善待漢人，不欲壞你基業。可現今看來，清軍入關，又是兵禍。關內關外，舍少存多，只能如此了。", -2, 1, 0, 0);
-    __event_1557_block_32();
+    __event_1557_block_16();
 }
-__event_1557_block_32() {
+__event_1557_block_16() {
     talk(188, "＜…………＞", -2, 0, 0, 0);
     talk(188, "為大清萬世計，朕有得選麼？將朕放開吧。", -2, 1, 0, 0);
     talk(0, "閣下萬乘之尊，想必不會出爾反爾，誅殺我等於陣前。", -2, 0, 0, 0);

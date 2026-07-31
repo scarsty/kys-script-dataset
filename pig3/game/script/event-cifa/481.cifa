@@ -41,18 +41,10 @@ __event_481_block_2() {
 }
 __event_481_block_3() {
     SetX50(1009, GetX50(1008) + GetX50(1005));
-    if (GetX50(1009) <= GetX50(1006)) {
-        __event_481_block_5();
-        return;
+    if (GetX50(1009) > GetX50(1006)) {
+        SetX50(1009, GetX50(1006) + 0);
+        SetX50(1008, GetX50(1006) - GetX50(1005));
     }
-    __event_481_block_4();
-}
-__event_481_block_4() {
-    SetX50(1009, GetX50(1006) + 0);
-    SetX50(1008, GetX50(1006) - GetX50(1005));
-    __event_481_block_5();
-}
-__event_481_block_5() {
     SetRole(GetX50(1000), 82 / 2, GetX50(1009));
     SetX50(1020, GetX50(1020) - 6);
     SetRole(GetX50(1000), 42 / 2, GetX50(1020));

@@ -68,60 +68,65 @@ SetX50(113, -1);
 SetX50(114, -1);
 SetX50(106, 0);
 label0:
+label2:
+label5:
+label6:
+label8:
 SetX50(107, Random50(GetX50(100)));
 SetX50(108, GetX50(300 + GetX50(107)));
 if (GetX50(108) == 1) { goto label0; }
-    if (GetX50(107) > 5) { goto label1; }
-        if (GetX50(103) == 1) { goto label0; }
-            SetX50(103, 1);
-            if (!CheckJumpFlag()) { goto label3; }
+if (GetX50(107) > 5) { goto label1; }
+if (GetX50(103) == 1) { goto label2; }
+SetX50(103, 1);
+if (!CheckJumpFlag()) { goto label3; }
 label1:
-                if (GetX50(107) > 9) { goto label3; }
-                    if (GetX50(104) == 1) { goto label0; }
-                        SetX50(104, 1);
+if (GetX50(107) > 9) { goto label4; }
+if (GetX50(104) == 1) { goto label5; }
+SetX50(104, 1);
 label3:
-                        SetX50(109, 0);
+label4:
+SetX50(109, 0);
 label7:
-                        SetX50(110, GetX50(111 + GetX50(109)));
-                        if (GetX50(107) == GetX50(110)) { goto label0; }
-                            SetX50(109, GetX50(109) + 1);
-                            if (GetX50(109) < GetX50(106)) { goto label7; }
-                                SetX50(111 + GetX50(106), GetX50(107));
-                                SetX50(106, GetX50(106) + 1);
-                                if (GetX50(106) < 4) { goto label0; }
-                                    SetX50(120, Random50(4));
-                                    SetX50(121, GetX50(111 + GetX50(120)));
-                                    SetX50(300 + GetX50(121), 1);
-                                    playmusic( GetX50(121));
-                                    SetX50(0, 1000);
-                                    SetX50(1, 1020);
-                                    SetX50(2, 1040);
-                                    SetX50(3, 1060);
-                                    SetX50(122, 0);
+SetX50(110, GetX50(111 + GetX50(109)));
+if (GetX50(107) == GetX50(110)) { goto label6; }
+SetX50(109, GetX50(109) + 1);
+if (GetX50(109) < GetX50(106)) { goto label7; }
+SetX50(111 + GetX50(106), GetX50(107));
+SetX50(106, GetX50(106) + 1);
+if (GetX50(106) < 4) { goto label8; }
+SetX50(120, Random50(4));
+SetX50(121, GetX50(111 + GetX50(120)));
+SetX50(300 + GetX50(121), 1);
+playmusic( GetX50(121));
+SetX50(0, 1000);
+SetX50(1, 1020);
+SetX50(2, 1040);
+SetX50(3, 1060);
+SetX50(122, 0);
 label9:
-                                    SetX50(123, GetX50(111 + GetX50(122)));
-                                    SetX50(124, GetX50(200 + GetX50(123)));
-                                    SetX50(125, GetX50(122) * 20);
-                                    SetX50(125, GetX50(125) + 1000);
-                                    getname(1, 2, 124, GetX50(125), 0, 0);
-                                    SetX50(122, GetX50(122) + 1);
-                                    if (GetX50(122) < 4) { goto label9; }
-                                        SetX50(122, 0);
-                                        DrawRect(GetX50(5), 150, 67, 25, 0, ColColor(255), 102);
-                                        i=getx50(102)+1;
-                                        setx50(1500,"第" + to_string(i)+"題");
-                                        setx50(1502,0);
-                                        drawstring(1, 1500, 6, 155, 11806, 0);
-                                        SetX50(122, Menu50(4, 0, GetX50(5), 190, 10));
-                                        SetX50(122, GetX50(122) - 1);
-                                        if (GetX50(122) != GetX50(120)) { goto label10; }
-                                            SetX50(119, GetX50(119) + 1);
+SetX50(123, GetX50(111 + GetX50(122)));
+SetX50(124, GetX50(200 + GetX50(123)));
+SetX50(125, GetX50(122) * 20);
+SetX50(125, GetX50(125) + 1000);
+getname(1, 2, 124, GetX50(125), 0, 0);
+SetX50(122, GetX50(122) + 1);
+if (GetX50(122) < 4) { goto label9; }
+SetX50(122, 0);
+DrawRect(GetX50(5), 150, 67, 25, 0, ColColor(255), 102);
+i=getx50(102)+1;
+setx50(1500,"第" + to_string(i)+"題");
+setx50(1502,0);
+drawstring(1, 1500, 6, 155, 11806, 0);
+SetX50(122, Menu50(4, 0, GetX50(5), 190, 10));
+SetX50(122, GetX50(122) - 1);
+if (GetX50(122) != GetX50(120)) { goto label10; }
+SetX50(119, GetX50(119) + 1);
 label10:
-                                            SetX50(102, GetX50(102) + 1);
-                                            if (GetX50(102) < GetX50(101)) { goto label11; }
-                                                playmusic(20);
-                                                if (GetX50(119) >= GetX50(105)) { goto label12; }
-                                                    SetX50(28929, 0);
+SetX50(102, GetX50(102) + 1);
+if (GetX50(102) < GetX50(101)) { goto label11; }
+playmusic(20);
+if (GetX50(119) >= GetX50(105)) { goto label12; }
+SetX50(28929, 0);
 exit();
 label12:
-                                                    SetX50(28929, 1);
+SetX50(28929, 1);

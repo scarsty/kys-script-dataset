@@ -1,52 +1,59 @@
 __event_1586_block_0() {
     if (UseItem(226)) {
-        __event_1586_block_10();
+        __event_1586_block_8();
         return;
     }
     __event_1586_block_1();
 }
 __event_1586_block_1() {
     if (UseItem(227)) {
-        __event_1586_block_9();
+        __event_1586_block_7();
         return;
     }
     __event_1586_block_2();
 }
 __event_1586_block_2() {
     if (UseItem(228)) {
-        __event_1586_block_8();
+        __event_1586_block_6();
         return;
     }
     __event_1586_block_3();
 }
 __event_1586_block_3() {
     if (UseItem(229)) {
-        __event_1586_block_7();
+        __event_1586_block_5();
         return;
     }
     __event_1586_block_4();
 }
 __event_1586_block_4() {
-    if (UseItem(230)) {
-        __event_1586_block_6();
+    if (!UseItem(230)) {
+        exit();
+    }
+    SetX50(3000, 406);
+    if (JudgeSexual(0)) {
+        __event_1586_block_12();
         return;
     }
-    __event_1586_block_5();
 }
 __event_1586_block_5() {
-    exit();
+    SetX50(3000, 405);
+    if (JudgeSexual(0)) {
+        __event_1586_block_12();
+        return;
+    }
     __event_1586_block_6();
 }
 __event_1586_block_6() {
-    SetX50(3000, 406);
+    SetX50(3000, 404);
     if (JudgeSexual(0)) {
-        __event_1586_block_11();
+        __event_1586_block_12();
         return;
     }
     __event_1586_block_7();
 }
 __event_1586_block_7() {
-    SetX50(3000, 405);
+    SetX50(3000, 403);
     if (JudgeSexual(0)) {
         __event_1586_block_12();
         return;
@@ -54,35 +61,10 @@ __event_1586_block_7() {
     __event_1586_block_8();
 }
 __event_1586_block_8() {
-    SetX50(3000, 404);
-    if (JudgeSexual(0)) {
-        __event_1586_block_13();
-        return;
-    }
-    __event_1586_block_9();
-}
-__event_1586_block_9() {
-    SetX50(3000, 403);
-    if (JudgeSexual(0)) {
-        __event_1586_block_14();
-        return;
-    }
-    __event_1586_block_10();
-}
-__event_1586_block_10() {
     SetX50(3000, 402);
-    __event_1586_block_11();
-}
-__event_1586_block_11() {
     __event_1586_block_12();
 }
 __event_1586_block_12() {
-    __event_1586_block_13();
-}
-__event_1586_block_13() {
-    __event_1586_block_14();
-}
-__event_1586_block_14() {
     talk(22, "要易容成這個樣子啊，好吧。", -2, 1, 0, 0);
     darkscene();
     SetRole(0, 2 / 2, GetX50(3000));

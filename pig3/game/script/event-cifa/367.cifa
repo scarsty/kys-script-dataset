@@ -110,62 +110,63 @@ setx50(1050,"莊家獲勝");
 setx50(1060,"不賺不賠");
 SetX50(100, 0);
 label0:
+label1:
 SetX50(101, Random50(32));
 SetX50(102, GetX50(250 + GetX50(101)));
 if (GetX50(102) != 0) { goto label0; }
-    SetX50(250 + GetX50(101), 1);
-    SetX50(300 + GetX50(100), GetX50(101));
-    SetX50(100, GetX50(100) + 1);
-    if (GetX50(100) < 8) { goto label0; }
-        SetX50(403, 0);
+SetX50(250 + GetX50(101), 1);
+SetX50(300 + GetX50(100), GetX50(101));
+SetX50(100, GetX50(100) + 1);
+if (GetX50(100) < 8) { goto label1; }
+SetX50(403, 0);
 label5:
-        SetX50(404, GetX50(403) + 1);
+SetX50(404, GetX50(403) + 1);
 label4:
-        SetX50(405, GetX50(304 + GetX50(403)));
-        SetX50(108, GetX50(200 + GetX50(405)));
-        SetX50(407, GetX50(304 + GetX50(404)));
-        SetX50(110, GetX50(200 + GetX50(407)));
-        if (GetX50(108) <= GetX50(110)) { goto label2; }
-            SetX50(409, GetX50(108) + 0);
-            SetX50(108, GetX50(110) + 0);
-            SetX50(110, GetX50(409) + 0);
+SetX50(405, GetX50(304 + GetX50(403)));
+SetX50(108, GetX50(200 + GetX50(405)));
+SetX50(407, GetX50(304 + GetX50(404)));
+SetX50(110, GetX50(200 + GetX50(407)));
+if (GetX50(108) <= GetX50(110)) { goto label2; }
+SetX50(409, GetX50(108) + 0);
+SetX50(108, GetX50(110) + 0);
+SetX50(110, GetX50(409) + 0);
 label2:
-            SetX50(112, GetX50(108) * 100);
-            SetX50(112, GetX50(112) + GetX50(110));
-            CallEvent(368, 0, 0, 0, 0);
-            if (GetX50(113) <= GetX50(400)) { goto label3; }
-                SetX50(400, GetX50(113) + 0);
-                SetX50(401, GetX50(403) + 0);
-                SetX50(402, GetX50(404) + 0);
+SetX50(112, GetX50(108) * 100);
+SetX50(112, GetX50(112) + GetX50(110));
+CallEvent(368, 0, 0, 0, 0);
+if (GetX50(113) <= GetX50(400)) { goto label3; }
+SetX50(400, GetX50(113) + 0);
+SetX50(401, GetX50(403) + 0);
+SetX50(402, GetX50(404) + 0);
 label3:
-                SetX50(410, GetX50(403) * 4);
-                SetX50(410, GetX50(410) + GetX50(404));
-                SetX50(460 + GetX50(410), GetX50(113));
-                SetX50(404, GetX50(404) + 1);
-                if (GetX50(404) < 4) { goto label4; }
-                    SetX50(403, GetX50(403) + 1);
-                    if (GetX50(403) < 3) { goto label5; }
-                        SetX50(411 + GetX50(401), 1);
-                        SetX50(411 + GetX50(402), 1);
-                        SetX50(418, 0);
-                        SetX50(416, 0);
+SetX50(410, GetX50(403) * 4);
+SetX50(410, GetX50(410) + GetX50(404));
+SetX50(460 + GetX50(410), GetX50(113));
+SetX50(404, GetX50(404) + 1);
+if (GetX50(404) < 4) { goto label4; }
+SetX50(403, GetX50(403) + 1);
+if (GetX50(403) < 3) { goto label5; }
+SetX50(411 + GetX50(401), 1);
+SetX50(411 + GetX50(402), 1);
+SetX50(418, 0);
+SetX50(416, 0);
 label7:
-                        SetX50(417, GetX50(411 + GetX50(416)));
-                        if (GetX50(417) != 0) { goto label6; }
-                            SetX50(419 + GetX50(418), GetX50(416));
-                            SetX50(418, GetX50(418) + 1);
+SetX50(417, GetX50(411 + GetX50(416)));
+if (GetX50(417) != 0) { goto label6; }
+SetX50(419 + GetX50(418), GetX50(416));
+SetX50(418, GetX50(418) + 1);
 label6:
-                            SetX50(416, GetX50(416) + 1);
-                            if (GetX50(418) < 2) { goto label7; }
-                                SetX50(421, Random50(2));
-                                if (GetX50(421) != 1) { goto label8; }
-                                    SetX50(422, GetX50(401) + 0);
-                                    SetX50(423, GetX50(402) + 0);
-                                    SetX50(424, GetX50(419) + 0);
-                                    SetX50(425, GetX50(420) + 0);
+SetX50(416, GetX50(416) + 1);
+if (GetX50(418) < 2) { goto label7; }
+SetX50(421, Random50(2));
+if (GetX50(421) != 1) { goto label8; }
+SetX50(422, GetX50(401) + 0);
+SetX50(423, GetX50(402) + 0);
+SetX50(424, GetX50(419) + 0);
+SetX50(425, GetX50(420) + 0);
 exit();
 label8:
-                                    SetX50(422, GetX50(419) + 0);
-                                    SetX50(423, GetX50(420) + 0);
-                                    SetX50(424, GetX50(401) + 0);
-                                    SetX50(425, GetX50(402) + 0);
+SetX50(422, GetX50(419) + 0);
+SetX50(423, GetX50(420) + 0);
+SetX50(424, GetX50(401) + 0);
+SetX50(425, GetX50(402) + 0);

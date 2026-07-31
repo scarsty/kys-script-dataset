@@ -7,7 +7,7 @@ __event_484_block_0() {
     SetX50(1004, read_mem(1985028 + GetX50(1003)));
     battlefieldget(1, 1004, 0, 1005, 0, 0);
     if (GetX50(1005) < 0) {
-        __event_484_block_17();
+        __event_484_block_18();
         return;
     }
     __event_484_block_1();
@@ -31,7 +31,7 @@ __event_484_block_2() {
     SetX50(1024, GetX50(1023) / 100);
     SetX50(1025, Random50(11));
     if (GetX50(1024) < GetX50(1025)) {
-        __event_484_block_12();
+        __event_484_block_16();
         return;
     }
     __event_484_block_3();
@@ -41,14 +41,14 @@ __event_484_block_3() {
     SetX50(1008, GetRole(GetX50(1005), 168 / 2));
     SetX50(1009, GetX50(1007) + GetX50(1008));
     if (GetX50(1009) < -1) {
-        __event_484_block_13();
+        __event_484_block_16();
         return;
     }
     __event_484_block_4();
 }
 __event_484_block_4() {
     if (GetX50(1007) < 0) {
-        __event_484_block_9();
+        __event_484_block_10();
         return;
     }
     __event_484_block_5();
@@ -74,7 +74,7 @@ __event_484_block_7() {
     SetRole(GetX50(1005), 174 / 2, GetX50(1017));
     AddItem( GetX50(1007), 1);
     if (GetX50(1017) > 0) {
-        __event_484_block_14();
+        __event_484_block_16();
         return;
     }
     __event_484_block_8();
@@ -82,12 +82,9 @@ __event_484_block_7() {
 __event_484_block_8() {
     SetRole(GetX50(1005), 166 / 2, -1);
     if (1) {
-        __event_484_block_15();
+        __event_484_block_16();
         return;
     }
-    __event_484_block_9();
-}
-__event_484_block_9() {
     __event_484_block_10();
 }
 __event_484_block_10() {
@@ -103,25 +100,10 @@ __event_484_block_10() {
 }
 __event_484_block_11() {
     SetRole(GetX50(1005), 168 / 2, -1);
-    __event_484_block_12();
-}
-__event_484_block_12() {
-    __event_484_block_13();
-}
-__event_484_block_13() {
-    __event_484_block_14();
-}
-__event_484_block_14() {
-    __event_484_block_15();
-}
-__event_484_block_15() {
     __event_484_block_16();
 }
 __event_484_block_16() {
     Redraw();
-    __event_484_block_17();
-}
-__event_484_block_17() {
     __event_484_block_18();
 }
 __event_484_block_18() {

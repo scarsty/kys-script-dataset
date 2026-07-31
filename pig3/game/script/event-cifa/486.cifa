@@ -40,18 +40,10 @@ __event_486_block_2() {
 }
 __event_486_block_3() {
     SetX50(1009, GetX50(1008) + GetX50(1005));
-    if (GetX50(1009) <= GetX50(1006)) {
-        __event_486_block_5();
-        return;
+    if (GetX50(1009) > GetX50(1006)) {
+        SetX50(1009, GetX50(1006) + 0);
+        SetX50(1008, GetX50(1006) - GetX50(1005));
     }
-    __event_486_block_4();
-}
-__event_486_block_4() {
-    SetX50(1009, GetX50(1006) + 0);
-    SetX50(1008, GetX50(1006) - GetX50(1005));
-    __event_486_block_5();
-}
-__event_486_block_5() {
     SetRole(GetX50(1000), 34 / 2, GetX50(1009));
     battlefieldget(1, 28005, 4, 1010, 0, 0);
     battlefieldget(1, 28005, 6, 1011, 0, 0);

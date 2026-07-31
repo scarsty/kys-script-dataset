@@ -25,277 +25,175 @@ __event_357_block_0() {
     SetX50(201, read_mem(1911132 + 0));
     SetX50(202, read_mem(1911130 + 0));
     SetX50(203, read_mem(345330 + 0));
-    if (GetX50(203) != 0) {
-        __event_357_block_2();
+    if (GetX50(203) == 0) {
+        SetX50(204, GetX50(201) + 0);
+        SetX50(205, GetX50(202) - 1);
+    }
+    if (GetX50(203) == 1) {
+        exit();
+    }
+    if (GetX50(203) == 2) {
+        SetX50(204, GetX50(201) - 1);
+        SetX50(205, GetX50(202) + 0);
+    }
+    if (GetX50(203) == 3) {
+        exit();
+    }
+    SetX50(211, GetS(GetX50(200), 2, GetX50(204), GetX50(205)));
+    SetX50(211, GetX50(211) + 2);
+    SetX50(207, GetS(GetX50(200), 3, GetX50(204), GetX50(205)));
+    SetX50(208, GetD(GetX50(200), GetX50(207), 7));
+    if (GetX50(208) <= -2) {
+        DrawRect(100, 100, 110, 25, 0, ColColor(255), 102);
+        drawstring(0, 300, 105, 104, 1797, 0);
+        SetX50(0, GetKey());
+        exit();
+    }
+    SetX50(206, GetX50(204) * 100);
+    SetX50(206, GetX50(206) + GetX50(205));
+    if (GetX50(206) == 846) {
+        SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
+        SetD(GetX50(200), GetX50(207), 7, -2);
+        SetS(GetX50(200), 1, 14, 43, 0);
+        DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
+        drawstring(0, 320, 105, 104, 1797, 0);
+        playwave(22);
+        SetX50(0, GetKey());
+        exit();
+    }
+    if (GetX50(206) == 2650) {
+        SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
+        SetD(GetX50(200), GetX50(207), 7, -2);
+        SetS(GetX50(200), 1, 52, 41, 0);
+        DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
+        drawstring(0, 320, 105, 104, 1797, 0);
+        playwave(22);
+        SetX50(0, GetKey());
+        exit();
+    }
+    if (GetX50(206) == 3407) {
+        SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
+        SetD(GetX50(200), GetX50(207), 7, -2);
+        SetS(GetX50(200), 1, 51, 17, 0);
+        DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
+        drawstring(0, 320, 105, 104, 1797, 0);
+        playwave(22);
+        SetX50(0, GetKey());
+        exit();
+    }
+    if (GetX50(206) == 3227) {
+        SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
+        SetD(GetX50(200), GetX50(207), 7, -2);
+        SetS(GetX50(200), 1, 32, 23, 0);
+        DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
+        drawstring(0, 320, 105, 104, 1797, 0);
+        playwave(22);
+        SetX50(0, GetKey());
+        exit();
+    }
+    if (GetX50(206) == 4838) {
+        __event_357_block_8();
         return;
     }
-    __event_357_block_1();
 }
 __event_357_block_1() {
-    SetX50(204, GetX50(201) + 0);
-    SetX50(205, GetX50(202) - 1);
+    if (GetX50(206) == 4713) {
+        __event_357_block_8();
+        return;
+    }
     __event_357_block_2();
 }
 __event_357_block_2() {
-    if (GetX50(203) != 1) {
-        __event_357_block_4();
+    if (GetX50(206) == 2722) {
+        __event_357_block_8();
         return;
     }
     __event_357_block_3();
 }
 __event_357_block_3() {
-    exit();
-    __event_357_block_4();
-}
-__event_357_block_4() {
-    if (GetX50(203) != 2) {
-        __event_357_block_6();
-        return;
-    }
-    __event_357_block_5();
-}
-__event_357_block_5() {
-    SetX50(204, GetX50(201) - 1);
-    SetX50(205, GetX50(202) + 0);
-    __event_357_block_6();
-}
-__event_357_block_6() {
-    if (GetX50(203) != 3) {
+    if (GetX50(206) == 1531) {
         __event_357_block_8();
         return;
     }
-    __event_357_block_7();
+    __event_357_block_4();
 }
-__event_357_block_7() {
-    exit();
+__event_357_block_4() {
+    if (GetX50(206) != 513) {
+        __event_357_block_9();
+        return;
+    }
     __event_357_block_8();
 }
 __event_357_block_8() {
-    SetX50(211, GetS(GetX50(200), 2, GetX50(204), GetX50(205)));
-    SetX50(211, GetX50(211) + 2);
-    SetX50(207, GetS(GetX50(200), 3, GetX50(204), GetX50(205)));
-    SetX50(208, GetD(GetX50(200), GetX50(207), 7));
-    if (GetX50(208) > -2) {
-        __event_357_block_10();
-        return;
-    }
-    __event_357_block_9();
-}
-__event_357_block_9() {
-    DrawRect(100, 100, 110, 25, 0, ColColor(255), 102);
-    drawstring(0, 300, 105, 104, 1797, 0);
-    SetX50(0, GetKey());
-    exit();
-    __event_357_block_10();
-}
-__event_357_block_10() {
-    SetX50(206, GetX50(204) * 100);
-    SetX50(206, GetX50(206) + GetX50(205));
-    if (GetX50(206) != 846) {
-        __event_357_block_12();
-        return;
-    }
-    __event_357_block_11();
-}
-__event_357_block_11() {
-    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
-    SetD(GetX50(200), GetX50(207), 7, -2);
-    SetS(GetX50(200), 1, 14, 43, 0);
-    DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
-    drawstring(0, 320, 105, 104, 1797, 0);
-    playwave(22);
-    SetX50(0, GetKey());
-    exit();
-    __event_357_block_12();
-}
-__event_357_block_12() {
-    if (GetX50(206) != 2650) {
-        __event_357_block_14();
-        return;
-    }
-    __event_357_block_13();
-}
-__event_357_block_13() {
-    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
-    SetD(GetX50(200), GetX50(207), 7, -2);
-    SetS(GetX50(200), 1, 52, 41, 0);
-    DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
-    drawstring(0, 320, 105, 104, 1797, 0);
-    playwave(22);
-    SetX50(0, GetKey());
-    exit();
-    __event_357_block_14();
-}
-__event_357_block_14() {
-    if (GetX50(206) != 3407) {
-        __event_357_block_16();
-        return;
-    }
-    __event_357_block_15();
-}
-__event_357_block_15() {
-    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
-    SetD(GetX50(200), GetX50(207), 7, -2);
-    SetS(GetX50(200), 1, 51, 17, 0);
-    DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
-    drawstring(0, 320, 105, 104, 1797, 0);
-    playwave(22);
-    SetX50(0, GetKey());
-    exit();
-    __event_357_block_16();
-}
-__event_357_block_16() {
-    if (GetX50(206) != 3227) {
-        __event_357_block_18();
-        return;
-    }
-    __event_357_block_17();
-}
-__event_357_block_17() {
-    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
-    SetD(GetX50(200), GetX50(207), 7, -2);
-    SetS(GetX50(200), 1, 32, 23, 0);
-    DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
-    drawstring(0, 320, 105, 104, 1797, 0);
-    playwave(22);
-    SetX50(0, GetKey());
-    exit();
-    __event_357_block_18();
-}
-__event_357_block_18() {
-    if (GetX50(206) == 4838) {
-        __event_357_block_23();
-        return;
-    }
-    __event_357_block_19();
-}
-__event_357_block_19() {
-    if (GetX50(206) == 4713) {
-        __event_357_block_24();
-        return;
-    }
-    __event_357_block_20();
-}
-__event_357_block_20() {
-    if (GetX50(206) == 2722) {
-        __event_357_block_25();
-        return;
-    }
-    __event_357_block_21();
-}
-__event_357_block_21() {
-    if (GetX50(206) == 1531) {
-        __event_357_block_26();
-        return;
-    }
-    __event_357_block_22();
-}
-__event_357_block_22() {
-    if (GetX50(206) != 513) {
-        __event_357_block_29();
-        return;
-    }
-    __event_357_block_23();
-}
-__event_357_block_23() {
-    __event_357_block_24();
-}
-__event_357_block_24() {
-    __event_357_block_25();
-}
-__event_357_block_25() {
-    __event_357_block_26();
-}
-__event_357_block_26() {
     SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
     SetD(GetX50(200), GetX50(207), 7, -2);
     SetX50(209, GetS(GetX50(200), 3, 5, 13));
     SetX50(210, GetD(GetX50(200), GetX50(209), 8));
     SetX50(210, GetX50(210) + 1);
     SetD(GetX50(200), GetX50(209), 8, GetX50(210));
-    if (GetX50(210) == 5) {
-        __event_357_block_28();
-        return;
+    if (GetX50(210) != 5) {
+        DrawRect(100, 100, 90, 25, 0, ColColor(255), 102);
+        drawstring(0, 310, 105, 104, 1797, 0);
+        SetX50(0, GetKey());
+        exit();
     }
-    __event_357_block_27();
-}
-__event_357_block_27() {
-    DrawRect(100, 100, 90, 25, 0, ColColor(255), 102);
-    drawstring(0, 310, 105, 104, 1797, 0);
-    SetX50(0, GetKey());
-    exit();
-    __event_357_block_28();
-}
-__event_357_block_28() {
     SetS(GetX50(200), 1, 9, 26, 0);
     DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
     drawstring(0, 320, 105, 104, 1797, 0);
     playwave(22);
     SetX50(0, GetKey());
     exit();
-    __event_357_block_29();
 }
-__event_357_block_29() {
+__event_357_block_9() {
     if (GetX50(206) == 1423) {
-        __event_357_block_32();
+        __event_357_block_13();
         return;
     }
-    __event_357_block_30();
+    __event_357_block_10();
 }
-__event_357_block_30() {
+__event_357_block_10() {
     if (GetX50(206) == 1623) {
-        __event_357_block_33();
+        __event_357_block_13();
         return;
     }
-    __event_357_block_31();
+    __event_357_block_11();
 }
-__event_357_block_31() {
+__event_357_block_11() {
     if (GetX50(206) != 1823) {
-        __event_357_block_42();
+        __event_357_block_20();
         return;
     }
-    __event_357_block_32();
+    __event_357_block_13();
 }
-__event_357_block_32() {
-    __event_357_block_33();
-}
-__event_357_block_33() {
-    if (GetX50(211) < 4996) {
-        __event_357_block_35();
-        return;
+__event_357_block_13() {
+    if (GetX50(211) >= 4996) {
+        SetX50(211, GetX50(211) - 4);
     }
-    __event_357_block_34();
-}
-__event_357_block_34() {
-    SetX50(211, GetX50(211) - 4);
-    __event_357_block_35();
-}
-__event_357_block_35() {
     SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
     SetX50(209, GetS(GetX50(200), 2, 14, 23));
     SetX50(210, GetS(GetX50(200), 2, 16, 23));
     SetX50(212, GetS(GetX50(200), 2, 18, 23));
     if (GetX50(209) != 4992) {
-        __event_357_block_39();
+        __event_357_block_19();
         return;
     }
-    __event_357_block_36();
+    __event_357_block_14();
 }
-__event_357_block_36() {
+__event_357_block_14() {
     if (GetX50(210) != 4994) {
-        __event_357_block_40();
+        __event_357_block_19();
         return;
     }
-    __event_357_block_37();
+    __event_357_block_15();
 }
-__event_357_block_37() {
+__event_357_block_15() {
     if (GetX50(212) != 4994) {
-        __event_357_block_41();
+        __event_357_block_19();
         return;
     }
-    __event_357_block_38();
+    __event_357_block_16();
 }
-__event_357_block_38() {
+__event_357_block_16() {
     SetX50(207, GetS(GetX50(200), 3, 14, 23));
     SetD(GetX50(200), GetX50(207), 7, -2);
     SetX50(207, GetS(GetX50(200), 3, 16, 23));
@@ -307,100 +205,53 @@ __event_357_block_38() {
     drawstring(0, 320, 105, 104, 1797, 0);
     playwave(22);
     SetX50(0, GetKey());
-    __event_357_block_39();
+    __event_357_block_19();
 }
-__event_357_block_39() {
-    __event_357_block_40();
-}
-__event_357_block_40() {
-    __event_357_block_41();
-}
-__event_357_block_41() {
+__event_357_block_19() {
     exit();
-    __event_357_block_42();
 }
-__event_357_block_42() {
-    if (GetX50(206) != 835) {
-        __event_357_block_46();
-        return;
+__event_357_block_20() {
+    if (GetX50(206) == 835) {
+        SetX50(209, GetS(GetX50(200), 3, 8, 35));
+        SetX50(210, GetD(GetX50(200), GetX50(209), 8));
+        if (GetX50(210) == 1) {
+            SetX50(210, GetX50(210) + 1);
+            SetD(GetX50(200), GetX50(209), 8, GetX50(210));
+            SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
+            SetD(GetX50(200), GetX50(207), 7, -2);
+            exit();
+        }
+        DrawRect(100, 100, 110, 25, 0, ColColor(255), 102);
+        drawstring(0, 300, 105, 104, 1797, 0);
+        SetX50(0, GetKey());
+        exit();
     }
-    __event_357_block_43();
-}
-__event_357_block_43() {
-    SetX50(209, GetS(GetX50(200), 3, 8, 35));
-    SetX50(210, GetD(GetX50(200), GetX50(209), 8));
-    if (GetX50(210) != 1) {
-        __event_357_block_45();
-        return;
+    if (GetX50(206) == 833) {
+        SetX50(209, GetS(GetX50(200), 3, 8, 35));
+        SetX50(210, GetD(GetX50(200), GetX50(209), 8));
+        SetX50(210, GetX50(210) + 1);
+        SetD(GetX50(200), GetX50(209), 8, GetX50(210));
+        SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
+        SetD(GetX50(200), GetX50(207), 7, -2);
+        exit();
     }
-    __event_357_block_44();
-}
-__event_357_block_44() {
-    SetX50(210, GetX50(210) + 1);
-    SetD(GetX50(200), GetX50(209), 8, GetX50(210));
-    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
-    SetD(GetX50(200), GetX50(207), 7, -2);
-    exit();
-    __event_357_block_45();
-}
-__event_357_block_45() {
-    DrawRect(100, 100, 110, 25, 0, ColColor(255), 102);
-    drawstring(0, 300, 105, 104, 1797, 0);
-    SetX50(0, GetKey());
-    exit();
-    __event_357_block_46();
-}
-__event_357_block_46() {
-    if (GetX50(206) != 833) {
-        __event_357_block_48();
-        return;
+    if (GetX50(206) == 831) {
+        SetX50(209, GetS(GetX50(200), 3, 8, 35));
+        SetX50(210, GetD(GetX50(200), GetX50(209), 8));
+        if (GetX50(210) == 2) {
+            SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
+            SetD(GetX50(200), GetX50(207), 7, -2);
+            SetS(GetX50(200), 1, 21, 32, 0);
+            DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
+            drawstring(0, 320, 105, 104, 1797, 0);
+            playwave(22);
+            SetX50(0, GetKey());
+            exit();
+        }
+        DrawRect(100, 100, 110, 25, 0, ColColor(255), 102);
+        drawstring(0, 300, 105, 104, 1797, 0);
+        SetX50(0, GetKey());
     }
-    __event_357_block_47();
-}
-__event_357_block_47() {
-    SetX50(209, GetS(GetX50(200), 3, 8, 35));
-    SetX50(210, GetD(GetX50(200), GetX50(209), 8));
-    SetX50(210, GetX50(210) + 1);
-    SetD(GetX50(200), GetX50(209), 8, GetX50(210));
-    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
-    SetD(GetX50(200), GetX50(207), 7, -2);
-    exit();
-    __event_357_block_48();
-}
-__event_357_block_48() {
-    if (GetX50(206) != 831) {
-        __event_357_block_52();
-        return;
-    }
-    __event_357_block_49();
-}
-__event_357_block_49() {
-    SetX50(209, GetS(GetX50(200), 3, 8, 35));
-    SetX50(210, GetD(GetX50(200), GetX50(209), 8));
-    if (GetX50(210) != 2) {
-        __event_357_block_51();
-        return;
-    }
-    __event_357_block_50();
-}
-__event_357_block_50() {
-    SetS(GetX50(200), 2, GetX50(204), GetX50(205), GetX50(211));
-    SetD(GetX50(200), GetX50(207), 7, -2);
-    SetS(GetX50(200), 1, 21, 32, 0);
-    DrawRect(100, 100, 150, 25, 0, ColColor(255), 102);
-    drawstring(0, 320, 105, 104, 1797, 0);
-    playwave(22);
-    SetX50(0, GetKey());
-    exit();
-    __event_357_block_51();
-}
-__event_357_block_51() {
-    DrawRect(100, 100, 110, 25, 0, ColColor(255), 102);
-    drawstring(0, 300, 105, 104, 1797, 0);
-    SetX50(0, GetKey());
-    __event_357_block_52();
-}
-__event_357_block_52() {
     exit();
 }
 __event_357_block_0();
