@@ -1,62 +1,26 @@
-__event_1405_block_0() {
-    if (UseItem(0)) {
-        __event_1405_block_6();
-        return;
+if (!UseItem(0)) {
+    if (UseItem(261)) {
+        talk(0, "小二哥，我這有上好的黑狗肉，你家可否代做一份狗肉煲？銀子不會少你們的。", -2, 0, 0, 0);
+        SetX50(0, GetItemAmount(0));
+        if (GetX50(0) >= 20) {
+            talk(383, "啊哈，我家大廚的手藝那可是窩窩頭上蒸籠——蓋了帽兒了！您就擎好兒吧！", -2, 1, 0, 0);
+            darkscene();
+            lightscene();
+            AddItem(0, -20);
+            AddItem(261, -1);
+            AddItem(262, 1);
+            exit();
+        }
+        talk(383, "客官，做倒是能做，可是這銀子……怎麼也要二十兩啊！", -2, 0, 0, 0);
     }
-    __event_1405_block_1();
-}
-__event_1405_block_1() {
-    if (!UseItem(261)) {
-        __event_1405_block_5();
-        return;
-    }
-    __event_1405_block_2();
-}
-__event_1405_block_2() {
-    talk(0, "小二哥，我這有上好的黑狗肉，你家可否代做一份狗肉煲？銀子不會少你們的。", -2, 0, 0, 0);
-    SetX50(0, GetItemAmount(0));
-    if (GetX50(0) < 20) {
-        __event_1405_block_4();
-        return;
-    }
-    __event_1405_block_3();
-}
-__event_1405_block_3() {
-    talk(383, "啊哈，我家大廚的手藝那可是窩窩頭上蒸籠——蓋了帽兒了！您就擎好兒吧！", -2, 1, 0, 0);
-    darkscene();
-    lightscene();
-    AddItem(0, -20);
-    AddItem(261, -1);
-    AddItem(262, 1);
     exit();
-    __event_1405_block_4();
 }
-__event_1405_block_4() {
-    talk(383, "客官，做倒是能做，可是這銀子……怎麼也要二十兩啊！", -2, 0, 0, 0);
-    __event_1405_block_5();
-}
-__event_1405_block_5() {
-    exit();
-    __event_1405_block_6();
-}
-__event_1405_block_6() {
-    SetX50(0, GetItemAmount(0));
-    if (GetX50(0) < 10) {
-        __event_1405_block_8();
-        return;
-    }
-    __event_1405_block_7();
-}
-__event_1405_block_7() {
+SetX50(0, GetItemAmount(0));
+if (GetX50(0) >= 10) {
     talk(0, "小二哥，給我來盤狗肉。", -2, 0, 0, 0);
     talk(383, "好咧，我這就給公子拿來。", -2, 1, 0, 0);
     AddItem(0, -10);
     AddItem(260, 1);
     exit();
-    __event_1405_block_8();
 }
-__event_1405_block_8() {
-    talk(383, "狗肉十兩銀子一盤，公子，你帶夠銀子再來吧。", -2, 0, 0, 0);
-    exit();
-}
-__event_1405_block_0();
+talk(383, "狗肉十兩銀子一盤，公子，你帶夠銀子再來吧。", -2, 0, 0, 0);

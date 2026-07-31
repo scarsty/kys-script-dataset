@@ -9,48 +9,25 @@ do {
     SetX50(998, GetX50(998) + 2);
     SetX50(1003, GetRole(GetX50(1000), GetX50(998) / 2));
 } while (GetX50(1003) != GetX50(999));
-__event_1048_block_0() {
-    SetX50(998, GetX50(998) + 20);
-    SetX50(1003, GetRole(GetX50(1000), GetX50(998) / 2));
-    SetX50(1003, GetX50(1003) / 100);
-    SetX50(1003, GetX50(1003) * 2);
-    SetX50(1003, GetX50(1003) + 36);
-    SetX50(1021, GetMagic(GetX50(999), GetX50(1003) / 2));
-    if (GetX50(1021) == 0) {
-        __event_1048_block_10();
-        return;
-    }
-    __event_1048_block_1();
-}
-__event_1048_block_1() {
+SetX50(998, GetX50(998) + 20);
+SetX50(1003, GetRole(GetX50(1000), GetX50(998) / 2));
+SetX50(1003, GetX50(1003) / 100);
+SetX50(1003, GetX50(1003) * 2);
+SetX50(1003, GetX50(1003) + 36);
+SetX50(1021, GetMagic(GetX50(999), GetX50(1003) / 2));
+if (GetX50(1021) != 0) {
     SetX50(1040, GetRole(GetX50(1000), 82 / 2));
     SetX50(1041, GetRole(GetX50(1000), 84 / 2));
     CallEvent(1049, 0, 0, 0, 0);
     SetX50(1043, GetRole(GetX50(1000), 86 / 2));
     SetX50(1044, GetRole(GetX50(1000), 46 / 2));
-    if (GetX50(1044) < 0) {
-        __event_1048_block_3();
-        return;
+    if (GetX50(1044) >= 0) {
+        SetX50(1045, GetItem(GetX50(1044), 104 / 2));
     }
-    __event_1048_block_2();
-}
-__event_1048_block_2() {
-    SetX50(1045, GetItem(GetX50(1044), 104 / 2));
-    __event_1048_block_3();
-}
-__event_1048_block_3() {
     SetX50(1046, GetRole(GetX50(1000), 48 / 2));
-    if (GetX50(1046) < 0) {
-        __event_1048_block_5();
-        return;
+    if (GetX50(1046) >= 0) {
+        SetX50(1047, GetItem(GetX50(1046), 104 / 2));
     }
-    __event_1048_block_4();
-}
-__event_1048_block_4() {
-    SetX50(1047, GetItem(GetX50(1046), 104 / 2));
-    __event_1048_block_5();
-}
-__event_1048_block_5() {
     SetX50(1045, GetX50(1045) + GetX50(1047));
     SetX50(1035, 0);
     SetX50(1037, 0);
@@ -58,36 +35,15 @@ __event_1048_block_5() {
     CallEvent(1050, 0, 0, 0, 0);
     SetX50(1033, GetRole(GetX50(1005), 90 / 2));
     SetX50(1034, GetRole(GetX50(1005), 48 / 2));
-    if (GetX50(1034) < 0) {
-        __event_1048_block_7();
-        return;
+    if (GetX50(1034) >= 0) {
+        SetX50(1035, GetItem(GetX50(1034), 108 / 2));
     }
-    __event_1048_block_6();
-}
-__event_1048_block_6() {
-    SetX50(1035, GetItem(GetX50(1034), 108 / 2));
-    __event_1048_block_7();
-}
-__event_1048_block_7() {
     SetX50(1036, GetRole(GetX50(1005), 46 / 2));
-    if (GetX50(1036) < 0) {
-        __event_1048_block_9();
-        return;
+    if (GetX50(1036) >= 0) {
+        SetX50(1037, GetItem(GetX50(1036), 108 / 2));
     }
-    __event_1048_block_8();
-}
-__event_1048_block_8() {
-    SetX50(1037, GetItem(GetX50(1036), 108 / 2));
-    __event_1048_block_9();
-}
-__event_1048_block_9() {
     SetX50(1035, GetX50(1035) + GetX50(1037));
     CallEvent(1051, 0, 0, 0, 0);
     CallEvent(1052, 0, 0, 0, 0);
     SetX50(28004, GetX50(1050) + 0);
-    __event_1048_block_10();
 }
-__event_1048_block_10() {
-    exit();
-}
-__event_1048_block_0();

@@ -1,32 +1,12 @@
-__event_437_block_0() {
-    SetX50(10, GetX50(28928) / 100);
-    SetX50(12, Random50(10));
-    if (GetX50(12) >= GetX50(10)) {
-        __event_437_block_4();
-        return;
-    }
-    __event_437_block_1();
-}
-__event_437_block_1() {
+SetX50(10, GetX50(28928) / 100);
+SetX50(12, Random50(10));
+if (GetX50(12) < GetX50(10)) {
     SetX50(11, GetX50(28004) + 0);
     SetX50(28004, 0);
     SetX50(13, GetRole(GetX50(28003), 82 / 2));
     SetX50(13, GetX50(13) - GetX50(11));
-    if (GetX50(13) > 0) {
-        __event_437_block_3();
-        return;
+    if (GetX50(13) <= 0) {
+        SetX50(13, 0);
     }
-    __event_437_block_2();
-}
-__event_437_block_2() {
-    SetX50(13, 0);
-    __event_437_block_3();
-}
-__event_437_block_3() {
     SetRole(GetX50(28003), 82 / 2, GetX50(13));
-    __event_437_block_4();
 }
-__event_437_block_4() {
-    exit();
-}
-__event_437_block_0();

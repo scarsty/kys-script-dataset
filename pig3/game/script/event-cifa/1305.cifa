@@ -1,175 +1,75 @@
-__event_1305_block_0() {
-    CallEvent(351, 10159, 7, 0, 0);
-    if (GetX50(28931) == 7) {
-        __event_1305_block_24();
-        return;
+CallEvent(351, 10159, 7, 0, 0);
+if (GetX50(28931) != 7) {
+    if (GetX50(28931) == 6) {
+        if (!HaveItem(40)) {
+            talk(0, "我好像沒有這樣一把刀……", -2, 0, 0, 0);
+            exit();
+        }
+        talk(0, "先生看看這把刀是否合用？", -2, 0, 0, 0);
+        talk(395, "不錯，比這勞什子強多了，少俠這就拿回去給他吧。", -2, 1, 0, 0);
+        AddItemWithoutHint(40, -1);
+        AddItem(44, 1);
+        modifyevent(12, 2, 1, 0, 1319, 0, 0, 9188, 9188, 9188, 0, -2, -2);
+        exit();
     }
-    __event_1305_block_1();
-}
-__event_1305_block_1() {
-    if (GetX50(28931) != 6) {
-        __event_1305_block_5();
-        return;
+    if (GetX50(28931) == 5) {
+        if (!HaveItem(41)) {
+            talk(0, "我好像沒有這樣一把刀……", -2, 0, 0, 0);
+            exit();
+        }
+        talk(0, "先生看看這把刀是否合用？", -2, 0, 0, 0);
+        talk(395, "不錯，比這勞什子強多了，少俠這就拿回去給他吧。", -2, 1, 0, 0);
+        AddItemWithoutHint(41, -1);
+        AddItem(44, 1);
+        modifyevent(12, 2, 1, 0, 1319, 0, 0, 9188, 9188, 9188, 0, -2, -2);
+        exit();
     }
-    __event_1305_block_2();
-}
-__event_1305_block_2() {
-    if (HaveItem(40)) {
-        __event_1305_block_4();
-        return;
+    if (GetX50(28931) == 4) {
+        if (!HaveItem(42)) {
+            talk(0, "我好像沒有這樣一把刀……", -2, 0, 0, 0);
+            exit();
+        }
+        talk(0, "先生看看這把刀是否合用？", -2, 0, 0, 0);
+        talk(395, "不錯，比這勞什子強多了，少俠這就拿回去給他吧。", -2, 1, 0, 0);
+        AddItemWithoutHint(42, -1);
+        AddItem(44, 1);
+        modifyevent(12, 2, 1, 0, 1319, 0, 0, 9188, 9188, 9188, 0, -2, -2);
+        exit();
     }
-    __event_1305_block_3();
-}
-__event_1305_block_3() {
-    talk(0, "我好像沒有這樣一把刀……", -2, 0, 0, 0);
-    exit();
-    __event_1305_block_4();
-}
-__event_1305_block_4() {
-    talk(0, "先生看看這把刀是否合用？", -2, 0, 0, 0);
-    talk(395, "不錯，比這勞什子強多了，少俠這就拿回去給他吧。", -2, 1, 0, 0);
-    AddItemWithoutHint(40, -1);
-    AddItem(44, 1);
-    modifyevent(12, 2, 1, 0, 1319, 0, 0, 9188, 9188, 9188, 0, -2, -2);
-    exit();
-    __event_1305_block_5();
-}
-__event_1305_block_5() {
-    if (GetX50(28931) != 5) {
-        __event_1305_block_9();
-        return;
+    if (GetX50(28931) == 3) {
+        if (!HaveItem(43)) {
+            talk(0, "我好像沒有這樣一把刀……", -2, 0, 0, 0);
+            exit();
+        }
+        talk(0, "先生看看這把刀是否合用？", -2, 0, 0, 0);
+        talk(395, "不錯，比這勞什子強多了，少俠這就拿回去給他吧。", -2, 1, 0, 0);
+        AddItemWithoutHint(43, -1);
+        AddItem(44, 1);
+        modifyevent(12, 2, 1, 0, 1319, 0, 0, 9188, 9188, 9188, 0, -2, -2);
+        exit();
     }
-    __event_1305_block_6();
-}
-__event_1305_block_6() {
-    if (HaveItem(41)) {
-        __event_1305_block_8();
-        return;
+    if (GetX50(28931) == 2) {
+        if (!HaveItem(45)) {
+            talk(0, "我好像沒有這樣一把刀……", -2, 0, 0, 0);
+            exit();
+        }
+        talk(0, "先生看看這把刀是否合用？", -2, 0, 0, 0);
+        talk(395, "不錯，比這勞什子強多了，少俠這就拿回去給他吧。", -2, 1, 0, 0);
+        AddItemWithoutHint(45, -1);
+        AddItem(44, 1);
+        modifyevent(12, 2, 1, 0, 1319, 0, 0, 9188, 9188, 9188, 0, -2, -2);
+        exit();
     }
-    __event_1305_block_7();
-}
-__event_1305_block_7() {
-    talk(0, "我好像沒有這樣一把刀……", -2, 0, 0, 0);
-    exit();
-    __event_1305_block_8();
-}
-__event_1305_block_8() {
-    talk(0, "先生看看這把刀是否合用？", -2, 0, 0, 0);
-    talk(395, "不錯，比這勞什子強多了，少俠這就拿回去給他吧。", -2, 1, 0, 0);
-    AddItemWithoutHint(41, -1);
-    AddItem(44, 1);
-    modifyevent(12, 2, 1, 0, 1319, 0, 0, 9188, 9188, 9188, 0, -2, -2);
-    exit();
-    __event_1305_block_9();
-}
-__event_1305_block_9() {
-    if (GetX50(28931) != 4) {
-        __event_1305_block_13();
-        return;
+    if (!HaveItem(46)) {
+        talk(0, "我好像沒有這樣一把刀……", -2, 0, 0, 0);
+        exit();
     }
-    __event_1305_block_10();
-}
-__event_1305_block_10() {
-    if (HaveItem(42)) {
-        __event_1305_block_12();
-        return;
-    }
-    __event_1305_block_11();
-}
-__event_1305_block_11() {
-    talk(0, "我好像沒有這樣一把刀……", -2, 0, 0, 0);
-    exit();
-    __event_1305_block_12();
-}
-__event_1305_block_12() {
-    talk(0, "先生看看這把刀是否合用？", -2, 0, 0, 0);
-    talk(395, "不錯，比這勞什子強多了，少俠這就拿回去給他吧。", -2, 1, 0, 0);
-    AddItemWithoutHint(42, -1);
-    AddItem(44, 1);
-    modifyevent(12, 2, 1, 0, 1319, 0, 0, 9188, 9188, 9188, 0, -2, -2);
-    exit();
-    __event_1305_block_13();
-}
-__event_1305_block_13() {
-    if (GetX50(28931) != 3) {
-        __event_1305_block_17();
-        return;
-    }
-    __event_1305_block_14();
-}
-__event_1305_block_14() {
-    if (HaveItem(43)) {
-        __event_1305_block_16();
-        return;
-    }
-    __event_1305_block_15();
-}
-__event_1305_block_15() {
-    talk(0, "我好像沒有這樣一把刀……", -2, 0, 0, 0);
-    exit();
-    __event_1305_block_16();
-}
-__event_1305_block_16() {
-    talk(0, "先生看看這把刀是否合用？", -2, 0, 0, 0);
-    talk(395, "不錯，比這勞什子強多了，少俠這就拿回去給他吧。", -2, 1, 0, 0);
-    AddItemWithoutHint(43, -1);
-    AddItem(44, 1);
-    modifyevent(12, 2, 1, 0, 1319, 0, 0, 9188, 9188, 9188, 0, -2, -2);
-    exit();
-    __event_1305_block_17();
-}
-__event_1305_block_17() {
-    if (GetX50(28931) != 2) {
-        __event_1305_block_21();
-        return;
-    }
-    __event_1305_block_18();
-}
-__event_1305_block_18() {
-    if (HaveItem(45)) {
-        __event_1305_block_20();
-        return;
-    }
-    __event_1305_block_19();
-}
-__event_1305_block_19() {
-    talk(0, "我好像沒有這樣一把刀……", -2, 0, 0, 0);
-    exit();
-    __event_1305_block_20();
-}
-__event_1305_block_20() {
-    talk(0, "先生看看這把刀是否合用？", -2, 0, 0, 0);
-    talk(395, "不錯，比這勞什子強多了，少俠這就拿回去給他吧。", -2, 1, 0, 0);
-    AddItemWithoutHint(45, -1);
-    AddItem(44, 1);
-    modifyevent(12, 2, 1, 0, 1319, 0, 0, 9188, 9188, 9188, 0, -2, -2);
-    exit();
-    __event_1305_block_21();
-}
-__event_1305_block_21() {
-    if (HaveItem(46)) {
-        __event_1305_block_23();
-        return;
-    }
-    __event_1305_block_22();
-}
-__event_1305_block_22() {
-    talk(0, "我好像沒有這樣一把刀……", -2, 0, 0, 0);
-    exit();
-    __event_1305_block_23();
-}
-__event_1305_block_23() {
     talk(0, "先生看看這把刀是否合用？", -2, 0, 0, 0);
     talk(395, "不錯，比這勞什子強多了，少俠這就拿回去給他吧。", -2, 1, 0, 0);
     AddItemWithoutHint(46, -1);
     AddItem(44, 1);
     modifyevent(12, 2, 1, 0, 1319, 0, 0, 9188, 9188, 9188, 0, -2, -2);
     exit();
-    __event_1305_block_24();
 }
-__event_1305_block_24() {
-    talk(395, "&&少俠能幫我找把其他刀來麼？", -2, 0, 0, 0);
-    talk(0, "這個包在我身上。", -2, 1, 0, 0);
-    exit();
-}
-__event_1305_block_0();
+talk(395, "&&少俠能幫我找把其他刀來麼？", -2, 0, 0, 0);
+talk(0, "這個包在我身上。", -2, 1, 0, 0);

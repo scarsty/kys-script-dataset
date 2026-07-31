@@ -1,36 +1,16 @@
-__event_765_block_0() {
-    SetX50(0, GetRole(166, 72 / 2));
-    if (GetX50(0) >= 5) {
-        __event_765_block_4();
-        return;
-    }
-    __event_765_block_1();
-}
-__event_765_block_1() {
+SetX50(0, GetRole(166, 72 / 2));
+if (GetX50(0) < 5) {
     talk(68, "怎麼，又想跟我的木人較量較量？", -2, 0, 0, 0);
     SetJumpFlag(WoodMan(GetX50(0)));
-    if (CheckJumpFlag()) {
-        __event_765_block_3();
-        return;
+    if (!CheckJumpFlag()) {
+        talk(68, "沒關係，仔細想想，其實啊，這木頭腦袋很笨的。", -2, 0, 0, 0);
+        exit();
     }
-    __event_765_block_2();
-}
-__event_765_block_2() {
-    talk(68, "沒關係，仔細想想，其實啊，這木頭腦袋很笨的。", -2, 0, 0, 0);
-    exit();
-    __event_765_block_3();
-}
-__event_765_block_3() {
     talk(68, "這木頭腦袋還真是不行，我得想法改進改進我的木人了。這個鏟子就送給你吧。", -2, 0, 0, 0);
     SetX50(0, GetRole(166, 72 / 2));
     SetX50(0, GetX50(0) + 1);
     SetRole(166, 72 / 2, GetX50(0));
     AddItem(240, 1);
     exit();
-    __event_765_block_4();
 }
-__event_765_block_4() {
-    talk(68, "呵呵，看來我的木人奈何不了你了。", -2, 0, 0, 0);
-    exit();
-}
-__event_765_block_0();
+talk(68, "呵呵，看來我的木人奈何不了你了。", -2, 0, 0, 0);
