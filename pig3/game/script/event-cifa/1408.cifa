@@ -1,12 +1,5 @@
-__event_1408_block_0() {
-    SetX50(0, GetRole(0, 88 / 2));
-    if (GetX50(0) < 120) {
-        __event_1408_block_2();
-        return;
-    }
-    __event_1408_block_1();
-}
-__event_1408_block_1() {
+SetX50(0, GetRole(0, 88 / 2));
+if (GetX50(0) >= 120) {
     talk(0, "＜好高的牆，看我的輕功！＞", -2, 0, 0, 0);
     darkscene();
     setsceneposition2(25, 21);
@@ -30,10 +23,5 @@ __event_1408_block_1() {
     lightscene();
     AddItem(261, 1);
     exit();
-    __event_1408_block_2();
 }
-__event_1408_block_2() {
-        talk(420, "好高的牆，我的輕功還不夠啊。", -2, 1, 0, 0);
-    exit();
-}
-__event_1408_block_0();
+talk(420, "好高的牆，我的輕功還不夠啊。", -2, 1, 0, 0);

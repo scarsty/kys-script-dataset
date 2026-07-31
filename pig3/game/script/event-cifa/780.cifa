@@ -1,125 +1,57 @@
-__event_780_block_0() {
-    talk(83, "我們青竹幫的兄弟，遍佈中原各地，少俠想去哪裡，馬上給你送到！", -2, 1, 0, 0);
-    CallEvent(351, 6025, 8, 0, 0);
-    if (GetX50(28931) != 1) {
-        __event_780_block_2();
-        return;
-    }
-    __event_780_block_1();
-}
-__event_780_block_1() {
+talk(83, "我們青竹幫的兄弟，遍佈中原各地，少俠想去哪裡，馬上給你送到！", -2, 1, 0, 0);
+CallEvent(351, 6025, 8, 0, 0);
+if (GetX50(28931) == 1) {
     SetRoleFace(2);
     SetMainMapPosition(326, 290);
     jumpscene(15, 50, 27);
     CallEvent(1664, 0, 0, 0, 0);
     exit();
-    __event_780_block_2();
 }
-__event_780_block_2() {
-    if (GetX50(28931) != 2) {
-        __event_780_block_4();
-        return;
-    }
-    __event_780_block_3();
-}
-__event_780_block_3() {
+if (GetX50(28931) == 2) {
     SetRoleFace(2);
     SetMainMapPosition(312, 205);
     jumpscene(13, 49, 35);
     CallEvent(1664, 0, 0, 0, 0);
     exit();
-    __event_780_block_4();
 }
-__event_780_block_4() {
-    if (GetX50(28931) != 3) {
-        __event_780_block_6();
-        return;
-    }
-    __event_780_block_5();
-}
-__event_780_block_5() {
+if (GetX50(28931) == 3) {
     SetRoleFace(0);
     SetMainMapPosition(335, 180);
     jumpscene(19, 26, 45);
     CallEvent(1664, 0, 0, 0, 0);
     exit();
-    __event_780_block_6();
 }
-__event_780_block_6() {
-    if (GetX50(28931) != 4) {
-        __event_780_block_8();
-        return;
-    }
-    __event_780_block_7();
-}
-__event_780_block_7() {
+if (GetX50(28931) == 4) {
     SetRoleFace(0);
     SetMainMapPosition(359, 230);
     jumpscene(14, 26, 50);
     CallEvent(1664, 0, 0, 0, 0);
     exit();
-    __event_780_block_8();
 }
-__event_780_block_8() {
-    if (GetX50(28931) != 5) {
-        __event_780_block_10();
-        return;
-    }
-    __event_780_block_9();
-}
-__event_780_block_9() {
+if (GetX50(28931) == 5) {
     SetRoleFace(2);
     SetMainMapPosition(296, 318);
     jumpscene(30, 54, 29);
     exit();
-    __event_780_block_10();
 }
-__event_780_block_10() {
-    if (GetX50(28931) != 6) {
-        __event_780_block_12();
-        return;
-    }
-    __event_780_block_11();
-}
-__event_780_block_11() {
+if (GetX50(28931) == 6) {
     SetRoleFace(0);
     SetMainMapPosition(246, 226);
     jumpscene(68, 42, 49);
     CallEvent(1663, 0, 0, 0, 0);
     exit();
-    __event_780_block_12();
 }
-__event_780_block_12() {
-    if (GetX50(28931) != 7) {
-        __event_780_block_14();
-        return;
-    }
-    __event_780_block_13();
-}
-__event_780_block_13() {
+if (GetX50(28931) == 7) {
     SetRoleFace(0);
     SetMainMapPosition(140, 234);
     jumpscene(73, 31, 52);
     CallEvent(1663, 0, 0, 0, 0);
     exit();
-    __event_780_block_14();
 }
-__event_780_block_14() {
-    if (GetX50(28931) != 8) {
-        __event_780_block_16();
-        return;
-    }
-    __event_780_block_15();
-}
-__event_780_block_15() {
+if (GetX50(28931) == 8) {
     SetRoleFace(2);
     SetMainMapPosition(213, 266);
     jumpscene(108, 48, 31);
     CallEvent(1663, 0, 0, 0, 0);
     exit();
-    __event_780_block_16();
 }
-__event_780_block_16() {
-    exit();
-}
-__event_780_block_0();

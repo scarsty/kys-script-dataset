@@ -1,73 +1,29 @@
-__event_206_block_0() {
-    ;
-    ;
-    ;
-    ;
-    ;
-    ;
-    SetX50(123, GetX50(300 + GetX50(118)));
-    SetX50(124, GetX50(400 + GetX50(118)));
-    if (GetX50(124) == GetX50(100)) {
-        __event_206_block_2();
-        return;
-    }
-    __event_206_block_1();
-}
-__event_206_block_1() {
+;
+;
+;
+;
+;
+;
+SetX50(123, GetX50(300 + GetX50(118)));
+SetX50(124, GetX50(400 + GetX50(118)));
+if (GetX50(124) != GetX50(100)) {
     exit();
-    __event_206_block_2();
 }
-__event_206_block_2() {
-    SetX50(125, GetX50(125) - 1);
-    if (GetX50(123) != GetX50(100)) {
-        __event_206_block_4();
-        return;
-    }
-    __event_206_block_3();
-}
-__event_206_block_3() {
+SetX50(125, GetX50(125) - 1);
+if (GetX50(123) == GetX50(100)) {
     SetX50(123, GetX50(101) + 0);
-    __event_206_block_4();
 }
-__event_206_block_4() {
-    if (GetX50(123) != GetX50(102)) {
-        __event_206_block_6();
-        return;
-    }
-    __event_206_block_5();
-}
-__event_206_block_5() {
+if (GetX50(123) == GetX50(102)) {
     SetX50(126, GetX50(126) + 1);
-    __event_206_block_6();
 }
-__event_206_block_6() {
-    if (GetX50(123) != GetX50(103)) {
-        __event_206_block_8();
-        return;
-    }
-    __event_206_block_7();
-}
-__event_206_block_7() {
+if (GetX50(123) == GetX50(103)) {
     SetX50(127, Random50(40));
     SetX50(127, GetX50(127) + 40);
     AddItem(0, GetX50(127));
-    __event_206_block_8();
 }
-__event_206_block_8() {
-    if (GetX50(123) != GetX50(104)) {
-        __event_206_block_10();
-        return;
-    }
-    __event_206_block_9();
-}
-__event_206_block_9() {
+if (GetX50(123) == GetX50(104)) {
     SetX50(125, GetX50(125) - 1);
-    __event_206_block_10();
 }
-__event_206_block_10() {
-                        SetX50(400 + GetX50(118), GetX50(123));
-                        DrawRect(0, 0, 200, 200, 0, ColColor(255), 102);
-                        DrawRect(200, 0, 120, 200, 0, ColColor(255), 102);
-    exit();
-}
-__event_206_block_0();
+SetX50(400 + GetX50(118), GetX50(123));
+DrawRect(0, 0, 200, 200, 0, ColColor(255), 102);
+DrawRect(200, 0, 120, 200, 0, ColColor(255), 102);

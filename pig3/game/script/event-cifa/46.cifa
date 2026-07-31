@@ -1,21 +1,9 @@
-__event_46_block_0() {
-    join(26);
-    modifyevent(16, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    SetStarState(22, 3);
-    if (!InTeam(27)) {
-        __event_46_block_2();
-        return;
-    }
-    __event_46_block_1();
-}
-__event_46_block_1() {
+join(26);
+modifyevent(16, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+SetStarState(22, 3);
+if (InTeam(27)) {
     CallEvent(233, 26, 0, 0, 0);
     CallEvent(231, 26, 163, GetX50(28931), 0);
     CallEvent(233, 27, 0, 0, 0);
     CallEvent(231, 27, 163, GetX50(28931), 0);
-    __event_46_block_2();
 }
-__event_46_block_2() {
-    exit();
-}
-__event_46_block_0();

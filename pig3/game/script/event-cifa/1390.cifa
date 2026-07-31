@@ -1,166 +1,130 @@
-__event_1390_block_0() {
-    modifyevent(59, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(59, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(54, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(54, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(54, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(48, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(48, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(48, 9, 1, 0, 0, 0, 0, 1702, 1702, 1702, 0, -2, -2);
-    modifyevent(48, 0, 1, 0, 1391, 0, 0, 5398, 5398, 5398, 0, -2, -2);
-    modifyevent(48, 1, 1, 0, 1391, 0, 0, 5398, 5398, 5398, 0, -2, -2);
-    modifyevent(73, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    setscenemap(73, 1, 26, 34, 0);
-    setscenemap(73, 1, 25, 34, 0);
-    modifyevent(41, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(41, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(41, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(39, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    setscenemap(39, 1, 38, 22, 0);
-    setscenemap(39, 1, 40, 22, 0);
-    setscenemap(39, 1, 39, 22, 0);
-    setscenemap(39, 1, 38, 24, 0);
-    modifyevent(65, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(66, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    setscenemap(66, 1, 16, 15, 0);
-    setscenemap(53, 1, 29, 26, 0);
-    setscenemap(53, 1, 28, 27, 0);
-    modifyevent(53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(54, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    if (GetStarState(66) > 0) {
-        __event_1390_block_2();
-        return;
-    }
-    __event_1390_block_1();
-}
-__event_1390_block_1() {
+modifyevent(59, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(59, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(54, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(54, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(54, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(48, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(48, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(48, 9, 1, 0, 0, 0, 0, 1702, 1702, 1702, 0, -2, -2);
+modifyevent(48, 0, 1, 0, 1391, 0, 0, 5398, 5398, 5398, 0, -2, -2);
+modifyevent(48, 1, 1, 0, 1391, 0, 0, 5398, 5398, 5398, 0, -2, -2);
+modifyevent(73, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+setscenemap(73, 1, 26, 34, 0);
+setscenemap(73, 1, 25, 34, 0);
+modifyevent(41, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(41, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(41, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(39, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+setscenemap(39, 1, 38, 22, 0);
+setscenemap(39, 1, 40, 22, 0);
+setscenemap(39, 1, 39, 22, 0);
+setscenemap(39, 1, 38, 24, 0);
+modifyevent(65, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(66, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+setscenemap(66, 1, 16, 15, 0);
+setscenemap(53, 1, 29, 26, 0);
+setscenemap(53, 1, 28, 27, 0);
+modifyevent(53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(54, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+if (GetStarState(66) <= 0) {
     modifyevent(54, 5, 1, 0, 889, 0, 0, 7172, 7172, 7172, 0, -2, -2);
-    __event_1390_block_2();
 }
-__event_1390_block_2() {
-    setscenemap(54, 1, 19, 48, 0);
-    setscenemap(43, 1, 32, 26, 0);
-    setscenemap(43, 1, 33, 25, 0);
-    modifyevent(43, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(68, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(73, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(17, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    setscenemap(17, 1, 31, 30, 0);
-    setscenemap(17, 1, 31, 31, 0);
-    setscenemap(17, 1, 31, 32, 0);
-    setscenemap(17, 1, 31, 33, 0);
-    setscenemap(17, 1, 29, 30, 0);
-    setscenemap(17, 1, 29, 31, 0);
-    setscenemap(17, 1, 29, 32, 0);
-    setscenemap(17, 1, 29, 33, 0);
-    modifyevent(44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(44, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(74, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    setscenemap(74, 1, 21, 17, 0);
-    setscenemap(74, 1, 20, 17, 0);
-    setscenemap(74, 1, 19, 17, 0);
-    setscenemap(74, 1, 18, 17, 0);
-    setscenemap(74, 1, 17, 17, 0);
-    setscenemap(74, 1, 21, 23, 0);
-    setscenemap(74, 1, 20, 23, 0);
-    setscenemap(74, 1, 19, 23, 0);
-    setscenemap(74, 1, 20, 22, 0);
-    setscenemap(74, 1, 19, 18, 0);
-    setscenemap(74, 1, 23, 25, 0);
-    setscenemap(74, 1, 22, 25, 0);
-    setscenemap(74, 1, 21, 25, 0);
-    setscenemap(74, 1, 20, 25, 0);
-    setscenemap(74, 1, 19, 25, 0);
-    setscenemap(74, 1, 18, 25, 0);
-    setscenemap(74, 1, 40, 43, 0);
-    setscenemap(74, 1, 41, 44, 0);
-    setscenemap(74, 1, 41, 41, 0);
-    setscenemap(74, 1, 41, 43, 0);
-    modifyevent(74, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(68, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    setscenemap(27, 1, 23, 21, 0);
-    setscenemap(27, 1, 23, 22, 0);
-    modifyevent(27, 1, 1, 0, 1129, 0, 0, 8806, 8806, 8806, 0, -2, -2);
-    modifyevent(27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    setscenemap(3, 1, 26, 37, 0);
-    setscenemap(3, 1, 24, 37, 0);
-    setscenemap(3, 1, 23, 37, 0);
-    setscenemap(3, 1, 22, 38, 0);
-    setscenemap(3, 1, 22, 39, 0);
-    modifyevent(3, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    modifyevent(3, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    modifyevent(3, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    modifyevent(3, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    modifyevent(3, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    modifyevent(3, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    modifyevent(3, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    SetSubmapInfo(127, 18 / 2, 1);
-    modifyevent(14, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-    modifyevent(14, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(14, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(56, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(56, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(56, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    setscenemap(52, 1, 11, 27, 0);
-    setscenemap(52, 1, 11, 28, 0);
-    setscenemap(52, 1, 13, 27, 0);
-    setscenemap(52, 1, 13, 28, 0);
-    modifyevent(52, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(52, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(68, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(68, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(61, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    setscenemap(61, 1, 26, 8, 0);
-    setscenemap(61, 1, 26, 9, 0);
-    modifyevent(61, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(61, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(61, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(61, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(61, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    setscenemap(61, 1, 28, 7, 0);
-    modifyevent(61, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(115, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(115, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(115, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(115, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(31, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    if (GetStarState(64) > 0) {
-        __event_1390_block_4();
-        return;
-    }
-    __event_1390_block_3();
-}
-__event_1390_block_3() {
-    exit();
-    __event_1390_block_4();
-}
-__event_1390_block_4() {
-    if (GetStarState(81) > 0) {
-        __event_1390_block_6();
-        return;
-    }
-    __event_1390_block_5();
-}
-__event_1390_block_5() {
-    exit();
-    __event_1390_block_6();
-}
-__event_1390_block_6() {
-    if (GetStarState(87) == 2) {
-        __event_1390_block_8();
-        return;
-    }
-    __event_1390_block_7();
-}
-__event_1390_block_7() {
-    exit();
-    __event_1390_block_8();
-}
-__event_1390_block_8() {
-                    modifyevent(15, 92, 0, 0, 0, 0, 1747, 0, 0, 0, 0, -2, -2);
-                    modifyevent(15, 93, 0, 0, 0, 0, 1747, 0, 0, 0, 0, -2, -2);
+setscenemap(54, 1, 19, 48, 0);
+setscenemap(43, 1, 32, 26, 0);
+setscenemap(43, 1, 33, 25, 0);
+modifyevent(43, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(68, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(73, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(17, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+setscenemap(17, 1, 31, 30, 0);
+setscenemap(17, 1, 31, 31, 0);
+setscenemap(17, 1, 31, 32, 0);
+setscenemap(17, 1, 31, 33, 0);
+setscenemap(17, 1, 29, 30, 0);
+setscenemap(17, 1, 29, 31, 0);
+setscenemap(17, 1, 29, 32, 0);
+setscenemap(17, 1, 29, 33, 0);
+modifyevent(44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(44, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(74, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+setscenemap(74, 1, 21, 17, 0);
+setscenemap(74, 1, 20, 17, 0);
+setscenemap(74, 1, 19, 17, 0);
+setscenemap(74, 1, 18, 17, 0);
+setscenemap(74, 1, 17, 17, 0);
+setscenemap(74, 1, 21, 23, 0);
+setscenemap(74, 1, 20, 23, 0);
+setscenemap(74, 1, 19, 23, 0);
+setscenemap(74, 1, 20, 22, 0);
+setscenemap(74, 1, 19, 18, 0);
+setscenemap(74, 1, 23, 25, 0);
+setscenemap(74, 1, 22, 25, 0);
+setscenemap(74, 1, 21, 25, 0);
+setscenemap(74, 1, 20, 25, 0);
+setscenemap(74, 1, 19, 25, 0);
+setscenemap(74, 1, 18, 25, 0);
+setscenemap(74, 1, 40, 43, 0);
+setscenemap(74, 1, 41, 44, 0);
+setscenemap(74, 1, 41, 41, 0);
+setscenemap(74, 1, 41, 43, 0);
+modifyevent(74, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(68, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+setscenemap(27, 1, 23, 21, 0);
+setscenemap(27, 1, 23, 22, 0);
+modifyevent(27, 1, 1, 0, 1129, 0, 0, 8806, 8806, 8806, 0, -2, -2);
+modifyevent(27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+setscenemap(3, 1, 26, 37, 0);
+setscenemap(3, 1, 24, 37, 0);
+setscenemap(3, 1, 23, 37, 0);
+setscenemap(3, 1, 22, 38, 0);
+setscenemap(3, 1, 22, 39, 0);
+modifyevent(3, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+modifyevent(3, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+modifyevent(3, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+modifyevent(3, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+modifyevent(3, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+modifyevent(3, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+modifyevent(3, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+SetSubmapInfo(127, 18 / 2, 1);
+modifyevent(14, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+modifyevent(14, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(14, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(56, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(56, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(56, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+setscenemap(52, 1, 11, 27, 0);
+setscenemap(52, 1, 11, 28, 0);
+setscenemap(52, 1, 13, 27, 0);
+setscenemap(52, 1, 13, 28, 0);
+modifyevent(52, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(52, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(68, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(68, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(61, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+setscenemap(61, 1, 26, 8, 0);
+setscenemap(61, 1, 26, 9, 0);
+modifyevent(61, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(61, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(61, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(61, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(61, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+setscenemap(61, 1, 28, 7, 0);
+modifyevent(61, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(115, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(115, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(115, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(115, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(31, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+if (GetStarState(64) <= 0) {
     exit();
 }
-__event_1390_block_0();
+if (GetStarState(81) <= 0) {
+    exit();
+}
+if (GetStarState(87) != 2) {
+    exit();
+}
+modifyevent(15, 92, 0, 0, 0, 0, 1747, 0, 0, 0, 0, -2, -2);
+modifyevent(15, 93, 0, 0, 0, 0, 1747, 0, 0, 0, 0, -2, -2);

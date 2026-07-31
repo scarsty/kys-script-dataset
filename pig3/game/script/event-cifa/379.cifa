@@ -1,18 +1,6 @@
-__event_379_block_0() {
-    SetX50(2001, GetX50(28928) + 0);
-    SetX50(2002, GetX50(28929) + 0);
-    CallEvent(351, GetX50(2001), 2, 0, 0);
-    if (GetX50(28931) != 1) {
-        __event_379_block_2();
-        return;
-    }
-    __event_379_block_1();
-}
-__event_379_block_1() {
+SetX50(2001, GetX50(28928) + 0);
+SetX50(2002, GetX50(28929) + 0);
+CallEvent(351, GetX50(2001), 2, 0, 0);
+if (GetX50(28931) == 1) {
     SetRole(0, 126 / 2, GetX50(2002));
-    __event_379_block_2();
 }
-__event_379_block_2() {
-    exit();
-}
-__event_379_block_0();

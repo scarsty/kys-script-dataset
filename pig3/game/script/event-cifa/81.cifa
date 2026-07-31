@@ -1,28 +1,16 @@
-__event_81_block_0() {
-    if (GetStarState(38) == 3) {
-        __event_81_block_2();
-        return;
-    }
-    __event_81_block_1();
-}
-__event_81_block_1() {
-    exit();
-    __event_81_block_2();
-}
-__event_81_block_2() {
-        leave(46);
-        modifyevent(16, 35, 1, 0, 746, 0, 0, 7184, 7184, 7184, 0, -2, -2);
-        SetStarState(38, 1);
-        CallEvent(232, 8, 175, 0, 0);
-        CallEvent(232, 13, 175, 0, 0);
-        CallEvent(232, 42, 175, 0, 0);
-        CallEvent(232, 51, 175, 0, 0);
-        CallEvent(232, 46, 175, 0, 0);
-        CallEvent(232, 46, 178, 0, 0);
-        CallEvent(232, 48, 178, 0, 0);
-        CallEvent(232, 49, 178, 0, 0);
-        CallEvent(232, 52, 178, 0, 0);
-        CallEvent(232, 54, 178, 0, 0);
+if (GetStarState(38) != 3) {
     exit();
 }
-__event_81_block_0();
+leave(46);
+modifyevent(16, 35, 1, 0, 746, 0, 0, 7184, 7184, 7184, 0, -2, -2);
+SetStarState(38, 1);
+CallEvent(232, 8, 175, 0, 0);
+CallEvent(232, 13, 175, 0, 0);
+CallEvent(232, 42, 175, 0, 0);
+CallEvent(232, 51, 175, 0, 0);
+CallEvent(232, 46, 175, 0, 0);
+CallEvent(232, 46, 178, 0, 0);
+CallEvent(232, 48, 178, 0, 0);
+CallEvent(232, 49, 178, 0, 0);
+CallEvent(232, 52, 178, 0, 0);
+CallEvent(232, 54, 178, 0, 0);

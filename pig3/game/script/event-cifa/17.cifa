@@ -1,18 +1,6 @@
-__event_17_block_0() {
-    if (GetStarState(34) == 3) {
-        __event_17_block_2();
-        return;
-    }
-    __event_17_block_1();
-}
-__event_17_block_1() {
-    exit();
-    __event_17_block_2();
-}
-__event_17_block_2() {
-        leave(9);
-        modifyevent(15, 14, 1, 0, 709, 0, 0, 7324, 7324, 7324, 0, -2, -2);
-        SetStarState(34, 1);
+if (GetStarState(34) != 3) {
     exit();
 }
-__event_17_block_0();
+leave(9);
+modifyevent(15, 14, 1, 0, 709, 0, 0, 7324, 7324, 7324, 0, -2, -2);
+SetStarState(34, 1);

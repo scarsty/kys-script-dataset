@@ -1,35 +1,23 @@
-__event_299_block_0() {
-    SetAnimationLayer(0, 0, 63, 63, 0);
-    battlefieldget(5, 28005, 4, 1, 0, 0);
-    battlefieldget(5, 28005, 6, 2, 0, 0);
-    SetAnimationLayer(GetX50(1), GetX50(2), 1, 1, 1);
-    SetX50(11, GetX50(2) * 128);
-    SetX50(12, GetX50(1) * 2);
-    SetX50(3, GetX50(11) + GetX50(12));
-    SetX50(1, read_mem(349914 + 0));
-    SetX50(2, read_mem(349916 + 0));
-    SetAnimationLayer(GetX50(1), GetX50(2), 1, 1, 1);
-    SetX50(11, GetX50(2) * 128);
-    SetX50(12, GetX50(1) * 2);
-    SetX50(4, GetX50(11) + GetX50(12));
-    SetX50(5, read_mem(1985028 + GetX50(4)));
-    if (GetX50(5) >= 0) {
-        __event_299_block_2();
-        return;
-    }
-    __event_299_block_1();
-}
-__event_299_block_1() {
+SetAnimationLayer(0, 0, 63, 63, 0);
+battlefieldget(5, 28005, 4, 1, 0, 0);
+battlefieldget(5, 28005, 6, 2, 0, 0);
+SetAnimationLayer(GetX50(1), GetX50(2), 1, 1, 1);
+SetX50(11, GetX50(2) * 128);
+SetX50(12, GetX50(1) * 2);
+SetX50(3, GetX50(11) + GetX50(12));
+SetX50(1, read_mem(349914 + 0));
+SetX50(2, read_mem(349916 + 0));
+SetAnimationLayer(GetX50(1), GetX50(2), 1, 1, 1);
+SetX50(11, GetX50(2) * 128);
+SetX50(12, GetX50(1) * 2);
+SetX50(4, GetX50(11) + GetX50(12));
+SetX50(5, read_mem(1985028 + GetX50(4)));
+if (GetX50(5) < 0) {
     PlayAction(GetX50(28005), 1, 26);
     battlefieldset(5, 28005, 4, 1, 0, 0);
     battlefieldset(5, 28005, 6, 2, 0, 0);
     write_mem(1985028 + GetX50(3), -1);
     write_mem(1985028 + GetX50(4), GetX50(28005));
     Redraw();
-    __event_299_block_2();
 }
-__event_299_block_2() {
-        SetAnimationLayer(0, 0, 63, 63, 0);
-    exit();
-}
-__event_299_block_0();
+SetAnimationLayer(0, 0, 63, 63, 0);

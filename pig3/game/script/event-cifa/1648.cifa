@@ -1,32 +1,12 @@
-__event_1648_block_0() {
-    if (UseItem(0)) {
-        __event_1648_block_2();
-        return;
-    }
-    __event_1648_block_1();
-}
-__event_1648_block_1() {
+if (!UseItem(0)) {
     exit();
-    __event_1648_block_2();
 }
-__event_1648_block_2() {
-    SetX50(0, GetItemAmount(0));
-    if (GetX50(0) < 500) {
-        __event_1648_block_4();
-        return;
-    }
-    __event_1648_block_3();
-}
-__event_1648_block_3() {
+SetX50(0, GetItemAmount(0));
+if (GetX50(0) >= 500) {
     talk(102, "灰貂皮一張，客官您拿好。收您五百兩。", "商販甲", 0, 1, 0);
     AddItemWithoutHint(0, -500);
     AddItem(255, 1);
     modifyevent(105, 79, 0, 0, 1649, 0, 0, 0, 0, 0, 0, -2, -2);
     exit();
-    __event_1648_block_4();
 }
-__event_1648_block_4() {
-            talk(102, "客官，小本生意不賒賬，您錢夠了再來吧。", "商販甲", 0, 1, 0);
-    exit();
-}
-__event_1648_block_0();
+talk(102, "客官，小本生意不賒賬，您錢夠了再來吧。", "商販甲", 0, 1, 0);

@@ -1,21 +1,9 @@
-__event_1553_block_0() {
-    SetX50(0, GetRole(166, 94 / 2));
-    SetX50(0, GetX50(0) + 1);
-    SetRole(166, 94 / 2, GetX50(0));
-    if (GetX50(0) == 3) {
-        __event_1553_block_2();
-        return;
-    }
-    __event_1553_block_1();
-}
-__event_1553_block_1() {
-    exit();
-    __event_1553_block_2();
-}
-__event_1553_block_2() {
-        modifyevent(15, 3, 0, 0, 0, 0, 1473, 0, 0, 0, 0, -2, -2);
-        modifyevent(15, 4, 0, 0, 0, 0, 1473, 0, 0, 0, 0, -2, -2);
-        SetMissionState(44, 1);
+SetX50(0, GetRole(166, 94 / 2));
+SetX50(0, GetX50(0) + 1);
+SetRole(166, 94 / 2, GetX50(0));
+if (GetX50(0) != 3) {
     exit();
 }
-__event_1553_block_0();
+modifyevent(15, 3, 0, 0, 0, 0, 1473, 0, 0, 0, 0, -2, -2);
+modifyevent(15, 4, 0, 0, 0, 0, 1473, 0, 0, 0, 0, -2, -2);
+SetMissionState(44, 1);

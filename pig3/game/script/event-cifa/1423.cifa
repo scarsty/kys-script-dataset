@@ -1,152 +1,84 @@
-__event_1423_block_0() {
-    CallEvent(67, 0, 0, 0, 0);
-    SetStarState(39, 3);
-    modifyevent(15, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(54, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(95, 7, 1, 0, 1535, 0, 0, 5342, 5342, 5342, 0, -2, -2);
-    if (GetStarState(37) == 0) {
-        __event_1423_block_2();
-        return;
-    }
-    __event_1423_block_1();
-}
-__event_1423_block_1() {
+CallEvent(67, 0, 0, 0, 0);
+SetStarState(39, 3);
+modifyevent(15, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(54, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(95, 7, 1, 0, 1535, 0, 0, 5342, 5342, 5342, 0, -2, -2);
+if (GetStarState(37) != 0) {
     CallEvent(65, 0, 0, 0, 0);
     SetStarState(37, 3);
     modifyevent(15, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    __event_1423_block_2();
 }
-__event_1423_block_2() {
-    modifyevent(54, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(95, 6, 1, 0, 1535, 0, 0, 5334, 5334, 5334, 0, -2, -2);
-    if (GetStarState(43) == 0) {
-        __event_1423_block_4();
-        return;
-    }
-    __event_1423_block_3();
-}
-__event_1423_block_3() {
+modifyevent(54, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(95, 6, 1, 0, 1535, 0, 0, 5334, 5334, 5334, 0, -2, -2);
+if (GetStarState(43) != 0) {
     CallEvent(75, 0, 0, 0, 0);
     SetStarState(43, 3);
     modifyevent(15, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    __event_1423_block_4();
 }
-__event_1423_block_4() {
-    SetX50(0, GetD(95, 141, 2));
-    SetRole(166, 76 / 2, GetX50(0));
-    modifyevent(95, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(95, 5, 1, 0, 1538, 0, 0, 5324, 5324, 5324, 0, -2, -2);
-    if (GetStarState(41) == 0) {
-        __event_1423_block_6();
-        return;
-    }
-    __event_1423_block_5();
-}
-__event_1423_block_5() {
+SetX50(0, GetD(95, 141, 2));
+SetRole(166, 76 / 2, GetX50(0));
+modifyevent(95, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(95, 5, 1, 0, 1538, 0, 0, 5324, 5324, 5324, 0, -2, -2);
+if (GetStarState(41) != 0) {
     CallEvent(71, 0, 0, 0, 0);
     SetStarState(41, 3);
     modifyevent(15, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    __event_1423_block_6();
 }
-__event_1423_block_6() {
-    SetX50(0, GetD(95, 143, 2));
-    SetRole(166, 78 / 2, GetX50(0));
-    modifyevent(95, 143, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(83, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(83, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(83, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(83, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(83, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(83, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(83, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(83, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(83, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(95, 136, 1, 0, 1537, 0, 0, 5316, 5316, 5316, 0, -2, -2);
-    if (GetStarState(46) == 0) {
-        __event_1423_block_8();
-        return;
-    }
-    __event_1423_block_7();
-}
-__event_1423_block_7() {
+SetX50(0, GetD(95, 143, 2));
+SetRole(166, 78 / 2, GetX50(0));
+modifyevent(95, 143, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(83, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(83, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(83, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(83, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(83, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(83, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(83, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(83, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(83, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(95, 136, 1, 0, 1537, 0, 0, 5316, 5316, 5316, 0, -2, -2);
+if (GetStarState(46) != 0) {
     CallEvent(137, 0, 0, 0, 0);
     SetStarState(46, 3);
     modifyevent(15, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    __event_1423_block_8();
 }
-__event_1423_block_8() {
-    SetX50(0, GetD(47, 1, 2));
-    SetRole(166, 80 / 2, GetX50(0));
-    modifyevent(47, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(95, 137, 1, 0, 1539, 0, 0, 7292, 7292, 7292, 0, -2, -2);
-    if (GetStarState(61) == 0) {
-        __event_1423_block_10();
-        return;
-    }
-    __event_1423_block_9();
-}
-__event_1423_block_9() {
+SetX50(0, GetD(47, 1, 2));
+SetRole(166, 80 / 2, GetX50(0));
+modifyevent(47, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(95, 137, 1, 0, 1539, 0, 0, 7292, 7292, 7292, 0, -2, -2);
+if (GetStarState(61) != 0) {
     CallEvent(105, 0, 0, 0, 0);
     SetStarState(61, 3);
     modifyevent(15, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    __event_1423_block_10();
 }
-__event_1423_block_10() {
-    SetX50(0, GetD(3, 39, 2));
-    SetRole(166, 82 / 2, GetX50(0));
-    modifyevent(3, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(95, 4, 1, 0, 1540, 0, 0, 7308, 7308, 7308, 0, -2, -2);
-    if (GetStarState(69) == 0) {
-        __event_1423_block_12();
-        return;
-    }
-    __event_1423_block_11();
-}
-__event_1423_block_11() {
+SetX50(0, GetD(3, 39, 2));
+SetRole(166, 82 / 2, GetX50(0));
+modifyevent(3, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(95, 4, 1, 0, 1540, 0, 0, 7308, 7308, 7308, 0, -2, -2);
+if (GetStarState(69) != 0) {
     CallEvent(135, 0, 0, 0, 0);
     SetStarState(69, 3);
     modifyevent(15, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    __event_1423_block_12();
 }
-__event_1423_block_12() {
-    SetX50(0, GetD(62, 4, 2));
-    SetRole(166, 84 / 2, GetX50(0));
-    modifyevent(62, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(95, 138, 1, 0, 1541, 0, 0, 7304, 7304, 7304, 0, -2, -2);
-    if (GetStarState(51) == 0) {
-        __event_1423_block_14();
-        return;
-    }
-    __event_1423_block_13();
-}
-__event_1423_block_13() {
+SetX50(0, GetD(62, 4, 2));
+SetRole(166, 84 / 2, GetX50(0));
+modifyevent(62, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(95, 138, 1, 0, 1541, 0, 0, 7304, 7304, 7304, 0, -2, -2);
+if (GetStarState(51) != 0) {
     CallEvent(117, 0, 0, 0, 0);
     SetStarState(51, 3);
     modifyevent(15, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    __event_1423_block_14();
 }
-__event_1423_block_14() {
-    SetX50(0, GetD(19, 30, 2));
-    SetRole(166, 86 / 2, GetX50(0));
-    modifyevent(19, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    modifyevent(95, 3, 1, 0, 1542, 0, 0, 7296, 7296, 7296, 0, -2, -2);
-    if (GetStarState(60) == 0) {
-        __event_1423_block_16();
-        return;
-    }
-    __event_1423_block_15();
-}
-__event_1423_block_15() {
+SetX50(0, GetD(19, 30, 2));
+SetRole(166, 86 / 2, GetX50(0));
+modifyevent(19, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(95, 3, 1, 0, 1542, 0, 0, 7296, 7296, 7296, 0, -2, -2);
+if (GetStarState(60) != 0) {
     CallEvent(111, 0, 0, 0, 0);
     SetStarState(60, 3);
     modifyevent(15, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    __event_1423_block_16();
 }
-__event_1423_block_16() {
-                                    SetX50(0, GetD(39, 3, 2));
-                                    SetRole(166, 88 / 2, GetX50(0));
-                                    modifyevent(39, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-                                    modifyevent(95, 139, 1, 0, 1543, 0, 0, 7302, 7302, 7302, 0, -2, -2);
-    exit();
-}
-__event_1423_block_0();
+SetX50(0, GetD(39, 3, 2));
+SetRole(166, 88 / 2, GetX50(0));
+modifyevent(39, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(95, 139, 1, 0, 1543, 0, 0, 7302, 7302, 7302, 0, -2, -2);

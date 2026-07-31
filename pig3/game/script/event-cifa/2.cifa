@@ -1,28 +1,7 @@
-__event_2_block_0() {
-    join(1);
-    modifyevent(16, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    SetStarState(1, 3);
-    if (!InTeam(17)) {
-        __event_2_block_4();
-        return;
-    }
-    __event_2_block_1();
-}
-__event_2_block_1() {
-    if (!InTeam(4)) {
-        __event_2_block_5();
-        return;
-    }
-    __event_2_block_2();
-}
-__event_2_block_2() {
-    if (!InTeam(28)) {
-        __event_2_block_6();
-        return;
-    }
-    __event_2_block_3();
-}
-__event_2_block_3() {
+join(1);
+modifyevent(16, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+SetStarState(1, 3);
+if (InTeam(17) && InTeam(4) && InTeam(28)) {
     CallEvent(233, 1, 0, 0, 0);
     CallEvent(231, 1, 171, GetX50(28931), 0);
     CallEvent(233, 4, 0, 0, 0);
@@ -31,15 +10,4 @@ __event_2_block_3() {
     CallEvent(231, 17, 171, GetX50(28931), 0);
     CallEvent(233, 28, 0, 0, 0);
     CallEvent(231, 28, 171, GetX50(28931), 0);
-    __event_2_block_4();
 }
-__event_2_block_4() {
-    __event_2_block_5();
-}
-__event_2_block_5() {
-    __event_2_block_6();
-}
-__event_2_block_6() {
-    exit();
-}
-__event_2_block_0();

@@ -1,66 +1,22 @@
-__event_227_block_0() {
-    write_mem(1837988 + 0, GetX50(28928));
-    write_mem(1837984 + 0, GetX50(28929));
-    if (GetX50(28930) != 0) {
-        __event_227_block_2();
-        return;
-    }
-    __event_227_block_1();
-}
-__event_227_block_1() {
+write_mem(1837988 + 0, GetX50(28928));
+write_mem(1837984 + 0, GetX50(28929));
+if (GetX50(28930) == 0) {
     SetX50(28929, GetX50(28929) - 1);
-    __event_227_block_2();
 }
-__event_227_block_2() {
-    if (GetX50(28930) != 1) {
-        __event_227_block_4();
-        return;
-    }
-    __event_227_block_3();
-}
-__event_227_block_3() {
+if (GetX50(28930) == 1) {
     SetX50(28928, GetX50(28928) + 1);
-    __event_227_block_4();
 }
-__event_227_block_4() {
-    if (GetX50(28930) != 2) {
-        __event_227_block_6();
-        return;
-    }
-    __event_227_block_5();
-}
-__event_227_block_5() {
+if (GetX50(28930) == 2) {
     SetX50(28929, GetX50(28929) + 1);
-    __event_227_block_6();
 }
-__event_227_block_6() {
-    if (GetX50(28930) != 3) {
-        __event_227_block_8();
-        return;
-    }
-    __event_227_block_7();
-}
-__event_227_block_7() {
+if (GetX50(28930) == 3) {
     SetX50(28928, GetX50(28928) - 1);
-    __event_227_block_8();
 }
-__event_227_block_8() {
-    write_mem(1837990 + 0, GetX50(28928));
-    write_mem(1837986 + 0, GetX50(28929));
-    if (GetX50(28930) == -2) {
-        __event_227_block_10();
-        return;
-    }
-    __event_227_block_9();
-}
-__event_227_block_9() {
+write_mem(1837990 + 0, GetX50(28928));
+write_mem(1837986 + 0, GetX50(28929));
+if (GetX50(28930) != -2) {
     write_mem(345358 + 0, GetX50(28930));
     SetX50(28931, GetX50(28930) * 8);
     SetX50(28931, GetX50(28931) + 7430);
     write_mem(1838058 + 0, GetX50(28931));
-    __event_227_block_10();
 }
-__event_227_block_10() {
-    exit();
-}
-__event_227_block_0();

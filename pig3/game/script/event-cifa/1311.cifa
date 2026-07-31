@@ -1,25 +1,4 @@
-__event_1311_block_0() {
-    if (!HaveItem(253)) {
-        __event_1311_block_4();
-        return;
-    }
-    __event_1311_block_1();
-}
-__event_1311_block_1() {
-    if (!HaveItem(254)) {
-        __event_1311_block_5();
-        return;
-    }
-    __event_1311_block_2();
-}
-__event_1311_block_2() {
-    if (!HaveItem(255)) {
-        __event_1311_block_6();
-        return;
-    }
-    __event_1311_block_3();
-}
-__event_1311_block_3() {
+if (HaveItem(253) && HaveItem(254) && HaveItem(255)) {
     talk(0, "你看這些東西是否合用？", -2, 1, 0, 0);
     talk(102, "多謝尊主，東西都齊了，我這就去趕製法衣。", -2, 0, 0, 0);
     darkscene();
@@ -37,16 +16,5 @@ __event_1311_block_3() {
     ShowTeammate(70, 102, 0);
     modifyevent(15, 84, 1, 0, 799, 1398, 0, 7286, 7286, 7286, 0, -2, -2);
     exit();
-    __event_1311_block_4();
 }
-__event_1311_block_4() {
-    __event_1311_block_5();
-}
-__event_1311_block_5() {
-    __event_1311_block_6();
-}
-__event_1311_block_6() {
-                talk(102, "蘇州蠶絲製品聞名天下，杭州盛產錦緞，關外的灰貂毛色最好。", -2, 0, 0, 0);
-    exit();
-}
-__event_1311_block_0();
+talk(102, "蘇州蠶絲製品聞名天下，杭州盛產錦緞，關外的灰貂毛色最好。", -2, 0, 0, 0);

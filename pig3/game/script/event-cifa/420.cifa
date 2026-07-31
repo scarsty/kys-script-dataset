@@ -1,20 +1,8 @@
-__event_420_block_0() {
-    SetX50(10, GetX50(28928) / 100);
-    SetX50(10, GetX50(10) + 1);
-    SetX50(11, GetX50(28004) * GetX50(10));
-    SetX50(11, GetX50(11) / 20);
-    SetX50(12, Random50(100));
-    if (GetX50(12) < 50) {
-        __event_420_block_2();
-        return;
-    }
-    __event_420_block_1();
-}
-__event_420_block_1() {
+SetX50(10, GetX50(28928) / 100);
+SetX50(10, GetX50(10) + 1);
+SetX50(11, GetX50(28004) * GetX50(10));
+SetX50(11, GetX50(11) / 20);
+SetX50(12, Random50(100));
+if (GetX50(12) >= 50) {
     SetX50(28004, GetX50(28004) + GetX50(11));
-    __event_420_block_2();
 }
-__event_420_block_2() {
-    exit();
-}
-__event_420_block_0();

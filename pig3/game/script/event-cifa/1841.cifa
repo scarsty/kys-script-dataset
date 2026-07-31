@@ -1,27 +1,7 @@
-__event_1841_block_0() {
-    if (!InTeam(78)) {
-        __event_1841_block_2();
-        return;
-    }
-    __event_1841_block_1();
-}
-__event_1841_block_1() {
-    exit();
-    __event_1841_block_2();
-}
-__event_1841_block_2() {
-    if (!InTeam(100)) {
-        __event_1841_block_4();
-        return;
-    }
-    __event_1841_block_3();
-}
-__event_1841_block_3() {
-    exit();
-    __event_1841_block_4();
-}
-__event_1841_block_4() {
-            CallEvent(1839, 0, 0, 0, 0);
+if (InTeam(78)) {
     exit();
 }
-__event_1841_block_0();
+if (InTeam(100)) {
+    exit();
+}
+CallEvent(1839, 0, 0, 0, 0);

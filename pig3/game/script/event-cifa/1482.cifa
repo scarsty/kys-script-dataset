@@ -18,35 +18,29 @@ __event_1482_block_0() {
     SetRole(4, 192 / 2, 900);
     SetRole(889, 184 / 2, 32);
     SetRole(889, 192 / 2, 900);
-    if (TryBattle(216)) {
-        __event_1482_block_1();
+    trybattle(216);
+        lightscene();
+        talk(421, "＜好厲害的掌法，好厲害的內力，難道我今日要喪命在此？＞石……", -2, 0, 0, 0);
+        talk(279, "徒死無益，退開！", -2, 1, 0, 0);
+        talk(278, "太玄經，木兄弟，這世上竟當真有人能練成太玄經！哈哈，哈哈！", -2, 0, 0, 0);
+        talk(279, "試！", -2, 1, 0, 0);
+        talk(278, "正是！", -2, 0, 0, 0);
+        SetAttribute(279, 0, 0, 0, 0);
+        SetAttribute(278, 0, 0, 0, 0);
+        SetRole(889, 184 / 2, 32);
+        SetRole(889, 192 / 2, 900);
+    if (TryBattle(217)) {
+        __event_1482_block_2();
         return;
     }
     __event_1482_block_1();
 }
 __event_1482_block_1() {
-    lightscene();
-    talk(421, "＜好厲害的掌法，好厲害的內力，難道我今日要喪命在此？＞石……", -2, 0, 0, 0);
-    talk(279, "徒死無益，退開！", -2, 1, 0, 0);
-    talk(278, "太玄經，木兄弟，這世上竟當真有人能練成太玄經！哈哈，哈哈！", -2, 0, 0, 0);
-    talk(279, "試！", -2, 1, 0, 0);
-    talk(278, "正是！", -2, 0, 0, 0);
-    SetAttribute(279, 0, 0, 0, 0);
-    SetAttribute(278, 0, 0, 0, 0);
-    SetRole(889, 184 / 2, 32);
-    SetRole(889, 192 / 2, 900);
-    if (TryBattle(217)) {
-        __event_1482_block_3();
-        return;
-    }
+            dead();
+    exit();
     __event_1482_block_2();
 }
 __event_1482_block_2() {
-            dead();
-    exit();
-    __event_1482_block_3();
-}
-__event_1482_block_3() {
     lightscene();
     talk(421, "＜這石破天更如脫胎換骨一般，兩位島主的武功已是驚世駭俗，合我和兩位島主之力，才勉強壓制……這就是太玄經？＞", -2, 1, 0, 0);
     talk(278, "哈哈，妙極，妙極！", -2, 0, 0, 0);
@@ -109,12 +103,12 @@ __event_1482_block_3() {
     talk(160, "阿彌陀佛，理當如此。", -2, 0, 0, 0);
     SetX50(0, GetRole(166, 92 / 2));
     if (GetX50(0) == 0) {
-        __event_1482_block_5();
+        __event_1482_block_4();
         return;
     }
-    __event_1482_block_4();
+    __event_1482_block_3();
 }
-__event_1482_block_4() {
+__event_1482_block_3() {
     talk(0, "張大哥，李大哥，二位島主已然仙去，兩位一身好武功，待在這島上亦是無益，不如跟我前去歸雲莊，時時暢飲一番，豈不美哉？", -2, 0, 0, 0);
     talk(92, "少俠所言不無道理……兄弟，你說呢？", -2, 1, 0, 0);
     talk(93, "走。", -2, 0, 0, 0);
@@ -124,9 +118,9 @@ __event_1482_block_4() {
     SetStarState(54, 1);
     ShowTeammate(54, 93, 0);
     modifyevent(16, 48, 1, 0, 790, 0, 0, 5140, 5140, 5140, 0, -2, -2);
-    __event_1482_block_5();
+    __event_1482_block_4();
 }
-__event_1482_block_5() {
+__event_1482_block_4() {
     darkscene();
     modifyevent(2, 18, 0, 0, 0, 0, 0, 5152, 5152, 5152, 0, -2, -2);
     modifyevent(2, 17, 0, 0, 0, 0, 0, 8238, 8238, 8238, 0, -2, -2);
@@ -134,37 +128,37 @@ __event_1482_block_5() {
     SetRoleFace(1);
     SetX50(0, GetRole(166, 116 / 2));
     if (GetX50(0) == 0) {
-        __event_1482_block_10();
+        __event_1482_block_9();
+        return;
+    }
+    __event_1482_block_5();
+}
+__event_1482_block_5() {
+    if (GetX50(0) != 1) {
+        __event_1482_block_7();
         return;
     }
     __event_1482_block_6();
 }
 __event_1482_block_6() {
-    if (GetX50(0) != 1) {
-        __event_1482_block_8();
-        return;
-    }
+    modifyevent(2, 19, 0, 0, 0, 0, 0, 7312, 0, 0, 0, -2, -2);
     __event_1482_block_7();
 }
 __event_1482_block_7() {
-    modifyevent(2, 19, 0, 0, 0, 0, 0, 7312, 0, 0, 0, -2, -2);
+    if (GetX50(0) != 2) {
+        __event_1482_block_10();
+        return;
+    }
     __event_1482_block_8();
 }
 __event_1482_block_8() {
-    if (GetX50(0) != 2) {
-        __event_1482_block_11();
-        return;
-    }
+    modifyevent(2, 19, 0, 0, 0, 0, 0, 7126, 0, 0, 0, -2, -2);
     __event_1482_block_9();
 }
 __event_1482_block_9() {
-    modifyevent(2, 19, 0, 0, 0, 0, 0, 7126, 0, 0, 0, -2, -2);
     __event_1482_block_10();
 }
 __event_1482_block_10() {
-    __event_1482_block_11();
-}
-__event_1482_block_11() {
     lightscene();
     talk(242, "這兩人自己解不出這俠客行的祕密，居然毀去石刻，令我也無法再解，實在可惡，可惡！", -2, 1, 0, 0);
     talk(0, "師公，這俠客行的圖解之祕，已經有人解出來了。", -2, 0, 0, 0);
@@ -189,17 +183,17 @@ __event_1482_block_11() {
     talk(0, "謝謝師公！", -2, 0, 0, 0);
     SetX50(0, GetStarAmount());
     if (GetX50(0) < 80) {
-        __event_1482_block_13();
+        __event_1482_block_12();
         return;
     }
+    __event_1482_block_11();
+}
+__event_1482_block_11() {
+    talk(242, "你在歸雲莊也聚集了不少夥伴了，一定會打很多硬仗，這個你也拿去吧。", -2, 1, 0, 0);
+    AddItem(59, 1);
     __event_1482_block_12();
 }
 __event_1482_block_12() {
-    talk(242, "你在歸雲莊也聚集了不少夥伴了，一定會打很多硬仗，這個你也拿去吧。", -2, 1, 0, 0);
-    AddItem(59, 1);
-    __event_1482_block_13();
-}
-__event_1482_block_13() {
     talk(0, "對了師公，不知您是否得到了消息，襄兒師妹前些日子被蒙古國師金輪法王擄去了……", -2, 0, 0, 0);
     talk(242, "什麼？襄兒被抓走了？", -2, 1, 0, 0);
     talk(0, "近來我們四處打探，但是到現在還沒有消息，能否請師公……", -2, 0, 0, 0);
@@ -213,17 +207,17 @@ __event_1482_block_13() {
     SetX50(1, GetRole(166, 112 / 2));
     SetX50(3, GetX50(0) + GetX50(1));
     if (GetX50(3) == 0) {
-        __event_1482_block_15();
+        __event_1482_block_14();
         return;
     }
+    __event_1482_block_13();
+}
+__event_1482_block_13() {
+    modifyevent(15, 89, 0, 0, 0, 0, 1735, 0, 0, 0, 0, -2, -2);
+    modifyevent(15, 90, 0, 0, 0, 0, 1735, 0, 0, 0, 0, -2, -2);
     __event_1482_block_14();
 }
 __event_1482_block_14() {
-    modifyevent(15, 89, 0, 0, 0, 0, 1735, 0, 0, 0, 0, -2, -2);
-    modifyevent(15, 90, 0, 0, 0, 0, 1735, 0, 0, 0, 0, -2, -2);
-    __event_1482_block_15();
-}
-__event_1482_block_15() {
     lightscene();
     talk(413, "師公，師公！唉，他老人家輕功高明，定然已去得遠了……", -2, 0, 0, 0);
     SetRoleFace(0);
@@ -240,19 +234,19 @@ __event_1482_block_15() {
     SetMissionState(42, 2);
     SetX50(0, GetRole(166, 116 / 2));
     if (GetX50(0) == 0) {
-        __event_1482_block_20();
+        __event_1482_block_19();
+        return;
+    }
+    __event_1482_block_15();
+}
+__event_1482_block_15() {
+    if (GetX50(0) != 1) {
+        __event_1482_block_17();
         return;
     }
     __event_1482_block_16();
 }
 __event_1482_block_16() {
-    if (GetX50(0) != 1) {
-        __event_1482_block_18();
-        return;
-    }
-    __event_1482_block_17();
-}
-__event_1482_block_17() {
     talk(412, "你……你難道……一直在這等我？", -2, 0, 0, 0);
     talk(85, "怎麼樣，我這個徒弟夠意思吧？", -2, 1, 0, 0);
     talk(423, "你……我……我沒事……", -2, 0, 0, 0);
@@ -261,16 +255,16 @@ __event_1482_block_17() {
     SetX50(1, GetRole(166, 110 / 2));
     SetX50(1, GetX50(1) + 8);
     SetRole(116, 110 / 2, GetX50(1));
+    __event_1482_block_17();
+}
+__event_1482_block_17() {
+    if (GetX50(0) != 2) {
+        __event_1482_block_20();
+        return;
+    }
     __event_1482_block_18();
 }
 __event_1482_block_18() {
-    if (GetX50(0) != 2) {
-        __event_1482_block_21();
-        return;
-    }
-    __event_1482_block_19();
-}
-__event_1482_block_19() {
     talk(412, "非非，你怎麼在這。難道……你一直在這裡等我？", -2, 0, 0, 0);
     talk(84, "&&哥哥，我……你終於平安回來啦……", -2, 1, 0, 0);
     talk(422, "別哭，我這不是好好的嘛。你的&&哥哥不會有事的，因為捨不得非非呀。", -2, 0, 0, 0);
@@ -279,12 +273,12 @@ __event_1482_block_19() {
     SetX50(1, GetRole(166, 112 / 2));
     SetX50(1, GetX50(1) + 6);
     SetRole(116, 112 / 2, GetX50(1));
+    __event_1482_block_19();
+}
+__event_1482_block_19() {
     __event_1482_block_20();
 }
 __event_1482_block_20() {
-    __event_1482_block_21();
-}
-__event_1482_block_21() {
     exit();
 }
 __event_1482_block_0();

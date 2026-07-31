@@ -1,18 +1,6 @@
-__event_718_block_0() {
-    talk(18, "你搜集了不少武功祕籍啊，想知道哪個武功的情況呢？", -2, 0, 0, 0);
-    BookList();
-    if (GetX50(28931) == -1) {
-        __event_718_block_2();
-        return;
-    }
-    __event_718_block_1();
-}
-__event_718_block_1() {
+talk(18, "你搜集了不少武功祕籍啊，想知道哪個武功的情況呢？", -2, 0, 0, 0);
+BookList();
+if (GetX50(28931) != -1) {
     SetX50(0, GetX50(28931) + 14123);
     talk(18, getx50(0));
-    __event_718_block_2();
 }
-__event_718_block_2() {
-    exit();
-}
-__event_718_block_0();

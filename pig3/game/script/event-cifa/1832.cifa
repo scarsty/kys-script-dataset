@@ -1,26 +1,14 @@
-__event_1832_block_0() {
-    SetX50(1000, Random50(99));
-    if (GetX50(1000) < 50) {
-        __event_1832_block_2();
-        return;
-    }
-    __event_1832_block_1();
-}
-__event_1832_block_1() {
-    exit();
-    __event_1832_block_2();
-}
-__event_1832_block_2() {
-        SetX50(2000, Random50(4));
-        SetX50(2000, GetX50(2000) + 1);
-        SetX50(1001, GetRole(0, 102 / 2));
-        SetX50(1002, GetX50(1001) + GetX50(2000));
-        SetRole(0, 102 / 2, GetX50(1002));
-        SetX50(3000, "增加御劍%d");
-        SetX50(3100, sprintf(GetX50String(3000), GetX50(2000)));
-        SetX50(3200, GetRoleName(0));
-        SetX50(3100, GetX50String(3300) + GetX50String(3200));
-        showtitle(-3300, 2331);
+SetX50(1000, Random50(99));
+if (GetX50(1000) >= 50) {
     exit();
 }
-__event_1832_block_0();
+SetX50(2000, Random50(4));
+SetX50(2000, GetX50(2000) + 1);
+SetX50(1001, GetRole(0, 102 / 2));
+SetX50(1002, GetX50(1001) + GetX50(2000));
+SetRole(0, 102 / 2, GetX50(1002));
+SetX50(3000, "增加御劍%d");
+SetX50(3100, sprintf(GetX50String(3000), GetX50(2000)));
+SetX50(3200, GetRoleName(0));
+SetX50(3100, GetX50String(3300) + GetX50String(3200));
+showtitle(-3300, 2331);

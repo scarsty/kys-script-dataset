@@ -1,22 +1,10 @@
-__event_1173_block_0() {
-    SetX50(0, GetRole(166, 54 / 2));
-    SetX50(0, GetX50(0) + 1);
-    SetRole(166, 54 / 2, GetX50(0));
-    if (GetX50(0) == 2) {
-        __event_1173_block_2();
-        return;
-    }
-    __event_1173_block_1();
-}
-__event_1173_block_1() {
-    exit();
-    __event_1173_block_2();
-}
-__event_1173_block_2() {
-        setscenemap(52, 1, 51, 17, 4398);
-        setscenemap(52, 1, 52, 17, 4398);
-        modifyevent(52, 13, 0, 0, 357, 0, 0, 0, 0, 0, 0, -2, -2);
-        modifyevent(52, 23, 1, 0, 1174, 0, 0, 7316, 7316, 7316, 0, -2, -2);
+SetX50(0, GetRole(166, 54 / 2));
+SetX50(0, GetX50(0) + 1);
+SetRole(166, 54 / 2, GetX50(0));
+if (GetX50(0) != 2) {
     exit();
 }
-__event_1173_block_0();
+setscenemap(52, 1, 51, 17, 4398);
+setscenemap(52, 1, 52, 17, 4398);
+modifyevent(52, 13, 0, 0, 357, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(52, 23, 1, 0, 1174, 0, 0, 7316, 7316, 7316, 0, -2, -2);

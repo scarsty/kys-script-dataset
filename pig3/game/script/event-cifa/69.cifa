@@ -1,18 +1,6 @@
-__event_69_block_0() {
-    if (GetStarState(40) == 3) {
-        __event_69_block_2();
-        return;
-    }
-    __event_69_block_1();
-}
-__event_69_block_1() {
-    exit();
-    __event_69_block_2();
-}
-__event_69_block_2() {
-        leave(40);
-        modifyevent(15, 20, 1, 0, 740, 0, 0, 7092, 7092, 7092, 0, -2, -2);
-        SetStarState(40, 1);
+if (GetStarState(40) != 3) {
     exit();
 }
-__event_69_block_0();
+leave(40);
+modifyevent(15, 20, 1, 0, 740, 0, 0, 7092, 7092, 7092, 0, -2, -2);
+SetStarState(40, 1);

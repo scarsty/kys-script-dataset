@@ -1,23 +1,11 @@
-__event_1638_block_0() {
-    if (TryBattle(73)) {
-        __event_1638_block_2();
-        return;
-    }
-    __event_1638_block_1();
-}
-__event_1638_block_1() {
+if (!TryBattle(73)) {
     dead();
     exit();
-    __event_1638_block_2();
 }
-__event_1638_block_2() {
-        modifyevent(87, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-        modifyevent(87, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-        modifyevent(87, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-        modifyevent(87, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-        modifyevent(87, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-        modifyevent(87, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-        lightscene();
-    exit();
-}
-__event_1638_block_0();
+modifyevent(87, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(87, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(87, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(87, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(87, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+modifyevent(87, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
+lightscene();
