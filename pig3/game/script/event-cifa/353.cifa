@@ -17,7 +17,7 @@ if (!JudgeMoney(GetX50(9001))) {
     exit();
 }
 Talk(382, "好咧，客官裡面請。", -2, 1, 0, 0);
-ChangeItem(174, GetX50(9001), 0, 1);
+ChangeItem(0, GetX50(9001), 0, 1);
 DarkScene();
 Rest();
 LightScene();
