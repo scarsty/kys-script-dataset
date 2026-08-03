@@ -37,11 +37,7 @@ do {
     }
     if (__cifa_pc_491 == 2) {
         SetX50(1010, GetX50(1010) + 2);
-        if (1) {
-            __cifa_pc_491 = 1;
-        } else {
-            __cifa_pc_491 = 3;
-        }
+        __cifa_pc_491 = 1;
     }
     if (__cifa_pc_491 == 3) {
         SetX50(1010, GetX50(1010) + 20);
@@ -174,11 +170,7 @@ do {
     }
     if (__cifa_pc_491 == 12) {
         SetX50(1030, 0);
-        if (1) {
-            __cifa_pc_491 = 14;
-        } else {
-            __cifa_pc_491 = 13;
-        }
+        __cifa_pc_491 = 14;
     }
     if (__cifa_pc_491 == 13) {
         SetX50(1030, GetX50(1030) - GetX50(1050));
@@ -186,11 +178,7 @@ do {
     }
     if (__cifa_pc_491 == 14) {
         SetRole(GetX50(1005), 17, GetX50(1030));
-        if (1) {
-            __cifa_pc_491 = 19;
-        } else {
-            __cifa_pc_491 = 15;
-        }
+        __cifa_pc_491 = 19;
     }
     if (__cifa_pc_491 == 15) {
         UpdateAllScreen();
@@ -283,11 +271,7 @@ do {
     if (__cifa_pc_491 == 31) {
         SetX50(1080, GetX50(1031) + 0);
         SetX50(1031, 0);
-        if (1) {
-            __cifa_pc_491 = 33;
-        } else {
-            __cifa_pc_491 = 32;
-        }
+        __cifa_pc_491 = 33;
     }
     if (__cifa_pc_491 == 32) {
         SetX50(1031, GetX50(1031) - GetX50(1080));
@@ -304,11 +288,7 @@ do {
     }
     if (__cifa_pc_491 == 34) {
         SetX50(1040, GetX50(1040) + GetX50(1023));
-        if (1) {
-            __cifa_pc_491 = 36;
-        } else {
-            __cifa_pc_491 = 35;
-        }
+        __cifa_pc_491 = 36;
     }
     if (__cifa_pc_491 == 35) {
         SetX50(1040, GetX50(1040) + GetX50(1080));
@@ -319,11 +299,7 @@ do {
             SetX50(1040, GetX50(1041) + 0);
         }
         SetRole(GetX50(1000), 41, GetX50(1040));
-        if (1) {
-            __cifa_pc_491 = 41;
-        } else {
-            __cifa_pc_491 = 37;
-        }
+        __cifa_pc_491 = 41;
     }
     if (__cifa_pc_491 == 37) {
         UpdateAllScreen();

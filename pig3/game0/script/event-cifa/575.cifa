@@ -1,5 +1,5 @@
 talk(105, "客倌想住宿嗎？本店有上好客房供應．一間２０兩．", 105, 0);
-if (AskRest() == 1) {
+if (AskRest()) {
     if (JudgeMoney(20)) {
         talk(0, "荒野之地多兇險，龍門地界只怕兵禍臨頭不遠．", 0, 1);
         darkscene();

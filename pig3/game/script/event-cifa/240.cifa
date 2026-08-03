@@ -37,7 +37,6 @@ else {
                     }
                     AddItem(205,1);
                 }
-                else { }
             }
             else {
                 AddItemWithoutHint(a,-1);

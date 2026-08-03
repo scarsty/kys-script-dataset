@@ -82,11 +82,7 @@ if (__cifa_pc_484 == 7) {
 }
 if (__cifa_pc_484 == 8) {
     SetRole(GetX50(1005), 83, -1);
-    if (1) {
-        __cifa_pc_484 = 16;
-    } else {
-        __cifa_pc_484 = 10;
-    }
+    __cifa_pc_484 = 16;
 }
 if (__cifa_pc_484 == 10) {
     SetX50(1018, GetRole(GetX50(1005), 88));

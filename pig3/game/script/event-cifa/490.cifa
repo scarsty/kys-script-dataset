@@ -114,11 +114,7 @@ do {
     }
     if (__cifa_pc_490 == 10) {
         SetX50(1030, 0);
-        if (1) {
-            __cifa_pc_490 = 12;
-        } else {
-            __cifa_pc_490 = 11;
-        }
+        __cifa_pc_490 = 12;
     }
     if (__cifa_pc_490 == 11) {
         SetX50(1030, GetX50(1030) - GetX50(1050));
@@ -126,11 +122,7 @@ do {
     }
     if (__cifa_pc_490 == 12) {
         SetRole(GetX50(1005), 17, GetX50(1030));
-        if (1) {
-            __cifa_pc_490 = 17;
-        } else {
-            __cifa_pc_490 = 13;
-        }
+        __cifa_pc_490 = 17;
     }
     if (__cifa_pc_490 == 13) {
         UpdateAllScreen();
@@ -232,11 +224,7 @@ do {
         }
         UpdateAllScreen();
         SetRole(GetX50(1005), 20, GetX50(1075));
-        if (1) {
-            __cifa_pc_490 = 33;
-        } else {
-            __cifa_pc_490 = 30;
-        }
+        __cifa_pc_490 = 33;
     }
     if (__cifa_pc_490 == 30) {
         UpdateAllScreen();

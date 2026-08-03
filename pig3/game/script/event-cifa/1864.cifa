@@ -24,4 +24,3 @@ if (!InTeam(8)) {
         modifyevent(30,0,4,1865);
     }
 }
-else { }

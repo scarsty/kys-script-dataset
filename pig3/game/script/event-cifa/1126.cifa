@@ -65,11 +65,7 @@ if (__cifa_pc_1126 == 3) {
     SetX50(0, GetRole(0, 42));
     SetX50(0, GetX50(0) + 30);
     SetRole(0, 42, GetX50(0));
-    if (1) {
-        __cifa_pc_1126 = 11;
-    } else {
-        __cifa_pc_1126 = 4;
-    }
+    __cifa_pc_1126 = 11;
 }
 if (__cifa_pc_1126 == 4) {
     talk(420, "這酒……這酒裡放了什麼！啊……", -2, 1, 0, 0);
@@ -82,11 +78,7 @@ if (__cifa_pc_1126 == 4) {
     SetX50(0, GetX50(0) + 5);
     SetRole(0, 20, GetX50(0));
     lightscene();
-    if (1) {
-        __cifa_pc_1126 = 11;
-    } else {
-        __cifa_pc_1126 = 5;
-    }
+    __cifa_pc_1126 = 11;
 }
 if (__cifa_pc_1126 == 5) {
     talk(93, "拿去罷。", -2, 1, 0, 0);
@@ -103,11 +95,7 @@ if (__cifa_pc_1126 == 6) {
     SetX50(0, GetRole(0, 42));
     SetX50(0, GetX50(0) + 30);
     SetRole(0, 42, GetX50(0));
-    if (1) {
-        __cifa_pc_1126 = 11;
-    } else {
-        __cifa_pc_1126 = 7;
-    }
+    __cifa_pc_1126 = 11;
 }
 if (__cifa_pc_1126 == 7) {
     talk(421, "這酒……這酒裡放了什麼！啊……", -2, 0, 0, 0);

@@ -49,11 +49,7 @@ if (__cifa_pc_482 == 4) {
     SetX50(1008, GetX50(28005) * 28);
     SetX50(1009, GetX50(1009) + GetX50(1007));
     UpdateAllScreen();
-    if (1) {
-        __cifa_pc_482 = 7;
-    } else {
-        __cifa_pc_482 = 6;
-    }
+    __cifa_pc_482 = 7;
 }
 if (__cifa_pc_482 == 6) {
     SetX50(1007, 0);

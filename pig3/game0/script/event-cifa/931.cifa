@@ -1,4 +1,4 @@
-if (AskRest() == 1) {
+if (AskRest()) {
     talk(0, "為了走更遠的路，適當的休息也是必須的．我就好好的睡一覺吧！", 0, 1);
     darkscene();
     Rest();
