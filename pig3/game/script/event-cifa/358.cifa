@@ -1,21 +1,20 @@
-SetX50(200, getcurrentscene());
-SetX50(201, getsceney());
-SetX50(202, getscenex());
-SetX50(203, GetS(GetX50(200), 3, GetX50(201), GetX50(202)));
-SetX50(204, GetD(GetX50(200), GetX50(203), 7));
-SetX50(204, GetX50(204) * -1);
-SetSubmapInfo(GetX50(200), 8, GetX50(204));
-SetSubmapInfo(GetX50(200), 22, GetX50(201));
-SetSubmapInfo(GetX50(200), 23, GetX50(202));
-SetX50(205, GetD(GetX50(200), GetX50(203), 8));
-SetX50(206, GetX50(205) / 100);
-SetX50(207, GetX50(205) % 100);
-SetX50(208, GetSubmapInfo(GetX50(200), 10));
-SetX50(209, GetSubmapInfo(GetX50(200), 11));
-if (GetX50(208) <= 0 && GetX50(209) <= 0) {
-    SetSubmapInfo(GetX50(204), 24, GetX50(206));
-    SetSubmapInfo(GetX50(204), 25, GetX50(207));
+scene = getcurrentscene();
+y = getsceney();
+x = getscenex();
+evt = GetS(scene, 3, y, x);
+dest = GetD(scene, evt, 7) * -1;
+SetSubmapInfo(scene, 8, dest);
+SetSubmapInfo(scene, 22, y);
+SetSubmapInfo(scene, 23, x);
+pos = GetD(scene, evt, 8);
+dy = pos / 100;
+dx = pos % 100;
+info10 = GetSubmapInfo(scene, 10);
+info11 = GetSubmapInfo(scene, 11);
+if (info10 <= 0 && info11 <= 0) {
+    SetSubmapInfo(dest, 24, dy);
+    SetSubmapInfo(dest, 25, dx);
     exit();
 }
-SetSubmapInfo(GetX50(204), 14, GetX50(206));
-SetSubmapInfo(GetX50(204), 15, GetX50(207));
+SetSubmapInfo(dest, 14, dy);
+SetSubmapInfo(dest, 15, dx);
