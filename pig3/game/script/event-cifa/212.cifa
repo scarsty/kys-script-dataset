@@ -17,8 +17,8 @@ do {
         if (GetX50(30) != 0) {
             SetX50(6, GetItemAmount(GetX50(5)));
             if (GetX50(6) != 0) {
-                SetX50(30, GetX50(30) * 10);
-                SetX50(30, GetX50(30) / 7);
+                SetX50(30, GetX50(30) / 10);
+                SetX50(30, GetX50(30) * 7);
                 ka212_build_line(GetX50(0), GetX50(5), GetX50(30), GetX50(6));
                 SetX50(0, GetX50(0) + 1);
             }
@@ -48,8 +48,8 @@ do {
                     talk(90, "輸入錯誤。", -2, 0, 0, 0);
                 } else {
                     SetX50(30, GetItem(GetX50(28927), 10));
-                    SetX50(30, GetX50(30) * 10);
-                    SetX50(30, GetX50(30) / 7);
+                    SetX50(30, GetX50(30) / 10);
+                    SetX50(30, GetX50(30) * 7);
                     SetX50(30, GetX50(30) * GetX50(10032));
                     SetX50(31, GetItemAmount(0));
                     SetX50(31, GetX50(31) + GetX50(30));
