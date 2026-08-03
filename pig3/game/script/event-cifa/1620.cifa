@@ -13,7 +13,7 @@ darkscene();
 modifyevent(57, 66, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 lightscene();
 AddItem(127, 1);
-SetX50(0, GetRole(166, 40 / 2));
+SetX50(0, GetRole(166, 20));
 if (GetX50(0) != 0) {
     modifyevent(68, 3, 1, 0, 697, 0, 0, 6292, 6292, 6292, 0, -2, -2);
     modifyevent(68, 4, 1, 0, 697, 0, 0, 7016, 7016, 7016, 0, -2, -2);

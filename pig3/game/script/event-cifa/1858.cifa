@@ -3,8 +3,8 @@ SetX50(1000, GetTeam(GetX50(2000)));
 if (GetX50(1000) < 0) {
     ShowTitle("全隊輕功增加10", 0);
 } else {
-    SetX50(3000, GetRole(GetX50(1000), 88 / 2));
+    SetX50(3000, GetRole(GetX50(1000), 44));
     SetX50(3000, GetX50(3000) + 10);
-    SetRole(GetX50(1000), 88 / 2, GetX50(3000));
+    SetRole(GetX50(1000), 44, GetX50(3000));
     exit();
 }

@@ -122,7 +122,7 @@ if (!InTeam(25)) {
     SetMissionState(3, 2);
     exit();
 }
-SetRole(166, 112 / 2, 3);
+SetRole(166, 56, 3);
 talk(25, "&&兄弟不用擔心，這姑娘受的傷雖重，卻還有救。", -2, 1, 0, 0);
 talk(422, "真的，那就有勞程姑娘了。", -2, 0, 0, 0);
 darkscene();

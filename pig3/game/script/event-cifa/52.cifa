@@ -1,6 +1,6 @@
 join(30);
 modifyevent(16, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 SetStarState(27, 3);
-SetX50(0, GetRole(28, 120 / 2));
+SetX50(0, GetRole(28, 60));
 SetX50(0, GetX50(0) + 20);
-SetRole(28, 120 / 2, GetX50(0));
+SetRole(28, 60, GetX50(0));

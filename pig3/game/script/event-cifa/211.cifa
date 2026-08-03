@@ -128,7 +128,7 @@ ka211_build_line(slot, item, amount) {
     SetX50(2, GetX50(2) + 1000);
     SetX50(800 + slot, GetX50(2));
     getname(0, 1, item, GetX50(2), 0, 0);
-    string_length_x50(GetX50(2), 3, 0, 0, 0, 0);
+    stringlength(GetX50(2), 3, 0, 0, 0, 0);
     SetX50(8, 21);
     SetX50(8, GetX50(8) - GetX50(3));
     SetX50(180, MakeSpaces(GetX50(8)));

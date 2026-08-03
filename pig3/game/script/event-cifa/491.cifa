@@ -12,17 +12,17 @@ do {
         SetX50(1071, GetX50(1071) * 2);
         SetX50(1072, GetX50(1072) * 128);
         SetX50(1073, GetX50(1071) + GetX50(1072));
-        SetX50(1040, GetRole(GetX50(1000), 82 / 2));
-        SetX50(1041, GetRole(GetX50(1000), 84 / 2));
-        SetX50(1042, GetRole(GetX50(1000), 110 / 2));
-        SetX50(1043, GetRole(GetX50(1000), 86 / 2));
-        SetX50(1044, GetRole(GetX50(1000), 46 / 2));
+        SetX50(1040, GetRole(GetX50(1000), 41));
+        SetX50(1041, GetRole(GetX50(1000), 42));
+        SetX50(1042, GetRole(GetX50(1000), 55));
+        SetX50(1043, GetRole(GetX50(1000), 43));
+        SetX50(1044, GetRole(GetX50(1000), 23));
         if (GetX50(1044) >= 0) {
-            SetX50(1045, GetItem(GetX50(1044), 104 / 2));
+            SetX50(1045, GetItem(GetX50(1044), 52));
         }
-        SetX50(1046, GetRole(GetX50(1000), 48 / 2));
+        SetX50(1046, GetRole(GetX50(1000), 24));
         if (GetX50(1046) >= 0) {
-            SetX50(1047, GetItem(GetX50(1046), 104 / 2));
+            SetX50(1047, GetItem(GetX50(1046), 52));
             SetX50(1045, GetX50(1045) + GetX50(1047));
         }
         __cifa_pc_491 = 1;
@@ -58,8 +58,8 @@ do {
         SetX50(1022, GetMagic(GetX50(999), GetX50(1012) / 2));
         SetX50(1012, GetX50(1011) + 96);
         SetX50(1023, GetMagic(GetX50(999), GetX50(1012) / 2));
-        SetX50(1024, GetMagic(GetX50(999), 26 / 2));
-        SetX50(1025, GetMagic(GetX50(999), 24 / 2));
+        SetX50(1024, GetMagic(GetX50(999), 13));
+        SetX50(1025, GetMagic(GetX50(999), 12));
         SetX50(1001, getbattlecursorx());
         SetX50(1002, getbattlecursory());
         SetX50(1061, GetX50(1001) - GetX50(1020));
@@ -125,16 +125,16 @@ do {
         battlefieldget(1, 1004, 0, 1005, 0, 0);
         SetX50(1006, GetX50(1004) * 28);
         SetX50(1035, 0);
-        SetX50(1030, GetRole(GetX50(1005), 34 / 2));
-        SetX50(1032, GetRole(GetX50(1005), 110 / 2));
-        SetX50(1033, GetRole(GetX50(1005), 90 / 2));
-        SetX50(1034, GetRole(GetX50(1005), 48 / 2));
+        SetX50(1030, GetRole(GetX50(1005), 17));
+        SetX50(1032, GetRole(GetX50(1005), 55));
+        SetX50(1033, GetRole(GetX50(1005), 45));
+        SetX50(1034, GetRole(GetX50(1005), 24));
         if (GetX50(1034) >= 0) {
-            SetX50(1035, GetItem(GetX50(1034), 108 / 2));
+            SetX50(1035, GetItem(GetX50(1034), 54));
         }
-        SetX50(1036, GetRole(GetX50(1005), 46 / 2));
+        SetX50(1036, GetRole(GetX50(1005), 23));
         if (GetX50(1036) >= 0) {
-            SetX50(1037, GetItem(GetX50(1036), 108 / 2));
+            SetX50(1037, GetItem(GetX50(1036), 54));
             SetX50(1035, GetX50(1035) + GetX50(1037));
         }
         SetX50(1051, GetX50(1043) * 3);
@@ -185,7 +185,7 @@ do {
         __cifa_pc_491 = 14;
     }
     if (__cifa_pc_491 == 14) {
-        SetRole(GetX50(1005), 34 / 2, GetX50(1030));
+        SetRole(GetX50(1005), 17, GetX50(1030));
         if (1) {
             __cifa_pc_491 = 19;
         } else {
@@ -272,7 +272,7 @@ do {
     if (__cifa_pc_491 == 30) {
         battlefieldget(1, 1004, 0, 1005, 0, 0);
         SetX50(1006, GetX50(1004) * 28);
-        SetX50(1031, GetRole(GetX50(1005), 82 / 2));
+        SetX50(1031, GetRole(GetX50(1005), 41));
         SetX50(1080, GetX50(1022) + 0);
         if (GetX50(1031) > GetX50(1080)) {
             __cifa_pc_491 = 32;
@@ -294,7 +294,7 @@ do {
         __cifa_pc_491 = 33;
     }
     if (__cifa_pc_491 == 33) {
-        SetRole(GetX50(1005), 82 / 2, GetX50(1031));
+        SetRole(GetX50(1005), 41, GetX50(1031));
         UpdateAllScreen();
         if (GetX50(1080) < GetX50(1023)) {
             __cifa_pc_491 = 35;
@@ -318,7 +318,7 @@ do {
         if (GetX50(1040) >= GetX50(1041)) {
             SetX50(1040, GetX50(1041) + 0);
         }
-        SetRole(GetX50(1000), 82 / 2, GetX50(1040));
+        SetRole(GetX50(1000), 41, GetX50(1040));
         if (1) {
             __cifa_pc_491 = 41;
         } else {

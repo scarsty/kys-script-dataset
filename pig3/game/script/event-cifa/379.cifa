@@ -2,5 +2,5 @@ SetX50(2001, GetX50(28928) + 0);
 SetX50(2002, GetX50(28929) + 0);
 CallEvent(351, GetX50(2001), 2, 0, 0);
 if (GetX50(28931) == 1) {
-    SetRole(0, 126 / 2, GetX50(2002));
+    SetRole(0, 63, GetX50(2002));
 }

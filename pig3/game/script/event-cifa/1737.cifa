@@ -30,10 +30,10 @@ if (a!=1) {
     lightscene();
     exit();
 }
-SetX50(0, GetRole(166, 108 / 2));
+SetX50(0, GetRole(166, 54));
 SetX50(0, GetX50(0) + 8);
-SetRole(166, 108 / 2, GetX50(0));
-SetX50(1, GetRole(166, 112 / 2));
+SetRole(166, 54, GetX50(0));
+SetX50(1, GetRole(166, 56));
 if (GetX50(0) <= GetX50(1)) {
     talk(251, "哼，天堂有路你不走，地獄無門你闖進來，拿下！", -2, 0, 0, 0);
     talk(416, "快把我師妹放了！", -2, 1, 0, 0);

@@ -4,7 +4,7 @@ SetStarState(13, 3);
 if (InTeam(12)) {
     CallEvent(233, 12, 0, 0, 0);
     CallEvent(231, 12, 164, GetX50(28931), 0);
-    SetRole(13, 128 / 2, 164);
+    SetRole(13, 64, 164);
 }
 if (InTeam(8) && InTeam(44)) {
     CallEvent(233, 8, 0, 0, 0);

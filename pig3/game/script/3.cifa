@@ -1,0 +1,162 @@
+f0() {
+    __w_h_values = getscreensize();
+    w = __w_h_values[0];
+    h = __w_h_values[1];
+    clear();
+    showstringwithbox(100, 70, "输入人物序号");
+    a=enternumber(0,100,100,100,0);
+    clear();
+    drawrect(0,0,w,h,0,50);
+    showstatus(a);
+    pause();
+    clear();
+    drawrect(0,0,w,h,0,50);
+    showability(a);
+    pause();
+    trybattle(a);
+}
+f1() {
+    ask2fight(59);
+}
+f2() {
+    showstringwithbox(100, 70, "让哪个物品翻倍?");
+    i=0;
+    str = {};
+    while (i<200) {
+        item = getitemlistitem(i);
+        num = getitemlistamount(i);
+        if (num>0) {
+            str[i]=getnameasstring(1, item);
+        }
+        else {
+            break;
+        }
+        i=i+1;
+    }
+    a = menu(i, 100, 100, 150, str);
+    if (a>=0) {
+        item = getitemlistitem(a);
+        num = getitemlistamount(a);
+        AddItem(item, num);
+    }
+}
+f3() {
+    talk(16, 1, "下面你可以在5秒鐘之內移動鼠標，將會即時顯示鼠標的位置。*如果想中間退出的話，按任意的鍵即可。");
+    t = gettime();
+    clearbutton();
+    while (gettime() - t <= 5) {
+        x = getmousex();
+        y = getmousey();
+        clear();
+        showstring(100, 70, x+", " + to_string(y));
+        if (checkbutton() > 0) {
+            pause();
+            break;
+        }
+    }
+    clearbutton();
+    talk(17, 5, "演示完畢，給錢。");
+}
+f4() {
+    darkscene();
+    lightscene();
+    learnmagic(0, 17);
+}
+f5() {
+    if (n == 0) {
+        n = 0;
+    }
+    else {
+        n = n + 1;
+    }
+    if (n == 5) {
+        AddItem(1, 1);
+        n = 0;
+    }
+    else {
+        talk(0, 0, "一个空箱子。");
+    }
+}
+f6() {
+    join(50);
+}
+f7() {
+    showstringwithbox(100, 70, "吃哪个100次？");
+    i=0;
+    str = {};
+    while (i<200) {
+        item = getitemlistitem(i);
+        num = getitemlistamount(i);
+        if (num>0) {
+            str[i]=getnameasstring(1, item);
+        }
+        else {
+            break;
+        }
+        i=i+1;
+    }
+    a = menu(i, 100, 100, 150, str);
+    str = {};
+    i = 0;
+    while (i<6) {
+        num = getmember(i);
+        str[i]=getnameasstring(0, num);
+        i=i+1;
+    }
+    b = menu(i, 250, 100, 150, str);
+    b = getmember(b);
+    if (a>=0) {
+        item = getitemlistitem(a);
+        num = getitemlistamount(a);
+        i = 0;
+        while (i < 100) {
+            eatoneitem(b, item);
+            i = i + 1;
+        }
+    }
+}
+ask2fight(num) {
+    clear();
+    talk(num,"我可以为你找来一些江湖名人陪你过招，只不过要收取一定的费用。但打赢之后同样有奖励哦",-2,1,0,0);
+    clear();
+    showstringwithbox(100, 70, "你要跟谁打一架？");
+    i=1;
+    str = {};
+    l = {};
+    m=1;
+    while (i<=75) {
+        if (getrolepro(i,17) > 0) {
+            str[(m) - 1]=getnameasstring(0, i);
+            l[(m) - 1]=i;
+            m=m+1;
+        }
+        i=i+1;
+    }
+    a = menu(size(l), 100, 100, 150, str);
+    a=a+1;
+    if (a>=1) {
+        if !JudgeMoney(100,0,7) then
+        talk(num,"对不起，你没有足够的银子！",-2,1,0,0);
+        Clear();
+        return;
+    }
+    AddItemWithoutHint(174,-100);
+    if (!AskBattle(1,0)) {
+        return;
+    }
+    talk(a,sprintf("%s%s%s","在下Ｒ",getnameasstring(0, a),"Ｗ向少侠请教！"),-2,1,0,0);
+    clear();
+    setbattlepro(a,0,33);
+    if (TryBattle(0,0,1,1)) {
+        talk(a,"少侠武功高强，在下甘拜下风！",-2,1,0,0);
+        clear();
+        winmoney=random(100)+100;
+        AddItemWithoutHint(174,winmoney);
+    }
+    else {
+        talk(a,"真是太弱了，回去再练练吧！",-2,1,0,0);
+        clear();
+    }
+    setbattlepro(1,0,33);
+}
+}

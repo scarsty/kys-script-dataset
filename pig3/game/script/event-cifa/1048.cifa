@@ -16,31 +16,31 @@ SetX50(1003, GetX50(1003) * 2);
 SetX50(1003, GetX50(1003) + 36);
 SetX50(1021, GetMagic(GetX50(999), GetX50(1003) / 2));
 if (GetX50(1021) != 0) {
-    SetX50(1040, GetRole(GetX50(1000), 82 / 2));
-    SetX50(1041, GetRole(GetX50(1000), 84 / 2));
+    SetX50(1040, GetRole(GetX50(1000), 41));
+    SetX50(1041, GetRole(GetX50(1000), 42));
     CallEvent(1049, 0, 0, 0, 0);
-    SetX50(1043, GetRole(GetX50(1000), 86 / 2));
-    SetX50(1044, GetRole(GetX50(1000), 46 / 2));
+    SetX50(1043, GetRole(GetX50(1000), 43));
+    SetX50(1044, GetRole(GetX50(1000), 23));
     if (GetX50(1044) >= 0) {
-        SetX50(1045, GetItem(GetX50(1044), 104 / 2));
+        SetX50(1045, GetItem(GetX50(1044), 52));
     }
-    SetX50(1046, GetRole(GetX50(1000), 48 / 2));
+    SetX50(1046, GetRole(GetX50(1000), 24));
     if (GetX50(1046) >= 0) {
-        SetX50(1047, GetItem(GetX50(1046), 104 / 2));
+        SetX50(1047, GetItem(GetX50(1046), 52));
     }
     SetX50(1045, GetX50(1045) + GetX50(1047));
     SetX50(1035, 0);
     SetX50(1037, 0);
-    SetX50(1030, GetRole(GetX50(1005), 34 / 2));
+    SetX50(1030, GetRole(GetX50(1005), 17));
     CallEvent(1050, 0, 0, 0, 0);
-    SetX50(1033, GetRole(GetX50(1005), 90 / 2));
-    SetX50(1034, GetRole(GetX50(1005), 48 / 2));
+    SetX50(1033, GetRole(GetX50(1005), 45));
+    SetX50(1034, GetRole(GetX50(1005), 24));
     if (GetX50(1034) >= 0) {
-        SetX50(1035, GetItem(GetX50(1034), 108 / 2));
+        SetX50(1035, GetItem(GetX50(1034), 54));
     }
-    SetX50(1036, GetRole(GetX50(1005), 46 / 2));
+    SetX50(1036, GetRole(GetX50(1005), 23));
     if (GetX50(1036) >= 0) {
-        SetX50(1037, GetItem(GetX50(1036), 108 / 2));
+        SetX50(1037, GetItem(GetX50(1036), 54));
     }
     SetX50(1035, GetX50(1035) + GetX50(1037));
     CallEvent(1051, 0, 0, 0, 0);

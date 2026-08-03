@@ -34,4 +34,4 @@ SetStarState(74, 2);
 ShowTeammate(74, 68, 0);
 modifyevent(15, 39, 1, 0, 765, 0, 0, 7056, 7056, 7056, 0, -2, -2);
 AddItem(250, 1);
-SetRole(166, 72 / 2, 1);
+SetRole(166, 36, 1);

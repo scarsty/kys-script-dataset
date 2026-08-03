@@ -4,6 +4,6 @@ if (GetStarState(27) != 3) {
 leave(30);
 modifyevent(16, 30, 1, 0, 730, 0, 0, 7012, 7012, 7012, 0, -2, -2);
 SetStarState(27, 1);
-SetX50(0, GetRole(28, 120 / 2));
+SetX50(0, GetRole(28, 60));
 SetX50(0, GetX50(0) - 20);
-SetRole(28, 120 / 2, GetX50(0));
+SetRole(28, 60, GetX50(0));

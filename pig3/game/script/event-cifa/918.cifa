@@ -1,6 +1,6 @@
-SetX50(0, GetRole(166, 38 / 2));
+SetX50(0, GetRole(166, 19));
 SetX50(0, GetX50(0) + 1);
-SetRole(166, 38 / 2, GetX50(0));
+SetRole(166, 19, GetX50(0));
 if (GetX50(0) != 3) {
     exit();
 }

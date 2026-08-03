@@ -52,7 +52,7 @@ if (__cifa_pc_1126 == 2) {
     talk(92, "呵呵，不妨事，不妨事，少俠想喝，便喝罷。", -2, 0, 0, 0);
     darkscene();
     lightscene();
-    SetX50(0, GetRole(0, 80 / 2));
+    SetX50(0, GetRole(0, 40));
     if (GetX50(0) == 0) {
         __cifa_pc_1126 = 4;
     } else {
@@ -62,9 +62,9 @@ if (__cifa_pc_1126 == 2) {
 if (__cifa_pc_1126 == 3) {
     talk(422, "果然是好酒！", -2, 1, 0, 0);
     talk(92, "少俠內力不凡，佩服，佩服。", -2, 0, 0, 0);
-    SetX50(0, GetRole(0, 84 / 2));
+    SetX50(0, GetRole(0, 42));
     SetX50(0, GetX50(0) + 30);
-    SetRole(0, 84 / 2, GetX50(0));
+    SetRole(0, 42, GetX50(0));
     if (1) {
         __cifa_pc_1126 = 11;
     } else {
@@ -75,12 +75,12 @@ if (__cifa_pc_1126 == 4) {
     talk(420, "這酒……這酒裡放了什麼！啊……", -2, 1, 0, 0);
     talk(92, "呵呵，看來少俠的功夫還須錘鍊才是。", -2, 0, 0, 0);
     darkscene();
-    SetX50(0, GetRole(0, 36 / 2));
+    SetX50(0, GetRole(0, 18));
     SetX50(0, GetX50(0) - 50);
-    SetRole(0, 36 / 2, GetX50(0));
-    SetX50(0, GetRole(0, 40 / 2));
+    SetRole(0, 18, GetX50(0));
+    SetX50(0, GetRole(0, 20));
     SetX50(0, GetX50(0) + 5);
-    SetRole(0, 40 / 2, GetX50(0));
+    SetRole(0, 20, GetX50(0));
     lightscene();
     if (1) {
         __cifa_pc_1126 = 11;
@@ -90,7 +90,7 @@ if (__cifa_pc_1126 == 4) {
 }
 if (__cifa_pc_1126 == 5) {
     talk(93, "拿去罷。", -2, 1, 0, 0);
-    SetX50(0, GetRole(0, 80 / 2));
+    SetX50(0, GetRole(0, 40));
     if (GetX50(0) == 1) {
         __cifa_pc_1126 = 7;
     } else {
@@ -100,9 +100,9 @@ if (__cifa_pc_1126 == 5) {
 if (__cifa_pc_1126 == 6) {
     talk(422, "果然是好酒！", -2, 0, 0, 0);
     talk(93, "哼", -2, 1, 0, 0);
-    SetX50(0, GetRole(0, 84 / 2));
+    SetX50(0, GetRole(0, 42));
     SetX50(0, GetX50(0) + 30);
-    SetRole(0, 84 / 2, GetX50(0));
+    SetRole(0, 42, GetX50(0));
     if (1) {
         __cifa_pc_1126 = 11;
     } else {
@@ -112,12 +112,12 @@ if (__cifa_pc_1126 == 6) {
 if (__cifa_pc_1126 == 7) {
     talk(421, "這酒……這酒裡放了什麼！啊……", -2, 0, 0, 0);
     talk(93, "小子，這酒看來你是無福消受了。", -2, 1, 0, 0);
-    SetX50(0, GetRole(0, 36 / 2));
+    SetX50(0, GetRole(0, 18));
     SetX50(0, GetX50(0) - 50);
-    SetRole(0, 36 / 2, GetX50(0));
-    SetX50(0, GetRole(0, 40 / 2));
+    SetRole(0, 18, GetX50(0));
+    SetX50(0, GetRole(0, 20));
     SetX50(0, GetX50(0) + 5);
-    SetRole(0, 40 / 2, GetX50(0));
+    SetRole(0, 20, GetX50(0));
     __cifa_pc_1126 = 11;
 }
 if (__cifa_pc_1126 == 11) {
@@ -151,6 +151,6 @@ if (__cifa_pc_1126 == 11) {
     talk(412, "爺爺？難道是丁不三追來了。這老頭脾氣古怪，武功不弱，君子不處危地，我也走罷。", -2, 0, 0, 0);
     modifyevent(74, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
     modifyevent(68, 27, 1, 0, 1127, 0, 0, 8810, 8810, 8810, 0, -2, -2);
-    SetRole(166, 92 / 2, 1);
+    SetRole(166, 46, 1);
     exit();
 }

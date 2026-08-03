@@ -203,7 +203,7 @@ SetMissionState(40, 2);
 SetMissionState(43, 1);
 CallEvent(1422, 0, 0, 0, 0);
 lightscene();
-SetX50(0, GetRole(166, 74 / 2));
+SetX50(0, GetRole(166, 37));
 if (GetX50(0) != 1) {
     SetStarState(37, 1);
     ShowTeammate(37, 38, 0);

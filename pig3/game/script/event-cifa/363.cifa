@@ -1,8 +1,8 @@
-SetX50(0, GetRole(0, 8 / 2));
-SetRole(370, 8 / 2, GetX50(0));
-SetX50(0, GetRole(0, 10 / 2));
-SetRole(370, 10 / 2, GetX50(0));
-SetX50(0, GetRole(0, 12 / 2));
-SetRole(370, 12 / 2, GetX50(0));
-SetX50(0, GetRole(0, 14 / 2));
-SetRole(370, 14 / 2, GetX50(0));
+SetX50(0, GetRole(0, 4));
+SetRole(370, 4, GetX50(0));
+SetX50(0, GetRole(0, 5));
+SetRole(370, 5, GetX50(0));
+SetX50(0, GetRole(0, 6));
+SetRole(370, 6, GetX50(0));
+SetX50(0, GetRole(0, 7));
+SetRole(370, 7, GetX50(0));

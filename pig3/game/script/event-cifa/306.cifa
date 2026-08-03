@@ -36,5 +36,5 @@ modifyevent(2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 modifyevent(1, 1, 1, -2, 0, 0, 0, 7400, 7400, 7400, 0, -2, -2);
 modifyevent(1, 2, 0, -2, 0, 0, 307, 0, 0, 0, 0, -2, -2);
 modifyevent(1, 3, 0, -2, 0, 0, 307, 0, 0, 0, 0, -2, -2);
-SetSubmapInfo(2, 18 / 2, 1);
+SetSubmapInfo(2, 9, 1);
 setsceneposition2(49, 35);

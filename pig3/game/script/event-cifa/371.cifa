@@ -50,7 +50,7 @@ if (__cifa_pc_371 == 1) {
 }
 if (__cifa_pc_371 == 2) {
     SetX50(103, GetX50(101) + 266);
-    SetX50(104, GetItem(GetX50(103), 188 / 2));
+    SetX50(104, GetItem(GetX50(103), 94));
     if (GetX50(104) == 1) {
         __cifa_pc_371 = 6;
     } else {
@@ -58,7 +58,7 @@ if (__cifa_pc_371 == 2) {
     }
 }
 if (__cifa_pc_371 == 3) {
-    SetItem(GetX50(103), 188 / 2, 1);
+    SetItem(GetX50(103), 94, 1);
     SetX50(104, GetD(107, 0, 8));
     SetX50(104, GetX50(104) + 1);
     SetD(107, 0, 8, GetX50(104));

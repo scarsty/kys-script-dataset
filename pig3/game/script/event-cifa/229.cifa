@@ -1,5 +1,4 @@
 SetX50(0, GetTeam(GetX50(28928)));
-Debug(0, 0, 0, 0, 0, 0);
 if (GetX50(0) <= 200 && GetX50(0) >= 0) {
     if (GetX50(0) <= 82) {
         SetX50(0, GetX50(0) - 1);

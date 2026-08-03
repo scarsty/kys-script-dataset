@@ -1,18 +1,18 @@
 SetX50(0, 0);
 if (InTeam(85)) {
-    SetX50(0, GetRole(166, 110 / 2));
+    SetX50(0, GetRole(166, 55));
 }
 SetX50(1, 0);
 if (InTeam(84)) {
-    SetX50(1, GetRole(166, 112 / 2));
+    SetX50(1, GetRole(166, 56));
 }
 SetX50(2, GetX50(0) + GetX50(1));
 if (GetX50(2) == 0) {
-    SetRole(166, 116 / 2, 0);
+    SetRole(166, 58, 0);
     exit();
 }
 if (GetX50(0) >= GetX50(1)) {
-    SetRole(166, 116 / 2, 1);
+    SetRole(166, 58, 1);
     exit();
 }
-SetRole(166, 116 / 2, 2);
+SetRole(166, 58, 2);

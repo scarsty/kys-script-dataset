@@ -47,5 +47,5 @@ darkscene();
 modifyevent(73, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 leave(84);
 SetStarState(81, 0);
-SetRole(166, 114 / 2, 1);
+SetRole(166, 57, 1);
 lightscene();

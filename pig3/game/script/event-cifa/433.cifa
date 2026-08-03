@@ -4,12 +4,12 @@ SetX50(11, GetX50(28004) * GetX50(10));
 SetX50(11, GetX50(11) / 10);
 SetX50(28004, GetX50(28004) - GetX50(11));
 battlefieldget(1, 28001, 0, 12, 0, 0);
-SetX50(12, GetRole(GetX50(12), 34 / 2));
+SetX50(12, GetRole(GetX50(12), 17));
 SetX50(12, GetX50(12) - GetX50(11));
 if (GetX50(12) < 0) {
     SetX50(12, 0);
 }
-SetRole(GetX50(1), 34 / 2, GetX50(12));
+SetRole(GetX50(1), 17, GetX50(12));
 battlefieldget(1, 28001, 4, 13, 0, 0);
 battlefieldget(1, 28001, 6, 14, 0, 0);
 SetAnimationLayer(GetX50(13), GetX50(14), 1, 1, 1);

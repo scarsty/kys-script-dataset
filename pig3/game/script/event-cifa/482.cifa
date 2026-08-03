@@ -23,7 +23,7 @@ if (__cifa_pc_482 == 1) {
 }
 if (__cifa_pc_482 == 2) {
     battlefieldget(1, 28005, 0, 1000, 0, 0);
-    SetX50(1040, GetRole(GetX50(1005), 30 / 2));
+    SetX50(1040, GetRole(GetX50(1005), 15));
     if (GetX50(1040) > 20) {
         __cifa_pc_482 = 6;
     } else {
@@ -44,8 +44,8 @@ if (__cifa_pc_482 == 3) {
     }
 }
 if (__cifa_pc_482 == 4) {
-    SetX50(1007, GetRole(GetX50(1005), 34 / 2));
-    SetRole(GetX50(1005), 34 / 2, 0);
+    SetX50(1007, GetRole(GetX50(1005), 17));
+    SetRole(GetX50(1005), 17, 0);
     SetX50(1008, GetX50(28005) * 28);
     SetX50(1009, GetX50(1009) + GetX50(1007));
     UpdateAllScreen();

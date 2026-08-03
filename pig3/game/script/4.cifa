@@ -1,0 +1,179 @@
+f1() {
+    m={};
+    for (i = 1; i <= 20000; i = i + 1) {
+        m[(i) - 1] = 1;
+    }
+    for (i = 2; i <= 20000; i = i + 1) {
+        if (m[(i) - 1] == 1) {
+            for (j = i * 2; j <= 20000, i; j = j + 1) {
+                m[(j) - 1] = 0;
+            }
+        }
+    }
+    str = " ";
+    for (i = 2; i <= 20000; i = i + 1) {
+        if (m[(i) - 1] == 1) {
+            str = str+ " " + to_string(i);
+        }
+    }
+    talk(1,str,1);
+}
+f1() {
+    clear();
+    setrolepro(enternumber(0,200, 200, 200, 0), 0, 25);
+    for (i = 382; i <= 395; i = i + 1) {
+        setmagicpro(100, i, 16);
+    }
+}
+f3() {
+    talk(16, 1, "下面你可以在5秒鐘之內移動鼠標，將會即時顯示鼠標的位置。**如果想中間退出的話，按任意的鍵即可。");
+    t = gettime();
+    clearbutton();
+    while (gettime() - t <= 5) {
+        x = getmousex();
+        y = getmousey();
+        clear();
+        showstring(100, 70, x+", " + to_string(y));
+        if (checkbutton() > 0) {
+            pause();
+            break;
+        }
+    }
+    clearbutton();
+    talk(17, 0, "演示完畢，給錢。","叫我刘德华");
+    talk("演示完畢，給錢!!!!!!!!!!!!!!!!。", 17, 0);
+    talk(2, 17, 10000);
+}
+f4() {
+    execevent(574);
+}
+f6() {
+    allleave();
+    join(226);
+    join(280);
+    join(181);
+    join(882);
+    SetAttribute(181, 1, 60, 1, 60);
+    SetAttribute(226, 1, 60, 1, 60);
+    SetAttribute(280, 1, 60, 1, 60);
+    SetAttribute(882, 1, 60, 1, 60);
+}
+f9() {
+    rest();
+    trybattle(294);
+}
+f11() {
+    learnmagic(0, 278, 10);
+}
+f12() {
+    setrolepro(4, 892, 25);
+}
+f13() {
+    setrolepro(824, 6, 18);
+    setrolepro(328, 6, 42);
+    setrolepro(90, 6, 43);
+    setrolepro(70, 6, 44);
+    setrolepro(115, 6, 45);
+    setrolepro(0, 6, 46);
+    setrolepro(0, 6, 47);
+    setrolepro(0, 6, 48);
+    setrolepro(10, 6, 50);
+    setrolepro(10, 6, 51);
+    setrolepro(40, 6, 52);
+    setrolepro(10, 6, 53);
+    setrolepro(30, 6, 54);
+    setrolepro(50, 6, 58);
+    setrolepro(1, 6, 15);
+}
+f14() {
+    rest();
+    setbattlepro(881,297,34);
+    setbattlepro(-1,297,32);
+    setbattlepro(-1,297,33);
+    trybattle(297);
+}
+f15() {
+    rest();
+    trybattle(enternumber(0,298,100,100,0));
+}
+f16() {
+    rest();
+    trybattle(290);
+}
+f17() {
+    AddItem(204,500);
+}
+f18() {
+    i = 1;
+    while (1) {
+        talk(readtalkasstring(i));
+        if (i<2) {
+            talk(inteam(0));
+            else if (i < 4) {
+                talk("medium");
+            }
+            else {
+                talk("big");
+            }
+            i = i + 1;
+            if (i > 5) {
+                break;
+            }
+        }
+    }
+    f19() {
+        showstringwithbox(10, 10, "請選擇材料");
+        a=menu(3, 10, 40, 100, {"靖鐵","沖金","雲石"});
+        if (a==-1) {
+            exit();
+        }
+        else {
+            b=a+211;
+            c=haveitem(b);
+            if (c==0) {
+                talk(86, "你沒有該材料。", -2, 0, 0, 0);
+                exit();
+            }
+            else {
+                showstringwithbox(10, 10, "請選擇花草");
+                z=menu(6, 10, 40, 100, {"芙蓉","紫薇","霜菊","嫣茶","芷蘭","盈竹"});
+                if (z==-1) {
+                    exit();
+                }
+                else {
+                    y=z+214;
+                    x=haveitem(y);
+                    if (x==0) {
+                        talk(86, "你沒有該花草。", -2, 0, 0, 0);
+                        d=getnameasstring(1,b);
+                        showstringwithbox(10, 10, "現在只有" + to_string(d)"這種材料，是否製作？");
+                        f=menu(2, 10, 40, 100, {"是","否"});
+                        if (f!=0) {
+                            exit();
+                        }
+                    }
+                    else {
+                        AddItemWithoutHint(b,-1);
+                        AddItemWithoutHint(y,-1);
+                        g=getitempro(b,42);
+                        h=getitempro(y,42);
+                        i=g+h;
+                        j=187;
+                        while (j<203) {
+                            j=j+1;
+                            k=getitempro(j,42);
+                            if (k==i) {
+                                AddItem(j,50);
+                                exit();
+                            }
+                        }
+                        AddItem(205,1);
+                    }
+                }
+            }
+        }
+        exit();
+    }
+    f20() {
+        setitemintro(0, "一张藏宝图，好像已经被撕毁");
+    }

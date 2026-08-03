@@ -52,9 +52,9 @@ if (GetX50(28931) != 1) {
     modifyevent(25, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
     modifyevent(25, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
     modifyevent(25, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    SetX50(0, GetRole(166, 110 / 2));
+    SetX50(0, GetRole(166, 55));
     SetX50(0, GetX50(0) + 10);
-    SetRole(166, 110 / 2, GetX50(0));
+    SetRole(166, 55, GetX50(0));
     lightscene();
     exit();
 }
@@ -97,7 +97,7 @@ darkscene();
 modifyevent(25, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 modifyevent(25, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 modifyevent(25, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-SetX50(0, GetRole(166, 112 / 2));
+SetX50(0, GetRole(166, 56));
 SetX50(0, GetX50(0) + 5);
-SetRole(166, 112 / 2, GetX50(0));
+SetRole(166, 56, GetX50(0));
 lightscene();

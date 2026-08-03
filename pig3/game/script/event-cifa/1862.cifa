@@ -5,15 +5,15 @@ if (a<=0) {
 }
 else {
     darkscene();
-    setscenemappro(4324*2,68,1,41,34);
-    setscenemappro(3560*2,68,1,41,33);
-    setscenemappro(1260*2,68,1,42,34);
-    setscenemappro(1260*2,68,1,42,33);
-    setscenemappro(1260*2,68,1,41,32);
-    setscenemappro(2596*2,68,1,43,33);
-    setscenemappro(3043*2,68,1,42,31);
-    setscenemappro(3186*2,68,1,43,35);
-    setscenemappro(3021*2,68,1,41,36);
+    setscenemappro(8648,68,1,41,34);
+    setscenemappro(7120,68,1,41,33);
+    setscenemappro(2520,68,1,42,34);
+    setscenemappro(2520,68,1,42,33);
+    setscenemappro(2520,68,1,41,32);
+    setscenemappro(5192,68,1,43,33);
+    setscenemappro(6086,68,1,42,31);
+    setscenemappro(6372,68,1,43,35);
+    setscenemappro(6042,68,1,41,36);
     setsceneface(3);
     lightscene();
     talk(0, "鐺鐺擋鐺鐺", -1, 1, 1, 0);

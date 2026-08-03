@@ -56,7 +56,7 @@ SetRoleFace(0);
 SetStarState(25, 5);
 lightscene();
 talk(416, "石萬嗔，丁春秋，你們受死吧！", -2, 1, 0, 0);
-SetX50(0, GetRole(166, 102 / 2));
+SetX50(0, GetRole(166, 51));
 if (GetX50(0) != 1) {
     talk(129, "喂，蛤蟆王，快出來。", -2, 0, 0, 0);
     talk(244, "誰叫我？誰叫我！", -2, 1, 0, 0);

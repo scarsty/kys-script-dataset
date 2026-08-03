@@ -1,4 +1,4 @@
-SetX50(0, GetRole(0, 30 / 2));
+SetX50(0, GetRole(0, 15));
 SetX50(1, Random50(GetX50(0)));
 SetX50(0, Random50(GetX50(0)));
 SetX50(0, GetX50(1) + GetX50(0));

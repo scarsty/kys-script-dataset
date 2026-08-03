@@ -85,9 +85,9 @@ if (GetX50(28931) == 1) {
     modifyevent(15, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
     modifyevent(15, 96, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
     modifyevent(15, 93, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    SetX50(0, GetRole(166, 108 / 2));
+    SetX50(0, GetRole(166, 54));
     SetX50(0, GetX50(0) + 7);
-    SetRole(166, 108 / 2, GetX50(0));
+    SetRole(166, 54, GetX50(0));
     lightscene();
     exit();
 }
@@ -155,6 +155,6 @@ modifyevent(15, 94, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 modifyevent(25, 16, 0, 0, 0, 0, 1748, 0, 0, 0, 0, -2, -2);
 lightscene();
 talk(413, "這……我……她……還是去大功坊看看吧……", -2, 0, 0, 0);
-SetX50(0, GetRole(166, 110 / 2));
+SetX50(0, GetRole(166, 55));
 SetX50(0, GetX50(0) + 5);
-SetRole(166, 110 / 2, GetX50(0));
+SetRole(166, 55, GetX50(0));

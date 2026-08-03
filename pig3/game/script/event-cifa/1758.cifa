@@ -9,9 +9,9 @@ if (!TryBattle(283)) {
     lightscene();
     exit();
 }
-SetX50(0, GetRole(0, 146 / 2));
+SetX50(0, GetRole(0, 73));
 SetX50(0, GetX50(0) + 100);
-SetRole(0, 146 / 2, GetX50(0));
+SetRole(0, 73, GetX50(0));
 lightscene();
 talk(226, "天亦有時盡，人亦有時終……", "葵花太監", 0, 0, 0);
 talk(226, "武功……終也有帶不來的東西。", "林遠圖", 0, 0, 0);

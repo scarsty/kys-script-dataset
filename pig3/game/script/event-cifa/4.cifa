@@ -21,12 +21,12 @@ if (InTeam(31) && InTeam(45) && InTeam(69) && InTeam(84)) {
     CallEvent(233, 84, 0, 0, 0);
     CallEvent(231, 84, 177, GetX50(28931), 0);
 }
-SetX50(0, GetRole(1, 88 / 2));
+SetX50(0, GetRole(1, 44));
 SetX50(0, GetX50(0) + 30);
-SetRole(1, 88 / 2, GetX50(0));
-SetX50(0, GetRole(1, 120 / 2));
+SetRole(1, 44, GetX50(0));
+SetX50(0, GetRole(1, 60));
 SetX50(0, GetX50(0) + 20);
-SetRole(1, 120 / 2, GetX50(0));
-SetX50(0, GetRole(1, 116 / 2));
+SetRole(1, 60, GetX50(0));
+SetX50(0, GetRole(1, 58));
 SetX50(0, GetX50(0) + 10);
-SetRole(1, 116 / 2, GetX50(0));
+SetRole(1, 58, GetX50(0));

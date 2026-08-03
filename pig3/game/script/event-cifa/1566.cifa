@@ -53,7 +53,7 @@ if (__cifa_pc_1566 == 0) {
     SetX50(100, GetKey());
     RoleEnding(33, 33, GetX50(7033));
     RoleEnding(34, 9, GetX50(7034));
-    SetX50(2, GetRole(166, 118 / 2));
+    SetX50(2, GetRole(166, 59));
     if (GetX50(2) == 1) {
         __cifa_pc_1566 = 2;
     } else {
@@ -169,7 +169,7 @@ if (__cifa_pc_1566 == 3) {
     RoleEnding(GetX50(0), 66, GetX50(1));
     SetX50(0, GetX50(0) + 1);
     SetX50(1, GetX50(1) + 1);
-    SetX50(2, GetRole(166, 118 / 2));
+    SetX50(2, GetRole(166, 59));
     if (GetX50(2) == 2) {
         __cifa_pc_1566 = 5;
     } else {
@@ -245,7 +245,7 @@ if (__cifa_pc_1566 == 6) {
     SetX50(100, GetKey());
     SetX50(0, GetX50(0) + 1);
     SetX50(1, GetX50(1) + 1);
-    SetX50(2, GetRole(166, 118 / 2));
+    SetX50(2, GetRole(166, 59));
     if (GetX50(2) == 3) {
         __cifa_pc_1566 = 8;
     } else {
@@ -310,7 +310,7 @@ if (__cifa_pc_1566 == 9) {
     RoleEnding(GetX50(0), 369, GetX50(1));
     SetX50(0, GetX50(0) + 1);
     SetX50(1, GetX50(1) + 1);
-    SetX50(2, GetRole(166, 62 / 2));
+    SetX50(2, GetRole(166, 31));
     if (GetX50(2) == 1) {
         __cifa_pc_1566 = 11;
     } else {
@@ -371,7 +371,7 @@ if (__cifa_pc_1566 == 12) {
     SetX50(1, GetX50(1) + 1);
     RoleEnding(GetX50(0), 432, GetX50(1));
     SetX50(100, GetKey());
-    SetX50(0, GetRole(166, 118 / 2));
+    SetX50(0, GetRole(166, 59));
     if (GetX50(0) != 0) {
         if (GetX50(0) != 1) {
             if (GetX50(0) != 2) {

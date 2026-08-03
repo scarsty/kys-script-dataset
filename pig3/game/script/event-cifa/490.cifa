@@ -10,14 +10,14 @@ do {
         SetX50(1011, GetX50(1084) * 2);
         SetX50(1085, GetX50(1082) - 20);
         SetX50(999, GetRole(GetX50(1000), GetX50(1085) / 2));
-        SetX50(1070, GetMagic(GetX50(999), 16 / 2));
-        SetX50(1071, GetMagic(GetX50(999), 18 / 2));
-        SetX50(1072, GetMagic(GetX50(999), 26 / 2));
-        SetX50(1073, GetMagic(GetX50(999), 34 / 2));
+        SetX50(1070, GetMagic(GetX50(999), 8));
+        SetX50(1071, GetMagic(GetX50(999), 9));
+        SetX50(1072, GetMagic(GetX50(999), 13));
+        SetX50(1073, GetMagic(GetX50(999), 17));
         SetX50(1045, 0);
         SetX50(1054, GetX50(28005) * 28);
         battlefieldget(1, 28005, 2, 1074, 0, 0);
-        SetX50(1040, GetRole(GetX50(1000), 108 / 2));
+        SetX50(1040, GetRole(GetX50(1000), 54));
         SetX50(1012, GetX50(1011) + 76);
         SetX50(1020, GetMagic(GetX50(999), GetX50(1012) / 2));
         SetX50(1091, GetItemAmount(GetX50(1070)));
@@ -96,7 +96,7 @@ do {
     if (__cifa_pc_490 == 9) {
         battlefieldget(1, 1004, 0, 1005, 0, 0);
         SetX50(1006, GetX50(1004) * 28);
-        SetX50(1030, GetRole(GetX50(1005), 34 / 2));
+        SetX50(1030, GetRole(GetX50(1005), 17));
         SetX50(1051, Random50(5));
         SetX50(1051, GetX50(1051) + GetX50(1021));
         SetX50(1053, GetX50(1040) * 2);
@@ -125,7 +125,7 @@ do {
         __cifa_pc_490 = 12;
     }
     if (__cifa_pc_490 == 12) {
-        SetRole(GetX50(1005), 34 / 2, GetX50(1030));
+        SetRole(GetX50(1005), 17, GetX50(1030));
         if (1) {
             __cifa_pc_490 = 17;
         } else {
@@ -220,8 +220,8 @@ do {
     if (__cifa_pc_490 == 29) {
         battlefieldget(1, 1004, 0, 1005, 0, 0);
         SetX50(1006, GetX50(1004) * 28);
-        SetX50(1075, GetRole(GetX50(1005), 40 / 2));
-        SetX50(1076, GetRole(GetX50(1005), 98 / 2));
+        SetX50(1075, GetRole(GetX50(1005), 20));
+        SetX50(1076, GetRole(GetX50(1005), 49));
         SetX50(1050, GetX50(1073) - GetX50(1076));
         if (GetX50(1050) < 0) {
             SetX50(1050, 0);
@@ -231,7 +231,7 @@ do {
             SetX50(1075, 999);
         }
         UpdateAllScreen();
-        SetRole(GetX50(1005), 40 / 2, GetX50(1075));
+        SetRole(GetX50(1005), 20, GetX50(1075));
         if (1) {
             __cifa_pc_490 = 33;
         } else {

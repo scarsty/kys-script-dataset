@@ -1,4 +1,4 @@
-SetX50(0, GetRole(0, 88 / 2));
+SetX50(0, GetRole(0, 44));
 if (GetX50(0) >= 120) {
     talk(0, "＜好高的牆，看我的輕功！＞", -2, 0, 0, 0);
     darkscene();

@@ -6,7 +6,7 @@ SetX50(203, getsceneface());
 SetX50(205, GetD(GetX50(200), 0, 8));
 SetX50(206, GetD(GetX50(200), 0, 7));
 if (GetX50(203) == GetX50(205)) {
-    SetX50(207, GetX50(203) * 14 + 5014);
+    SetX50(207, GetX50(203) * 5028);
     if (GetX50(206) == GetX50(207)) {
         SetX50(206, GetX50(206) - 12);
     }
@@ -15,7 +15,7 @@ if (GetX50(203) == GetX50(205)) {
     UpdateAllScreen();
 } else {
     SetD(GetX50(200), 0, 8, GetX50(203));
-    SetX50(207, GetX50(203) * 14 + 5004);
+    SetX50(207, GetX50(203) * 5018);
     SetD(GetX50(200), 0, 7, GetX50(207));
     UpdateAllScreen();
 }
@@ -60,7 +60,7 @@ SetX50(213, GetX50(212) / 50);
 SetX50(214, (GetX50(211) - GetX50(210)) / GetX50(213) - 1);
 SetX50(215, 0);
 do {
-    SetX50(216, GetX50(215) * 5 + 35);
+    SetX50(216, GetX50(215) * 40);
     if (GetX50(215) <= GetX50(214)) {
         DrawPicture(0, 4612, GetX50(216), 180);
         SetX50(215, GetX50(215) + 1);

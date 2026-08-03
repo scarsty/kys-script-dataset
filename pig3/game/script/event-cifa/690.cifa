@@ -10,13 +10,13 @@ if (HaveItem(72)) {
         SetD(85, 1, 2, 694);
         SetD(85, 2, 2, 695);
         SetD(85, 5, 4, 696);
-        SetRole(166, 40 / 2, 1);
+        SetRole(166, 20, 1);
         AddItem(72, -1);
-        SetX50(0, GetItem(72, 76 / 2));
+        SetX50(0, GetItem(72, 38));
         if (GetX50(0) != -1) {
-            SetRole(GetX50(0), 122 / 2, -1);
-            SetRole(GetX50(0), 124 / 2, 0);
-            SetItem(72, 76 / 2, -1);
+            SetRole(GetX50(0), 61, -1);
+            SetRole(GetX50(0), 62, 0);
+            SetItem(72, 38, -1);
         }
         modifyevent(57, 66, 1, 0, 1620, 0, 0, 8566, 8566, 8566, 0, -2, -2);
         exit();

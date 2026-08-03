@@ -4,18 +4,18 @@ SetX50(202, getscenex());
 SetX50(203, GetS(GetX50(200), 3, GetX50(201), GetX50(202)));
 SetX50(204, GetD(GetX50(200), GetX50(203), 7));
 SetX50(204, GetX50(204) * -1);
-SetSubmapInfo(GetX50(200), 16 / 2, GetX50(204));
-SetSubmapInfo(GetX50(200), 44 / 2, GetX50(201));
-SetSubmapInfo(GetX50(200), 46 / 2, GetX50(202));
+SetSubmapInfo(GetX50(200), 8, GetX50(204));
+SetSubmapInfo(GetX50(200), 22, GetX50(201));
+SetSubmapInfo(GetX50(200), 23, GetX50(202));
 SetX50(205, GetD(GetX50(200), GetX50(203), 8));
 SetX50(206, GetX50(205) / 100);
 SetX50(207, GetX50(205) % 100);
-SetX50(208, GetSubmapInfo(GetX50(200), 20 / 2));
-SetX50(209, GetSubmapInfo(GetX50(200), 22 / 2));
+SetX50(208, GetSubmapInfo(GetX50(200), 10));
+SetX50(209, GetSubmapInfo(GetX50(200), 11));
 if (GetX50(208) <= 0 && GetX50(209) <= 0) {
-    SetSubmapInfo(GetX50(204), 48 / 2, GetX50(206));
-    SetSubmapInfo(GetX50(204), 50 / 2, GetX50(207));
+    SetSubmapInfo(GetX50(204), 24, GetX50(206));
+    SetSubmapInfo(GetX50(204), 25, GetX50(207));
     exit();
 }
-SetSubmapInfo(GetX50(204), 28 / 2, GetX50(206));
-SetSubmapInfo(GetX50(204), 30 / 2, GetX50(207));
+SetSubmapInfo(GetX50(204), 14, GetX50(206));
+SetSubmapInfo(GetX50(204), 15, GetX50(207));

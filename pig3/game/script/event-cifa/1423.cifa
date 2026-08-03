@@ -16,7 +16,7 @@ if (GetStarState(43) != 0) {
     modifyevent(15, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 }
 SetX50(0, GetD(95, 141, 2));
-SetRole(166, 76 / 2, GetX50(0));
+SetRole(166, 38, GetX50(0));
 modifyevent(95, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 modifyevent(95, 5, 1, 0, 1538, 0, 0, 5324, 5324, 5324, 0, -2, -2);
 if (GetStarState(41) != 0) {
@@ -25,7 +25,7 @@ if (GetStarState(41) != 0) {
     modifyevent(15, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 }
 SetX50(0, GetD(95, 143, 2));
-SetRole(166, 78 / 2, GetX50(0));
+SetRole(166, 39, GetX50(0));
 modifyevent(95, 143, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 modifyevent(83, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 modifyevent(83, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
@@ -43,7 +43,7 @@ if (GetStarState(46) != 0) {
     modifyevent(15, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 }
 SetX50(0, GetD(47, 1, 2));
-SetRole(166, 80 / 2, GetX50(0));
+SetRole(166, 40, GetX50(0));
 modifyevent(47, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 modifyevent(95, 137, 1, 0, 1539, 0, 0, 7292, 7292, 7292, 0, -2, -2);
 if (GetStarState(61) != 0) {
@@ -52,7 +52,7 @@ if (GetStarState(61) != 0) {
     modifyevent(15, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 }
 SetX50(0, GetD(3, 39, 2));
-SetRole(166, 82 / 2, GetX50(0));
+SetRole(166, 41, GetX50(0));
 modifyevent(3, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 modifyevent(95, 4, 1, 0, 1540, 0, 0, 7308, 7308, 7308, 0, -2, -2);
 if (GetStarState(69) != 0) {
@@ -61,7 +61,7 @@ if (GetStarState(69) != 0) {
     modifyevent(15, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 }
 SetX50(0, GetD(62, 4, 2));
-SetRole(166, 84 / 2, GetX50(0));
+SetRole(166, 42, GetX50(0));
 modifyevent(62, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 modifyevent(95, 138, 1, 0, 1541, 0, 0, 7304, 7304, 7304, 0, -2, -2);
 if (GetStarState(51) != 0) {
@@ -70,7 +70,7 @@ if (GetStarState(51) != 0) {
     modifyevent(15, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 }
 SetX50(0, GetD(19, 30, 2));
-SetRole(166, 86 / 2, GetX50(0));
+SetRole(166, 43, GetX50(0));
 modifyevent(19, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 modifyevent(95, 3, 1, 0, 1542, 0, 0, 7296, 7296, 7296, 0, -2, -2);
 if (GetStarState(60) != 0) {
@@ -79,6 +79,6 @@ if (GetStarState(60) != 0) {
     modifyevent(15, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 }
 SetX50(0, GetD(39, 3, 2));
-SetRole(166, 88 / 2, GetX50(0));
+SetRole(166, 44, GetX50(0));
 modifyevent(39, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 modifyevent(95, 139, 1, 0, 1543, 0, 0, 7302, 7302, 7302, 0, -2, -2);

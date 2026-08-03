@@ -1,7 +1,7 @@
 __cifa_pc_1571 = 0;
 if (__cifa_pc_1571 == 0) {
     SetX50(8000, 1);
-    SetX50(9000, GetRole(116, 118 / 2));
+    SetX50(9000, GetRole(116, 59));
     SetX50(7000, 15374);
     SetX50(7000, GetX50(7000) + GetX50(9000));
     SetX50(8001, 1);
@@ -11,7 +11,7 @@ if (__cifa_pc_1571 == 0) {
     SetX50(8003, 1);
     SetX50(7003, 13372);
     SetX50(8004, 1);
-    SetX50(0, GetRole(166, 68 / 2));
+    SetX50(0, GetRole(166, 34));
     if (GetX50(0) == 1) {
         __cifa_pc_1571 = 2;
     } else {
@@ -97,7 +97,7 @@ if (__cifa_pc_1571 == 12) {
     SetX50(7014, 13388);
     SetX50(7015, 13389);
     SetX50(7016, 13390);
-    SetX50(0, GetRole(166, 104 / 2));
+    SetX50(0, GetRole(166, 52));
     if (GetX50(0) == 0) {
         __cifa_pc_1571 = 16;
     } else {
@@ -105,7 +105,7 @@ if (__cifa_pc_1571 == 12) {
     }
 }
 if (__cifa_pc_1571 == 13) {
-    SetX50(0, GetRole(166, 62 / 2));
+    SetX50(0, GetRole(166, 31));
     if (GetX50(0) == 1) {
         __cifa_pc_1571 = 15;
     } else {
@@ -129,7 +129,7 @@ if (__cifa_pc_1571 == 15) {
     }
 }
 if (__cifa_pc_1571 == 16) {
-    SetX50(0, GetRole(166, 62 / 2));
+    SetX50(0, GetRole(166, 31));
     if (GetX50(0) == 1) {
         __cifa_pc_1571 = 18;
     } else {

@@ -1,9 +1,9 @@
 SetMainMapPosition(143, 371);
-SetSubmapInfo(83, 28 / 2, 52);
-SetSubmapInfo(83, 30 / 2, 34);
-SetSubmapInfo(83, 32 / 2, 57);
-SetSubmapInfo(83, 38 / 2, 34);
-SetSubmapInfo(83, 34 / 2, 57);
-SetSubmapInfo(83, 40 / 2, 34);
-SetSubmapInfo(83, 36 / 2, 57);
-SetSubmapInfo(83, 42 / 2, 34);
+SetSubmapInfo(83, 14, 52);
+SetSubmapInfo(83, 15, 34);
+SetSubmapInfo(83, 16, 57);
+SetSubmapInfo(83, 19, 34);
+SetSubmapInfo(83, 17, 57);
+SetSubmapInfo(83, 20, 34);
+SetSubmapInfo(83, 18, 57);
+SetSubmapInfo(83, 21, 34);

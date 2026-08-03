@@ -27,9 +27,9 @@ if (!TryBattle(284)) {
     lightscene();
     exit();
 }
-SetX50(0, GetRole(0, 146 / 2));
+SetX50(0, GetRole(0, 73));
 SetX50(0, GetX50(0) + 100);
-SetRole(0, 146 / 2, GetX50(0));
+SetRole(0, 73, GetX50(0));
 lightscene();
 talk(262, "原來……你我都錯了。", -2, 0, 0, 0);
 talk(263, "你我本都明白。", -2, 0, 0, 0);

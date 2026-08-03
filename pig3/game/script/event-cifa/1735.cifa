@@ -19,8 +19,8 @@ modifyevent(16, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 modifyevent(16, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 SetStarState(1, 2);
 SetStarState(2, 2);
-SetX50(0, GetRole(166, 110 / 2));
-SetX50(1, GetRole(166, 112 / 2));
+SetX50(0, GetRole(166, 55));
+SetX50(1, GetRole(166, 56));
 if (GetX50(0) >= GetX50(1)) {
     modifyevent(15, 69, 0, 0, 0, 0, 0, 7314, 7314, 7314, 0, -2, -2);
     lightscene();

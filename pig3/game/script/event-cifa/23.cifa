@@ -5,7 +5,7 @@ leave(12);
 modifyevent(16, 17, 1, 0, 712, 0, 0, 6068, 6068, 6068, 0, -2, -2);
 SetStarState(12, 1);
 CallEvent(232, 12, 164, 0, 0);
-SetRole(13, 128 / 2, 25);
+SetRole(13, 64, 25);
 CallEvent(232, 11, 174, 0, 0);
 CallEvent(232, 12, 174, 0, 0);
 CallEvent(232, 76, 174, 0, 0);

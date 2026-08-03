@@ -36,7 +36,7 @@ SetMissionState(28, 1);
 SetMissionState(27, 1);
 CallEvent(1390, 0, 0, 0, 0);
 openscene(83);
-SetX50(0, GetRole(166, 68 / 2));
+SetX50(0, GetRole(166, 34));
 if (GetX50(0) != 1) {
     modifyevent(97, 32, 0, 0, 0, 0, 0, 8808, 8808, 8808, 0, -2, -2);
     modifyevent(97, 31, 0, 0, 0, 0, 0, 5152, 5152, 5152, 0, -2, -2);

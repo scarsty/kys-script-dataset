@@ -37,9 +37,9 @@ if (__cifa_pc_845 == 1) {
 }
 if (__cifa_pc_845 == 2) {
     if (GetX50(28931) == 2) {
-        SetRole(166, 42 / 2, 3);
+        SetRole(166, 21, 3);
         if (!TryBattle(91)) {
-            SetRole(166, 42 / 2, 4);
+            SetRole(166, 21, 4);
         }
         lightscene();
         talk(0, "道長好快的劍！", -2, 0, 0, 0);

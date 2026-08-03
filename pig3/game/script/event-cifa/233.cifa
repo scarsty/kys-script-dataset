@@ -1,4 +1,4 @@
-SetX50(0, GetRole(GetX50(28928), 30 / 2));
+SetX50(0, GetRole(GetX50(28928), 15));
 SetX50(1, GetX50(0) / 5);
 if (GetX50(1) > 10) {
     SetX50(1, 10);

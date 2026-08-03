@@ -1,2 +1,2 @@
-SetSubmapInfo(81, 28 / 2, 38);
-SetSubmapInfo(81, 30 / 2, 58);
+SetSubmapInfo(81, 14, 38);
+SetSubmapInfo(81, 15, 58);

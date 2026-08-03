@@ -1,16 +1,16 @@
-SetX50(1, GetRole(GetX50(28928), 36 / 2));
-SetX50(2, GetRole(GetX50(28928), 34 / 2));
+SetX50(1, GetRole(GetX50(28928), 18));
+SetX50(2, GetRole(GetX50(28928), 17));
 SetX50(3, GetX50(1) / 5);
 SetX50(2, GetX50(2) + GetX50(3));
 if (GetX50(2) > GetX50(1)) {
     SetX50(2, GetX50(1) + 0);
 }
-SetRole(GetX50(28928), 34 / 2, GetX50(2));
-SetX50(1, GetRole(GetX50(28928), 84 / 2));
-SetX50(2, GetRole(GetX50(28928), 82 / 2));
+SetRole(GetX50(28928), 17, GetX50(2));
+SetX50(1, GetRole(GetX50(28928), 42));
+SetX50(2, GetRole(GetX50(28928), 41));
 SetX50(3, GetX50(1) / 20);
 SetX50(2, GetX50(2) + GetX50(3));
 if (GetX50(2) > GetX50(1)) {
     SetX50(2, GetX50(1) + 0);
 }
-SetRole(GetX50(28928), 82 / 2, GetX50(2));
+SetRole(GetX50(28928), 41, GetX50(2));

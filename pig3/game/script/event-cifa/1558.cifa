@@ -120,5 +120,5 @@ modifyevent(123, 5, 0, 0, 0, 0, 1564, 0, 0, 0, 0, -2, -2);
 modifyevent(123, 4, 0, 0, 0, 0, 1564, 0, 0, 0, 0, -2, -2);
 SetMissionState(48, 1);
 lightscene();
-SetX50(0, GetRole(166, 100 / 2));
+SetX50(0, GetRole(166, 50));
 getx50(0) < 108;

@@ -1,6 +1,6 @@
-SetX50(0, GetRole(166, 30 / 2));
+SetX50(0, GetRole(166, 15));
 SetX50(0, GetX50(0) + 1);
-SetRole(166, 30 / 2, GetX50(0));
+SetRole(166, 15, GetX50(0));
 if (GetX50(0) == 6) {
     modifyevent(22, 0, 1, 0, 538, 0, 0, -2, 0, 0, 0, -2, -2);
 }

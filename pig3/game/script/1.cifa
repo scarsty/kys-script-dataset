@@ -1,0 +1,261 @@
+f0() {
+    clear();
+    showstringwithbox(100, 70, "想去哪里");
+    i = 1;
+    str = {};
+    l1 = {1, 15, 13, 14, 19, 22, 45, 61, 62, 68, 73, 104, 108, 105, 89, 100};
+    if (getscenepro(29, 9) > 0) {
+        l1 = {1, 15, 13, 14, 19, 22};
+    }
+    if (getscenepro(29, 9) == 0 && getscenepro(83, 9) > 0) {
+        l1 = {1, 15, 13, 14, 19, 22, 45, 61, 62, 68, 73, 104, 108, 105};
+    }
+    l = {};
+    m = 1;
+    while (i <= size(l1)) {
+        k = l1[(i) - 1];
+        if (getscenepro(k, 10) > 0) {
+            str[(m) - 1] = getnameasstring(2, k);
+            l[(m) - 1] = k;
+            m = m + 1;
+        }
+        i = i + 1;
+    }
+    a = menu(size(l), 100, 100, 150, str);
+    if (a >= 0) {
+        SetMainMapPosition(getscenepro(l[a], 10) + 1, getscenepro(l[a], 11) + 1);
+    }
+    setmenuesctype(-2);
+}
+f1() {
+    showstringwithbox(100, 70, "让哪个物品翻倍?");
+    i = 0;
+    str = {};
+    while (i < 276) {
+        item = getitemlistitem(i);
+        num = getitemlistamount(i);
+        if (num > 0) {
+            str[i] = getnameasstring(1, item);
+        }
+        else {
+            break;
+        }
+        i = i + 1;
+    }
+    a = menu(i, 100, 100, 150, str);
+    if (a >= 0) {
+        item = getitemlistitem(a);
+        num = getitemlistamount(a);
+        AddItem(item, num);
+        setnameasstring("大騙紙", 0, 0);
+    }
+}
+f2() {
+    showstringwithbox(100, 70, "得到全部物品");
+    for (i = 0; i <= 276; i = i + 1) {
+        additem(i, 20);
+    }
+    setnameasstring("大騙紙", 0, 0);
+}
+f3() {
+    showstringwithbox(100, 70, "吃哪个100次？");
+    i = 0;
+    str = {};
+    while (i < 276) {
+        item = getitemlistitem(i);
+        num = getitemlistamount(i);
+        if (num > 0) {
+            str[i] = getnameasstring(1, item);
+        }
+        else {
+            break;
+        }
+        i = i + 1;
+    }
+    a = menu(i, 100, 100, 150, str);
+    if (a >= 0) {
+        b = getmember(SelectOneTeamMember("选择队友", -1, -1));
+        item = getitemlistitem(a);
+        num = getitemlistamount(a);
+        i = 0;
+        while (i < 100) {
+            eatoneitem(b, item);
+            clear();
+            i = i + 1;
+        }
+        setnameasstring("大騙紙", 0, 0);
+    }
+    rest();
+}
+f4() {
+    b = getmember(SelectOneTeamMember("清除队友的武功", -1, -1));
+    if (b < 0) {
+        return;
+    }
+    clear();
+    showstringwithbox(100, 70, "保留几个？");
+    i = enternumber(1, 9, 200, 120, 0);
+    while (i < 10) {
+        setrolepro(0, b, 63 + i);
+        setrolepro(0, b, 73 + i);
+        i = i + 1;
+    }
+    setnameasstring("大騙紙", 0, 0);
+    rest();
+}
+f5() {
+    b = getmember(SelectOneTeamMember("清除队友的内功", -1, -1));
+    if (b < 0) {
+        return;
+    }
+    clear();
+    showstringwithbox(100, 70, "保留几个？");
+    i = enternumber(0, 9, 200, 120, 0);
+    while (i < 4) {
+        setrolepro(0, b, 92 + i);
+        setrolepro(0, b, 96 + i);
+        i = i + 1;
+    }
+    setnameasstring("大騙紙", 0, 0);
+    rest();
+}
+f6() {
+    showstringwithbox(100, 70, "直接习武");
+    str = {"拳經", "劍譜", "刀録", "奇門", "暗典", "心法"};
+    t = menu(6, 100, 100, 150, str) + 1;
+    str = {};
+    items = {};
+    i = 0;
+    k = 0;
+    while (i < 300) {
+        item = getitemlistitem(i);
+        num = getitemlistamount(i);
+        if (num > 0) {
+            if (getitempro(item, 36) > 0) {
+                if (t <= 5 && getmagicpro(getitempro(item, 36), 12) == t) {
+                    str[k] = getnameasstring(1, item);
+                    items[k] = item;
+                    k = k + 1;
+                }
+                if (t == 6 && getmagicpro(getitempro(item, 36), 14) == 3) {
+                    str[k] = getnameasstring(1, item);
+                    items[k] = item;
+                    k = k + 1;
+                }
+            }
+        }
+        else {
+            break;
+        }
+        i = i + 1;
+    }
+    a = menu(size(str), 200, 100, 150, str);
+    if (a >= 0) {
+        b = getmember(SelectOneTeamMember("直接习武", -1, -1));
+        item = items[a];
+        i = 0;
+        while (i < 10) {
+            eatoneitem(b, item);
+            learnmagic(b, getitempro(item, 36));
+            clear();
+            i = i + 1;
+        }
+        setnameasstring("大騙紙", 0, 0);
+    }
+    rest();
+}
+f7() {
+    showstringwithbox(100, 70, "直接习武");
+    str = {"拳經", "劍譜", "刀録", "奇門", "暗典", "心法"};
+    t = menu(6, 100, 100, 150, str) + 1;
+    str = {};
+    items = {};
+    i = 0;
+    k = 0;
+    while (i < 300) {
+        item = getitemlistitem(i);
+        num = getitemlistamount(i);
+        if (num > 0) {
+            if (getitempro(item, 36) > 0) {
+                if (t <= 5 && getmagicpro(getitempro(item, 36), 12) == t) {
+                    str[k] = getnameasstring(1, item);
+                    items[k] = item;
+                    k = k + 1;
+                }
+                if (t == 6 && getmagicpro(getitempro(item, 36), 14) == 3) {
+                    str[k] = getnameasstring(1, item);
+                    items[k] = item;
+                    k = k + 1;
+                }
+            }
+        }
+        else {
+            break;
+        }
+        i = i + 1;
+    }
+    a = menu(size(str), 200, 100, 150, str);
+    if (a >= 0) {
+        b = enternumber(0, 1000, 200, 120, 0);
+        item = items[a];
+        i = 0;
+        while (i < 10) {
+            eatoneitem(b, item);
+            learnmagic(b, getitempro(item, 36));
+            clear();
+            i = i + 1;
+        }
+        setnameasstring("大騙紙", 0, 0);
+    }
+    rest();
+}
+f8() {
+    b = enternumber(0, 1000, 200, 120, 0);
+    AddItem(b, 10);
+    setnameasstring("大騙紙", 0, 0);
+}
+f9() {
+    i = enternumber(1, 299, 200, 120, 0);
+    trybattle(i - 1);
+}
+f10() {
+    i = enternumber(0, 1000, 200, 120, 0);
+    setteam(0, i);
+}
+f100() {
+    showtitle("修正場景錯亂");
+    resetscene();
+    for (i = 0; i <= 149; i = i + 1) {
+        openscene(i);
+    }
+}
+f101() {
+    rest();
+    execevent(enternumber(0, 2000, 200, 120, 0));
+}
+f102() {
+    darkscene();
+    modifyevent(15, 82, 0, 0, 0, 0, 0, 5382, 5382, 5382, 0, -2, -2);
+    lightscene();
+    talk(280, "老道來訪，不知&&小友可在？", -2, 0, 0, 0);
+    talk(0, "張真人！", -2, 1, 0, 0);
+    talk(280, "呵呵，不想我這把老骨頭，還是來得及趕到此處。", -2, 0, 0, 0);
+    talk(0, "張真人，您老……", -2, 1, 0, 0);
+    talk(280, "呵呵，無妨。大戰在即，先聽老頭兒說兩句話。&&啊，你這幾年在江湖上的所作所為，老頭兒我，可是看在眼裡哪。你品行端正，敢作敢為。想來兩位聖人的在天之靈，也能安息了。", -2, 0, 0, 0);
+    talk(412, "爺爺？莫非張真人來此，與兩位爺爺有關？", -2, 1, 0, 0);
+    talk(280, "不錯。兩位聖人歸天前，自覺不久於人世，便將這套武功傳給了老頭兒我。現在看來，是時候了。老頭兒便將它物歸原主，為你壯行吧。", -2, 0, 0, 0);
+    talk(0, "爺爺……爺爺……謝過張真人。", -2, 1, 0, 0);
+    for (i = 63; i <= 72; i = i + 1) {
+        k = getrolepro(0, i);
+        if (k == 1 || k == 36 || k == 66 || k == 91) {
+            setrolepro(115, 0, i);
+            break;
+        }
+    }
+    SetRole(0, 42, 8000);
+    SetRole(0, 41, 8000);
+    SetRole(0, 40, 2);
+    if (getrolepro(0, 13) >= 0) {
+        SetRole(0, 92, 126);
+    }
+}

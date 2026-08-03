@@ -16,9 +16,9 @@ do {
     } else {
         SetX50(2, GetRole(GetX50(0), 19));
         getname(1, 0, 0, GetX50(3), 0, 0);
-        string_length_x50(GetX50(3), 4, 0, 0, 0, 0);
+        stringlength(GetX50(3), 4, 0, 0, 0, 0);
         SetX50(4, GetX50(5) - GetX50(4));
-        spaces_x50(1, 50, 4, 0, 0, 0, 0);
+        spaces(1, 50, 4, 0, 0, 0);
         concat(60, GetX50(3), 50, 0, 0, 0, 0);
         format50(1, 50, 10, 2, 0, 0, 0);
         concat(60, 60, 50, 0, 0, 0, 0);

@@ -8,9 +8,9 @@ if (!TryBattle(282)) {
     lightscene();
     exit();
 }
-SetX50(0, GetRole(0, 146 / 2));
+SetX50(0, GetRole(0, 73));
 SetX50(0, GetX50(0) + 100);
-SetRole(0, 146 / 2, GetX50(0));
+SetRole(0, 73, GetX50(0));
 lightscene();
 talk(257, "求道卅載兮，買舟而東；舞劍放歌兮，笑盡英雄。", -2, 0, 0, 0);
 modifyevent(128, 0, 1, 0, 1757, 0, 0, 6698, 6698, 6698, 0, -2, -2);

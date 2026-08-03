@@ -1,2 +1,2 @@
 CallEvent(403, 6, 4, 0, 0);
-SetRole(GetX50(28005), 114 / 2, 5);
+SetRole(GetX50(28005), 57, 5);

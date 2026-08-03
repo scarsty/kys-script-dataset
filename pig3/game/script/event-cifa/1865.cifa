@@ -1,6 +1,6 @@
 if (InTeam(14)) {
     darkscene();
-    setscenemappro(4269*2,30,1,33,36);
+    setscenemappro(8538,30,1,33,36);
     setscenemappro(7128,30,1,32,36);
     modifyevent(30,0,4,-1);
     setsceneposition2(34,36);

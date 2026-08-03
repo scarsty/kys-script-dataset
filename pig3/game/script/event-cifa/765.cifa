@@ -1,4 +1,4 @@
-SetX50(0, GetRole(166, 72 / 2));
+SetX50(0, GetRole(166, 36));
 if (GetX50(0) < 5) {
     talk(68, "怎麼，又想跟我的木人較量較量？", -2, 0, 0, 0);
     SetJumpFlag(WoodMan(GetX50(0)));
@@ -7,9 +7,9 @@ if (GetX50(0) < 5) {
         exit();
     }
     talk(68, "這木頭腦袋還真是不行，我得想法改進改進我的木人了。這個鏟子就送給你吧。", -2, 0, 0, 0);
-    SetX50(0, GetRole(166, 72 / 2));
+    SetX50(0, GetRole(166, 36));
     SetX50(0, GetX50(0) + 1);
-    SetRole(166, 72 / 2, GetX50(0));
+    SetRole(166, 36, GetX50(0));
     AddItem(240, 1);
     exit();
 }

@@ -24,7 +24,7 @@ if (__cifa_pc_484 == 1) {
 if (__cifa_pc_484 == 2) {
     PlayAction(GetX50(28005), 1, 36);
     battlefieldget(1, 28005, 0, 1000, 0, 0);
-    SetX50(1040, GetRole(GetX50(1005), 30 / 2));
+    SetX50(1040, GetRole(GetX50(1005), 15));
     SetX50(1021, getbattleactor());
     SetX50(1022, GetX50(1021) * 2);
     SetX50(1022, GetX50(1022) + 146);
@@ -38,8 +38,8 @@ if (__cifa_pc_484 == 2) {
     }
 }
 if (__cifa_pc_484 == 3) {
-    SetX50(1007, GetRole(GetX50(1005), 166 / 2));
-    SetX50(1008, GetRole(GetX50(1005), 168 / 2));
+    SetX50(1007, GetRole(GetX50(1005), 83));
+    SetX50(1008, GetRole(GetX50(1005), 84));
     SetX50(1009, GetX50(1007) + GetX50(1008));
     if (GetX50(1009) < -1) {
         __cifa_pc_484 = 16;
@@ -70,9 +70,9 @@ if (__cifa_pc_484 == 6) {
     }
 }
 if (__cifa_pc_484 == 7) {
-    SetX50(1017, GetRole(GetX50(1005), 174 / 2));
+    SetX50(1017, GetRole(GetX50(1005), 87));
     SetX50(1017, GetX50(1017) - 1);
-    SetRole(GetX50(1005), 174 / 2, GetX50(1017));
+    SetRole(GetX50(1005), 87, GetX50(1017));
     AddItem( GetX50(1007), 1);
     if (GetX50(1017) > 0) {
         __cifa_pc_484 = 16;
@@ -81,7 +81,7 @@ if (__cifa_pc_484 == 7) {
     }
 }
 if (__cifa_pc_484 == 8) {
-    SetRole(GetX50(1005), 166 / 2, -1);
+    SetRole(GetX50(1005), 83, -1);
     if (1) {
         __cifa_pc_484 = 16;
     } else {
@@ -89,9 +89,9 @@ if (__cifa_pc_484 == 8) {
     }
 }
 if (__cifa_pc_484 == 10) {
-    SetX50(1018, GetRole(GetX50(1005), 176 / 2));
+    SetX50(1018, GetRole(GetX50(1005), 88));
     SetX50(1018, GetX50(1018) - 1);
-    SetRole(GetX50(1005), 176 / 2, GetX50(1018));
+    SetRole(GetX50(1005), 88, GetX50(1018));
     AddItem( GetX50(1008), 1);
     if (GetX50(1018) > 0) {
         __cifa_pc_484 = 16;
@@ -100,7 +100,7 @@ if (__cifa_pc_484 == 10) {
     }
 }
 if (__cifa_pc_484 == 11) {
-    SetRole(GetX50(1005), 168 / 2, -1);
+    SetRole(GetX50(1005), 84, -1);
     __cifa_pc_484 = 16;
 }
 if (__cifa_pc_484 == 16) {

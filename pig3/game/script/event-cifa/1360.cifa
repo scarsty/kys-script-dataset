@@ -4,34 +4,34 @@ if (!InTeam(33)) {
     exit();
 }
 talk(95, "咦？不錯，就是她了。看不出，你小子還有些小聰明。", -2, 0, 0, 0);
-SetX50(0, GetRole(0, 120 / 2));
+SetX50(0, GetRole(0, 60));
 SetX50(0, GetX50(0) + 2);
-SetRole(0, 120 / 2, GetX50(0));
+SetRole(0, 60, GetX50(0));
 SetX50(1, GetTeam(1));
 if (GetX50(1) > 0) {
-    SetX50(0, GetRole(GetX50(1), 120 / 2));
+    SetX50(0, GetRole(GetX50(1), 60));
     SetX50(0, GetX50(0) + 2);
-    SetRole(GetX50(1), 120 / 2, GetX50(0));
+    SetRole(GetX50(1), 60, GetX50(0));
     SetX50(2, GetTeam(2));
     if (GetX50(1) > 0) {
-        SetX50(0, GetRole(GetX50(2), 120 / 2));
+        SetX50(0, GetRole(GetX50(2), 60));
         SetX50(0, GetX50(0) + 2);
-        SetRole(GetX50(2), 120 / 2, GetX50(0));
+        SetRole(GetX50(2), 60, GetX50(0));
         SetX50(3, GetTeam(3));
         if (GetX50(1) > 0) {
-            SetX50(0, GetRole(GetX50(3), 120 / 2));
+            SetX50(0, GetRole(GetX50(3), 60));
             SetX50(0, GetX50(0) + 2);
-            SetRole(GetX50(3), 120 / 2, GetX50(0));
+            SetRole(GetX50(3), 60, GetX50(0));
             SetX50(4, GetTeam(4));
             if (GetX50(1) > 0) {
-                SetX50(0, GetRole(GetX50(4), 120 / 2));
+                SetX50(0, GetRole(GetX50(4), 60));
                 SetX50(0, GetX50(0) + 2);
-                SetRole(GetX50(4), 120 / 2, GetX50(0));
+                SetRole(GetX50(4), 60, GetX50(0));
                 SetX50(5, GetTeam(5));
                 if (GetX50(1) > 0) {
-                    SetX50(0, GetRole(GetX50(5), 120 / 2));
+                    SetX50(0, GetRole(GetX50(5), 60));
                     SetX50(0, GetX50(0) + 2);
-                    SetRole(GetX50(5), 120 / 2, GetX50(0));
+                    SetRole(GetX50(5), 60, GetX50(0));
                 }
             }
         }

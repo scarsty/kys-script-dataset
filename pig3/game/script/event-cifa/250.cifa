@@ -8,11 +8,11 @@ label3:
 label5:
 SetX50(1090, GetX50(1090) + 1);
 if (GetX50(1090) >= 54) { goto label0; }
-SetX50(1091, GetItem(GetX50(1090), 78 / 2));
+SetX50(1091, GetItem(GetX50(1090), 39));
 if (GetX50(1091) != 0) { goto label1; }
 SetX50(1001, GetItemAmount(GetX50(1090)));
 if (GetX50(1001) <= 0) { goto label2; }
-SetX50(1092, GetItem(GetX50(1090), 18 / 2));
+SetX50(1092, GetItem(GetX50(1090), 9));
 if (GetX50(1092) <= 0) { goto label3; }
 SetX50(1500, GetItemName(GetX50(1090)));
 SetX50(1600, sprintf(GetX50String(1550), GetX50(1092)));
@@ -109,7 +109,7 @@ SetX50(1177, GetX50(1175) - 25);
 if (GetX50(1020) > 1) { goto label14; }
 SetX50(1980, "請選擇材料");
 SetX50(1930, "已有");
-SetX50(1055, GetX50(1250 + 1));
+SetX50(1055, GetX50(1251));
 SetX50(1950, GetItemName(GetX50(1055)));
 SetX50(1950, GetX50String(1900) + GetX50String(1930));
 SetX50(1980, GetX50String(1950) + GetX50String(1900));
@@ -118,8 +118,8 @@ if (GetX50(1120) > 1) { goto label15; }
 talk(97, "當前只有一種可打造兵器和一種材料，是否打造？", -2, 1, 0, 0);
 SetX50(2500, "是");
 SetX50(2550, "否");
-SetX50(2600 + 0, 2500);
-SetX50(2600 + 1, 2550);
+SetX50(2600, 2500);
+SetX50(2601, 2550);
 SetX50(1130, Menu50(2, 2600, 181, 215, 10));
 if (GetX50(1130) == 1) { goto label16; }
 exit();
@@ -127,7 +127,7 @@ label14:
 if (GetX50(1120) > 1) { goto label17; }
 SetX50(1980, "請選擇欲打造之兵器");
 SetX50(1930, "已有");
-SetX50(1055, GetX50(1430 + 1));
+SetX50(1055, GetX50(1431));
 SetX50(1950, GetItemName(GetX50(1055)));
 SetX50(1950, GetX50String(1900) + GetX50String(1930));
 SetX50(1980, GetX50String(1900) + GetX50String(1900));
@@ -154,23 +154,23 @@ label20:
 SetX50(1051, GetX50(1250 + GetX50(1030)));
 SetX50(1151, GetX50(1430 + GetX50(1130)));
 AddItemWithoutHint( GetX50(1151), -1);
-SetX50(1092, GetItem(GetX50(1051), 18 / 2));
+SetX50(1092, GetItem(GetX50(1051), 9));
 SetX50(1092, GetX50(1092) - 1);
-SetItem(GetX50(1051), 18 / 2, GetX50(1092));
-SetX50(1070, GetRole(97, 112 / 2));
+SetItem(GetX50(1051), 9, GetX50(1092));
+SetX50(1070, GetRole(97, 56));
 SetX50(1071, GetX50(1070) / 12);
 SetX50(1070, GetX50(1070) + 1);
-SetRole(97, 112 / 2, GetX50(1070));
+SetRole(97, 56, GetX50(1070));
 if (GetX50(1151) == 211) { goto label22; }
 if (GetX50(1151) == 212) { goto label23; }
-SetX50(2000 + 0, 3);
-SetX50(2000 + 1, 6);
-SetX50(2000 + 2, 8);
-SetX50(2000 + 3, 9);
+SetX50(2000, 3);
+SetX50(2001, 6);
+SetX50(2002, 8);
+SetX50(2003, 9);
 SetX50(1095, GetX50(2000 + GetX50(1071)));
-SetX50(1072, GetItem(GetX50(1051), 106 / 2));
+SetX50(1072, GetItem(GetX50(1051), 53));
 SetX50(1072, GetX50(1072) + GetX50(1095));
-SetItem(GetX50(1051), 106 / 2, GetX50(1072));
+SetItem(GetX50(1051), 53, GetX50(1072));
 SetX50(2200, "輕功加成");
 label24:
 label25:
@@ -186,25 +186,25 @@ clear();
 showmessage(0, 2300, 170, 230, 0, 0);
 exit();
 label23:
-SetX50(2000 + 0, 6);
-SetX50(2000 + 1, 11);
-SetX50(2000 + 2, 15);
-SetX50(2000 + 3, 18);
+SetX50(2000, 6);
+SetX50(2001, 11);
+SetX50(2002, 15);
+SetX50(2003, 18);
 SetX50(1095, GetX50(2000 + GetX50(1071)));
-SetX50(1072, GetItem(GetX50(1051), 104 / 2));
+SetX50(1072, GetItem(GetX50(1051), 52));
 SetX50(1072, GetX50(1072) + GetX50(1095));
-SetItem(GetX50(1051), 104 / 2, GetX50(1072));
+SetItem(GetX50(1051), 52, GetX50(1072));
 SetX50(2200, "攻擊力");
 if (1) { goto label24; }
 label22:
-SetX50(2000 + 0, 6);
-SetX50(2000 + 1, 11);
-SetX50(2000 + 2, 15);
-SetX50(2000 + 3, 18);
+SetX50(2000, 6);
+SetX50(2001, 11);
+SetX50(2002, 15);
+SetX50(2003, 18);
 SetX50(1095, GetX50(2000 + GetX50(1071)));
-SetX50(1072, GetItem(GetX50(1051), 108 / 2));
+SetX50(1072, GetItem(GetX50(1051), 54));
 SetX50(1072, GetX50(1072) + GetX50(1095));
-SetItem(GetX50(1051), 108 / 2, GetX50(1072));
+SetItem(GetX50(1051), 54, GetX50(1072));
 SetX50(2200, "防禦力");
 if (1) { goto label25; }
 label13:

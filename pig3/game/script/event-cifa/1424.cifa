@@ -11,12 +11,12 @@ if (GetStarState(43) != 0) {
     modifyevent(15, 22, 1, 0, 743, 0, 0, 5324, 5324, 5324, 0, -2, -2);
     modifyevent(95, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
     if (!JudgeSexual(0)) {
-        SetX50(0, GetRole(166, 76 / 2));
+        SetX50(0, GetRole(166, 38));
         modifyevent(95, 141, 1, 0, 1392, GetX50(0), 0, 5326, 5326, 5326, 0, -2, -2);
         modifyevent(95, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
     }
 } else {
-    SetX50(0, GetRole(166, 76 / 2));
+    SetX50(0, GetRole(166, 38));
     modifyevent(95, 141, 1, 0, 1392, GetX50(0), 0, 5326, 5326, 5326, 0, -2, -2);
     modifyevent(95, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
 }
@@ -69,7 +69,7 @@ if (GetStarState(51) != 0) {
     modifyevent(15, 30, 1, 0, 771, 0, 0, 7298, 7298, 7298, 0, -2, -2);
     if (!JudgeSexual(0)) {
         modifyevent(95, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-        SetX50(0, GetRole(166, 86 / 2));
+        SetX50(0, GetRole(166, 43));
         if (GetX50(0) != 0) {
             modifyevent(19, 30, 1, 0, 1411, 0, 0, 7298, 7298, 7298, 0, -2, -2);
             if (!JudgeSexual(0)) {
@@ -81,7 +81,7 @@ if (GetStarState(51) != 0) {
     }
 } else {
     modifyevent(95, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    SetX50(0, GetRole(166, 86 / 2));
+    SetX50(0, GetRole(166, 43));
     if (GetX50(0) != 0) {
         modifyevent(19, 30, 1, 0, 1411, 0, 0, 7298, 7298, 7298, 0, -2, -2);
         if (!JudgeSexual(0)) {
@@ -96,11 +96,11 @@ if (GetStarState(60) != 0) {
     modifyevent(15, 27, 1, 0, 766, 0, 0, 7302, 7302, 7302, 0, -2, -2);
     if (!JudgeSexual(0)) {
         modifyevent(95, 139, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-        SetX50(0, GetRole(166, 88 / 2));
+        SetX50(0, GetRole(166, 44));
         modifyevent(39, 3, 1, 0, 1397, GetX50(0), 0, 7300, 7300, 7300, 0, -2, -2);
     }
 } else {
     modifyevent(95, 139, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2);
-    SetX50(0, GetRole(166, 88 / 2));
+    SetX50(0, GetRole(166, 44));
     modifyevent(39, 3, 1, 0, 1397, GetX50(0), 0, 7300, 7300, 7300, 0, -2, -2);
 }

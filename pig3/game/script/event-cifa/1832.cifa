@@ -4,9 +4,9 @@ if (GetX50(1000) >= 50) {
 }
 SetX50(2000, Random50(4));
 SetX50(2000, GetX50(2000) + 1);
-SetX50(1001, GetRole(0, 102 / 2));
+SetX50(1001, GetRole(0, 51));
 SetX50(1002, GetX50(1001) + GetX50(2000));
-SetRole(0, 102 / 2, GetX50(1002));
+SetRole(0, 51, GetX50(1002));
 SetX50(3000, "增加御劍%d");
 SetX50(3100, sprintf(GetX50String(3000), GetX50(2000)));
 SetX50(3200, GetRoleName(0));

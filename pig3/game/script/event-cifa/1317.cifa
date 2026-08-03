@@ -1,11 +1,11 @@
-SetX50(0, GetRole(166, 66 / 2));
+SetX50(0, GetRole(166, 33));
 SetX50(0, GetX50(0) + 1);
-SetRole(166, 66 / 2, GetX50(0));
+SetRole(166, 33, GetX50(0));
 if (GetX50(0) != 4) {
     exit();
 }
 SetMissionState(34, 1);
-SetX50(0, GetRole(166, 62 / 2));
+SetX50(0, GetRole(166, 31));
 if (GetX50(0) == 1) {
     modifyevent(102, 0, 1, 0, 1328, 0, 0, 6368, 6368, 6368, 0, -2, -2);
     modifyevent(102, 5, 1, 0, 1333, 0, 0, 6360, 6360, 6360, 0, -2, -2);

@@ -1,5 +1,5 @@
-SetSubmapInfo(4, 44 / 2, 14);
-SetSubmapInfo(4, 46 / 2, 13);
-SetSubmapInfo(4, 48 / 2, 14);
-SetSubmapInfo(4, 50 / 2, 15);
-SetSubmapInfo(4, 16 / 2, 5);
+SetSubmapInfo(4, 22, 14);
+SetSubmapInfo(4, 23, 13);
+SetSubmapInfo(4, 24, 14);
+SetSubmapInfo(4, 25, 15);
+SetSubmapInfo(4, 8, 5);
