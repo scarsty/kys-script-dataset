@@ -10,5 +10,5 @@ SetRole(0, 51, GetX50(1002));
 SetX50(3000, "增加御劍%d");
 SetX50(3100, sprintf(GetX50String(3000), GetX50(2000)));
 SetX50(3200, GetRoleName(0));
-SetX50(3100, GetX50String(3300) + GetX50String(3200));
+SetX50(3300, GetX50String(3100) + GetX50String(3200));
 showtitle(-3300, 2331);

@@ -82,8 +82,8 @@ if (GetX50(1020) == 1) {
     SetX50(1980, "請選擇材料");
     SetX50(1930, "已有");
     SetX50(1950, GetItemName(GetX50(1055)));
-    SetX50(1950, GetX50String(1900) + GetX50String(1930));
-    SetX50(1980, GetX50String(1950) + GetX50String(1900));
+    SetX50(1900, GetX50String(1930) + GetX50String(1950));
+    SetX50(1950, GetX50String(1900) + GetX50String(1980));
     if (GetX50(1120) == 1) {
         SetX50(1130, 1);
         talk(97, "當前只有一種可打造兵器和一種材料，是否打造？", -2, 1, 0, 0);
