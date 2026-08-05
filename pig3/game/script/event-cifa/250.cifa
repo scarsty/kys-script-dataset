@@ -10,22 +10,13 @@ do {
     if (GetX50(1091) == 0 && GetX50(1001) > 0 && GetX50(1092) > 0) {
         SetX50(1500, GetItemName(GetX50(1090)));
         SetX50(1600, sprintf(GetX50String(1550), GetX50(1092)));
-        SetX50(1008, drawlength(GetX50String(1500)));
-        SetX50(1008, GetX50(1008) / 2);
-        SetX50(1670, MakeSpaces(1));
-        SetX50(1650, MakeSpaces(1));
-        do {
-            SetX50(1650, GetX50String(1670) + GetX50String(1670));
-            SetX50(1008, GetX50(1008) + 1);
-        } while (GetX50(1008) < 5);
-        SetX50(1670, GetX50String(1500) + GetX50String(1500));
-        SetX50(1670, "可打造次數：");
-        SetX50(1670, GetX50String(1500) + GetX50String(1500));
-        concat(GetX50(1021), 1500, 1600, 0, 0, 0);
+        SetX50(1670, MakeSpaces(16 - drawlength(GetX50String(1500))));
+        SetX50(1650, MakeSpaces(4 - drawlength(GetX50String(1600))));
+        SetX50(GetX50(1021), GetX50String(1500) + GetX50String(1670) + "可打造次數 " + GetX50String(1650) + GetX50String(1600));
         SetX50(1020, GetX50(1020) + 1);
-        SetX50(1300 + GetX50(1020), GetX50(1021));
-        SetX50(1200 + GetX50(1020), GetX50(1092));
-        SetX50(1250 + GetX50(1020), GetX50(1090));
+        SetX50(1300 + GetX50(1020) - 1, GetX50(1021));
+        SetX50(1200 + GetX50(1020) - 1, GetX50(1092));
+        SetX50(1250 + GetX50(1020) - 1, GetX50(1090));
         SetX50(1021, GetX50(1021) + 50);
     }
 } while (GetX50(1090) < 53);
@@ -39,57 +30,36 @@ SetX50(1101, GetItemAmount(211));
 if (GetX50(1101) > 0) {
     SetX50(1500, GetItemName(211));
     SetX50(1600, sprintf(GetX50String(1550), GetX50(1101)));
-    SetX50(1008, drawlength(GetX50String(1500)));
-    SetX50(1008, GetX50(1008) / 2);
-    SetX50(1670, MakeSpaces(1));
-    SetX50(1650, MakeSpaces(1));
-    do {
-        SetX50(1650, GetX50String(1670) + GetX50String(1670));
-        SetX50(1008, GetX50(1008) + 1);
-    } while (GetX50(1008) < 11);
-    SetX50(1670, GetX50String(1500) + GetX50String(1500));
-    concat(GetX50(1121), 1500, 1600, 0, 0, 0);
+    SetX50(1670, MakeSpaces(16 - drawlength(GetX50String(1500))));
+    SetX50(1650, MakeSpaces(4 - drawlength(GetX50String(1600))));
+    SetX50(GetX50(1121), GetX50String(1500) + GetX50String(1670) + "數量 " + GetX50String(1650) + GetX50String(1600));
     SetX50(1120, GetX50(1120) + 1);
-    SetX50(1450 + GetX50(1120), GetX50(1121));
-    SetX50(1430 + GetX50(1120), 211);
+    SetX50(1450 + GetX50(1120) - 1, GetX50(1121));
+    SetX50(1430 + GetX50(1120) - 1, 211);
     SetX50(1121, GetX50(1121) + 50);
 }
 SetX50(1102, GetItemAmount(212));
 if (GetX50(1102) > 0) {
     SetX50(1500, GetItemName(212));
     SetX50(1600, sprintf(GetX50String(1550), GetX50(1102)));
-    SetX50(1008, drawlength(GetX50String(1500)));
-    SetX50(1008, GetX50(1008) / 2);
-    SetX50(1670, MakeSpaces(1));
-    SetX50(1650, MakeSpaces(1));
-    do {
-        SetX50(1650, GetX50String(1670) + GetX50String(1670));
-        SetX50(1008, GetX50(1008) + 1);
-    } while (GetX50(1008) < 11);
-    SetX50(1670, GetX50String(1500) + GetX50String(1500));
-    concat(GetX50(1121), 1500, 1600, 0, 0, 0);
+    SetX50(1670, MakeSpaces(16 - drawlength(GetX50String(1500))));
+    SetX50(1650, MakeSpaces(4 - drawlength(GetX50String(1600))));
+    SetX50(GetX50(1121), GetX50String(1500) + GetX50String(1670) + "數量 " + GetX50String(1650) + GetX50String(1600));
     SetX50(1120, GetX50(1120) + 1);
-    SetX50(1450 + GetX50(1120), GetX50(1121));
-    SetX50(1430 + GetX50(1120), 212);
+    SetX50(1450 + GetX50(1120) - 1, GetX50(1121));
+    SetX50(1430 + GetX50(1120) - 1, 212);
     SetX50(1121, GetX50(1121) + 50);
 }
 SetX50(1103, GetItemAmount(213));
 if (GetX50(1103) > 0) {
     SetX50(1500, GetItemName(213));
     SetX50(1600, sprintf(GetX50String(1550), GetX50(1103)));
-    SetX50(1008, drawlength(GetX50String(1500)));
-    SetX50(1008, GetX50(1008) / 2);
-    SetX50(1670, MakeSpaces(1));
-    SetX50(1650, MakeSpaces(1));
-    do {
-        SetX50(1650, GetX50String(1670) + GetX50String(1670));
-        SetX50(1008, GetX50(1008) + 1);
-    } while (GetX50(1008) < 11);
-    SetX50(1670, GetX50String(1500) + GetX50String(1500));
-    concat(GetX50(1121), 1500, 1600, 0, 0, 0);
+    SetX50(1670, MakeSpaces(16 - drawlength(GetX50String(1500))));
+    SetX50(1650, MakeSpaces(4 - drawlength(GetX50String(1600))));
+    SetX50(GetX50(1121), GetX50String(1500) + GetX50String(1670) + "數量 " + GetX50String(1650) + GetX50String(1600));
     SetX50(1120, GetX50(1120) + 1);
-    SetX50(1450 + GetX50(1120), GetX50(1121));
-    SetX50(1430 + GetX50(1120), 213);
+    SetX50(1450 + GetX50(1120) - 1, GetX50(1121));
+    SetX50(1430 + GetX50(1120) - 1, 213);
     SetX50(1121, GetX50(1121) + 50);
 }
 if (GetX50(1120) == 0) {
@@ -100,12 +70,12 @@ SetX50(1075, GetX50(1020) * 18);
 SetX50(1075, GetX50(1075) - 470);
 SetX50(1075, GetX50(1075) / -2);
 SetX50(1076, GetX50(1075) - 5);
-SetX50(1077, GetX50(1075) - 25);
+SetX50(1077, GetX50(1075) - 30);
 SetX50(1175, GetX50(1120) * 18);
 SetX50(1175, GetX50(1175) - 470);
 SetX50(1175, GetX50(1175) / -2);
 SetX50(1176, GetX50(1175) - 5);
-SetX50(1177, GetX50(1175) - 25);
+SetX50(1177, GetX50(1175) - 30);
 if (GetX50(1020) == 1) {
     SetX50(1030, 1);
     SetX50(1055, GetX50(1251));
@@ -130,8 +100,8 @@ if (GetX50(1020) == 1) {
         SetX50(1950, "請選擇材料");
         SetX50(1125, GetX50(1120) * 18);
         SetX50(1125, GetX50(1125) + 10);
-        showmessage(2, 1950, 500, 1177, 26211, 0);
-        SetX50(1130, Menu50(GetX50(1120), 1450, 481, GetX50(1175), 10));
+        showstringwithbox(520, GetX50(1177), GetX50String(1950));
+        SetX50(1130, Menu50(GetX50(1120), 1450, 520, GetX50(1175), 10));
         if (GetX50(1130) <= 0) {
             exit();
         }
@@ -140,8 +110,8 @@ if (GetX50(1020) == 1) {
     SetX50(1900, "請選擇欲打造之兵器");
     SetX50(1025, GetX50(1020) * 18);
     SetX50(1025, GetX50(1025) + 10);
-    showmessage(2, 1900, 200, 1077, 26211, 0);
-    SetX50(1030, Menu50(GetX50(1020), 1300, 181, GetX50(1075), 10));
+    showstringwithbox(160, GetX50(1077), GetX50String(1900));
+    SetX50(1030, Menu50(GetX50(1020), 1300, 160, GetX50(1075), 10));
     if (GetX50(1030) <= 0) {
         exit();
     }
@@ -151,8 +121,8 @@ if (GetX50(1020) == 1) {
         SetX50(1950, "請選擇材料");
         SetX50(1125, GetX50(1120) * 18);
         SetX50(1125, GetX50(1125) + 10);
-        showmessage(2, 1950, 500, 1177, 26211, 0);
-        SetX50(1130, Menu50(GetX50(1120), 1450, 481, GetX50(1175), 10));
+        showstringwithbox(520, GetX50(1177), GetX50String(1950));
+        SetX50(1130, Menu50(GetX50(1120), 1450, 520, GetX50(1175), 10));
         if (GetX50(1130) <= 0) {
             exit();
         }
@@ -205,9 +175,9 @@ SetX50(2100, "打造成功");
 SetX50(2150, "增加");
 SetX50(1500, GetItemName(GetX50(1051)));
 SetX50(1600, sprintf(GetX50String(1550), GetX50(1095)));
-SetX50(1500, GetX50String(2300) + GetX50String(2100));
-SetX50(2150, GetX50String(2300) + GetX50String(2300));
-SetX50(2200, GetX50String(2300) + GetX50String(2300));
-SetX50(1600, GetX50String(2300) + GetX50String(2300));
+SetX50(2300, GetX50String(2100) + GetX50String(1500));
+SetX50(2300, GetX50String(2300) + GetX50String(2150));
+SetX50(2300, GetX50String(2300) + GetX50String(2200));
+SetX50(2300, GetX50String(2300) + GetX50String(1600));
 clear();
 showmessage(0, 2300, 170, 230, 0, 0);

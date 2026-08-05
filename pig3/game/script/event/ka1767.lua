@@ -104,6 +104,7 @@ if TryBattle(297) == true then goto label0 end;
     Talk(149, "哈哈，眾卿平身，眾卿平身，哈哈哈哈。", -2, 1, 0, 0);
     Talk(424, "後……會……無……期……", -2, 0, 0, 0);
     DarkScene();
+    SetMainMapPosition(325, 290);
     JumpScene(15, 8, 36);
     SetRoleFace(1);
     LightScene();

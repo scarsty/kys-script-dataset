@@ -15,6 +15,5 @@ SetX50(9999, GetX50(9999) * 10);
 SetX50(9999, GetX50(9999) + 10);
 DrawRect(12, 15, GetX50(9999), 30, 0, ColColor(255), 102);
 DrawString(0, 10000, 19, 22, 1797, 0);
-SetX50(9006, GetKey());
 Delay(100);
 SetX50(28931, ScrollMenu50(GetX50(28929), 15000, 12, 50, 8));

@@ -104,6 +104,7 @@ talk(413, "也許瘋了對你而言，其實是一種解脫，慕容復，你一
 talk(149, "哈哈，眾卿平身，眾卿平身，哈哈哈哈。", -2, 1, 0, 0);
 talk(424, "後……會……無……期……", -2, 0, 0, 0);
 darkscene();
+SetMainMapPosition(325, 290);
 jumpscene(15, 8, 36);
 SetRoleFace(1);
 lightscene();
