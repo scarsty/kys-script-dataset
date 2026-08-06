@@ -78,7 +78,7 @@ SetX50(1176, GetX50(1175) - 5);
 SetX50(1177, GetX50(1175) - 30);
 if (GetX50(1020) == 1) {
     SetX50(1030, 1);
-    SetX50(1055, GetX50(1251));
+    SetX50(1055, GetX50(1250));
     SetX50(1980, "請選擇材料");
     SetX50(1930, "已有");
     SetX50(1950, GetItemName(GetX50(1055)));
@@ -128,8 +128,8 @@ if (GetX50(1020) == 1) {
         }
     }
 }
-SetX50(1051, GetX50(1250 + GetX50(1030)));
-SetX50(1151, GetX50(1430 + GetX50(1130)));
+SetX50(1051, GetX50(1249 + GetX50(1030)));
+SetX50(1151, GetX50(1429 + GetX50(1130)));
 AddItemWithoutHint(GetX50(1151), -1);
 SetX50(1092, GetItem(GetX50(1051), 9));
 SetX50(1092, GetX50(1092) - 1);
