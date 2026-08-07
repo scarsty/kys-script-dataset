@@ -1,3 +1,6 @@
+callevent(358);
+exit();
+
 ClearX50();
 SetX50(200, getcurrentscene());
 SetX50(201, getsceney());
