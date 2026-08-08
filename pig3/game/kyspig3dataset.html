@@ -19,7 +19,7 @@
 .table-wrap{max-width:100%;overflow-x:visible}.table-wrap table{width:100%;min-width:0;table-layout:auto}.table-wrap th,.table-wrap td{white-space:normal;overflow-wrap:anywhere;word-break:break-word}.table-wrap .column-hidden{display:none!important}
 .column-view{display:flex;align-items:center;justify-content:flex-end;gap:9px;margin:0 0 10px;color:#655b4c;font-size:.9rem}.column-view select{max-width:min(100%,320px);border:1px solid var(--line);border-radius:4px;background:#fffdf8;padding:7px 30px 7px 10px;color:var(--ink);font:inherit}.wide-table th:first-child,.wide-table td:first-child{width:5.5rem}.wide-table th:nth-child(2),.wide-table td:nth-child(2){width:8rem}
 #items-group>.subtabs,#sheet-7>.magic-subtabs{position:sticky;top:var(--mast-height,0);z-index:4;margin-left:-8px;margin-right:-8px;padding:10px 8px 12px;background:rgba(247,243,233,.96);backdrop-filter:blur(10px);box-shadow:0 8px 14px rgba(45,30,16,.08)}
-@media(max-width:720px){.table-wrap table{font-size:.72rem}.table-wrap th,.table-wrap td{padding:5px 3px;line-height:1.35}.subtabs{gap:4px}.subtab{padding:6px 8px}.column-view{align-items:stretch;flex-direction:column;gap:4px}.column-view select{max-width:none;width:100%}.wide-table th:first-child,.wide-table td:first-child{width:3.5rem}.wide-table th:nth-child(2),.wide-table td:nth-child(2){width:5.5rem}}
+@media(max-width:720px){.mast-top{align-items:center;flex-direction:row;flex-wrap:wrap;gap:10px}.mast-top .brand{flex:0 0 100%}.mast-top .search{flex:1 1 0;min-width:0;width:auto}.mast-top .wx-petal-switch{flex:0 0 auto;width:auto}.tabs{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tabs .tab{scroll-snap-align:start}.table-wrap{overflow-x:auto}.table-wrap table{width:max-content;min-width:100%;table-layout:auto;font-size:.8rem}.table-wrap th,.table-wrap td{min-width:5.5rem;padding:7px 8px;line-height:1.4;overflow-wrap:normal;word-break:normal}.subtabs{gap:4px}.subtab{padding:6px 8px}.column-view{align-items:stretch;flex-direction:column;gap:4px}.column-view select{max-width:none;width:100%}.wide-table th:first-child,.wide-table td:first-child{min-width:3.5rem;width:3.5rem}.wide-table th:nth-child(2),.wide-table td:nth-child(2){min-width:5.5rem;width:5.5rem}}
 </style>
 <style id="wuxia-theme">
 /* ===== 武侠风美化层（不改动数据，仅覆盖视觉） ===== */
@@ -277,7 +277,6 @@ body::after{
 <button class="tab" role="tab" aria-selected="false" data-target="presets">隐藏主角预设</button>
 <button class="tab" role="tab" aria-selected="false" data-target="couples">情侣加成</button>
 <button class="tab" role="tab" aria-selected="false" data-target="specials">特技效果</button>
-<button class="tab" role="tab" aria-selected="false" data-target="changes">修订记录</button>
 </nav>
 </header>
 <main class="main">
@@ -291,68 +290,20 @@ body::after{
 <p class="lede">原始工作簿的完整网页化资料集。可在表内即时检索，并在末尾查看代码核对后的情侣、特技、隐藏主角预设与修订内容。</p>
 </div>
 </div>
-<div class="callout">使用顶部标签切换资料页；输入关键字即可只显示当前页匹配行。带浅金色底纹的行是本次经实际游戏数据确认后追加或修正的内容。</div>
+<div class="callout">使用顶部标签切换资料页；输入关键字即可只显示当前页匹配行。物品、人物与武功名称通常按 0 号存档的原始繁体显示。带浅金色底纹的行是本次经实际游戏数据确认后追加或修正的内容。</div>
 </section>
 <section id='sheet-1' class='panel' role='tabpanel'>
 <div class='panel-head'>
 <h2>说明</h2>
-<span>47 行 / 12 列</span>
+<span>资料说明</span>
 </div>
 <div class="table-wrap">
 <table>
 <thead>
-<tr>
-<th>09年10月6日，1.05版资料集面世</th>
-<th>
-</th>
-<th>
-</th>
-<th>
-</th>
-<th>
-</th>
-<th>
-</th>
-<th>
-</th>
-<th>
-</th>
-<th>
-</th>
-<th>
-</th>
-<th>
-</th>
-<th>
-</th>
-</tr>
+<tr><th>资料说明</th></tr>
 </thead>
 <tbody>
-<tr>
-<td>13年1月4日，2.01版资料集面世。</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
+<tr><td>13年1月4日，2.01版资料集面世。</td></tr>
 <tr>
 <td>17年8月，金庸水浒传不再更新了。最后的版本是3.5.0.10.</td>
 <td>
@@ -118167,58 +118118,6 @@ body::after{
 </table>
 </div>
 </section>
-<section id="changes" class="panel" role="tabpanel">
-<div class="panel-head">
-<h2>修订记录</h2>
-<span>2026-08-07</span>
-</div>
-<div class="change-list">
-<article>
-<b>武功全集与资料分区复核</b>
-<p>查明武功漏项根因：原 Excel 武功表只覆盖物理编号 0 至 395，后续记录此前依靠按角色手工挑选，错误地把“当前是否有角色使用”当成收录条件。本轮改为按 0 号存档的物理位置检查全部高编号记录，收录所有非“备用”武功，补入 401 水晶墻、406 惡魔玫瑰、407 阿賴耶識、408 黃道絕嘯，并按物理编号排序。物品资料中的秘籍名与 TMagic 战斗名称并非同一字段，名称差异不再直接判为错误。108 星页的 7 个特殊姓名已迁入“隐藏主角预设”；暗典改为从奇门原表迁出完整 19 列资料，并置于奇门和心法之间。</p>
-</article>
-<article>
-<b>资料结构与隐藏角色复核</b>
-<p>标签栏改为自动换行。新增“暗典”页，按游戏的秘籍与暗器武功分类规则列出 0 号存档中的 16 本暗器类秘籍。武功编号改为存档物理下标，剔除 0 号废记录；补全虚伪帝的 402 至 405 号外功、407 号阿赖耶识内功，以及无耻帝的 397 号逆天顺地特技和光头强的 409 号专用武功。旧版心得、修改和脚本合并至“旧版BUG与修改相关”。</p>
-</article>
-<article>
-<b>表格与特技补全</b>
-<p>修正错误表头位置，将说明性尾行移到表格外；说明页截去署名日期后的旧资料。特技页补入 C++ 已实现的主动特技 SA_0 至 SA_38，并保留 15 条被动特技。武功页依据 0 号存档补入虛僞帝的 191 至 194 号武功及光頭強的 198 号武功。</p>
-</article>
-<article>
-<b>维护规则</b>
-<p>此后资料修订直接编辑本 HTML 文件，不重新导出。导出脚本默认拒绝覆盖现有页面；仅在需要整体重建时，才可显式使用 <code>-ForceRebuild</code>。</p>
-</article>
-<article>
-<b>资料来源</b>
-<p>基础内容从原资料工作簿逐表导出，战斗定义由 1.xlsx 导入。首页版本号直接读取 kys_main.cpp 的 versionstr；校对依据为当前游戏的 ranger.grp / ranger.idx、0 号存档、lover.txt 和 C++ 战斗实现。</p>
-</article>
-<article>
-<b>战斗表修正</b>
-<p>战斗定义页已剔除编号 297、名称为空的重复记录；正确的“决战慕容复”记录保留。</p>
-</article>
-<article>
-<b>隐藏主角预设</b>
-<p>新增“虛僞帝”“無恥帝”“光頭強”创建口令说明。前两者复制 0 号存档的隐藏角色预设；光頭強仅授予 409 号专用武功，不是独立 NPC。</p>
-</article>
-<article>
-<b>名称修正</b>
-<p>剑谱 61：太岳三青峰；刀锋 73：罗汉刀谱；奇门 8C：夺魄鞭法；奇门 92：七弦无形琴谱。</p>
-</article>
-<article>
-<b>NPC 专用武功</b>
-<p>武功页补入实际启用的 18C 天王托塔与 18D 旋天智障。天王托塔的被动效果已在特技效果页说明；旋天智障没有额外特技绑定。</p>
-</article>
-<article>
-<b>情侣复核</b>
-<p>新增情侣加成页，列出 lover.txt 的全部 24 条配置及真实生效方向。杨过与陆无双的“替代受伤”按代码仅单向作用于杨过。</p>
-</article>
-<article>
-<b>特技复核</b>
-<p>新增特技效果页，以 kys_battle.cpp 的实际逻辑为准；剧情、攻略和材料物品依用户要求未做内容校订。</p>
-</article>
-</div>
-</section>
 </main>
 <script>
 let tabs=[...document.querySelectorAll('.tab')],panels=[...document.querySelectorAll('.panel')];
@@ -119386,10 +119285,10 @@ function mergeLegacyPages(){
 	sourcePanels.forEach(source=>{
 		const tab=[...document.querySelectorAll('.tab')].find(item=>item.dataset.target===source.id);tab?.remove();source.remove();
 	});
-	const changesTab=[...document.querySelectorAll('.tab')].find(item=>item.dataset.target==='changes');
-	changesTab?.before(Object.assign(document.createElement('button'),{className:'tab',textContent:'旧版BUG与修改相关',type:'button'}));
-	const tab=changesTab?.previousElementSibling;if(tab){tab.setAttribute('role','tab');tab.setAttribute('aria-selected','false');tab.dataset.target='legacy-bugs'}
-	document.getElementById('changes')?.before(panel);
+    const tab=Object.assign(document.createElement('button'),{className:'tab',textContent:'旧版BUG与修改相关',type:'button'});
+    tab.setAttribute('role','tab');tab.setAttribute('aria-selected','false');tab.dataset.target='legacy-bugs';
+    document.querySelector('.tabs')?.append(tab);
+    document.querySelector('main')?.append(panel);
 }
 
 function removeEnemyTailFragments(){
@@ -119403,14 +119302,11 @@ function removeEnemyTailFragments(){
 }
 
 function moveLateTabs(){
-	const changes=document.getElementById('changes'),tabsNav=document.querySelector('.tabs');
+    const tabsNav=document.querySelector('.tabs');
 	['心得','修改 (2)','脚本'].forEach(name=>{
 		const tab=[...tabs].find(item=>item.textContent.trim()===name),panel=tab&&document.getElementById(tab.dataset.target);
 		if(tab)tabsNav.append(tab);if(panel)document.querySelector('main').append(panel);
 	});
-	const changesTab=[...tabs].find(item=>item.textContent.trim()==='修订记录');
-	if(changesTab)tabsNav.append(changesTab);
-	if(changes)document.querySelector('main').append(changes);
 }
 
 function replaceLinearPage(title,mode='document'){
@@ -119591,13 +119487,6 @@ function markRepeatedHeaders(){
 	});
 }
 
-function addCleanupRevision(){
-	const list=panelByTitle('修订记录')?.querySelector('.change-list');if(!list)return;
-	const article=document.createElement('article');
-	article.innerHTML='<b>页面结构整理</b><p>说明、攻略、心得与修改记录改为文档流；剧情改为条目卡片；商店按城市分节；脚本恢复实际表头。普通资料表已移除空行和空尾列，并将说明性尾注移至表格外。</p>';
-	list.prepend(article);
-}
-
 removeEmptyRowsAndColumns();
 normalizeHeaderRows();
 rebuildAllTableHeads();
@@ -119614,7 +119503,6 @@ replaceMagicRows();
 simplifyMagicTable();
 buildMagicSubpages();
 markRepeatedHeaders();
-addCleanupRevision();
 addHiddenRoleDataNote();
 addDarkBooks();
 labelStoryTable();
